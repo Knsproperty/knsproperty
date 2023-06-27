@@ -2,4 +2,19 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer {}
+
+@layer {
+    * {
+        @apply text-black;
+    }
+
+    ._container {
+        @apply max-w-[1520px];
+    }
+
+    ._center {
+        @apply flex items-center justify-center
+    }
+
+
+}

@@ -1,5 +1,6 @@
 import './globals.css'
 import { Lexend } from 'next/font/google'
+import { Header, Footer } from '@/blocks/layouts/main';
 
 const lexend = Lexend({ subsets: ['latin'] })
 
@@ -15,7 +16,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={lexend.className}>{children}</body>
+      <body className={lexend.className}>
+        <Header />
+        {children}
+        <Footer />
+      </body>
     </html>
   )
 }

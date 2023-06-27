@@ -2,7 +2,7 @@
 module.exports = {
   content: [
     './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
-    './src/components/**/*.{js,ts,jsx,tsx,mdx}',
+    './src/blocks/**/**/*.{js,ts,jsx,tsx,mdx}',
     './src/app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
@@ -11,7 +11,7 @@ module.exports = {
       md: '768px',
       lg: '1024px',
       xl: '1280px',
-      '2xl': '	1536px'
+      '2xl': '1536px'
     },
     colors: {
       black: '#000000',
@@ -38,6 +38,7 @@ module.exports = {
   },
 
   daisyui: {
+    themes: false,
     themes: [
       {
         mytheme: {
