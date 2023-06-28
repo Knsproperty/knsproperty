@@ -1,7 +1,7 @@
-import Image from "next/image";
-import { cache } from "react";
 import { Search } from "@/blocks/sections";
 import strapi from "@/utils/strapi";
+import Trendings from "@/blocks/sections/trending";
+
 
 export default async function Home() {
   const data = await getData();
@@ -9,6 +9,7 @@ export default async function Home() {
   return (
     <main>
       <Search />
+      <Trendings />
     </main>
   );
 }
