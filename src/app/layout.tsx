@@ -3,6 +3,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { Lexend } from 'next/font/google'
 import { Header, Footer } from '@/blocks/layouts/main';
+import Breadcrumbs from '@/blocks/atoms/breadcrumbs';
 
 const lexend = Lexend({ subsets: ['latin'] })
 
@@ -20,6 +21,8 @@ export default function RootLayout({
     <html lang="en">
       <body className={lexend.className}>
         <Header />
+        <Breadcrumbs routes={[{ name: 'home', href: '/' }, { name: 'about us', href: '/about-us' }, { name: 'our team' }]} />
+
         {children}
         <Footer />
       </body>

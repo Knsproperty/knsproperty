@@ -19,8 +19,8 @@ function Search() {
                     </h1>
 
                     <div className="grid-cols-3  mt-8 gap-5  rounded-full p-1.5 inline-grid">
-                        {categories.map((ctgr) => (
-                            <button
+                        {categories.map((ctgr, index) => (
+                            <button key={index}
                                 onClick={() => {
                                     setCategory(ctgr);
                                 }}

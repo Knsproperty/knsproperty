@@ -56,8 +56,8 @@ const Footer = () => {
                 <section className="grid grid-cols-2 w-full py-10">
                     <div >
                         <div className="flex gap-3 mb-5">
-                            {__meta.social.map((links) => (
-                                <BtnHoverOutline><links.Icon className="stroke-black group-hover:stroke-white" size={20} /></BtnHoverOutline>
+                            {__meta.social.map((links, index) => (
+                                <BtnHoverOutline key={index}><links.Icon className="stroke-black group-hover:stroke-white" size={20} /></BtnHoverOutline>
                             ))}
                         </div>
 
@@ -72,11 +72,11 @@ const Footer = () => {
 
                     <div className="grid grid-cols-3">
                         {
-                            Object.keys(__meta.links).map((key) => (
-                                <div>
+                            Object.keys(__meta.links).map((key, index) => (
+                                <div key={index}>
                                     <h5 className="capitalize font-medium py-2">{key}</h5>
                                     <div className="flex flex-col gap-1">
-                                        {(__meta.links as any)[key].map((links: any) => (<Link href={links.href} className="text-sm font-light hover:underline capitalize">{links.text}</Link>))}
+                                        {(__meta.links as any)[key].map((links: any, index2: number) => (<Link key={index2} href={links.href} className="text-sm font-light hover:underline capitalize">{links.text}</Link>))}
                                     </div>
                                 </div>
                             ))

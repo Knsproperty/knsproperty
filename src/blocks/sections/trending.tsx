@@ -97,8 +97,8 @@ const Trendings = () => {
                 <div className="_center flex-col pt-10 pb-14">
                     <h2 className="text-3xl text-primary ">New this week...</h2>
                     <div className="flex gap-5 my-5">
-                        {['for sale', 'for rent', 'off plan'].map((ctgr) => (
-                            <button
+                        {['for sale', 'for rent', 'off plan'].map((ctgr, index) => (
+                            <button key={index}
                                 onClick={() => {
                                     setCategory(ctgr);
                                 }}
@@ -114,7 +114,7 @@ const Trendings = () => {
 
 
                     <div className="2xl:max-w-[1320px] xl:max-w-[1320px] lg:max-w-[80vw] md:max-w-[80vw] max-w-[100vw] ">
-                        <Slider>{_meta.map((property, index) => <PropertyCard {...property} />)}</Slider>
+                        <Slider>{_meta.map((property, index) => <PropertyCard key={index} {...property} />)}</Slider>
                     </div>
 
 
