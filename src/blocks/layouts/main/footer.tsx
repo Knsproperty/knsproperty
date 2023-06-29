@@ -37,12 +37,12 @@ const __meta = {
         ],
         abouts: [
             { text: 'our services', href: '/' },
-            { text: 'meet the team', href: '/' },
-            { text: 'Careers at Allsopp & Allsopp', href: '/' },
+            { text: 'meet the team', href: '/about-us/team' },
+            { text: 'Careers at Knsproperty', href: '/about-us/careers' },
         ],
         'contact us': [
-            { text: '(+971) 4 559 8030', href: '/' },
-            { text: 'info@knsproperty.com', href: '/' },
+            { text: '(+971) 4 559 8030', href: 'tel:+97145598030' },
+            { text: 'info@knsproperty.com', href: 'mailto:info@knsproperty.com' },
         ]
     }
 }

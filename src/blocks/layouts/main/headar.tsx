@@ -1,9 +1,7 @@
-import Container from "@/blocks/atoms/container";
 import Link from "next/link"
-import { FiChevronDown, FiX } from "react-icons/fi";
-
-
 import { FiMenu } from "react-icons/fi";
+import Container from "@/blocks/atoms/container";
+import { FiChevronDown, FiX } from "react-icons/fi";
 
 const __meta = [
     { text: 'buy', href: '/' },
@@ -13,10 +11,10 @@ const __meta = [
     { text: 'off plan', href: '/' },
     {
         text: 'explore more', href: '/', options: [
-            { text: 'carrier', href: "/" },
-            { text: 'our team', href: "/" },
+            { text: 'careers', href: "/about-us/careers" },
+            { text: 'our team', href: "/about-us/team" },
             { text: 'about us', href: "/" },
-            { text: 'contact us', href: "/" },
+            { text: 'contact us', href: "/contact" },
         ]
     },
 
@@ -54,7 +52,7 @@ const Headar = () => {
                 <div className=" h-[70px] grid grid-cols-[1fr_2fr_1fr] ">
 
                     <div className="_center">
-                        <img src="/logo.svg" alt="..." className="w-[250px]" />
+                        <Link href={'/'}>  <img src="/logo.svg" alt="..." className="w-[250px]" /></Link>
                     </div>
 
                     <nav className="xl:flex items-center justify-around ml-5 hidden">
