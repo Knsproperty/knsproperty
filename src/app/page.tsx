@@ -8,7 +8,7 @@ export default async function Home() {
 
   return (
     <main>
-      {JSON.stringify(data)}
+      {/* {JSON.stringify(data)} */}
       <Search />
       <Trendings />
       <Book_Valuation />
