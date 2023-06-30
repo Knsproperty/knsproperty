@@ -16,6 +16,19 @@
     }
 
 
+    .custom-scrollbar::-webkit-scrollbar {
+        width: 5px;
+    }
+
+    .custom-scrollbar::-webkit-scrollbar-track {
+        background-color: whitesmoke;
+    }
+
+    .custom-scrollbar::-webkit-scrollbar-thumb {
+        background-color: darkgrey;
+        border-radius: 10px;
+    }
+
 
 
 

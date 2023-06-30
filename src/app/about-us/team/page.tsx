@@ -1,7 +1,6 @@
 import Container from "@/blocks/atoms/container"
 import team from "../../../../sample/team.json"
 import TeamCard from "@/blocks/molecules/cards/team-card"
-import Breadcrumbs from "@/blocks/atoms/breadcrumbs"
 
 export default function About() {
     return (

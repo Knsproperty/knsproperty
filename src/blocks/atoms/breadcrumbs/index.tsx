@@ -3,15 +3,15 @@ import Link from "next/link"
 import Container from "../container"
 import { usePathname } from 'next/navigation'
 
-interface Props {
-    routes: { name: string, href?: string }[]
-}
 
-const Breadcrumbs: React.FC<Props> = () => {
+const excepted_routes = ['/property/buy']
+
+
+const Breadcrumbs: React.FC = () => {
     const pathname = usePathname()
     const splited = splitInput(pathname)
 
-    if (pathname == '/') {
+    if (pathname == '/' || excepted_routes.includes(pathname)) {
         return null
     }
 
