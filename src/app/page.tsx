@@ -12,8 +12,8 @@ export default async function Home() {
       {/* {JSON.stringify(data)} */}
       <Search />
       <Trendings />
-      <Info />
       <Book_Valuation />
+      <Info />
     </main>
   );
 }

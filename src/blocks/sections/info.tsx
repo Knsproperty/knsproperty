@@ -51,7 +51,9 @@ export default function Info() {
   const info_items = _data.map((it, i) => <Info_Card {...it} key={i} />);
   return (
     <Container>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-5 ">{info_items}</div>
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-5 mb-14">
+        {info_items}
+      </div>
     </Container>
   );
 }
