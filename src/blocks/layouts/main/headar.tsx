@@ -49,8 +49,7 @@ const Headar = () => {
     return (
         <header>
             <Container>
-                <div className=" h-[70px] grid grid-cols-[1fr_2fr_1fr] ">
-
+                <div className=" h-[70px] grid lg:grid-cols-[1fr_2fr_1fr] grid-cols-[1fr_1fr] ">
                     <div className="_center">
                         <Link href={'/'}>  <img src="/logo.svg" alt="..." className="w-[250px]" /></Link>
                     </div>
@@ -85,7 +84,7 @@ const Headar = () => {
 
 
 
-                    <div className="_center">
+                    <div className="_center hidden lg:flex">
                         <button className="bg-primary py-4 text-white hover:bg-white hover:border hover:border-primary hover:text-primary font-semibold text-sm rounded-full capitalize px-8">List your property</button>
                     </div>
 
