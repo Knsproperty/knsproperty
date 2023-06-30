@@ -7,7 +7,10 @@ export default async function page() {
 
 async function getData() {
   let buy_properties = await fetch(
-    `${process.env.NEXT_PUBLIC_URL}/api/search/rent`
+    `${process.env.NEXT_PUBLIC_URL}/api/search/rent`,
+    {
+      cache: "no-cache",
+    }
   );
   return await buy_properties.json();
 }
