@@ -2,8 +2,8 @@ import Link from "next/link";
 import { FiChevronDown } from "react-icons/fi";
 
 const __meta = [
-  { text: "buy", href: "/" },
-  { text: "rent", href: "/" },
+  { text: "buy", href: "/properties/residential/buy" },
+  { text: "rent", href: "/properties/residential/rent" },
   { text: "commercial", href: "/" },
   { text: "property management", href: "/" },
   { text: "off plan", href: "/" },
