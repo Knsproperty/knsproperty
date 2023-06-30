@@ -21,13 +21,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={lexend.className}>
         <Header />
-        <Breadcrumbs
-          routes={[
-            { name: "home", href: "/" },
-            { name: "about us", href: "/about-us" },
-            { name: "our team" },
-          ]}
-        />
+        <Breadcrumbs />
 
         {children}
         <Footer />
