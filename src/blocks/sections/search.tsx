@@ -1,4 +1,7 @@
 import Search from "../molecules/search";
+import SearchSmall from "../molecules/search/small";
+
+
 import { FiAlertCircle, FiPhone } from "react-icons/fi";
 function SearchSection() {
     return (
@@ -10,6 +13,8 @@ function SearchSection() {
                     </h1>
 
                     <Search />
+                    <SearchSmall />
+
 
                     <div className="bg-[#FFF5EB] border-2 border-[#F5973A] rounded-full w-full-- mt-5 grid grid-cols-[50px_auto] p-3 pr-10">
                         <div className="_center">

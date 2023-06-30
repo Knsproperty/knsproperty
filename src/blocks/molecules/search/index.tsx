@@ -10,11 +10,10 @@ const Search = () => {
     const [category, setCategory] = useState("residental");
     const [type, setType] = useState<"buy" | "rent">("rent");
     return (
-        <>
-
+        <div className='lg:flex items-center flex-col hidden'>
             <PropertySelection selected={category} setSelected={setCategory} />
 
-            <div className="w-[720px] bg-white h-[56px] mt-5 rounded-full relative ">
+            <div className="lg:w-[720px] bg-white h-[56px] mt-5 rounded-full relative ">
                 <div className="grid grid-cols-[100px_1fr_1fr_56px]">
                     <div className="dropdown dropdown-hover">
                         <label tabIndex={0}>
@@ -85,7 +84,7 @@ const Search = () => {
 
             </div>
 
-        </>
+        </div>
 
     )
 }

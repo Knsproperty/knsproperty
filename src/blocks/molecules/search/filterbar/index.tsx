@@ -66,7 +66,7 @@ const Filterbar = () => {
 
 export default Filterbar;
 
-const Select = ({
+export const Select = ({
   data,
   value,
   onChange,
