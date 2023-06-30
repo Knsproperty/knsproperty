@@ -9,7 +9,10 @@ export interface CardData {
   Icon: IconType;
   title: string;
   desc: string;
-  action: string;
+  action: {
+    text: string;
+    href: string;
+  };
   color: string;
 }
 const _data: CardData[] = [
@@ -17,21 +20,30 @@ const _data: CardData[] = [
     Icon: MdEmail,
     title: "Stay updated",
     desc: "We are here to answer all of your questions with a range of experts across the board. Between us, there's nothing we can't help you with!",
-    action: "Yes , please",
+    action: {
+      text: "Yes , Please",
+      href: "/",
+    },
     color: "green",
   },
   {
     Icon: MdMobileScreenShare,
     title: "Get in touch",
     desc: "We are here to answer all of your questions with a range of experts across the board. Between us, there's nothing we can't help you with!",
-    action: "Yes , please",
+    action: {
+      text: "Contact Us",
+      href: "/",
+    },
     color: "pink",
   },
   {
     Icon: FaUsers,
     title: "Stay updated",
     desc: "We are here to answer all of your questions with a range of experts across the board. Between us, there's nothing we can't help you with!",
-    action: "Yes , please",
+    action: {
+      text: "Our People",
+      href: "/",
+    },
     color: "green",
   },
 ];
