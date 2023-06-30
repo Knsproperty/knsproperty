@@ -1,15 +1,5 @@
-"use client";
-
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
-import { useState } from "react";
-import Image from "next/image";
-import Container from "../atoms/container";
-
-import PropertyCard, { Props } from "../molecules/cards/property";
-
-import Slider from "../molecules/slider";
-
+import PropertyCard, { Props } from "@/blocks/molecules/cards/property";
+import React from "react";
 const _meta: Props[] = [
   {
     bedroom: 3,
@@ -92,44 +82,15 @@ const _meta: Props[] = [
       "A spacious family residence with five bedrooms, four bathrooms, and ample room for entertainment and relaxation.",
   },
 ];
-
-const Trendings = () => {
-  const [category, setCategory] = useState("for sale");
-
-  return (
-    <section>
-      <Container>
-        <div className="_center flex-col pt-10 pb-14">
-          <h2 className="text-3xl text-primary ">New this week...</h2>
-          <div className="flex gap-5 my-5">
-            {["for sale", "for rent", "off plan"].map((ctgr, index) => (
-              <button
-                key={index}
-                onClick={() => {
-                  setCategory(ctgr);
-                }}
-                className={`py-3 font-light text-sm rounded-full capitalize px-8 ${
-                  category === ctgr
-                    ? " bg-primary border border-primary text-white"
-                    : "bg-transparent  border border-[#ccd3e7] hover:border-black "
-                }`}
-              >
-                {ctgr}
-              </button>
-            ))}
-          </div>
-
-          <div className="2xl:max-w-[1320px] xl:max-w-[1320px] lg:max-w-[80vw] md:max-w-[80vw] max-w-[100vw] ">
-            <Slider>
-              {_meta.map((property, index) => (
-                <PropertyCard key={index} {...property} />
-              ))}
-            </Slider>
-          </div>
-        </div>
-      </Container>
-    </section>
-  );
-};
-
-export default Trendings;
+export default async function Buy() {
+  const data = await getData();
+  return _meta.map((property, index) => (
+    <PropertyCard key={index} {...property} />
+  ));
+}
+async function getData() {
+  let buy_properties = await fetch(`${process.env.NEXT_PUBLIC_URL}/api/buy`, {
+    cache: "force-cache",
+  });
+  return await buy_properties.json();
+}
