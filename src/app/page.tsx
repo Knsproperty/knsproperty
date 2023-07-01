@@ -2,6 +2,7 @@ import { Search } from "@/blocks/sections";
 import Trendings from "@/blocks/sections/trending";
 
 import Book_Valuation from "@/blocks/sections/book-valuation";
+import Info from "@/blocks/sections/info";
 export default async function Home() {
   const data = await getData();
   console.log(data);
@@ -12,6 +13,7 @@ export default async function Home() {
       <Search />
       <Trendings />
       <Book_Valuation />
+      <Info />
     </main>
   );
 }

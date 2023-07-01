@@ -23,6 +23,7 @@
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-icons": "^4.10.1",
+    "react-phone-number-input": "^3.2.25",
     "react-slick": "^0.29.0",
     "slick-carousel": "^1.8.1",
     "strapi-sdk-js": "^2.2.0",
