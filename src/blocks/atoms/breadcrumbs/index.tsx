@@ -2,13 +2,11 @@
 import Link from "next/link"
 import Container from "../container"
 import { usePathname } from 'next/navigation'
-
-
-const excepted_routes = ['/property/buy']
-
+const excepted_routes = ['/property/buy', '/property/buy/[slug]']
 
 const Breadcrumbs: React.FC = () => {
     const pathname = usePathname()
+
     const splited = splitInput(pathname)
 
     if (pathname == '/' || excepted_routes.includes(pathname)) {

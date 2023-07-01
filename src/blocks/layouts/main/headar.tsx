@@ -4,7 +4,7 @@ import Container from "@/blocks/atoms/container";
 import { FiChevronDown, FiX } from "react-icons/fi";
 
 const __meta = [
-  { text: 'buy', href: '/' },
+  { text: 'buy', href: '/property/buy' },
   { text: 'rent', href: '/' },
   { text: 'commercial', href: '/' },
   { text: 'property management', href: '/' },
@@ -17,7 +17,6 @@ const __meta = [
       { text: 'contact us', href: "/contact" },
     ]
   },
-
 ]
 
 const Dropdown = ({ options, text }: { options: { text: string, href: string }[], text: string }) => {

@@ -49,6 +49,7 @@ module.exports = {
           lightgray: '#f8f9fb',
           lightgreen: '#e5ebe9',
           lightviolet: '#e8e5ea',
+          lightblue: '#eef0f6'
         },
       },
     ],
@@ -56,3 +57,5 @@ module.exports = {
 
   plugins: [require("daisyui")],
 }
+
+
