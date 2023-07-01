@@ -4,33 +4,46 @@ import { usePathname, useRouter } from "next/navigation";
 
 interface Props {
   title: string;
-  options: string[];
+  options: {
+    value: string;
+    label: string;
+  }[];
   setter: (name: string) => void;
+  handleUpdateParams: (title: string, value: string) => void;
 }
 
-export const Dropdown: React.FC<Props> = ({ title, options, setter }) => {
-  // please code here for set query parameters
+export const Dropdown: React.FC<Props> = ({
+  title,
+  options,
+  setter,
+  handleUpdateParams,
+}) => {
+  // Function to handle option selection
+  const handleOptionSelect = (name: string) => {
+    setter(name); // Update the state using the setter function
+    handleUpdateParams(title, name); // Call the handleUpdateParams function to update the query parameters
+  };
 
   return (
     <div className="dropdown ">
       <label tabIndex={0}>
-        <button className=" py-2.5 px-5 rounded-full border border-primary  text-primary  w-full  capitalize flex items-center justify-center font-[300] text-sm">
+        <button className="py-2.5 px-5 rounded-full border border-primary text-primary w-full capitalize flex items-center justify-center font-[300] text-sm">
           {title}
           <FiChevronDown className="ml-5" />{" "}
         </button>
       </label>
       <ul
         tabIndex={0}
-        className=" custom-scrollbar dropdown-content z-[1] menu p-2 shadow bg-white rounded-box w-52 mt-8 max-h-80 grid overflow-y-scroll"
+        className="custom-scrollbar dropdown-content z-[1] menu p-2 shadow bg-white rounded-box w-52 mt-8 max-h-80 grid overflow-y-scroll"
       >
         {options.map((name) => (
           <li
-            key={name}
+            key={name.value}
             onClick={() => {
-              setter(name);
+              handleOptionSelect(name.value); // Call the handleOptionSelect function on click
             }}
           >
-            <a className="capitalize">{name}</a>
+            <a className="capitalize">{name.label}</a>
           </li>
         ))}
       </ul>

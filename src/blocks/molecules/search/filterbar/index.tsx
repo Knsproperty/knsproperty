@@ -1,4 +1,4 @@
-'use client'
+"use client";
 
 import React, { useState } from "react";
 import { beds_options, price_min_max, property_types } from "./data";
@@ -72,7 +72,10 @@ export const Select = ({
   onChange,
   disabledOption,
 }: {
-  data: string[];
+  data: {
+    value: string;
+    label: string;
+  }[];
   value: string;
   onChange: (value: string) => void;
   disabledOption: string;
@@ -91,8 +94,8 @@ export const Select = ({
         {disabledOption}
       </option>
       {data.map((item, index) => (
-        <option key={index} value={item}>
-          {item}
+        <option key={index} value={item.value}>
+          {item.label}
         </option>
       ))}
     </select>
