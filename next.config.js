@@ -6,6 +6,10 @@ const nextConfig = {
                 protocol: 'https',
                 hostname: 'www.knsproperty.com',
             },
+            {
+                protocol: "https",
+                hostname: 'ksnpropertiesstrapi-production.up.railway.app'
+            }
         ],
     },
 }

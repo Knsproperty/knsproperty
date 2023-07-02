@@ -9,6 +9,7 @@ const getProperty = async (slug: string) => {
 
 
 import Image from "next/image";
+import ImageUrlExtractor from "@/lib/imageUrlExtractor";
 import addCommasToNumber from "@/app/lib/addCommasToNumbers";
 import { LuBedDouble, LuBath, LuMaximize } from "react-icons/lu";
 
@@ -19,6 +20,7 @@ import LocationCard from "@/blocks/molecules/cards/location";
 export default async function page({ params }: any) {
   const { slug } = params;
   const [{ attributes }] = await getProperty(slug);
+  const media = ImageUrlExtractor(attributes)
 
   return <Container>
 
@@ -29,27 +31,26 @@ export default async function page({ params }: any) {
       <section className="h-[400px] bg-white grid lg:grid-cols-2 my-5">
 
         <div className="relative rounded-md overflow-hidden">
-          <Image fill src={'/propery.jpg'} alt="propery" />
+          <Image fill src={media[0]} alt="propery" />
         </div>
 
         <div className="hidden lg:grid grid-cols-2 gap-5 pl-5">
 
           <div className="relative overflow-hidden rounded-md">
-            <Image fill src={'/propery.jpg'} alt="propery" />
+            <Image fill src={media[1]} alt="propery" />
           </div>
 
           <div className="relative overflow-hidden rounded-md">
-            <Image fill src={'/propery.jpg'} alt="propery" />
+            <Image fill src={media[2]} alt="propery" />
           </div>
 
           <div className="relative overflow-hidden rounded-md">
-            <Image fill src={'/propery.jpg'} alt="propery" />
+            <Image fill src={media[0]} alt="propery" />
           </div>
 
           <div className="relative overflow-hidden rounded-md">
-            <Image fill src={'/propery.jpg'} alt="propery" />
+            <Image fill src={media[1]} alt="propery" />
           </div>
-
         </div>
 
       </section>

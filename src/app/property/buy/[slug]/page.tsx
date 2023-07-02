@@ -1,11 +1,12 @@
 import React from "react";
+import ReactMarkdown from 'react-markdown';
 import Container from "@/blocks/atoms/container";
 const getProperty = async (slug: string) => {
   const res = await fetch(`${process.env.NEXT_PUBLIC_URL}/api/buy/${slug}`, {
-    cache: "force-cache",
+    cache: "no-cache",
   });
   return await res.json();
-};
+}
 
 
 import Image from "next/image";
@@ -14,11 +15,15 @@ import { LuBedDouble, LuBath, LuMaximize } from "react-icons/lu";
 
 import ContactCard from "@/blocks/molecules/cards/contact";
 import LocationCard from "@/blocks/molecules/cards/location";
-
+import ImageUrlExtractor from "@/lib/imageUrlExtractor";
 
 export default async function page({ params }: any) {
   const { slug } = params;
   const [{ attributes }] = await getProperty(slug);
+
+
+
+  const media = ImageUrlExtractor(attributes)
 
   return <Container>
 
@@ -29,31 +34,30 @@ export default async function page({ params }: any) {
       <section className="h-[400px] bg-white grid lg:grid-cols-2 my-5">
 
         <div className="relative rounded-md overflow-hidden">
-          <Image fill src={'/propery.jpg'} alt="propery" />
+          <Image fill src={media[0]} alt="propery" />
         </div>
 
         <div className="hidden lg:grid grid-cols-2 gap-5 pl-5">
 
           <div className="relative overflow-hidden rounded-md">
-            <Image fill src={'/propery.jpg'} alt="propery" />
+            <Image fill src={media[1]} alt="propery" />
           </div>
 
           <div className="relative overflow-hidden rounded-md">
-            <Image fill src={'/propery.jpg'} alt="propery" />
+            <Image fill src={media[2]} alt="propery" />
           </div>
 
           <div className="relative overflow-hidden rounded-md">
-            <Image fill src={'/propery.jpg'} alt="propery" />
+            <Image fill src={media[0]} alt="propery" />
           </div>
 
           <div className="relative overflow-hidden rounded-md">
-            <Image fill src={'/propery.jpg'} alt="propery" />
+            <Image fill src={media[1]} alt="propery" />
           </div>
 
         </div>
 
       </section>
-
 
       <section className="grid lg:grid-cols-[3fr_1fr] gap-10 ">
 
@@ -73,7 +77,14 @@ export default async function page({ params }: any) {
 
           <h3 className="text-xl font-semibold text-secondary mt-5 mb-2.5">Description</h3>
 
-          <p className=" font-[300] text-primary">{attributes.Description}</p>
+          <p className=" font-[300] text-primary">
+          </p>
+
+
+          <ReactMarkdown>{attributes.Description}</ReactMarkdown>
+
+
+
 
 
         </div>

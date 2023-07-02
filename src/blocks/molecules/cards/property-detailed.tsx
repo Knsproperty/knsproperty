@@ -9,6 +9,7 @@ interface Props {
     discription: string,
     property_type: "rent" | "buy"
 }
+
 import Link from "next/link";
 import Image from "next/image";
 import { BsImages } from 'react-icons/bs'

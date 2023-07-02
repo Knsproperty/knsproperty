@@ -1,7 +1,6 @@
 import Container from "@/blocks/atoms/container";
-import PropertyDetailed from "@/blocks/molecules/cards/property-detailed";
 import strapi, { populate } from "@/utils/strapi";
-import Skeleton from "@/blocks/atoms/skeletons";
+import PropertyDetailed from "@/blocks/molecules/cards/property-detailed";
 export default async function Buy({ searchParams }: any) {
   const buy_properties = await strapi.find<any>("buy-properties", {
     populate: populate,
@@ -37,16 +36,18 @@ export default async function Buy({ searchParams }: any) {
               bed: attributes.Bedrooms,
               bathroom: attributes.Bathrooms,
               area: attributes.Area,
-              media: ["/propery.jpg", "/propery.jpg", "/propery.jpg"],
+              media: ImageUrlExtractor(attributes),
             }}
           />
         ))}
-
-
-
-
-
       </Container>
     </div>
   );
+}
+
+const ImageUrlExtractor = (attributes: any) => {
+  const test_image_url = "https://ksnpropertiesstrapi-production.up.railway.app"
+  const preview_image_url = `${test_image_url}${attributes.Preview_Image.data.attributes.formats.small.url}`;
+  const images: string[] = attributes.Images.data.map((_: any) => `${test_image_url}${_.attributes.formats.small.url}`)
+  return [preview_image_url, ...images,]
 }
