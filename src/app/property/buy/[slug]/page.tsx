@@ -97,7 +97,6 @@ export default async function page({ params }: any) {
     </div>
 
 
-    {/* {JSON.stringify(attributes)} */}
 
   </Container>
 }

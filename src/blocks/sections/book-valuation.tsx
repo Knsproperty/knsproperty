@@ -37,7 +37,6 @@ export default function Book_Valuation() {
               </select>
 
               <Country_Input />
-              <Book_Input type="phone" placeholder="Phone Number*" />
               <Book_Input type="text" placeholder="Property Address*" />
 
               <button className="bg-primary group flex items-center mt-5 py-4 text-white hover:bg-white  hover:text-primary font-semibold text-sm rounded-full capitalize px-8 w-full justify-center">

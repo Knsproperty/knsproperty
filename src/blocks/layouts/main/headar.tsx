@@ -5,7 +5,7 @@ import { FiChevronDown, FiX } from "react-icons/fi";
 
 const __meta = [
   { text: 'buy', href: '/property/buy' },
-  { text: 'rent', href: '/' },
+  { text: 'rent', href: '/property/rent' },
   { text: 'commercial', href: '/' },
   { text: 'property management', href: '/' },
   { text: 'off plan', href: '/' },

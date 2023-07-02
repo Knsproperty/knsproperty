@@ -29,6 +29,7 @@ export default async function Buy({ searchParams }: any) {
         {buy_properties?.data?.map(({ attributes }: any) => (
           <PropertyDetailed
             {...{
+              property_type: 'buy',
               slug: attributes.slug,
               title: attributes.Short_Address,
               discription: attributes.Location,
