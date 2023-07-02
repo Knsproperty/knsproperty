@@ -4,7 +4,6 @@ import Container from "../atoms/container";
 import Book_Input from "../atoms/inputs/book-v-input";
 import {
   DropdownBookValuation,
-  DropdownBuyRent,
 } from "../molecules/filter/dropdown";
 import Country_Input from "../atoms/inputs/country-input";
 
@@ -31,13 +30,17 @@ export default function Book_Valuation() {
             <form className="mt-12 space-y-4">
               <Book_Input type="text" placeholder="Full Name*" />
               <Book_Input type="email" placeholder="Email*" />
-              <DropdownBookValuation />
+              <select className="select w-full bg-white rounded-full pl-8 font-light text-[#A7ADB8] ">
+                <option disabled selected className="text-sm ">Property type</option>
+                <option value={'buy'}>Buy</option>
+                <option value={'rent'}>Rent</option>
+              </select>
+
               <Country_Input />
               <Book_Input type="phone" placeholder="Phone Number*" />
               <Book_Input type="text" placeholder="Property Address*" />
 
               <button className="bg-primary group flex items-center mt-5 py-4 text-white hover:bg-white  hover:text-primary font-semibold text-sm rounded-full capitalize px-8 w-full justify-center">
-                {" "}
                 Submit Details
               </button>
             </form>
