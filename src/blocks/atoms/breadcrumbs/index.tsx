@@ -2,7 +2,7 @@
 import Link from "next/link"
 import Container from "../container"
 import { usePathname } from 'next/navigation'
-const excepted_routes = ['/property/buy', '/property/buy/[slug]']
+const excepted_routes = ['/property/buy', '/property/buy/[slug]', '/property/rent/[slug]']
 
 const Breadcrumbs: React.FC = () => {
     const pathname = usePathname()
