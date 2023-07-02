@@ -1,19 +1,18 @@
-import Filter from "@/blocks/molecules/filter";
 import Container from "@/blocks/atoms/container";
 import PropertyDetailed from "@/blocks/molecules/cards/property-detailed";
 import strapi, { populate } from "@/utils/strapi";
-
+import Skeleton from "@/blocks/atoms/skeletons";
 export default async function Buy({ searchParams }: any) {
   const buy_properties = await strapi.find<any>("buy-properties", {
     populate: populate,
     filters: {
       ...(searchParams.max &&
         searchParams.min && {
-          Price: {
-            $lte: searchParams.max,
-            $gte: searchParams.min,
-          },
-        }),
+        Price: {
+          $lte: searchParams.max,
+          $gte: searchParams.min,
+        },
+      }),
       ...(searchParams.type && { Property_Type: searchParams.type }),
       ...(searchParams.bedrooms && { Bedrooms: searchParams.bedrooms }),
       ...(searchParams.query && {
@@ -26,7 +25,6 @@ export default async function Buy({ searchParams }: any) {
 
   return (
     <div>
-      <Filter />
       <Container>
         {buy_properties?.data?.map(({ attributes }: any) => (
           <PropertyDetailed
@@ -42,6 +40,11 @@ export default async function Buy({ searchParams }: any) {
             }}
           />
         ))}
+
+
+
+
+
       </Container>
     </div>
   );

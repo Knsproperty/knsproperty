@@ -3,7 +3,6 @@
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { useState } from "react";
-import Image from "next/image";
 import Container from "../atoms/container";
 
 import PropertyCard, { Props } from "../molecules/cards/property";
@@ -61,6 +60,7 @@ const _meta: Props[] = [
     description:
       "A cozy family home featuring three bedrooms, two bathrooms, and a spacious living area.",
   },
+
   {
     bedroom: 4,
     area: 2000,
@@ -108,11 +108,10 @@ const Trendings = () => {
                 onClick={() => {
                   setCategory(ctgr);
                 }}
-                className={`py-3 font-light text-sm rounded-full capitalize px-8 ${
-                  category === ctgr
-                    ? " bg-primary border border-primary text-white"
-                    : "bg-transparent  border border-[#ccd3e7] hover:border-black "
-                }`}
+                className={`py-3 font-light text-sm rounded-full capitalize px-8 ${category === ctgr
+                  ? " bg-primary border border-primary text-white"
+                  : "bg-transparent  border border-[#ccd3e7] hover:border-black "
+                  }`}
               >
                 {ctgr}
               </button>

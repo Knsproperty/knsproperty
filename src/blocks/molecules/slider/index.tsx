@@ -3,17 +3,19 @@ interface Props {
 }
 
 import React from "react";
+import { FiArrowRight, FiArrowLeft } from "react-icons/fi";
 import SlickSlider from "react-slick";
 
 function SampleNextArrow(props: any) {
     const { className, style, onClick } = props;
     return (
         <div
-            className={`${className} before:bg-primary before:p-3 before:rounded-full z-50 before:-ml-[40px] `}
+            className={`${className} before:hidden  `}
             style={{
                 ...style, display: "block", background: "transparent"
             }}
             onClick={onClick}>
+            <FiArrowRight size={20} className=" -mt-5 -ml-[30px] w-[40px] h-[40px] bg-white shadow-md p-2.5 z-[99999] absolute rounded-full" />
         </div >
     );
 }
@@ -22,10 +24,13 @@ function SamplePrevArrow(props: any) {
     const { className, style, onClick } = props;
     return (
         <div
-            className={`${className} before:bg-primary before:p-3 before:rounded-full z-50`}
-            style={{ ...style, display: "block", background: "transparent" }}
-            onClick={onClick}
-        />
+            className={`${className} before:hidden z-50`}
+            style={{
+                ...style, display: "block", background: "transparent"
+            }}
+            onClick={onClick}>
+            <FiArrowLeft size={20} className=" -mt-5 ml-[15px] w-[40px] h-[40px] bg-white shadow-md p-2.5  rounded-full" />
+        </div >
     );
 }
 
@@ -39,23 +44,36 @@ const Slider: React.FC<Props> = ({ children }) => {
         prevArrow: <SamplePrevArrow />,
         responsive: [
             {
-                breakpoint: 768,
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 2,
+                    infinite: true,
+                }
+            },
+            {
+                breakpoint: 600,
                 settings: {
                     arrows: false,
-                    slidesToShow: 3,
-                },
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    initialSlide: 1
+                }
             },
             {
                 breakpoint: 480,
                 settings: {
                     arrows: false,
                     slidesToShow: 1,
-                },
-            },
+                    slidesToScroll: 1,
+                    dots: true
+
+                }
+            }
         ],
     };
     return (
-        <div>
+        <div className="px-5" >
             <SlickSlider {...settings}>
                 {children}
             </SlickSlider>

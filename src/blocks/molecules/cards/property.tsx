@@ -18,7 +18,7 @@ const PropertyCard: React.FC<Props> = ({
 }) => {
     return (
         // <Link href={'/'}>
-        <div className=" h-[400px] rounded-md shadow-md overflow-hidden hover:bg-[#F3F8FD] m-2">
+        <div className=" h-[400px] rounded-md shadow-md overflow-hidden hover:bg-[#F3F8FD]  m-2">
             <header className="relative h-[200px]">
                 <Image className="w-full h-full" src={'/property.webp'} alt="property image" fill />
             </header>

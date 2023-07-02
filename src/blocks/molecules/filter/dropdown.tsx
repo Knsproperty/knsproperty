@@ -141,7 +141,7 @@ export const BigDropdown: React.FC = () => {
 
           <div className="grid grid-cols-3 gap-1">
             {amenities.map((aminity) => (
-              <Cheakbox cheaked={true} onChange={() => {}} title={aminity} />
+              <Cheakbox cheaked={true} onChange={() => { }} title={aminity} />
             ))}
           </div>
         </div>

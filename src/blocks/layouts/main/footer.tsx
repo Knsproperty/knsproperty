@@ -33,7 +33,7 @@ const __meta = {
   links: {
     services: [
       { text: "buy", href: "/" },
-      { text: "ren", href: "/" },
+      { text: "rent", href: "/" },
       { text: "off plan", href: "/" },
       { text: "commercial", href: "/" },
       { text: "property management", href: "/" },
