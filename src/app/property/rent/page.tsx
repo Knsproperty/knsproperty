@@ -1,8 +1,7 @@
 import Container from "@/blocks/atoms/container";
-import PropertyDetailed from "@/blocks/molecules/cards/property-detailed";
+import Exclusive from "@/blocks/sections/exclusive";
 import strapi, { populate } from "@/utils/strapi";
-
-
+import PropertyDetailed from "@/blocks/molecules/cards/property-detailed";
 
 
 export default async function Buy({ searchParams }: any) {

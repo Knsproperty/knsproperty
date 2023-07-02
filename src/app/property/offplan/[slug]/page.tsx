@@ -13,7 +13,5 @@ const getProperty = async (slug: string) => {
 export default async function page({ params }: any) {
   const { slug } = params;
   const property = await getProperty(slug);
-
-  console.log(property);
   return <div>{JSON.stringify(property)}</div>;
 }
