@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { FiChevronDown } from "react-icons/fi";
-import { usePathname, useRouter } from "next/navigation";
+import { usePathname } from "next/navigation";
 
 interface Props {
   title: string;
@@ -25,24 +25,23 @@ export const Dropdown: React.FC<Props> = ({
   };
 
   return (
-    <div className="dropdown ">
+    <div className="dropdown">
       <label tabIndex={0}>
         <button className="py-2.5 px-5 rounded-full border border-primary text-primary w-full capitalize flex items-center justify-center font-[300] text-sm">
           {title}
-          <FiChevronDown className="ml-5" />{" "}
+          <FiChevronDown className="ml-5" />
         </button>
       </label>
       <ul
         tabIndex={0}
-        className="custom-scrollbar dropdown-content z-[1] menu p-2 shadow bg-white rounded-box w-52 mt-8 max-h-80 grid overflow-y-scroll"
+        className="w-full custom-scrollbar dropdown-content z-[1] menu p-2 shadow bg-white rounded-box lg:w-52 lg:mt-8 max-h-80 grid overflow-y-scroll"
       >
         {options.map((name) => (
           <li
             key={name.value}
             onClick={() => {
               handleOptionSelect(name.value); // Call the handleOptionSelect function on click
-            }}
-          >
+            }}>
             <a className="capitalize">{name.label}</a>
           </li>
         ))}
@@ -66,8 +65,7 @@ export const DropdownBuyRent: React.FC = () => {
       </label>
       <ul
         tabIndex={0}
-        className=" custom-scrollbar dropdown-content z-[1] menu p-2 shadow bg-white rounded-box w-52 mt-8 max-h-80 grid overflow-y-scroll"
-      >
+        className="w-full custom-scrollbar dropdown-content z-[1] menu p-2 shadow bg-white rounded-box lg:w-52 lg:mt-8 max-h-80 grid overflow-y-scroll">
         <li>
           <Link href={"/property/buy"}>Buy</Link>
         </li>

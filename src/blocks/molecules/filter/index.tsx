@@ -11,13 +11,22 @@ import { useState } from "react";
 import { deleteSearchParams, updateSearchParams } from "@/utils/param";
 import { useRouter } from "next/navigation";
 
+
+import { LuFilter } from "react-icons/lu";
+
 const Filter = () => {
+  const [filterVisiblity, setFilterVisiblity] = useState(false)
   const router = useRouter();
   const [searchInput, setSearchInput] = useState(""); // State for the search input
   const [type, setPropertyType] = useState(""); // State for property type
   const [min, setPriceMin] = useState(""); // State for minimum price
   const [max, setPriceMax] = useState(""); // State for maximum price
   const [bedrooms, setBeds] = useState(""); // State for number of beds
+
+
+  const handleFilterClick = () => {
+    setFilterVisiblity(!filterVisiblity)
+  }
 
   const handleUpdateParams = (title: string, value: string) => {
     let newPathName = "";
@@ -75,7 +84,7 @@ const Filter = () => {
   return (
     <div className="bg-[#e3effa]">
       <Container>
-        <div className="h-[88px] grid grid-cols-[1fr_2fr] gap-5 items-center px-10">
+        <div className="h-[88px] grid lg:grid-cols-[1fr_2fr] grid-cols-[auto_50px] lg:gap-5 gap-2 items-center lg:px-10">
           <div className="bg-white rounded-full flex items-center py-3 px-5 gap-4 relative">
             <div className="_center">
               <FiSearch size={18} />
@@ -90,7 +99,10 @@ const Filter = () => {
             />
           </div>
 
-          <div className="w-full flex gap-5">
+
+          <button onClick={handleFilterClick} className="_center lg:hidden"><LuFilter size={22} /></button>
+
+          <div className=" lg:flex w-full hidden gap-5">
             <DropdownBuyRent />
             <Dropdown
               title="Property type"
@@ -118,6 +130,40 @@ const Filter = () => {
             />
           </div>
         </div>
+
+
+        {filterVisiblity && (
+          <div className="pb-5 lg:hidden block">
+            <div className=" flex w-full flex-col gap-3">
+              <DropdownBuyRent />
+              <Dropdown
+                title="Property type"
+                options={property_types}
+                setter={setPropertyType} // Pass the setter function for property type
+                handleUpdateParams={handleUpdateParams} // Pass the handleUpdateParams function as a prop
+              />
+              <Dropdown
+                title="Price Min"
+                options={price_min_max}
+                setter={setPriceMin} // Pass the setter function for minimum price
+                handleUpdateParams={handleUpdateParams} // Pass the handleUpdateParams function as a prop
+              />
+              <Dropdown
+                title="Price Max"
+                options={price_min_max}
+                setter={setPriceMax} // Pass the setter function for maximum price
+                handleUpdateParams={handleUpdateParams} // Pass the handleUpdateParams function as a prop
+              />
+              <Dropdown
+                title="Beds"
+                options={beds_options}
+                setter={setBeds} // Pass the setter function for number of beds
+                handleUpdateParams={handleUpdateParams} // Pass the handleUpdateParams function as a prop
+              />
+            </div>
+          </div>
+        )}
+
       </Container>
     </div>
   );

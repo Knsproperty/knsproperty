@@ -1,5 +1,6 @@
 import Container from "@/blocks/atoms/container";
 import strapi, { populate } from "@/utils/strapi";
+import DataNotFound from "@/blocks/atoms/data-not-found";
 import ImageUrlExtractor from "@/lib/imageUrlExtractor";
 import PropertyDetailed from "@/blocks/molecules/cards/property-detailed";
 
@@ -31,6 +32,11 @@ export default async function Buy({ searchParams }: any) {
   return (
     <div>
       <Container>
+
+
+
+        {buy_properties?.data.length == 0 && <DataNotFound />}
+
         {buy_properties?.data?.map(({ attributes }: any) => (
           <PropertyDetailed
             {...{
