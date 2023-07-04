@@ -10,7 +10,7 @@ const Filterbar = () => {
 
   return (
     <div className="bg-white w-full p-5">
-      <div className="grid-cols-2 grid gap-5">
+      <div className=" grid gap-5">
         <Select
           data={price_min_max}
           value={minPrice}
@@ -25,7 +25,7 @@ const Filterbar = () => {
         />
       </div>
 
-      <div className="grid-cols-2 grid gap-5 mt-5">
+      <div className=" grid gap-5 mt-5">
         <Select
           data={property_types}
           value={propertyType}

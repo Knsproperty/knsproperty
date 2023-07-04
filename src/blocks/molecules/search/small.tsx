@@ -1,46 +1,91 @@
-'use client'
-import { useState } from 'react'
-import Filterbar from './filterbar/small';
-import { FiChevronDown } from 'react-icons/fi';
-import PropertySelection from './property-selection';
+"use client";
+import React, { useState } from "react";
+import { beds_options, price_min_max, property_types } from "./filterbar/data";
 
-const Search = () => {
-    const [category, setCategory] = useState("residental");
-    const [type, setType] = useState<"buy" | "rent">("rent");
+const Filterbar = () => {
+    const [minPrice, setMinPrice] = useState("");
+    const [maxPrice, setMaxPrice] = useState("");
+    const [bedrooms, setBedrooms] = useState("");
+    const [propertyType, setPropertyType] = useState("");
+
     return (
-        <div className='w-full lg:hidden flex items-center justify-center flex-col'>
-            <PropertySelection selected={category} setSelected={setCategory} />
-            <div className='bg-white w-[95%] rounded-md overflow-hidden mt-5'>
-                <div className='grid grid-cols-[1fr_2fr] m-5 mb-0 border border-primary rounded-md '>
-                    <div className="dropdown dropdown-hover">
-                        <label tabIndex={0}> <button className="bg-primary h-[56px] w-full text-white capitalize flex items-center justify-center text-sm">{type} <FiChevronDown className="ml-2 stroke-white" /> </button> </label>
-                        <ul tabIndex={0} className="dropdown-content z-[1] menu p-2 shadow bg-white rounded-box w-52">
-                            <li
-                                onClick={() => {
-                                    setType("buy");
-                                }}
-                            >
-                                <a>Buy</a>
-                            </li>
-                            <li
-                                onClick={() => {
-                                    setType("rent");
-                                }}
-                            >
-                                <a>Rent</a>
-                            </li>
-                        </ul>
-                    </div>
+        <div className="bg-white w-full grid gap-2 p-5 max-w-lg lg:hidden mx-auto rounded-md mt-3">
 
-                    <div>
-                        <input type="text" className="w-full h-full bg-transparent font-light text-sm placeholder:text-sm placeholder:font-light outline-none border-none pl-5" placeholder="Community or Building" />
-                        <div className="absolute bg-white hidden"> search result goes here</div>
-                    </div>
-                </div>
-                <Filterbar />
+            <input
+                type="text"
+                className="w-full h-full py-4 px-2.5 rounded-md  bg-white border border-primary font-light text-sm placeholder:text-sm placeholder:font-light "
+                placeholder="Community or Building"
+            />
+
+            <Select
+                data={price_min_max}
+                value={minPrice}
+                onChange={setMinPrice}
+                disabledOption="Minimum Price"
+            />
+            <Select
+                data={price_min_max}
+                value={maxPrice}
+                onChange={setMaxPrice}
+                disabledOption="Maximum Price"
+            />
+
+
+
+            <Select
+                data={property_types}
+                value={propertyType}
+                onChange={setPropertyType}
+                disabledOption="Property Type"
+            />
+            <Select
+                data={beds_options}
+                value={bedrooms}
+                onChange={setBedrooms}
+                disabledOption="Bedrooms"
+            />
+
+            <div className="mt-5 flex justify-center">
+                <button className="py-3.5 px-20 text-white text-sm bg-primary rounded-full">
+                    Search
+                </button>
             </div>
         </div>
+    );
+};
 
-    )
-}
-export default Search
+export default Filterbar;
+
+export const Select = ({
+    data,
+    value,
+    onChange,
+    disabledOption,
+}: {
+    data: {
+        value: string;
+        label: string;
+    }[];
+    value: string;
+    onChange: (value: string) => void;
+    disabledOption: string;
+}) => {
+    const handleChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
+        onChange(event.target.value);
+    };
+    return (
+        <select
+            className="select !w-full border-primary p-2.5 text-gray-500 bg-white border rounded-md  outline-none appearance-none focus:border-indigo-600 !font-[400] !text-sm"
+            value={value}
+            onChange={handleChange}>
+            <option disabled value="">
+                {disabledOption}
+            </option>
+            {data.map((item, index) => (
+                <option key={index} value={item.value}>
+                    {item.label}
+                </option>
+            ))}
+        </select>
+    );
+};
