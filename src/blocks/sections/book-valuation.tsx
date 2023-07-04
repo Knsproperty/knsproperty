@@ -2,16 +2,13 @@
 import React from "react";
 import Container from "../atoms/container";
 import Book_Input from "../atoms/inputs/book-v-input";
-import {
-  DropdownBookValuation,
-} from "../molecules/filter/dropdown";
 import Country_Input from "../atoms/inputs/country-input";
 
 export default function Book_Valuation() {
   return (
     <div className="bg-[#e3ecee]">
       <Container>
-        <div className="pt-[60px] pb-[80px] rounded-lg  px-10 sm:px-[75px] text-center mb-14">
+        <div className="pt-[60px] pb-[80px] rounded-lg  sm:px-[75px] text-center mb-14">
           <div className="w-full">
             <div className="pb-6">
               <h2 className="text-secondary font-medium pb-[1.5rem] text-3xl">
