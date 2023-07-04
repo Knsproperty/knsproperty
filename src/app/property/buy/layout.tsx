@@ -6,7 +6,7 @@ import Filter from "@/blocks/molecules/filter"
 const Layout: React.FC<Props> = ({ children }) => (
     <>
         <Filter />
-        <Exclusive type="buy" />
+        {/* <Exclusive type="buy" /> */}
         {children}
     </>
 )

@@ -24,18 +24,18 @@ const PropertyDetailed: React.FC<Props> = ({ title, discription, price, bed, bat
 
                 <div className="absolute top-0 left-0 bg-white z-50 m-5 px-3 py-2 text-sm font-light drop-shadow-md flex items-center rounded-md "><BsImages className="mr-2" size={20} /> {media.length}</div>
 
-                <div className="bg-lightgray grid md:grid-cols-[2fr_1fr] h-[328px] lg:h-full">
+                <div className="bg-white grid md:grid-cols-[2fr_1fr] h-[328px] gap-2 lg:h-full p-2">
 
-                    <div className="relative bg-primary">
+                    <div className="relative overflow-hidden rounded-md ">
                         <Image alt="image" src={media1} fill />
                     </div>
-                    <div className="hidden bg-secondary md:grid grid-rows-2">
+                    <div className="hidden  md:grid grid-rows-2 gap-2">
 
-                        <div className="relative">
+                        <div className="relative overflow-hidden rounded-md">
                             <Image alt="image" src={media2} fill />
                         </div>
 
-                        <div className="relative">
+                        <div className="relative overflow-hidden rounded-md">
                             <Image alt="image" src={media3} fill />
                         </div>
                     </div>
