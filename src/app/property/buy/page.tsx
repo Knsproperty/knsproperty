@@ -9,11 +9,11 @@ export default async function Buy({ searchParams }: any) {
     filters: {
       ...(searchParams.max &&
         searchParams.min && {
-          Price: {
-            $lte: searchParams.max,
-            $gte: searchParams.min,
-          },
-        }),
+        Price: {
+          $lte: searchParams.max,
+          $gte: searchParams.min,
+        },
+      }),
       ...(searchParams.type && { Property_Type: searchParams.type }),
       ...(searchParams.bedrooms && { Bedrooms: searchParams.bedrooms }),
       ...(searchParams.query && {
@@ -30,7 +30,6 @@ export default async function Buy({ searchParams }: any) {
 
   return (
     <div>
-      {JSON.stringify(buy_properties.meta)}
       <Container>
         {buy_properties?.data?.map(({ attributes }: any) => (
           <PropertyDetailed

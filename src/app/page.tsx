@@ -8,6 +8,19 @@ export default async function Home() {
       <Search />
       <Trendings />
       <Book_Valuation />
+
+
+
+
+
+
+
+
+
+
+
+
+
       <Info />
     </main>
   );

@@ -1,7 +1,7 @@
 import Link from "next/link"
 import { FiMenu } from "react-icons/fi";
 import Container from "@/blocks/atoms/container";
-import { FiChevronDown, FiX } from "react-icons/fi";
+import { FiChevronDown, FiX, FiPhone } from "react-icons/fi";
 
 const __meta = [
   { text: 'buy', href: '/property/buy' },
@@ -23,7 +23,7 @@ const Dropdown = ({ options, text }: { options: { text: string, href: string }[]
   return (
     <div className="dropdown dropdown-hover ">
       <label tabIndex={0} className="text-sm font-light hover:underline capitalize flex items-center">{text} <FiChevronDown className="ml-2" /> </label>
-      <div tabIndex={0} className="dropdown-content z-[1]  menu  w-[250px]  pt-[25px]">
+      <div tabIndex={0} className="dropdown-content z-[1]  menu  w-[250px]  pt-[30px]">
         <div className="flex flex-col bg-lightgray p-5 rounded-md shadow">
           {options.map((link, index) => <Link key={index} href={link.href} className="text-sm font-light hover:underline capitalize py-2">{link.text}</Link>)}
         </div>
@@ -84,7 +84,7 @@ const Headar = () => {
 
 
           <div className="_center hidden lg:flex">
-            <button className="bg-primary py-4 text-white hover:bg-white hover:border hover:border-primary hover:text-primary font-semibold text-sm rounded-full capitalize px-8">List your property</button>
+            <button className="bg-primary py-4 text-white hover:bg-white group hover:border hover:border-primary hover:text-primary font-medium text-sm rounded-full capitalize px-8 flex gap-2 items-center"><FiPhone color="white" className="stroke-white group-hover:stroke-primary" />Contact Us</button>
           </div>
 
         </div>
