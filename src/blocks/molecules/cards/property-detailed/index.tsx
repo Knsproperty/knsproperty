@@ -21,7 +21,7 @@ const PropertyDetailed: React.FC<Props> = ({ title, discription, price, bed, bat
     return (
         <Link href={`/property/${property_type}/${slug}`}>
             <div className="lg:h-[328px] h-auto w-full grid lg:grid-cols-[1.5fr_1fr] my-5 border border-[#eef0f6] rounded-md overflow-hidden shadow-md bg-white hover:bg-[#F3F8FD] relative">
-                <div className="absolute top-0 left-0 bg-white z-50 m-5 px-3 py-2 text-sm font-light drop-shadow-md flex items-center rounded-md "><BsImages className="mr-2" size={20} /> {media.length}</div>
+                <div className="hidden absolute top-0 left-0 bg-white z-50 m-5 px-3 py-2 text-sm font-light drop-shadow-md lg   :flex items-center rounded-md "><BsImages className="mr-2" size={20} /> {media.length}</div>
                 <div className="bg-white grid md:grid-cols-[2fr_1fr] h-[290px] gap-2 lg:h-full p-2">
 
                     <div className="relative overflow-hidden rounded-md ">
@@ -44,7 +44,7 @@ const PropertyDetailed: React.FC<Props> = ({ title, discription, price, bed, bat
 
                     <div className="px-5">
                         <p className="font-light text-sm my-2 lg:hidden">AED {price} Per Annum</p>
-                        <h2 className="text-xl font-medium text-secondary mb-1">{title}</h2>
+                        <h2 className="text-xl font-medium text-secondary mb-1 capitalize   ">{title}</h2>
                         <p className="text-sm capitalize">{discription}</p>
 
                         <p className="font-light text-sm my-5 hidden lg:block">AED {price} Per Annum</p>
