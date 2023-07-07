@@ -1,15 +1,12 @@
 import { Main } from "@/types/blog";
+import strapi from "@/utils/strapi";
 import React from "react";
 
 export default async function page() {
-  const blogs = await getBlogs();
+  const blogs = await strapi.find("blogs", {
+    populate: ["*", "thumbnail"],
+  });
   return <div>{JSON.stringify(blogs)}</div>;
 }
 
-const getBlogs = async () => {
-  const res = await fetch(`${process.env.NEXT_PUBLIC_URL}/api/blog`, {
-    next: { revalidate: 3000 },
-  });
-  const blogs = await res.json();
-  return blogs;
-};
+export const revalidate = 3600;
