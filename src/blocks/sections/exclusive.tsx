@@ -42,7 +42,8 @@ export default Exclusive;
 
 const getExlusiveProperty = async (type: string) => {
   const res = await fetch(
-    `${process.env.NEXT_PUBLIC_URL}/api/exclusive/${type}`
+    `${process.env.NEXT_PUBLIC_URL}/api/exclusive/${type}`,
+    { cache: "force-cache" }
   );
   return await res.json();
 };

@@ -7,7 +7,9 @@ export default async function page() {
 }
 
 const getBlogs = async () => {
-  const res = await fetch(`${process.env.NEXT_PUBLIC_URL}/api/blog`);
-  const blogs: Main[] = await res.json();
+  const res = await fetch(`${process.env.NEXT_PUBLIC_URL}/api/blog`, {
+    next: { revalidate: 3000 },
+  });
+  const blogs = await res.json();
   return blogs;
 };
