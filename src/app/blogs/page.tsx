@@ -6,7 +6,7 @@ export default async function page() {
   const blogs = await strapi.find("blogs", {
     populate: ["*", "thumbnail"],
   });
-  return <div>{JSON.stringify(blogs)}</div>;
+  return <div>{JSON.stringify(blogs.data)}</div>;
 }
 
 export const revalidate = 3600;

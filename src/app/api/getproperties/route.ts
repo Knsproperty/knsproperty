@@ -1,3 +1,5 @@
+import slugify from "@/lib/slugigy";
+import strapi, { populate } from "@/utils/strapi";
 import axios from "axios";
 import { NextResponse } from "next/server";
 import { parseString } from "xml2js";
@@ -21,8 +23,131 @@ export async function GET() {
         }
       });
     });
+    const parsedXml = await JSON.parse(parsedData).list.property;
+    const convertArray = async (inputArray: any) => {
+      const newData: any = [];
 
-    return NextResponse.json(JSON.parse(parsedData));
+      inputArray.forEach((item: any) => {
+        const convertedItem: any = {
+          id: item.reference_number ? item.reference_number[0] : null,
+          attributes: {
+            Street: item.title_en ? item.reference_number[0] : null,
+            Rooms: item.bedrooms ? parseInt(item.bedrooms[0]) : null,
+            Short_Address: item.property_name ? item.property_name[0] : null,
+            Price: item.price ? parseInt(item.price[0]) : null,
+            Description: item.description_en ? item.description_en[0] : null,
+            PricePerSqFt: null,
+            ReraNumber: null,
+            ReferenceNumber: item.reference_number
+              ? item.reference_number[0]
+              : null,
+            AgentBRN: item.agent
+              ? item.agent[0].license_no
+                ? parseInt(item.agent[0].license_no[0])
+                : null
+              : null,
+            Bedrooms: item.bedroom ? parseInt(item.bedroom[0]) : null,
+            Bathrooms: item.bathroom ? parseInt(item.bathroom[0]) : null,
+            Area: item.size ? parseInt(item.size[0]) : null,
+            Property_Type: item.property_type ? item.property_type[0] : null,
+            Location: item.city ? item.city[0] : null,
+            createdAt: null,
+            updatedAt: null,
+            publishedAt: null,
+            Name: item.title_en ? item.title_en[0] : null,
+            slug: item.property_name ? slugify(item.property_name[0]) : null,
+            Exclusive: null,
+            Preview_Image: {
+              data: {
+                id: null,
+                attributes: {
+                  name: null,
+                  alternativeText: null,
+                  caption: null,
+                  width: null,
+                  height: null,
+                  formats: {
+                    small: {
+                      ext: null,
+                      url: null,
+                      hash: null,
+                      mime: null,
+                      name: null,
+                      path: null,
+                      size: null,
+                      width: null,
+                      height: null,
+                    },
+                    thumbnail: {
+                      ext: null,
+                      url: null,
+                      hash: null,
+                      mime: null,
+                      name: null,
+                      path: null,
+                      size: null,
+                      width: null,
+                      height: null,
+                    },
+                  },
+                  hash: null,
+                  ext: null,
+                  mime: null,
+                  size: null,
+                  url: null,
+                  previewUrl: null,
+                  provider: null,
+                  provider_metadata: null,
+                  createdAt: null,
+                  updatedAt: null,
+                },
+              },
+            },
+            Images: {
+              data: item.photo
+                ? item.photo[0].url.map((photo: any) => ({
+                    url: photo._ ? photo._ : null,
+                  }))
+                : [],
+            },
+            agent: {
+              data: item.agent
+                ? {
+                    id: null,
+                    attributes: {
+                      name: item.agent[0].name ? item.agent[0].name[0] : null,
+                      email: item.agent[0].email
+                        ? item.agent[0].email[0]
+                        : null,
+                      phone: item.agent[0].phone
+                        ? item.agent[0].phone[0]
+                        : null,
+                      licenseNo: item.agent[0].license_no
+                        ? item.agent[0].license_no[0]
+                        : null,
+                      photo: item.agent[0].photo
+                        ? item.agent[0].photo[0]
+                        : null,
+                    },
+                  }
+                : null,
+            },
+          },
+        };
+
+        newData.push(convertedItem);
+      });
+
+      return newData;
+    };
+
+    const convertedArray = await convertArray(parsedXml);
+    const buy_properties = await strapi.find("buy-properties", {
+      populate,
+    });
+    const combinedArray = await convertedArray.concat(buy_properties.data);
+    return NextResponse.json(combinedArray);
+    // return NextResponse.json(parsedXml);
   } catch (error: any) {
     console.error("Error fetching XML data:", error);
     return NextResponse.error();
