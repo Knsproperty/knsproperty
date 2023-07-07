@@ -1,4 +1,5 @@
 "use client";
+import axios from "axios";
 import { useState, ChangeEvent, FormEvent } from "react";
 
 interface FormData {
@@ -15,6 +16,23 @@ export default function Form() {
     phone: "",
     resume: null,
   });
+  const handleFileUpload = async (file: any) => {
+    const formData = new FormData();
+    formData.append("file", file);
+    formData.append("upload_preset", "chat-app");
+    formData.append("cloud_name", "hellooworkd"); // Replace with your upload preset
+
+    try {
+      const response = await axios.post(
+        "https://api.cloudinary.com/v1_1/hellooworkd/image/upload",
+        formData
+      );
+
+      console.log(response);
+    } catch (error) {
+      console.log(error);
+    }
+  };
 
   const [errors, setErrors] = useState<Partial<FormData>>({});
 
@@ -54,6 +72,8 @@ export default function Form() {
     setErrors(validationErrors);
 
     if (Object.keys(validationErrors).length === 0) {
+      console.log(formData);
+      handleFileUpload(formData.resume);
       // Form is valid, perform submission logic
       // ...
     }
