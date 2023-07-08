@@ -13,13 +13,24 @@ export default async function Page() {
         <div>
           <h5 className="text-white text-center mb-10">Join us</h5>
           <h1 className="text-5xl font-semibold text-white text-center">
-            Careers at Allsopp{" "}
+            Careers at Allsopp
           </h1>
         </div>
       </Landing>
 
       <Container>
-        <section className="grid lg:grid-cols-2 grid-cols-1 py-20 gap-5">
+
+
+
+        <section>
+          <h2 className="text-3xl font-semibold text-center py-3 mt-2">Current Job Openings</h2>
+          <p className="text-sm font-light text-center">We're looking for ambitious individuals that thrive in a high-pressure, incentive driven environment and we provide such candidates with the opportunity to earn almost limitless amounts of tax-free money.</p>
+
+          <div className="grid xl:grid-cols-3 lg:grid-cols-2 gap-5 my-10">
+            {jobs}
+          </div>
+        </section>
+        {/* <section className="grid lg:grid-cols-2 grid-cols-1 py-20 gap-5">
           <div className="px-10 ">
             <h2 className="text-2xl font-semibold mb-5 capitalize">
               work with us
@@ -31,13 +42,13 @@ export default async function Page() {
               your existing skills whilst teaching you new skill sets, ensuring
               you are fully confident in your job and future career.
             </p>
-            {jobs}
+            {JSON.stringify(data)}
           </div>
 
           <div className="px-10">
             <Form />
           </div>
-        </section>
+        </section> */}
       </Container>
     </div>
   );
