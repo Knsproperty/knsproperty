@@ -7,7 +7,8 @@ import { parseString } from "xml2js";
 export async function GET() {
   try {
     const response = await axios.get(
-      "https://expert.propertyfinder.ae/feed/kns/privatesite/ef5baf9b94ef69775d282c15b19d22ab"
+      "https://expert.propertyfinder.ae/feed/kns/privatesite/ef5baf9b94ef69775d282c15b19d22ab",
+      {}
     );
 
     const xmlData = response.data;
@@ -32,8 +33,8 @@ export async function GET() {
           id: item.reference_number ? item.reference_number[0] : null,
           attributes: {
             Street: item.title_en ? item.reference_number[0] : null,
-            Rooms: item.bedrooms ? parseInt(item.bedrooms[0]) : null,
-            Short_Address: item.property_name ? item.property_name[0] : null,
+            Rooms: item.bedroom ? parseInt(item.bedroom[0]) : null,
+            Short_Address: item.title_en ? item.title_en[0] : null,
             Price: item.price ? parseInt(item.price[0]) : null,
             Description: item.description_en ? item.description_en[0] : null,
             PricePerSqFt: null,
@@ -57,6 +58,11 @@ export async function GET() {
             Name: item.title_en ? item.title_en[0] : null,
             slug: item.property_name ? slugify(item.property_name[0]) : null,
             Exclusive: null,
+            Parking: item.parking ? parseInt(item.parking[0]) : null,
+            Community: item.community ? item.community[0] : null,
+            Sub_Community: item.sub_community ? item.sub_community[0] : null,
+            Furnished: item.furnished ? item.furnished[0] : null,
+            Geopoints: item.geopoints ? item.geopoints[0] : null,
             Preview_Image: {
               data: {
                 id: null,

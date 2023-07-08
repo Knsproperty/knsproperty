@@ -2,11 +2,13 @@ import Landing from "@/blocks/sections/landing";
 import Container from "@/blocks/atoms/container";
 import Job_Card from "@/blocks/molecules/cards/job-card";
 import { Main } from "@/types/job";
-import Form from "@/blocks/molecules/forms/job";
+import strapi, { populate } from "@/utils/strapi";
 
 export default async function Page() {
-  const data = await getData();
-  const jobs = data.map((it, i) => <Job_Card key={i} {...it} />);
+  const jobsData = await strapi.find<Main[]>("jobs", {
+    populate: populate,
+  });
+  const jobs = jobsData.data.map((it, i) => <Job_Card key={i} {...it} />);
   return (
     <div>
       <Landing background="url('https://www.allsoppandallsopp.com/images/banners/career.jpg')">
@@ -19,12 +21,16 @@ export default async function Page() {
       </Landing>
 
       <Container>
-
-
-
         <section>
-          <h2 className="text-3xl font-semibold text-center py-3 mt-2">Current Job Openings</h2>
-          <p className="text-sm font-light text-center">We're looking for ambitious individuals that thrive in a high-pressure, incentive driven environment and we provide such candidates with the opportunity to earn almost limitless amounts of tax-free money.</p>
+          <h2 className="text-3xl font-semibold text-center py-3 mt-2">
+            Current Job Openings
+          </h2>
+          <p className="text-sm font-light text-center">
+            We're looking for ambitious individuals that thrive in a
+            high-pressure, incentive driven environment and we provide such
+            candidates with the opportunity to earn almost limitless amounts of
+            tax-free money.
+          </p>
 
           <div className="grid xl:grid-cols-3 lg:grid-cols-2 gap-5 my-10">
             {jobs}
@@ -54,10 +60,10 @@ export default async function Page() {
   );
 }
 
-async function getData() {
-  const res = await fetch(`${process.env.NEXT_PUBLIC_URL}/api/job`, {
-    cache: "force-cache",
-  });
-  const team: Main[] = await res.json();
-  return team;
-}
+// async function getData() {
+//   const res = await fetch(`${process.env.NEXT_PUBLIC_URL}/api/job`, {
+//     cache: "no-cache",
+//   });
+//   const team: Main[] = await res.json();
+//   return team;
+// }
