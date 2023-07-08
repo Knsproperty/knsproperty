@@ -3,41 +3,44 @@ import strapi, { populate } from "@/utils/strapi";
 import DataNotFound from "@/blocks/atoms/data-not-found";
 import ImageUrlExtractor from "@/lib/imageUrlExtractor";
 import PropertyDetailed from "@/blocks/molecules/cards/property-detailed";
+import { Main } from "@/types/main";
 
 export default async function Buy({ searchParams }: any) {
-  const buy_properties = await strapi.find<any>("buy-properties", {
-    populate: populate,
-    filters: {
-      ...(searchParams.max &&
-        searchParams.min && {
-        Price: {
-          $lte: searchParams.max,
-          $gte: searchParams.min,
-        },
-      }),
-      ...(searchParams.type && { Property_Type: searchParams.type }),
-      ...(searchParams.bedrooms && { Bedrooms: searchParams.bedrooms }),
-      ...(searchParams.query && {
-        Name: {
-          $containsi: searchParams.query,
-        },
-      }),
-    },
-    pagination: {
-      page: searchParams.page ?? 1,
-      pageSize: 20,
-    },
+  const data = await fetch("http://localhost:3000/api/getproperties", {
+    cache: "force-cache",
   });
+  const properties: Main[] = await data.json();
+  // const buy_properties = await strapi.find<any>("buy-properties", {
+  //   populate: populate,
+  //   filters: {
+  //     ...(searchParams.max &&
+  //       searchParams.min && {
+  //       Price: {
+  //         $lte: searchParams.max,
+  //         $gte: searchParams.min,
+  //       },
+  //     }),
+  //     ...(searchParams.type && { Property_Type: searchParams.type }),
+  //     ...(searchParams.bedrooms && { Bedrooms: searchParams.bedrooms }),
+  //     ...(searchParams.query && {
+  //       Name: {
+  //         $containsi: searchParams.query,
+  //       },
+  //     }),
+  //   },
+  //   pagination: {
+  //     page: searchParams.page ?? 1,
+  //     pageSize: 20,
+  //   },
+  // });
 
   return (
     <div>
       <Container>
+        {/* {JSON.stringify(properties)} */}
+        {/* {buy_properties?.data.length == 0 && <DataNotFound />} */}
 
-
-
-        {buy_properties?.data.length == 0 && <DataNotFound />}
-
-        {buy_properties?.data?.map(({ attributes }: any) => (
+        {/* {properties?.map(({ attributes }: any) => (
           <PropertyDetailed
             {...{
               property_type: "buy",
@@ -48,10 +51,11 @@ export default async function Buy({ searchParams }: any) {
               bed: attributes.Bedrooms,
               bathroom: attributes.Bathrooms,
               area: attributes.Area,
-              media: ImageUrlExtractor(attributes),
+              media: [],
+              // media: ImageUrlExtractor(attributes),
             }}
           />
-        ))}
+        ))} */}
       </Container>
     </div>
   );

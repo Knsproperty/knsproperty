@@ -59,11 +59,3 @@ export default async function Page() {
     </div>
   );
 }
-
-// async function getData() {
-//   const res = await fetch(`${process.env.NEXT_PUBLIC_URL}/api/job`, {
-//     cache: "no-cache",
-//   });
-//   const team: Main[] = await res.json();
-//   return team;
-// }
