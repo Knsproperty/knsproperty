@@ -93,14 +93,20 @@ const _meta: Props[] = [
   },
 ];
 
-const Trendings = () => {
-  const [category, setCategory] = useState("for sale");
 
+interface Trendings {
+  title: string,
+  type: 'buy' | 'rent' | 'offplan'
+}
+
+
+const Trendings: React.FC<Trendings> = ({ title, type }) => {
+  const [category, setCategory] = useState("for sale");
   return (
     <section>
       <Container>
-        <div className="_center flex-col pt-10 pb-14">
-          <h2 className="text-3xl text-primary  mb-4">Featured Properties</h2>
+        <div className=" flex-col pt-10 pb-10">
+          <h2 className="text-3xl text-primary mb-4 ml-5">{title}</h2>
 
           <div className="2xl:max-w-[1320px] xl:max-w-[1320px] lg:max-w-[80vw] md:max-w-[80vw] max-w-[100vw] ">
             <Slider>

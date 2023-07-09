@@ -8,9 +8,11 @@ export default function Home() {
   return (
     <main>
       <Search />
-      <Trendings />
-      <Book_Valuation />
+      <Trendings title="Properties for Sale" type="buy" />
+      <Trendings title="Properties for Rent" type="rent" />
+      <Trendings title="Offplan Properties" type="offplan" />
 
+      <Book_Valuation />
       <Info />
     </main>
   );

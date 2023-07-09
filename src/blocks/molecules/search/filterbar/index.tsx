@@ -10,7 +10,7 @@ const Filterbar = () => {
   const [bedrooms, setBedrooms] = useState("");
 
   return (
-    <div className="bg-white w-full absolute p-5 border-2 rounded-3xl">
+    <div className="bg-white w-full absolute-- p-5 border-2 rounded-3xl">
       <div className="grid-cols-2 grid gap-5">
         <div>
           <h4 className="mb-3">Minimum Price</h4>
