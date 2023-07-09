@@ -7,7 +7,7 @@ import { Main } from "@/types/main";
 
 export default async function Buy({ searchParams }: any) {
   const data = await fetch("http://localhost:3000/api/getproperties", {
-    cache: "force-cache",
+    next: { revalidate: 3600 },
   });
   const properties: Main[] = await data.json();
   // const buy_properties = await strapi.find<any>("buy-properties", {
@@ -40,7 +40,7 @@ export default async function Buy({ searchParams }: any) {
         {/* {JSON.stringify(properties)} */}
         {/* {buy_properties?.data.length == 0 && <DataNotFound />} */}
 
-        {/* {properties?.map(({ attributes }: any) => (
+        {properties.map(({ attributes }: any) => (
           <PropertyDetailed
             {...{
               property_type: "buy",
@@ -55,7 +55,7 @@ export default async function Buy({ searchParams }: any) {
               // media: ImageUrlExtractor(attributes),
             }}
           />
-        ))} */}
+        ))}
       </Container>
     </div>
   );
