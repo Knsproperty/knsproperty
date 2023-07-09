@@ -17,9 +17,9 @@ const PropertyCard: React.FC<Props> = ({
 }) => {
     return (
         // <Link href={'/'}>
-        <div className=" h-[400px] rounded-md shadow-md overflow-hidden hover:bg-[#F3F8FD]  m-2">
-            <header className="relative h-[200px]">
-                <Image className="w-full h-full" src={'/property.webp'} alt="property image" fill />
+        <div className=" h-[400px] group rounded-md shadow-md overflow-hidden hover:bg-[#F3F8FD] m-2">
+            <header className="relative h-[200px] overflow-hidden">
+                <Image className="w-full h-full group-hover:scale-150 transition ease-in-out" src={'/property.webp'} alt="property image" fill />
             </header>
             <main>
                 <p className="text-sm ml-3 mt-4 font-light inline-block bg-secondary p-1 px-3 rounded-full text-white ">AED {price} Per Annum</p>
