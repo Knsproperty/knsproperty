@@ -17,6 +17,7 @@ const Headar = () => {
             {__meta.map((link, index) => link.options
               ? <HeaderDropdown
                 key={index}
+                href={link.href}
                 text={link.text}
                 options={link.options} />
               : <Link
