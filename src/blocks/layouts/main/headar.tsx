@@ -40,8 +40,22 @@ const Headar = () => {
 export default Headar
 
 const __meta = [
-  { text: 'buy', href: '/property/buy' },
-  { text: 'rent', href: '/property/rent' },
+  {
+    text: 'buy', href: '/property/buy', options: [
+      { text: 'apartment for sale', href: "/about-us/careers" },
+      { text: 'villas for sale', href: "/about-us/team" },
+      { text: 'townhouses for sale', href: "/" },
+      { text: 'commercial for sale', href: "/contact" },
+    ]
+  },
+  {
+    text: 'rent', href: '/property/rent', options: [
+      { text: 'apartment for rent', href: "/about-us/careers" },
+      { text: 'villas for rent', href: "/about-us/team" },
+      { text: 'townhouses for rent', href: "/" },
+      { text: 'commercial for rent', href: "/contact" },
+    ]
+  },
   { text: 'commercial', href: '/' },
   { text: 'property management', href: '/' },
   { text: 'off plan', href: '/' },
