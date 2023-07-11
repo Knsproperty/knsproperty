@@ -27,30 +27,30 @@ const PropertyDetailed: React.FC<Props> = ({
   slug,
   property_type,
 }) => {
-  //   const [media1, media2, media3] = media;
+  const [media1, media2, media3] = media;
   return (
     <Link href={`/property/${property_type}/${slug}`}>
       <div className="lg:h-[328px] h-auto w-full grid lg:grid-cols-[1.5fr_1fr] my-5 border border-[#eef0f6] rounded-md overflow-hidden shadow-md bg-white hover:bg-[#F3F8FD] relative">
         <div className="hidden absolute top-0 left-0 bg-white z-50 m-5 px-3 py-2 text-sm font-light drop-shadow-md lg   :flex items-center rounded-md ">
-          {/* <BsImages className="mr-2" size={20} /> {media.length} */}
+          <BsImages className="mr-2" size={20} /> {media.length}
         </div>
-        {/* <div className="bg-white grid md:grid-cols-[2fr_1fr] h-[290px] gap-2 lg:h-full p-2">
+        <div className="bg-white grid md:grid-cols-[2fr_1fr] h-[290px] gap-2 lg:h-full p-2">
 
-                    <div className="relative overflow-hidden rounded-md ">
-                        <Image alt="image" src={media1} fill />
-                    </div>
-                    <div className="hidden  md:grid grid-rows-2 gap-2">
+          <div className="relative overflow-hidden rounded-md bg-lightgray ">
+            <Image alt={title} src={media1} fill />
+          </div>
+          <div className="hidden  md:grid grid-rows-2 gap-2">
 
-                        <div className="relative overflow-hidden rounded-md">
-                            <Image alt="image" src={media2} fill />
-                        </div>
+            <div className="relative overflow-hidden rounded-md bg-lightgray">
+              <Image alt={title} src={media2} fill />
+            </div>
 
-                        <div className="relative overflow-hidden rounded-md">
-                            <Image alt="image" src={media3} fill />
-                        </div>
-                    </div>
+            <div className="relative overflow-hidden rounded-md bg-lightgray">
+              <Image alt={title} src={media3} fill />
+            </div>
+          </div>
 
-                </div> */}
+        </div>
 
         <div className=" lg:pt-4 grid lg:grid-rows-[auto_70px] pb-3">
           <div className="px-5">

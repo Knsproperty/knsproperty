@@ -8,7 +8,6 @@ export default function Loading() {
         <Skeleton />
         <Skeleton />
         <Skeleton />
-
       </div>
     </Container>
 

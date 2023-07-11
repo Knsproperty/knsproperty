@@ -64,7 +64,6 @@ const __meta = [
     text: 'explore more', href: '/', options: [
       { text: 'careers', href: "/about-us/careers" },
       { text: 'our team', href: "/about-us/team" },
-      { text: 'about us', href: "/" },
       { text: 'contact us', href: "/contact" },
     ]
   },

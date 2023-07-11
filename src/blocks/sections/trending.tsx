@@ -101,12 +101,14 @@ interface Trendings {
 
 
 const Trendings: React.FC<Trendings> = ({ title, type }) => {
-  const [category, setCategory] = useState("for sale");
   return (
     <section>
       <Container>
         <div className=" flex-col pt-10 pb-10">
-          <h2 className="text-3xl text-primary mb-4 ml-5">{title}</h2>
+          <div className="flex items-center justify-between px-6">
+            <h2 className="text-3xl text-primary mb-4 ">{title}</h2>
+            <button className="text-sm  text-secondary hover:underline">Explore more</button>
+          </div>
 
           <div className="2xl:max-w-[1320px] xl:max-w-[1320px] lg:max-w-[80vw] md:max-w-[80vw] max-w-[100vw] ">
             <Slider>

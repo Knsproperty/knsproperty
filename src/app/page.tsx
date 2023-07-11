@@ -2,7 +2,7 @@ import Info from "@/blocks/sections/info";
 import { Search } from "@/blocks/sections";
 import Trendings from "@/blocks/sections/trending";
 import Book_Valuation from "@/blocks/sections/book-valuation";
-
+import Testimonals from "@/blocks/molecules/testimonals";
 export default function Home() {
   // const data = await getData();
   return (
@@ -13,7 +13,8 @@ export default function Home() {
       <Trendings title="Offplan Properties" type="offplan" />
 
       <Book_Valuation />
-      <Info />
+      <Testimonals />
+      {/* <Info /> */}
     </main>
   );
 }

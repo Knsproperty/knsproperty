@@ -1,6 +1,5 @@
 import Link from "next/link";
 import Container from "@/blocks/atoms/container";
-import BtnHoverOutline from "@/blocks/atoms/buttons/hover-outline";
 import { FiTwitter, FiInstagram, FiMapPin } from "react-icons/fi";
 
 const __meta = {
@@ -17,18 +16,7 @@ const __meta = {
       Icon: FiMapPin,
       href: "/",
     },
-    {
-      Icon: FiTwitter,
-      href: "/",
-    },
-    {
-      Icon: FiInstagram,
-      href: "/",
-    },
-    {
-      Icon: FiMapPin,
-      href: "/",
-    },
+
   ],
   links: {
     services: [
@@ -58,12 +46,12 @@ const Footer = () => {
           <div className="order-2 lg:order-1">
             <div className="flex gap-3 flex-wrap mb-5">
               {__meta.social.map((links, index) => (
-                <BtnHoverOutline key={index}>
+                <button key={index} className=" bg-white shadow-md py-3.5 group font-semibold text-sm rounded-full capitalize px-3.5">
                   <links.Icon
-                    className="stroke-black group-hover:stroke-white"
-                    size={20}
+                    className="stroke-black group-hover:stroke-white--"
+                    size={18}
                   />
-                </BtnHoverOutline>
+                </button>
               ))}
             </div>
 

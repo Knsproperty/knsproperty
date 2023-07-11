@@ -9,6 +9,10 @@ const nextConfig = {
             {
                 protocol: "https",
                 hostname: 'ksnpropertiesstrapi-production.up.railway.app'
+            },
+            {
+                protocol: "https",
+                hostname: 's3-ap-southeast-1.amazonaws.com'
             }
         ],
     },
