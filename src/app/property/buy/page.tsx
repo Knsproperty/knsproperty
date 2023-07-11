@@ -37,9 +37,6 @@ export default async function Buy({ searchParams }: any) {
   return (
     <div>
       <Container>
-        {/* {JSON.stringify(properties)} */}
-        {/* {buy_properties?.data.length == 0 && <DataNotFound />} */}
-
         {properties.map(({ attributes }: any) => (
           <PropertyDetailed
             {...{
