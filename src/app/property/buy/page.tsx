@@ -42,8 +42,6 @@ export default async function Buy({ searchParams }: any) {
 
         {properties.map(({ attributes }: any) => (
           <>
-            {/* {JSON.stringify(attributes.Images)} */}
-
             <PropertyDetailed
               {...{
                 property_type: "buy",

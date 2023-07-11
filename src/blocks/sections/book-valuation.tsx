@@ -7,7 +7,7 @@ export default function Book_Valuation() {
   return (
     <section className="bg-[#e3ecee]" id="contact">
       <Container>
-        <div className="pt-[60px] pb-[80px] rounded-lg sm:px-[75px] text-center">
+        <div className="pt-[60px] pb-[80px] rounded-lg px-5 text-center">
           <div className="w-full">
             <div className="pb-6">
               <h2 className="text-secondary font-medium pb-[1.5rem] text-3xl">
@@ -20,7 +20,7 @@ export default function Book_Valuation() {
               </p>
             </div>
           </div>
-          <div className="lg:flex lg:items-center">
+          <div className="lg:flex lg:items-center lg:max-w-none lg:mx-0 max-w-[500px] mx-auto">
             <div className="mt-12 lg:flex lg:mt-0 lg:flex-col lg:items-center lg:w-1/2 lg:mx-10">
               <img
                 className="hidden object-cover mx-auto rounded-lg lg:block shrink-0 "

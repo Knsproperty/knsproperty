@@ -1,13 +1,8 @@
 "use client";
-
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
-import { useState } from "react";
-import Container from "../atoms/container";
-
-import PropertyCard, { Props } from "../molecules/cards/property";
-
+//glich if i remove this use client card margin will not be there
 import Slider from "../molecules/slider";
+import Container from "../atoms/container";
+import PropertyCard, { Props } from "../molecules/cards/property";
 
 const _meta: Props[] = [
   {
@@ -105,12 +100,12 @@ const Trendings: React.FC<Trendings> = ({ title, type }) => {
     <section>
       <Container>
         <div className=" flex-col pt-10 pb-10">
-          <div className="flex items-center justify-between px-6">
-            <h2 className="text-3xl text-primary mb-4 ">{title}</h2>
+          <div className="flex items-center justify-between px-6 mb-2">
+            <h2 className="lg:text-xl text-xl  text-primary  ">{title}</h2>
             <button className="text-sm  text-secondary hover:underline">Explore more</button>
           </div>
 
-          <div className="2xl:max-w-[1320px] xl:max-w-[1320px] lg:max-w-[80vw] md:max-w-[80vw] max-w-[100vw] ">
+          <div className="2xl:max-w-[1320px] xl:max-w-[1320px] max-w-[100vw]">
             <Slider>
               {_meta.map((property, index) => (
                 <PropertyCard key={index} {...property} />
