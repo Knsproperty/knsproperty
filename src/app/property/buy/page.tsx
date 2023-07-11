@@ -38,20 +38,23 @@ export default async function Buy({ searchParams }: any) {
     <div>
       <Container>
         {properties.map(({ attributes }: any) => (
-          <PropertyDetailed
-            {...{
-              property_type: "buy",
-              slug: attributes.slug,
-              title: attributes.Short_Address,
-              discription: attributes.Location,
-              price: attributes.Price,
-              bed: attributes.Bedrooms,
-              bathroom: attributes.Bathrooms,
-              area: attributes.Area,
-              media: [],
-              // media: ImageUrlExtractor(attributes),
-            }}
-          />
+          <>
+            {/* {JSON.stringify(attributes.Images)} */}
+
+            <PropertyDetailed
+              {...{
+                property_type: "buy",
+                slug: attributes.slug,
+                title: attributes.Short_Address,
+                discription: attributes.Location,
+                price: attributes.Price,
+                bed: attributes.Bedrooms,
+                bathroom: attributes.Bathrooms,
+                area: attributes.Area,
+                media: [attributes.Images.data[0].url, attributes.Images.data[1].url, attributes.Images.data[2].url],
+              }}
+            />
+          </>
         ))}
       </Container>
     </div>

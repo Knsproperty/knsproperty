@@ -7,6 +7,7 @@
         @apply text-black;
     }
 
+    /* custom css goes here... */
     ._container {
         @apply max-w-[1520px];
     }
@@ -14,7 +15,6 @@
     ._center {
         @apply flex items-center justify-center
     }
-
 
     .custom-scrollbar::-webkit-scrollbar {
         width: 5px;
@@ -28,9 +28,4 @@
         background-color: darkgrey;
         border-radius: 10px;
     }
-
-
-
-
-
 }

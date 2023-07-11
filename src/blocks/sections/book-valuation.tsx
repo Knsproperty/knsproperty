@@ -1,29 +1,26 @@
-"use client";
 import React from "react";
 import Container from "../atoms/container";
 import Book_Input from "../atoms/inputs/book-v-input";
-import Country_Input from "../atoms/inputs/country-input";
+import CountryPhoneNumberInput from "../atoms/inputs/country-input";
 
 export default function Book_Valuation() {
   return (
-    <div className="bg-[#e3ecee]">
+    <section className="bg-[#e3ecee]" id="contact">
       <Container>
-        <div className="pt-[60px] pb-[80px] rounded-lg  sm:px-[75px] text-center mb-14">
+        <div className="pt-[60px] pb-[80px] rounded-lg sm:px-[75px] text-center">
           <div className="w-full">
             <div className="pb-6">
               <h2 className="text-secondary font-medium pb-[1.5rem] text-3xl">
-                Book a property valuation
+                Contact Us
               </h2>
-              <p className="col-md-7 col-11 mx-auto text-primary text-base sm:w-[60%] pb-[10px] font-light ">
-                <span className="text-base">
-                  We have a waitlist of clients ready to view properties,
-                  extensive comparable community data and a trusted reputation.{" "}
-                </span>
+              <p className="col-md-7 col-11 mx-auto text-primary text-base sm:w-[60%] pb-[10px] font-light">
+                We have a waitlist of clients ready to view properties,
+                extensive comparable community data and a trusted reputation.
                 Just three of the reasons why people choose us.
               </p>
             </div>
           </div>
-          <div className="lg:flex lg:items-center  ">
+          <div className="lg:flex lg:items-center">
             <div className="mt-12 lg:flex lg:mt-0 lg:flex-col lg:items-center lg:w-1/2 lg:mx-10">
               <img
                 className="hidden object-cover mx-auto rounded-lg lg:block shrink-0 "
@@ -41,7 +38,7 @@ export default function Book_Valuation() {
                   <option value={'rent'}>Rent</option>
                 </select>
 
-                <Country_Input />
+                <CountryPhoneNumberInput />
                 <Book_Input type="text" placeholder="Property Address*" />
 
                 <button className="bg-primary group flex items-center mt-5 py-4 text-white hover:bg-white  hover:text-primary font-semibold text-sm rounded-full capitalize px-8 w-full justify-center">
@@ -53,6 +50,6 @@ export default function Book_Valuation() {
           </div>
         </div>
       </Container>
-    </div>
+    </section>
   );
 }
