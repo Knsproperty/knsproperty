@@ -1,4 +1,5 @@
 import slugify from "@/lib/slugigy";
+import { Main } from "@/types/main";
 import strapi, { populate } from "@/utils/strapi";
 import axios from "axios";
 import { NextResponse } from "next/server";
@@ -148,11 +149,15 @@ export async function GET() {
     };
 
     const convertedArray = await convertArray(parsedXml);
-    const buy_properties = await strapi.find("buy-properties", {
-      populate,
-    });
-    const combinedArray = await convertedArray.concat(buy_properties.data);
-    return NextResponse.json(combinedArray);
+    const filterArray = (inputArray: any, slug: string) => {
+      return inputArray.filter((item: Main) => {
+        const propertySlug = item.attributes.slug ? item.attributes.slug : null;
+        return propertySlug === slug.toLowerCase();
+      });
+    };
+
+    return NextResponse.json(filterArray(convertedArray, "bayshore"));
+    // return NextResponse.json(parsedXml);
   } catch (error: any) {
     console.error("Error fetching XML data:", error);
     return NextResponse.error();

@@ -24,6 +24,7 @@ export default async function page({ params }: any) {
 
   return (
     <Container>
+      {JSON.stringify(params)}
       <div className="">
         <section className="h-[400px] bg-white grid lg:grid-cols-2 my-5">
           <div className="relative rounded-md overflow-hidden">
