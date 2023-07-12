@@ -152,7 +152,7 @@ export async function GET() {
       populate,
     });
     const combinedArray = await convertedArray.concat(buy_properties.data);
-    return NextResponse.json(combinedArray);
+    return NextResponse.json(parsedXml);
   } catch (error: any) {
     console.error("Error fetching XML data:", error);
     return NextResponse.error();

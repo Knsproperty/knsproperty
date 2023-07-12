@@ -11,11 +11,10 @@ import { useState } from "react";
 import { deleteSearchParams, updateSearchParams } from "@/utils/param";
 import { useRouter } from "next/navigation";
 
-
 import { LuFilter } from "react-icons/lu";
 
 const Filter = () => {
-  const [filterVisiblity, setFilterVisiblity] = useState(false)
+  const [filterVisiblity, setFilterVisiblity] = useState(false);
   const router = useRouter();
   const [searchInput, setSearchInput] = useState(""); // State for the search input
   const [type, setPropertyType] = useState(""); // State for property type
@@ -23,10 +22,9 @@ const Filter = () => {
   const [max, setPriceMax] = useState(""); // State for maximum price
   const [bedrooms, setBeds] = useState(""); // State for number of beds
 
-
   const handleFilterClick = () => {
-    setFilterVisiblity(!filterVisiblity)
-  }
+    setFilterVisiblity(!filterVisiblity);
+  };
 
   const handleUpdateParams = (title: string, value: string) => {
     let newPathName = "";
@@ -59,7 +57,7 @@ const Filter = () => {
       switch (title) {
         case "Property type":
           setPropertyType(value);
-          newPathName = updateSearchParams("type", value.toLowerCase());
+          newPathName = updateSearchParams("type", value);
           break;
         case "Price Min":
           setPriceMin(value);
@@ -99,8 +97,9 @@ const Filter = () => {
             />
           </div>
 
-
-          <button onClick={handleFilterClick} className="_center lg:hidden"><LuFilter size={22} /></button>
+          <button onClick={handleFilterClick} className="_center lg:hidden">
+            <LuFilter size={22} />
+          </button>
 
           <div className=" lg:flex w-full hidden gap-5">
             <DropdownBuyRent />
@@ -130,7 +129,6 @@ const Filter = () => {
             />
           </div>
         </div>
-
 
         {filterVisiblity && (
           <div className="pb-5 lg:hidden block">
@@ -163,7 +161,6 @@ const Filter = () => {
             </div>
           </div>
         )}
-
       </Container>
     </div>
   );

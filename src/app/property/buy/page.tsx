@@ -6,38 +6,38 @@ import PropertyDetailed from "@/blocks/molecules/cards/property-detailed";
 import { Main } from "@/types/main";
 
 export default async function Buy({ searchParams }: any) {
-  const data = await fetch("http://localhost:3000/api/getproperties", {
-    next: { revalidate: 3600 },
-  });
-  const properties: Main[] = await data.json();
-  // const buy_properties = await strapi.find<any>("buy-properties", {
-  //   populate: populate,
-  //   filters: {
-  //     ...(searchParams.max &&
-  //       searchParams.min && {
-  //       Price: {
-  //         $lte: searchParams.max,
-  //         $gte: searchParams.min,
-  //       },
-  //     }),
-  //     ...(searchParams.type && { Property_Type: searchParams.type }),
-  //     ...(searchParams.bedrooms && { Bedrooms: searchParams.bedrooms }),
-  //     ...(searchParams.query && {
-  //       Name: {
-  //         $containsi: searchParams.query,
-  //       },
-  //     }),
-  //   },
-  //   pagination: {
-  //     page: searchParams.page ?? 1,
-  //     pageSize: 20,
-  //   },
+  // const data = await fetch("http://localhost:3000/api/getproperties", {
+  //   next: { revalidate: 3600 },
   // });
+  // const properties: Main[] = await data.json();
+  const buy_properties = await strapi.find<any>("buy-properties", {
+    populate: populate,
+    filters: {
+      ...(searchParams.max &&
+        searchParams.min && {
+          Price: {
+            $lte: searchParams.max,
+            $gte: searchParams.min,
+          },
+        }),
+      ...(searchParams.type && { Property_Type: searchParams.type }),
+      ...(searchParams.bedrooms && { Bedrooms: searchParams.bedrooms }),
+      ...(searchParams.query && {
+        Name: {
+          $containsi: searchParams.query,
+        },
+      }),
+    },
+    pagination: {
+      page: searchParams.page ?? 1,
+      pageSize: 20,
+    },
+  });
 
   return (
     <div>
       <Container>
-        {properties.map(({ attributes }: any) => (
+        {buy_properties.data.map(({ attributes }: any) => (
           <>
             <PropertyDetailed
               {...{
@@ -49,7 +49,11 @@ export default async function Buy({ searchParams }: any) {
                 bed: attributes.Bedrooms,
                 bathroom: attributes.Bathrooms,
                 area: attributes.Area,
-                media: [attributes.Images.data[0].url, attributes.Images.data[1].url, attributes.Images.data[2].url],
+                media: [
+                  attributes.Cron_Images.data[0].url,
+                  attributes.Cron_Images.data[1].url,
+                  attributes.Cron_Images.data[2].url,
+                ],
               }}
             />
           </>

@@ -1,13 +1,10 @@
 const property_types = [
   { value: "Show All", label: "Show All" },
-  { value: "Apartment", label: "Apartment" },
-  { value: "Villa", label: "Villa" },
-  { value: "Department", label: "Department" },
-  { value: "Townhouse", label: "Townhouse" },
-  { value: "Penthouse", label: "Penthouse" },
-  { value: "Duplex", label: "Duplex" },
-  { value: "Plot", label: "Plot" },
-  { value: "Land", label: "Land" },
+  { value: "AP", label: "Apartment" },
+  { value: "VH", label: "Villa" },
+  { value: "FA", label: "Flat" },
+  { value: "TH", label: "Townhouse" },
+  { value: "OF", label: "Office" },
 ];
 
 const beds_options = [

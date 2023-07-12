@@ -1,4 +1,5 @@
 "use client";
+import strapi from "@/utils/strapi";
 import axios from "axios";
 import { useState, ChangeEvent, FormEvent } from "react";
 
@@ -9,13 +10,14 @@ interface FormData {
   resume: File | null;
 }
 
-export default function Form() {
+export default function Form({ id }: any) {
   const [formData, setFormData] = useState<FormData>({
     fullName: "",
     email: "",
     phone: "",
     resume: null,
   });
+
   const handleFileUpload = async (file: any) => {
     const formData = new FormData();
     formData.append("file", file);
@@ -27,13 +29,24 @@ export default function Form() {
         "https://api.cloudinary.com/v1_1/hellooworkd/image/upload",
         formData
       );
-
-      console.log(response);
+      console.log(response.data.url);
+      return response.data.url;
     } catch (error) {
       console.log(error);
     }
   };
-
+  const applyJob = async () => {
+    const pdf = await handleFileUpload(formData.resume);
+    let data = {
+      Name: formData.fullName,
+      email: formData.email,
+      number: formData.phone,
+      Cv: pdf,
+      job: id,
+    };
+    const res = strapi.create("job-applications", data);
+    console.log(res);
+  };
   const [errors, setErrors] = useState<Partial<FormData>>({});
 
   const handleInputChange = (e: ChangeEvent<HTMLInputElement>) => {
@@ -52,7 +65,7 @@ export default function Form() {
     }));
   };
 
-  const handleSubmit = (e: FormEvent) => {
+  const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
 
     const validationErrors: Partial<FormData> = {};
@@ -72,8 +85,7 @@ export default function Form() {
     setErrors(validationErrors);
 
     if (Object.keys(validationErrors).length === 0) {
-      console.log(formData);
-      handleFileUpload(formData.resume);
+      await applyJob();
       // Form is valid, perform submission logic
       // ...
     }
@@ -83,7 +95,7 @@ export default function Form() {
     <div>
       {/* ... */}
 
-      <div className="px-10">
+      <div className="">
         <form onSubmit={handleSubmit}>
           <label className="label">
             <span className="label-text text-black">Full Name*</span>
