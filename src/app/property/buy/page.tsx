@@ -4,17 +4,20 @@ import DataNotFound from "@/blocks/atoms/data-not-found";
 import PropertyDetailed from "@/blocks/molecules/cards/property-detailed";
 
 export default async function Buy({ searchParams }: any) {
-
   const { data } = await strapi.find<any>("buy-properties", {
     populate: populate,
     filters: {
-      ...(searchParams.max &&
-        searchParams.min && {
-        Price: {
-          $lte: searchParams.max,
-          $gte: searchParams.min,
-        },
-      }),
+      $or: [
+        ...(searchParams.max && searchParams.min
+          ? [{ Price: { $lte: searchParams.max, $gte: searchParams.min } }]
+          : []),
+        ...(searchParams.max && !searchParams.min
+          ? [{ Price: { $lte: searchParams.max } }]
+          : []),
+        ...(searchParams.min && !searchParams.max
+          ? [{ Price: { $gte: searchParams.min } }]
+          : []),
+      ],
       ...(searchParams.type && { Property_Type: searchParams.type }),
       ...(searchParams.bedrooms && { Bedrooms: searchParams.bedrooms }),
       ...(searchParams.query && {
@@ -28,8 +31,6 @@ export default async function Buy({ searchParams }: any) {
       pageSize: 20,
     },
   });
-
-
 
   return (
     <div>
