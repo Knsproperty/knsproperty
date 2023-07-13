@@ -7,13 +7,17 @@ export default async function Buy({ searchParams }: any) {
   const { data } = await strapi.find<any>("rent-properties", {
     populate: populate,
     filters: {
-      ...(searchParams.max ||
-        (searchParams.min && {
-          Price: {
-            $lte: searchParams.max ?? 50000000,
-            $gte: searchParams.min ?? 0,
-          },
-        })),
+      $or: [
+        ...(searchParams.max && searchParams.min
+          ? [{ Price: { $lte: searchParams.max, $gte: searchParams.min } }]
+          : []),
+        ...(searchParams.max && !searchParams.min
+          ? [{ Price: { $lte: searchParams.max } }]
+          : []),
+        ...(searchParams.min && !searchParams.max
+          ? [{ Price: { $gte: searchParams.min } }]
+          : []),
+      ],
       ...(searchParams.type && { Property_Type: searchParams.type }),
       ...(searchParams.bedrooms && { Bedrooms: searchParams.bedrooms }),
       ...(searchParams.query && {
