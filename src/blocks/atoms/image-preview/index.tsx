@@ -11,9 +11,11 @@ import ImagePreviewer from "@/blocks/molecules/image-preview-slider"
 
 const slider_settings = {
     dots: true,
+    arrows: false,
     infinite: true,
     slidesToShow: 1,
     slidesToScroll: 1,
+
 };
 
 const ImagePreviwSlider: React.FC<Props> = ({ media }) => {
