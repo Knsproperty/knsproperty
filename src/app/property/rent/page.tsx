@@ -1,11 +1,10 @@
 import Container from "@/blocks/atoms/container";
-import Exclusive from "@/blocks/sections/exclusive";
 import strapi, { populate } from "@/utils/strapi";
+import DataNotFound from "@/blocks/atoms/data-not-found";
 import PropertyDetailed from "@/blocks/molecules/cards/property-detailed";
 
-
 export default async function Buy({ searchParams }: any) {
-    const buy_properties = await strapi.find<any>("rent-properties", {
+    const { data } = await strapi.find<any>("rent-properties", {
         populate: populate,
         filters: {
             ...(searchParams.max &&
@@ -29,7 +28,11 @@ export default async function Buy({ searchParams }: any) {
     return (
         <div>
             <Container>
-                {buy_properties?.data?.map(({ attributes }: any) => (
+
+                {data.length == 0 && <DataNotFound />}
+
+
+                {data?.map(({ attributes }: any) => (
                     <PropertyDetailed
                         {...{
                             property_type: 'rent',
@@ -40,7 +43,11 @@ export default async function Buy({ searchParams }: any) {
                             bed: attributes.Bedrooms,
                             bathroom: attributes.Bathrooms,
                             area: attributes.Area,
-                            media: ImageUrlExtractor(attributes),
+                            media: [
+                                attributes.Cron_Images.data[0].url,
+                                attributes.Cron_Images.data[1].url,
+                                attributes.Cron_Images.data[2].url,
+                            ],
                         }}
                     />
                 ))}

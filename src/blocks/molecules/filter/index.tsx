@@ -9,7 +9,7 @@ import {
 } from "../search/filterbar/data";
 import { useState } from "react";
 import { deleteSearchParams, updateSearchParams } from "@/utils/param";
-import { useRouter } from "next/navigation";
+import { useRouter, usePathname } from "next/navigation";
 
 import { LuFilter } from "react-icons/lu";
 
@@ -21,7 +21,7 @@ const Filter = () => {
   const [min, setPriceMin] = useState(""); // State for minimum price
   const [max, setPriceMax] = useState(""); // State for maximum price
   const [bedrooms, setBeds] = useState(""); // State for number of beds
-
+  const pathname = usePathname()
   const handleFilterClick = () => {
     setFilterVisiblity(!filterVisiblity);
   };

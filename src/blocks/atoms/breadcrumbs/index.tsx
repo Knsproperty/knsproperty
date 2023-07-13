@@ -57,7 +57,7 @@ function getNameByPath(path: string) {
         team: {
             name: 'team',
             href: '/about-us/team'
-        }
+        },
     }
     return names[path] ? names[path] : { name: '', href: '' } as { name: string, href: string }
 

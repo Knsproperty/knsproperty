@@ -8,7 +8,7 @@ import React from "react";
 import { FiArrowRight, FiArrowLeft } from "react-icons/fi";
 import SlickSlider from "react-slick";
 
-function SampleNextArrow(props: any) {
+export function SampleNextArrow(props: any) {
     const { className, style, onClick } = props;
     return (
         <div
@@ -16,13 +16,16 @@ function SampleNextArrow(props: any) {
             style={{
                 ...style, display: "block", background: "transparent"
             }}
-            onClick={onClick}>
+            onClick={(event) => {
+                event.stopPropagation()
+                onClick()
+            }}>
             <FiArrowRight size={20} className=" -mt-5 -ml-[30px] w-[40px] h-[40px] bg-white shadow-md p-2.5 z-[99999] absolute rounded-full" />
         </div >
     );
 }
 
-function SamplePrevArrow(props: any) {
+export function SamplePrevArrow(props: any) {
     const { className, style, onClick } = props;
     return (
         <div
@@ -30,7 +33,10 @@ function SamplePrevArrow(props: any) {
             style={{
                 ...style, display: "block", background: "transparent"
             }}
-            onClick={onClick}>
+            onClick={(event) => {
+                event.stopPropagation()
+                onClick()
+            }}>
             <FiArrowLeft size={20} className=" -mt-5 ml-[15px] w-[40px] h-[40px] bg-white shadow-md p-2.5  rounded-full" />
         </div >
     );
