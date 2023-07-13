@@ -34,7 +34,7 @@ const PropertyDetailed: React.FC<Props> = ({
         <div className="hidden absolute top-0 left-0 bg-white z-50 m-5 px-3 py-2 text-sm font-light drop-shadow-md lg   :flex items-center rounded-md ">
           <BsImages className="mr-2" size={20} /> {media.length}
         </div>
-        <div className="bg-white grid md:grid-cols-[2fr_1fr] h-[290px] gap-2 lg:h-full p-2">
+        <div className="grid md:grid-cols-[2fr_1fr] h-[290px] gap-2 lg:h-full p-2">
 
           <div className="relative overflow-hidden rounded-md bg-lightgray ">
             <Image alt={title} src={media1} fill />

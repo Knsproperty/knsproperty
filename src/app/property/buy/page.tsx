@@ -34,6 +34,12 @@ export default async function Buy({ searchParams }: any) {
   return (
     <div>
       <Container>
+
+        <div className="mt-5">
+          <h3 className="text-2xl text-secondary font-semibold mb-1">Search Result</h3>
+          <p className="text-sm font-light">Properties for sale  ({data.length})</p>
+        </div>
+
         {data.length == 0 && <DataNotFound />}
 
         {data.map(({ attributes }: any) => (
