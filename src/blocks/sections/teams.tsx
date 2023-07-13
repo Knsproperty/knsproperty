@@ -13,7 +13,7 @@ export default async function Teams() {
       key={index}
       name={member.attributes.Name}
       slug={member.attributes.slug}
-      image={`https://ksnpropertiesstrapi-production.up.railway.app${member.attributes.Profile.data.attributes.url}`}
+      image={member.attributes.Profile.data.attributes.url}
       role={member.attributes.Position}
     />
   ));

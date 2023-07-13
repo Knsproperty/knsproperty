@@ -78,12 +78,21 @@ const Filter = () => {
 
     router.push(newPathName);
   };
+  const handleFormSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
 
+    // Update the URL search parameters and navigate to the new URL
+    const newPathName = updateSearchParams("query", searchInput);
+    router.push(newPathName);
+  };
   return (
     <div className="bg-[#e3effa]">
       <Container>
         <div className="lg:h-[88px] py-3 lg:py-0 grid lg:grid-cols-[1fr_2fr] grid-cols-[auto_50px] lg:gap-5 gap-2 items-center lg:px-10">
-          <div className="bg-white rounded-full flex items-center py-3 px-5 gap-4 relative">
+          <form
+            onSubmit={handleFormSubmit}
+            className="bg-white rounded-full flex items-center py-3 px-5 gap-4 relative"
+          >
             <div className="_center">
               <FiSearch size={18} />
             </div>
@@ -95,7 +104,7 @@ const Filter = () => {
               value={searchInput}
               onChange={(e) => setSearchInput(e.target.value)}
             />
-          </div>
+          </form>
 
           <button onClick={handleFilterClick} className="_center lg:hidden">
             <LuFilter size={22} />
