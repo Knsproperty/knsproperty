@@ -11,8 +11,8 @@ const TeamCard: React.FC<Props> = ({ slug, image, name, role }) => {
     const url = `/about-us/team/${slug}`
     return (
         <Link href={url}>
-            <div className="grid group grid-rows-[300px_100px] w-[300px] cursor-pointer">
-                <div className="relative overflow-hidden rounded-lg">
+            <div className="grid group w-[300px] cursor-pointer">
+                <div className="aspect-w-5 aspect-h-6 overflow-hidden rounded-lg">
                     <Image src={image} fill alt={name} />
                 </div>
 

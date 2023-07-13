@@ -14,7 +14,7 @@ export default async function page({ params }: any) {
       <div>
         <Image media={[...attributes.Cron_Images.data.map((e: any) => e.url)]} />
 
-        <section className="grid lg:grid-cols-[3fr_1fr] gap-10 ">
+        <section className="grid lg:grid-cols-[3fr_1fr] gap-10 lg:px-0 px-5">
           <main>
             <h2 className="text-2xl font-semibold text-secondary"> AED {addCommasToNumber(attributes.Price)} <span className="text-sm font-medium "> / Per Year</span></h2>
 

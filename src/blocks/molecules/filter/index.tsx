@@ -88,11 +88,10 @@ const Filter = () => {
   return (
     <div className="bg-[#e3effa]">
       <Container>
-        <div className="lg:h-[88px] py-3 lg:py-0 grid lg:grid-cols-[1fr_2fr] grid-cols-[auto_50px] lg:gap-5 gap-2 items-center lg:px-10">
+        <div className="lg:h-[88px] py-3 lg:py-0 grid lg:grid-cols-[1fr_2fr] grid-cols-[auto_50px] lg:gap-5 gap-2 items-center lg:px-10 px-2">
           <form
             onSubmit={handleFormSubmit}
-            className="bg-white rounded-full flex items-center py-3 px-5 gap-4 relative"
-          >
+            className="bg-white rounded-full flex items-center py-3 px-5 gap-4 relative">
             <div className="_center">
               <FiSearch size={18} />
             </div>

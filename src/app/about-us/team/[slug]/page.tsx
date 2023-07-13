@@ -1,10 +1,9 @@
-import member from "../../../../../sample/team.json";
 import Container from "@/blocks/atoms/container";
 import { Main } from "@/types/team";
 import Image from "next/image";
 
 export default async function Page({ params: { slug } }: any) {
-  const data: Main = await getData(slug);
+  const { attributes }: Main = await getData(slug);
   return (
     <main>
       <Container>
@@ -12,23 +11,23 @@ export default async function Page({ params: { slug } }: any) {
           <section className="flex items-center xl:justify-end justify-center">
             <div className="relative h-[300px] w-[300px]  rounded-full overflow-hidden">
               <Image
-                src={`https://ksnpropertiesstrapi-production.up.railway.app${data.attributes.Profile.data.attributes.url}`}
+                src={attributes.Profile.data.attributes.url}
                 fill
-                alt={data.attributes.Name}
+                alt={attributes.Name}
               />
             </div>
           </section>
           <section className="flex items-center">
             <div>
               <h3 className="xl:text-left text-center capitalize text-xl group-hover:underline mb-1">
-                {data.attributes.Name}
+                {attributes.Name}
               </h3>
               <p className="xl:text-left text-center capitalize text-sm mb-2">
-                {data.attributes.Position}
+                {attributes.Position}
               </p>
 
               <p className="xl:text-left text-center text-sm font-light">
-                {data.attributes.Description}
+                {attributes.Description}
               </p>
             </div>
           </section>
