@@ -1,16 +1,14 @@
-import Info from "@/blocks/sections/info";
 import { Search } from "@/blocks/sections";
 import Trendings from "@/blocks/sections/trending";
 import Book_Valuation from "@/blocks/sections/book-valuation";
 import Testimonals from "@/blocks/molecules/testimonals";
-export default function Home() {
+export default async function Home() {
   // const data = await getData();
   return (
     <main>
       <Search />
       <Trendings title="Properties for Sale" type="buy" />
       <Trendings title="Properties for Rent" type="rent" />
-      <Trendings title="Offplan Properties" type="offplan" />
 
       <Book_Valuation />
       <Testimonals />
