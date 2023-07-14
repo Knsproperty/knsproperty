@@ -47,7 +47,7 @@ export default Trendings;
 // Exclusive Properties
 const getData = async (type: string) => {
   const data = await fetch(`${process.env.NEXT_PUBLIC_URL}/api/exclusive/${type}`, {
-    cache: "no-cache",
+    cache: "force-cache",
   });
   return await data.json();
 };
