@@ -14,7 +14,7 @@ const Drawer = () => {
             <div className="drawer drawer-end">
                 <input id="my-drawer" type="checkbox" className="drawer-toggle" />
                 <div className="drawer-content flex items-center justify-end">
-                    <label htmlFor="my-drawer" className="drawer-button">
+                    <label htmlFor="my-drawer" className="drawer-button px-3">
                         <FiMenu size={25} />
                     </label>
                 </div>
@@ -31,7 +31,7 @@ const Drawer = () => {
                                 key={index}
                                 href={link.href}
                                 onClick={handleClose}
-                                className="text-[16px] font-light pl-5 py-2.5 text-primary capitalize border-b border-[#d3d3d351]">
+                                className="text-[16px] font-light pl-5 py-2.5 text-primary capitalize border-b border-[#d3d3d32e]">
                                 {link.text}
                             </Link>
                         ))}
