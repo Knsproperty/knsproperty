@@ -81,7 +81,7 @@ const __meta = [
     ],
   },
   { text: "commercial", href: "/" },
-  { text: "property management", href: "/" },
+  { text: "property management", href: "/property/management" },
   { text: "off plan", href: "/" },
   {
     text: "explore more",
