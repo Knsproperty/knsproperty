@@ -40,13 +40,13 @@ const Headar = () => {
             <Drawer />
 
             <div className="_center hidden lg:flex">
-              <button className="bg-primary py-4 text-white hover:bg-white group hover:border hover:border-primary hover:text-primary font-medium text-sm rounded-full capitalize px-8 flex gap-2 items-center">
+              <a className="bg-primary py-4 text-white hover:bg-white group hover:border hover:border-primary hover:text-primary font-medium text-sm rounded-full capitalize px-8 flex gap-2 items-center">
                 <FiPhone
                   color="white"
                   className="stroke-white group-hover:stroke-primary"
                 />
                 Contact Us
-              </button>
+              </a>
             </div>
           </div>
         </Container>
@@ -82,7 +82,7 @@ const __meta = [
   },
   { text: "commercial", href: "/" },
   { text: "property management", href: "/property/management" },
-  { text: "off plan", href: "/" },
+  { text: "off plan", href: "/property/offplan" },
   {
     text: "explore more",
     href: "/",
