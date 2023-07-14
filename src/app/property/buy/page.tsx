@@ -2,9 +2,10 @@ import Container from "@/blocks/atoms/container";
 import strapi, { populate } from "@/utils/strapi";
 import DataNotFound from "@/blocks/atoms/data-not-found";
 import PropertyDetailed from "@/blocks/molecules/cards/property-detailed";
+import Pagination from "@/blocks/molecules/pagination";
 
 export default async function Buy({ searchParams }: any) {
-  const { data } = await strapi.find<any>("buy-properties", {
+  const { data, meta } = await strapi.find<any>("buy-properties", {
     populate: populate,
     filters: {
       $or: [
@@ -28,17 +29,20 @@ export default async function Buy({ searchParams }: any) {
     },
     pagination: {
       page: searchParams.page ?? 1,
-      pageSize: 20,
+      pageSize: 5,
     },
   });
 
   return (
     <div>
       <Container>
-
         <div className="mt-5 pl-5">
-          <h3 className="text-2xl text-secondary font-semibold mb-1">Search Result</h3>
-          <p className="text-sm font-light">Properties for sale  ({data.length})</p>
+          <h3 className="text-2xl text-secondary font-semibold mb-1">
+            Search Result
+          </h3>
+          <p className="text-sm font-light">
+            Properties for sale ({data.length})
+          </p>
         </div>
 
         {data.length == 0 && <DataNotFound />}
@@ -62,6 +66,7 @@ export default async function Buy({ searchParams }: any) {
             }}
           />
         ))}
+        <Pagination meta={meta} />
       </Container>
     </div>
   );
