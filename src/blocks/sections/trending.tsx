@@ -1,3 +1,5 @@
+'use client'
+
 import Link from "next/link";
 import Slider from "../molecules/slider";
 import Container from "../atoms/container";
@@ -28,7 +30,7 @@ const Trendings: React.FC<Props> = async ({ title, type }) => {
                   bathroom: attributes.Bathrooms,
                   title: attributes.Short_Address,
                   price: attributes.Price,
-                  image: attributes.Cron_Images.data[0].url,
+                  image: attributes.Cron_Images?.data[0].url,
                   description: attributes.Location,
                   type,
                   slug: attributes.slug
@@ -47,7 +49,7 @@ export default Trendings;
 // Exclusive Properties
 const getData = async (type: string) => {
   const data = await fetch(`${process.env.NEXT_PUBLIC_URL}/api/exclusive/${type}`, {
-    cache: "force-cache",
+    cache: "no-cache",
   });
   return await data.json();
 };
