@@ -79,8 +79,8 @@ const Search = async (query: string) => {
       `https://ksnpropertiesstrapi-production.up.railway.app/api/fuzzy-search/search?query=${query}&filters[contentTypes]=buy-properties`
     );
     const res = await queryData.json();
-    return res;
+    return res["buy-properties"];
   } else {
-    return {};
+    return [];
   }
 };
