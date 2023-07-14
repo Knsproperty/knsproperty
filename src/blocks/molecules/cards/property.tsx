@@ -20,7 +20,7 @@ import { LuBedDouble, LuBath, LuMaximize } from "react-icons/lu";
 const PropertyCard: React.FC<Props> = ({ area, bathroom, title, price, description, bedroom, image, type, slug }) => {
     return (
         <Link href={`/property/${type}/${slug}`}>
-            <div className=" h-[400px] group rounded-md shadow-md overflow-hidden hover:bg-[#F3F8FD] m-2">
+            <div className=" h-[400px]  group rounded-md shadow-md overflow-hidden hover:bg-[#F3F8FD] m-2">
                 <header className="relative h-[200px] overflow-hidden">
                     <Image className="w-full h-full group-hover:scale-150 transition ease-in-out" src={image} alt="property image" fill />
                 </header>

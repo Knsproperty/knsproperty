@@ -1,11 +1,13 @@
 'use client'
 
 interface Props {
-    children: any
+    children: any,
+    length: number
 }
 
 import React from "react";
 import { FiArrowRight, FiArrowLeft } from "react-icons/fi";
+import { LuEggFried } from "react-icons/lu";
 import SlickSlider from "react-slick";
 
 export function SampleNextArrow(props: any) {
@@ -42,14 +44,15 @@ export function SamplePrevArrow(props: any) {
     );
 }
 
-const Slider: React.FC<Props> = ({ children }) => {
+const Slider: React.FC<Props> = ({ children, length }) => {
     const settings = {
         dots: false,
         infinite: true,
-        slidesToShow: 4,
-        slidesToScroll: 4,
+        slidesToShow: length < 4 ? length : 4,
+        slidesToScroll: length < 4 ? length : 4,
         nextArrow: <SampleNextArrow />,
         prevArrow: <SamplePrevArrow />,
+
         responsive: [
             {
                 breakpoint: 1024,

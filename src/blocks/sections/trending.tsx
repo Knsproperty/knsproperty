@@ -22,7 +22,7 @@ const Trendings: React.FC<Props> = async ({ title, type }) => {
           </div>
 
           <div className="2xl:max-w-[1320px] xl:max-w-[1320px] max-w-[100vw]">
-            <Slider>
+            <Slider length={data.length}>
               {data.map(({ attributes }: any, index: number) => (
                 <PropertyCard key={index} {...{
                   bedroom: attributes.Bedrooms,
