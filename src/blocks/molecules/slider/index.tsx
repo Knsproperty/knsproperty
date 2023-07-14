@@ -2,7 +2,6 @@
 
 interface Props {
     children: any,
-    length: number
 }
 
 import React from "react";
@@ -44,12 +43,12 @@ export function SamplePrevArrow(props: any) {
     );
 }
 
-const Slider: React.FC<Props> = ({ children, length }) => {
+const Slider: React.FC<Props> = ({ children }) => {
     const settings = {
         dots: false,
         infinite: true,
-        slidesToShow: length < 4 ? length : 4,
-        slidesToScroll: length < 4 ? length : 4,
+        slidesToShow: 4,
+        slidesToScroll: 4,
         nextArrow: <SampleNextArrow />,
         prevArrow: <SamplePrevArrow />,
 
