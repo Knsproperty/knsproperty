@@ -7,7 +7,7 @@ interface Props {
   media: string[];
   bathroom: number;
   discription: string;
-  property_type: "rent" | "buy";
+  property_type: "rent" | "buy" | "offplan";
 }
 
 import Link from "next/link";
@@ -35,12 +35,10 @@ const PropertyDetailed: React.FC<Props> = ({
           <BsImages className="mr-2" size={20} /> {media.length}
         </div>
         <div className="grid md:grid-cols-[2fr_1fr] h-[290px] gap-2 lg:h-full p-2">
-
           <div className="relative overflow-hidden rounded-md bg-lightgray ">
             <Image alt={title} src={media1} fill />
           </div>
           <div className="hidden  md:grid grid-rows-2 gap-2">
-
             <div className="relative overflow-hidden rounded-md bg-lightgray">
               <Image alt={title} src={media2} fill />
             </div>
@@ -49,7 +47,6 @@ const PropertyDetailed: React.FC<Props> = ({
               <Image alt={title} src={media3} fill />
             </div>
           </div>
-
         </div>
 
         <div className=" lg:pt-4 grid lg:grid-rows-[auto_70px] pb-3">

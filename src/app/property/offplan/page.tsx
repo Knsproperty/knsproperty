@@ -4,8 +4,8 @@ import DataNotFound from "@/blocks/atoms/data-not-found";
 import PropertyDetailed from "@/blocks/molecules/cards/property-detailed";
 import Pagination from "@/blocks/molecules/pagination";
 
-export default async function Buy({ searchParams }: any) {
-  const { data, meta } = await strapi.find<any>("buy-properties", {
+export default async function OffPlan({ searchParams }: any) {
+  const { data, meta } = await strapi.find<any>("off-plans", {
     populate: populate,
     filters: {
       $or: [
@@ -32,10 +32,9 @@ export default async function Buy({ searchParams }: any) {
       pageSize: 5,
     },
   });
-  const res = await Search(searchParams.query);
+
   return (
     <div>
-      {JSON.stringify(res)}
       <Container>
         <div className="mt-5 pl-5">
           <h3 className="text-2xl text-secondary font-semibold mb-1">
@@ -51,7 +50,7 @@ export default async function Buy({ searchParams }: any) {
         {data.map(({ attributes }: any) => (
           <PropertyDetailed
             {...{
-              property_type: "buy",
+              property_type: "offplan",
               slug: attributes.slug,
               area: attributes.Area,
               price: attributes.Price,
@@ -72,15 +71,3 @@ export default async function Buy({ searchParams }: any) {
     </div>
   );
 }
-
-const Search = async (query: string) => {
-  if (query) {
-    const queryData = await fetch(
-      `https://ksnpropertiesstrapi-production.up.railway.app/api/fuzzy-search/search?query=${query}&filters[contentTypes]=buy-properties`
-    );
-    const res = await queryData.json();
-    return res;
-  } else {
-    return {};
-  }
-};
