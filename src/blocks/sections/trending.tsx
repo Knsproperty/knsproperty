@@ -88,12 +88,10 @@ const _meta: Props[] = [
   },
 ];
 
-
 interface Trendings {
-  title: string,
-  type: 'buy' | 'rent' | 'offplan'
+  title: string;
+  type: "buy" | "rent" | "offplan";
 }
-
 
 const Trendings: React.FC<Trendings> = ({ title, type }) => {
   return (
@@ -102,7 +100,9 @@ const Trendings: React.FC<Trendings> = ({ title, type }) => {
         <div className=" flex-col pt-10 pb-10">
           <div className="flex items-center justify-between px-6 mb-2">
             <h2 className="lg:text-xl text-xl  text-primary  ">{title}</h2>
-            <button className="text-sm  text-secondary hover:underline">Explore more</button>
+            <button className="text-sm  text-secondary hover:underline">
+              Explore more
+            </button>
           </div>
 
           <div className="2xl:max-w-[1320px] xl:max-w-[1320px] max-w-[100vw]">

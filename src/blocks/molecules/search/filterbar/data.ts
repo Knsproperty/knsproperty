@@ -15,7 +15,7 @@ const beds_options = [
   { value: "4", label: "4 Bedroom" },
   { value: "5", label: "5 Bedroom" },
   { value: "6", label: "6 Bedroom" },
-  { value: "7+", label: "7+ Bedroom" },
+  { value: "7", label: "7+ Bedroom" },
 ];
 
 const price_min_max = [
