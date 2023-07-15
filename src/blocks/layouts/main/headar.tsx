@@ -11,7 +11,7 @@ const Headar = () => {
       <header className="px-3 fixed top-0 w-full bg-white border-b border-b-[#8080804a] z-50">
         <Container>
           <div className=" h-[70px] grid lg:grid-cols-[1fr_2fr_1fr] grid-cols-[1fr_1fr] ">
-            <div className="_center">
+            <div className="flex items-center lg:justify-center">
               <Link href={"/"}>
                 <Logo />
               </Link>
