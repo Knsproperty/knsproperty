@@ -1,6 +1,7 @@
 "use client";
-import { useRouter } from "next/navigation";
 import React, { useState } from "react";
+import { useRouter } from "next/navigation";
+import { FiChevronLeft, FiChevronRight } from 'react-icons/fi'
 
 export default function Pagination({ meta }: any) {
   const router = useRouter();
@@ -9,16 +10,14 @@ export default function Pagination({ meta }: any) {
   const handlePageChange = (page: number) => {
     setPage(page);
     // Get the current URL search parameters
-
     const currentParams = new URLSearchParams(window.location.search);
 
     // Update the "page" parameter with the new value
     currentParams.set("page", String(page));
 
     // Get the updated URL pathname with the modified search parameters
-    const newPathName = `${
-      window.location.pathname
-    }?${currentParams.toString()}`;
+    const newPathName = `${window.location.pathname
+      }?${currentParams.toString()}`;
 
     // Navigate to the new URL
     router.push(newPathName);
@@ -29,7 +28,7 @@ export default function Pagination({ meta }: any) {
     (_, index) => (
       <button
         key={index}
-        className={`btn btn-lg ${page === index + 1 ? "btn-active" : ""}`}
+        className={` px-5 lg:px-2 mx-1  font-lg border border-[#80808071] ${page === index + 1 ? "bg-primary text-white" : ""}`}
         onClick={() => handlePageChange(index + 1)}
       >
         {index + 1}
@@ -37,22 +36,26 @@ export default function Pagination({ meta }: any) {
     )
   );
   return (
-    <div className="btn-group w-full justify-center items-center md:col-span-10">
+    <div className="bg-lightgray-- _center py-5">
       <button
-        className={`btn ${page == 1 && "btn-disabled"} btn-lg`}
+        aria-label="pagination-previous"
+        className={` px-3 py-1 ${page == 1 && "opacity-10"} `}
         onClick={() => handlePageChange(page - 1)}
       >
-        «
+        <FiChevronLeft size={22} />
       </button>
-      {buttons}
+      <div className="mx-2">
+        {buttons}
+      </div>
       <button
-        className={`btn ${
+        aria-label="pagination-next"
+        className={` px-3 py-1 ${
           // @ts-ignore
-          page >= meta?.pagination?.pageCount && "btn-disabled"
-        } btn-lg`}
+          page >= meta?.pagination?.pageCount && "opacity-10"
+          }`}
         onClick={() => handlePageChange(page + 1)}
       >
-        »
+        <FiChevronRight size={22} />
       </button>
     </div>
   );

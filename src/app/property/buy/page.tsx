@@ -32,7 +32,7 @@ export default async function Buy({ searchParams }: any) {
       pageSize: 5,
     },
   });
-  const res = await Search(searchParams.query);
+  // const res = await Search(searchParams.query);
   return (
     <div>
       {/* {JSON.stringify(res)} */}
