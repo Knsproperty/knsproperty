@@ -11,6 +11,8 @@ const AspectImage: React.FC<Props> = ({ src, alt, rounded }) => {
                 src={src}
                 alt={alt}
                 fill
+                placeholder="blur"
+                blurDataURL="/circle.png"
             />
         </div>
     )

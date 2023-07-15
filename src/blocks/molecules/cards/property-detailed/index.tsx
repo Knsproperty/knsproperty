@@ -24,14 +24,14 @@ const PropertyDetailed: React.FC<Props> = ({ title, discription, price, bed, bat
       <div className="lg:h-[328px] h-auto w-full grid lg:grid-cols-[1.5fr_1fr] my-5 md:border md:border-[#eef0f6] md:rounded-md overflow-hidden md:shadow-md bg-white hover:bg-[#F3F8FD] relative border-b border-[#80808027]">
         <div className="grid md:grid-cols-[2fr_1fr]  gap-2 lg:h-full p-2">
           <div className="overflow-hidden rounded-md bg-lightgray aspect-w-16 aspect-h-9">
-            <Image alt={title} src={media1} fill />
+            <Image blurDataURL="/circle.png" placeholder="blur" alt={title} src={media1} fill />
           </div>
           <div className="hidden md:grid gap-2">
             <div className="relative overflow-hidden rounded-md bg-lightgray aspect-w-16 aspect-h-9">
-              <Image alt={title} src={media2} fill />
+              <Image blurDataURL="/circle.png" placeholder="blur" alt={title} src={media2} fill />
             </div>
             <div className="relative overflow-hidden rounded-md bg-lightgray aspect-w-16 aspect-h-9">
-              <Image alt={title} src={media3} fill />
+              <Image blurDataURL="/circle.png" placeholder="blur" alt={title} src={media3} fill />
             </div>
           </div>
         </div>
