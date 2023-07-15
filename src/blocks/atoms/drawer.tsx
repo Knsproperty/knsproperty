@@ -51,7 +51,6 @@ export default Drawer
 
 const links = [
     { text: 'Home', href: '/' },
-    { text: 'about us', href: "/" },
     { text: 'buy', href: '/property/buy' },
     { text: 'rent', href: '/property/rent' },
     { text: 'offplan', href: '/property/offplan' },
