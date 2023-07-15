@@ -54,10 +54,9 @@ const PropertyDetailedPage: React.FC<Props> = ({
                         <hr className="opacity-10" />
                         <h2 className="text-xl font-semibold text-secondary mt-5 mb-2.5">Description</h2>
                         <Formetter text={description} />
-
                     </main>
 
-                    <aside className="grid gap-5 mb-5 min-w-[320px]">
+                    <aside className="flex flex-col gap-5 mb-5 min-w-[320px] h-auto">
                         <ContactCard />
                         <LocationCard geopoint={geopoint} />
                     </aside>
