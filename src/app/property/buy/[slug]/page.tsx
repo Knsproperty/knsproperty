@@ -14,7 +14,6 @@ export default async function page({ params }: any) {
 
   return (
     <Container>
-      {JSON.stringify(attributes)}
       <div>
         <Image media={[...attributes.Cron_Images.data.map((e: any) => e.url)]} />
 
