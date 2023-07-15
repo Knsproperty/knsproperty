@@ -1,6 +1,7 @@
 import React from "react";
 import Container from "@/blocks/atoms/container";
 import Image from "@/blocks/atoms/image-preview";
+import Formetter from "@/blocks/atoms/text-formatter";
 import ContactCard from "@/blocks/molecules/cards/contact";
 import addCommasToNumber from "@/app/lib/addCommasToNumbers";
 import LocationCard from "@/blocks/molecules/cards/location";
@@ -36,12 +37,12 @@ export default async function page({ params }: any) {
             <p className="font-light mb-5">{attributes.Short_Address}</p>
             <hr className="opacity-10" />
             <h2 className="text-xl font-semibold text-secondary mt-5 mb-2.5">Description</h2>
-            <p className="font-light text-primary">{attributes.Description}</p>
+            <Formetter text={attributes.Description} />
           </main>
 
           <aside className="grid gap-5 mb-5 min-w-[320px]">
             <ContactCard />
-            <LocationCard />
+            <LocationCard geopoint={attributes.Geopoints} />
           </aside>
         </section>
       </div>
