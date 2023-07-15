@@ -56,6 +56,7 @@ export default async function Buy({ searchParams }: any) {
               area: attributes.Area,
               price: attributes.Price,
               bed: attributes.Bedrooms,
+              parking: attributes.Parking,
               bathroom: attributes.Bathrooms,
               title: attributes.Short_Address,
               discription: attributes.Location,

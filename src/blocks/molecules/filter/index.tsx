@@ -142,7 +142,7 @@ const Filter = () => {
         </div>
 
         {filterVisiblity && (
-          <div className="pb-5 lg:hidden block">
+          <div className="pb-5 lg:hidden block px-2">
             <div className=" flex w-full flex-col gap-3">
               <DropdownBuyRent />
               <Dropdown

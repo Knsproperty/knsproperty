@@ -37,6 +37,7 @@ export default async function Buy({ searchParams }: any) {
           <PropertyDetailed
             {...{
               property_type: "rent",
+              parking: attributes.Parking,
               slug: attributes.slug,
               title: attributes.Short_Address,
               discription: attributes.Location,

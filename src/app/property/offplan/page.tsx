@@ -51,6 +51,7 @@ export default async function OffPlan({ searchParams }: any) {
           <PropertyDetailed
             {...{
               property_type: "offplan",
+              parking: attributes.Parking,
               slug: attributes.slug,
               area: attributes.Area,
               price: attributes.Price,

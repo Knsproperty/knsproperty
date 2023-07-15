@@ -16,7 +16,6 @@ import clampText from "@/app/lib/clampText";
 import addCommasToNumber from "@/app/lib/addCommasToNumbers";
 import { LuBedDouble, LuBath, LuMaximize } from "react-icons/lu";
 
-
 const PropertyCard: React.FC<Props> = ({ area, bathroom, title, price, description, bedroom, image, type, slug }) => {
     return (
         <Link href={`/property/${type}/${slug}`}>
