@@ -38,7 +38,7 @@ export default async function Buy({ searchParams }: any) {
       {/* {JSON.stringify(res)} */}
       <Container>
         <div className="mt-5 pl-5">
-          <h3 className="text-2xl text-secondary font-semibold mb-1">
+          <h3 className="lg:text-2xl md:text-xl text-lg text-secondary font-semibold mb-1">
             Search Result
           </h3>
           <p className="text-sm font-light">
