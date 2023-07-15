@@ -67,7 +67,6 @@ const __meta = [
       { text: "apartment for sale", href: "/property/buy?type=AP" },
       { text: "villas for sale", href: "/property/buy?type=VH" },
       { text: "townhouses for sale", href: "/property/buy?type=TH" },
-      { text: "commercial for sale", href: "/property/buy?type=OF" },
     ],
   },
   {
@@ -77,7 +76,6 @@ const __meta = [
       { text: "apartment for rent", href: "/property/rent?type=AP" },
       { text: "villas for rent", href: "/property/rent?type=VH" },
       { text: "townhouses for rent", href: "/property/rent?type=TH" },
-      { text: "commercial for rent", href: "/property/rent?type=OF" },
     ],
   },
   { text: "property management", href: "/property/management" },
