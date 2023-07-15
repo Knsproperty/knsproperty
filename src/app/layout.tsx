@@ -2,7 +2,6 @@ import "./globals.css";
 import "slick-carousel/slick/slick.css";
 import { Lexend } from "next/font/google";
 import "slick-carousel/slick/slick-theme.css";
-import Breadcrumbs from "@/blocks/atoms/breadcrumbs";
 import { Header, Footer } from "@/blocks/layouts/main";
 
 // font initlization
@@ -22,7 +21,6 @@ export default function RootLayout({
     <html lang="en">
       <body className={lexend.className}>
         <Header />
-        {/* <Breadcrumbs /> */}
         {children}
         <Footer />
       </body>

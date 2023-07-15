@@ -80,7 +80,6 @@ const __meta = [
       { text: "commercial for rent", href: "/property/rent?type=OF" },
     ],
   },
-  { text: "commercial", href: "/" },
   { text: "property management", href: "/property/management" },
   { text: "off plan", href: "/property/offplan" },
   {

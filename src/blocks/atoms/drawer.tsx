@@ -50,13 +50,12 @@ export default Drawer
 
 const links = [
     { text: 'Home', href: '/' },
+    { text: 'about us', href: "/" },
     { text: 'buy', href: '/property/buy' },
     { text: 'rent', href: '/property/rent' },
-    { text: 'commercial', href: '/' },
-    { text: 'property management', href: '/' },
-    { text: 'off plan', href: '/' },
+    { text: 'offplan', href: '/property/offplan' },
+    { text: 'contact us', href: "/contact" },
     { text: 'careers', href: "/about-us/careers" },
     { text: 'our team', href: "/about-us/team" },
-    { text: 'about us', href: "/" },
-    { text: 'contact us', href: "/contact" },
+    { text: 'property management', href: '/property/management' },
 ]
