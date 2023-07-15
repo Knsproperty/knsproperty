@@ -9,6 +9,7 @@ const Drawer = () => {
     const handleClose = () => {
         overlayRef.current.click()
     }
+
     return (
         <nav className="xl:hidden flex">
             <div className="drawer drawer-end">

@@ -55,14 +55,13 @@ const SimpleSearch = () => {
   };
   const handleCloseClick = (
     event: React.MouseEvent<HTMLButtonElement, MouseEvent>
-  ) => {};
+  ) => { };
   const onSubmit = (event: React.FormEvent) => {
     event.preventDefault();
     router.push(
-      `/property/${
-        active === "residental"
-          ? "buy"
-          : active === "commercial"
+      `/property/${active === "residental"
+        ? "buy"
+        : active === "commercial"
           ? "rent"
           : "offplan"
       }?query=${search}`
@@ -77,23 +76,23 @@ const SimpleSearch = () => {
 
         <PropertyType active={active} setActive={setActive} />
 
-        <section className="relative ">
+        <section className="relative">
           <form
             onSubmit={onSubmit}
             onClick={handleContainerClick}
-            className="bg-white shadow-md  h-[60px] px-3 pl-5 items-center flex  rounded-full gap-3 border  border-[#80808039]"
+            className="bg-white shadow-md md:h-[60px] h-[55px] px-3 pl-5 items-center flex rounded-full gap-3 border  border-[#80808039]"
           >
-            <FiSearch size={20} className="mr-1" />
+            <FiSearch size={18} className="mr-1" />
             <p className="text-primary hidden lg:block">Where &nbsp; ›</p>
             <input
               ref={inputRef}
               placeholder="Community or Building"
-              className="border-none outline-none xl:min-w-[400px] placeholder:text-light placeholder:text-sm flex-1"
+              className="border-none text-sm md:text-mdoutline-none xl:min-w-[400px] placeholder:text-light placeholder:text-sm flex-1"
               value={search}
               onChange={(e) => setSearch(e.target.value)}
             />
             <button className="hidden lg:block" onClick={handleCloseClick}>
-              <FiX size={20} />
+              <FiX size={18} />
             </button>
             <button
               type="submit"
@@ -131,16 +130,15 @@ const PropertyType = ({ active, setActive }: any) => {
       onClick={() => {
         setActive(name);
       }}
-      className={`text-white px-5 py-2.5 rounded-full md:text-sm text-[13px] capitalize ${
-        active == name ? "bg-primary " : "bg-transparent"
-      }`}
+      className={`text-white px-5 py-2.5 rounded-full md:text-sm text-[13px] capitalize ${active == name ? "bg-primary " : "bg-transparent"
+        }`}
       key={name}
     >
       {name}
     </button>
   ));
   return (
-    <div className="bg-secondary px-3 rounded-full overflow-hidden flex items-center h-[60px] ">
+    <div className="bg-secondary px-3 rounded-full overflow-hidden sm:flex items-center grid grid-cols-3 h-[60px] mx-auto ">
       {buttons}
     </div>
   );

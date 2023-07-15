@@ -2,12 +2,11 @@ import Container from "../atoms/container"
 
 const Testimonals = () => {
     return (
-        <div className=" bg-lightviolet-- pb-[5rem] pt-0">
+        <div className="lg:pt-[60px] lg:pb-[80px] py-10 ">
             <Container>
-
                 <section className="text-center">
-                    <div className="pb-10 pt-[5rem]">
-                        <h2 className="text-secondary font-medium pb-[1.5rem] text-3xl">
+                    <div className="">
+                        <h2 className="text-secondary font-medium pb-[1.5rem] lg:text-2xl md:text-xl text-xl">
                             Testimonals
                         </h2>
                         <p className="col-md-7 col-11 mx-auto text-primary text-base sm:w-[60%] pb-[10px] font-light">
@@ -17,12 +16,9 @@ const Testimonals = () => {
                         </p>
                     </div>
                     <div className="grid gap-x-6 md:grid-cols-3  lg:gap-x-12">
-
                         <User />
                         <User />
                         <User />
-
-
                     </div>
                 </section>
             </Container >
@@ -47,7 +43,7 @@ const User = () => {
             <h6 className="mb-4 font-medium text-sm text-primary dark:text-primary-400">
                 Web Developer
             </h6>
-            <p className="mb-4 font-light text-sm">
+            <p className="mb-4 font-light text-sm px-5 md:px-0">
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod eos id
                 officiis hic tenetur quae quaerat ad velit ab hic.
                 <svg

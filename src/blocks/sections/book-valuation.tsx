@@ -7,10 +7,10 @@ export default function Book_Valuation() {
   return (
     <section className="bg-[#e3ecee]" id="contact">
       <Container>
-        <div className="pt-[60px] pb-[80px] rounded-lg px-5 text-center">
+        <div className="lg:pt-[60px] lg:pb-[80px] py-10 rounded-lg px-5 text-center">
           <div className="w-full">
             <div className="pb-6">
-              <h2 className="text-secondary font-medium pb-[1.5rem] text-3xl">
+              <h2 className={'text-secondary pb-[1.5rem] lg:text-2xl md:text-xl text-xl font-medium'}>
                 Contact Us
               </h2>
               <p className="col-md-7 col-11 mx-auto text-primary text-base sm:w-[60%] pb-[10px] font-light">
@@ -41,7 +41,7 @@ export default function Book_Valuation() {
                 <CountryPhoneNumberInput />
                 <Book_Input type="text" placeholder="Property Address*" />
 
-                <button className="bg-primary group flex items-center mt-5 py-4 text-white hover:bg-white  hover:text-primary font-semibold text-sm rounded-full capitalize px-8 w-full justify-center">
+                <button className="bg-primary group flex items-center mt-5 py-4 text-white hover:bg-white  hover:text-primary font-medium text-sm rounded-full capitalize px-8 w-full justify-center ">
                   Submit Details
                 </button>
               </form>

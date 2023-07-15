@@ -95,7 +95,7 @@ const List = () => {
       {
         Object.keys(__meta.links).map((key, index) => (
           <div key={index}>
-            <h5 className="capitalize font-medium py-2">{key}</h5>
+            <h5 className="capitalize font-medium py-2 md:text-md text-md">{key}</h5>
             <div className="flex flex-col gap-1">
 
               {(__meta.links as any)[key].map(
