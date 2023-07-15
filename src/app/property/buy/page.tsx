@@ -35,7 +35,7 @@ export default async function Buy({ searchParams }: any) {
   const res = await Search(searchParams.query);
   return (
     <div>
-      {JSON.stringify(res)}
+      {/* {JSON.stringify(res)} */}
       <Container>
         <div className="mt-5 pl-5">
           <h3 className="text-2xl text-secondary font-semibold mb-1">

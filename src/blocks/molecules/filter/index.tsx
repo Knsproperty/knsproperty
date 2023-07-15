@@ -1,27 +1,23 @@
 "use client";
-import Container from "@/blocks/atoms/container";
-import { FiSearch } from "react-icons/fi";
-import { Dropdown, DropdownBuyRent } from "./dropdown";
-import {
-  property_types,
-  beds_options,
-  price_min_max,
-} from "../search/filterbar/data";
 import { useState } from "react";
-import { deleteSearchParams, updateSearchParams } from "@/utils/param";
-import { useRouter, usePathname } from "next/navigation";
-
 import { LuFilter } from "react-icons/lu";
+import { FiSearch } from "react-icons/fi";
+import Container from "@/blocks/atoms/container";
+import { Dropdown, DropdownBuyRent } from "./dropdown";
+import { useRouter, usePathname } from "next/navigation";
+import { deleteSearchParams, updateSearchParams } from "@/utils/param";
+import { property_types, beds_options, price_min_max, } from "../search/filterbar/data";
 
 const Filter = () => {
-  const [filterVisiblity, setFilterVisiblity] = useState(false);
   const router = useRouter();
-  const [searchInput, setSearchInput] = useState(""); // State for the search input
-  const [type, setPropertyType] = useState(""); // State for property type
+  const pathname = usePathname()
   const [min, setPriceMin] = useState(""); // State for minimum price
   const [max, setPriceMax] = useState(""); // State for maximum price
   const [bedrooms, setBeds] = useState(""); // State for number of beds
-  const pathname = usePathname()
+  const [type, setPropertyType] = useState(""); // State for property type
+  const [filterVisiblity, setFilterVisiblity] = useState(false);
+  const [searchInput, setSearchInput] = useState(""); // State for the search input
+
   const handleFilterClick = () => {
     setFilterVisiblity(!filterVisiblity);
   };
@@ -85,6 +81,13 @@ const Filter = () => {
     const newPathName = updateSearchParams("query", searchInput);
     router.push(newPathName);
   };
+
+
+  // hide filterbar from property-detailed page
+  if (!['/property/buy', '/property/rent'].includes(pathname)) {
+    return null
+  }
+
   return (
     <div className="bg-[#e3effa]">
       <Container>
