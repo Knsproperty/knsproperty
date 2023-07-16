@@ -33,9 +33,9 @@ export default async function Buy({ searchParams }: any) {
     },
   });
   // const res = await Search(searchParams.query);
+  // Property_Type
   return (
     <div>
-      {/* {JSON.stringify(res)} */}
       <Container>
         <div className="mt-5 pl-5">
           <h3 className="lg:text-2xl md:text-xl text-lg text-secondary font-semibold mb-1">

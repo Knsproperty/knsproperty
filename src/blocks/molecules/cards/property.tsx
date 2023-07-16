@@ -12,8 +12,8 @@ export interface Props {
 
 import Link from "next/link";
 import Image from "next/image";
-import clampText from "@/app/lib/clampText";
-import addCommasToNumber from "@/app/lib/addCommasToNumbers";
+import clampText from "@/lib/clampText";
+import addCommasToNumber from "@/lib/addCommasToNumbers";
 import { LuBedDouble, LuBath, LuMaximize } from "react-icons/lu";
 
 const PropertyCard: React.FC<Props> = ({ area, bathroom, title, price, description, bedroom, image, type, slug }) => {

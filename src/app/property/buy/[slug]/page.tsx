@@ -6,22 +6,21 @@ export default async function page({ params }: any) {
   } = await getProperty(slug);
   console.log(related_products);
   return (
-    <>
-      <Template
-        {...{
-          type: "buy",
-          area: attributes.Area,
-          price: attributes.Price,
-          bed: attributes.Bedrooms,
-          parking: attributes.Parking,
-          bath: attributes.Bathrooms,
-          geopoint: attributes.Geopoints,
-          description: attributes.Description,
-          short_address: attributes.Short_Address,
-          images: [...attributes.Cron_Images.data.map((e: any) => e.url)],
-        }}
-      />
-    </>
+    <Template
+      {...{
+        type: "buy",
+        area: attributes.Area,
+        price: attributes.Price,
+        bed: attributes.Bedrooms,
+        parking: attributes.Parking,
+        bath: attributes.Bathrooms,
+        geopoint: attributes.Geopoints,
+        description: attributes.Description,
+        property_type: attributes.Property_Type,
+        short_address: attributes.Short_Address,
+        images: [...attributes.Cron_Images.data.map((e: any) => e.url)],
+      }}
+    />
   );
 }
 // fetcher component
