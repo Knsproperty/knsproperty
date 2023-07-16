@@ -13,6 +13,7 @@ export default async function page({ params }: any) {
         bath: attributes.Bathrooms,
         geopoint: attributes.Geopoints,
         description: attributes.Description,
+        property_type: attributes.Property_Type,
         short_address: attributes.Short_Address,
         images: [...attributes.Cron_Images.data.map((e: any) => e.url)],
       }}
