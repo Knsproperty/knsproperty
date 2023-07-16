@@ -8,13 +8,13 @@ export default async function page({ params }: any) {
   return (
     <div>
       <Container>
-        <div className="grid lg:grid-cols-[1.5fr_2fr] gap-5 py-10 ">
+        <div className="grid lg:grid-cols-[1.5fr_2fr] gap-5 lg:py-10 ">
           <div className="_center h-[300px] xl:h-auto bg-lightgray roudned-md mb-2 bg-[url('/pettern.avif')] bg-cover">
             <h1 className=" text-3xl text-secondary font-semibold text-center">
               {attributes.position}
             </h1>
           </div>
-          <div className="">
+          <div className="lg:px-0 px-5">
             <h1 className="py-2 text-xl text-secondary font-semibold ">
               {attributes.position}
             </h1>
@@ -43,10 +43,11 @@ export default async function page({ params }: any) {
                 {attributes.requirements}
               </p>
             </section>
-            <Form id={id} />
           </div>
         </div>
+
       </Container>
+      <Form id={id} />
     </div>
   );
 }
