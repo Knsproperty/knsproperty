@@ -1,9 +1,7 @@
 import Template from "@/blocks/templates/detailed";
 export default async function page({ params }: any) {
   const { slug } = params;
-  const {
-    data: [{ attributes, related_products }],
-  } = await getProperty(slug);
+  const [{ attributes, related_products }] = await getProperty(slug);
   return (
     <Template
       {...{

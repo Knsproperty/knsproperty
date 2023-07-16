@@ -8,15 +8,6 @@ export async function GET(req: Request, { params }: any) {
       slug: slug,
     },
   });
-  let PropertyType = buy_properties.data[0].attributes.Property_Type;
-  const related_products = await strapi.find("rent-properties", {
-    populate,
-    filters: {
-      Property_Type: PropertyType,
-    },
-  });
-  return NextResponse.json({
-    data: buy_properties.data,
-    related_products: related_products,
-  });
+
+  return NextResponse.json(buy_properties.data);
 }
