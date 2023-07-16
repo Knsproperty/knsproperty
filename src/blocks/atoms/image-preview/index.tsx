@@ -29,7 +29,7 @@ const ImagePreviwSlider: React.FC<Props> = ({ media }) => {
     return (
         <>
             <ImagePreviewer media={media} />
-            <section className=" md:grid grid-cols-[2fr_1fr] gap-5 my-5 hidden" onClick={handleClick}>
+            <section className=" md:grid grid-cols-[2fr_1fr] gap-5 my-5 hidden md:px-5 xl:px-2" onClick={handleClick}>
                 <Image rounded src={media1} alt={media1} />
                 <section className="grid gap-5">
                     <Image rounded src={media2} alt={media2} />
@@ -37,10 +37,10 @@ const ImagePreviwSlider: React.FC<Props> = ({ media }) => {
                 </section>
             </section>
 
-            <section className="grid  md:hidden my-5">
-                <div className=" max-w-[100vw]">
+            <section className="grid md:hidden my-5">
+                <div className="max-w-[100vw]">
                     <Slider {...slider_settings}>
-                        {media.map((src) => (
+                        {media.splice(0, 5).map((src) => (
                             <Image {...{ src, alt: src }} />
                         ))}
                     </Slider>
