@@ -48,18 +48,22 @@ export const config = {
     footer: {
         social: [
             {
+                name: 'tiktok',
                 Icon: BsTiktok,
                 href: "https://www.tiktok.com/@knsproperties?is_from_webapp=1&sender_device=pc",
             },
             {
+                name: 'facebook',
                 Icon: FaFacebookF,
                 href: "https://www.facebook.com/kspropertiesOfficial/",
             },
             {
+                name: 'instragram',
                 Icon: FiInstagram,
                 href: "https://www.instagram.com/kspropertiesofficial/",
             },
             {
+                name: 'location',
                 Icon: FiMapPin,
                 href: "/",
             },

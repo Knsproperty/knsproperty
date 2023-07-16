@@ -1,10 +1,6 @@
-// Sementication : start from footer
-
-
-
 import Link from "next/link";
-import Container from "@/blocks/atoms/container";
 import { config } from "@/config/links";
+import Container from "@/blocks/atoms/container";
 
 const Footer = () => {
   return (
@@ -40,7 +36,7 @@ export default Footer;
 const SocialIcon = ({ links }: any) => {
   return (
     <a href={links.href} target="_">
-      <button className=" bg-white shadow-md py-3.5 group font-semibold text-sm rounded-full capitalize px-3.5">
+      <button aria-label={links.name} className=" bg-white shadow-md py-3.5 group font-semibold text-sm rounded-full capitalize px-3.5">
         <links.Icon className="stroke-black" size={18} />
       </button>
     </a>

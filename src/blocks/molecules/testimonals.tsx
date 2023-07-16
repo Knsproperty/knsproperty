@@ -37,6 +37,7 @@ const User = () => {
                 <img
                     src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(1).jpg"
                     className="w-32 rounded-full shadow-lg dark:shadow-black/20"
+                    alt="user-image"
                 />
             </div>
             <h5 className="mb-2 text-lg">Maria Smantha</h5>

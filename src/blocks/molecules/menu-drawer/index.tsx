@@ -30,7 +30,7 @@ const Drawer = () => {
             <div className="drawer drawer-end">
                 <input id="my-drawer" type="checkbox" className="drawer-toggle" />
                 <div className="drawer-content flex items-center justify-end">
-                    <button>
+                    <button aria-label="menu-toggle">
                         <label htmlFor="my-drawer" className="drawer-button px-3">
                             <HiOutlineMenuAlt3 size={28} className="stroke-primary" />
                         </label>
@@ -40,7 +40,7 @@ const Drawer = () => {
                     <label ref={overlayRef} htmlFor="my-drawer" className="drawer-overlay"></label>
                     <ul className="menu w-80 h-full bg-white">
                         <li className="h-[60px] bg-primary- flex justify-center">
-                            <button name="close" tabIndex={0} onClick={handleClose}>
+                            <button aria-label="menu-close" tabIndex={0} onClick={handleClose}>
                                 <FiX size={22} className="stroke-primary" />
                             </button>
                         </li>
