@@ -1,6 +1,5 @@
 import strapi, { populate } from "@/utils/strapi";
 import React from "react";
-import PropertyCard from "../molecules/cards/property";
 
 export default async function Related_products({
   type,
@@ -41,3 +40,5 @@ export default async function Related_products({
     </div>
   );
 }
+
+export const fetchCache = "force-cache";
