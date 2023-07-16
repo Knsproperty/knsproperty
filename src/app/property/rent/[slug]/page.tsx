@@ -1,7 +1,9 @@
 import Template from "@/blocks/templates/detailed";
 export default async function page({ params }: any) {
   const { slug } = params;
-  const [{ attributes }] = await getProperty(slug);
+  const {
+    data: [{ attributes, related_products }],
+  } = await getProperty(slug);
   return (
     <Template
       {...{
@@ -23,7 +25,7 @@ export default async function page({ params }: any) {
 // fetcher component
 const getProperty = async (slug: string) => {
   const res = await fetch(`${process.env.NEXT_PUBLIC_URL}/api/rent/${slug}`, {
-    cache: "force-cache",
+    next: { revalidate: 60 },
   });
   return await res.json();
 };
