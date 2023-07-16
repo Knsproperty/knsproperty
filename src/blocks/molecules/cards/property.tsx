@@ -26,7 +26,7 @@ const PropertyCard: React.FC<Props> = ({ area, bathroom, title, price, descripti
                 <main>
                     <p className="text-sm ml-3 mt-4 font-light inline-block bg-secondary p-1 px-3 rounded-full text-white ">AED {addCommasToNumber(parseInt(price))} Per Annum</p>
                     <div className="px-5">
-                        <h5 className="text-md text-primary font-medium my-3">{title}</h5>
+                        <h2 className="text-md text-primary font-medium my-3">{title}</h2>
                         <p className="text-sm font-light  text-primary mb-2">{clampText(description, 50)}</p>
                         <div className="grid grid-cols-[1fr_1fr_2fr] my-5 ">
                             <div className="_center "><LuBedDouble className="mr-2 stroke-primary stroke-[2px]" /> <span className="font-light text-primary">{bedroom}</span></div>
