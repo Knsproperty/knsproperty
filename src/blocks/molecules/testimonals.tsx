@@ -40,10 +40,10 @@ const User = () => {
                     alt="user-image"
                 />
             </div>
-            <h5 className="mb-2 text-lg">Maria Smantha</h5>
-            <h6 className="mb-4 font-medium text-sm text-primary dark:text-primary-400">
+            <h2 className="mb-2 text-lg">Maria Smantha</h2>
+            <h3 className="mb-4 font-medium text-sm text-primary dark:text-primary-400">
                 Web Developer
-            </h6>
+            </h3>
             <p className="mb-4 font-light text-sm px-5 md:px-0">
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod eos id
                 officiis hic tenetur quae quaerat ad velit ab hic.
