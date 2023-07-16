@@ -8,8 +8,8 @@ export default async function Home() {
   return (
     <main>
       <Search />
-      {/* <Trendings title="Properties for Sale" type="buy" />
-      <Trendings title="Properties for Rent" type="rent" /> */}
+      <Trendings title="Properties for Sale" type="buy" />
+      <Trendings title="Properties for Rent" type="rent" />
       <Book_Valuation />
       <Testimonals />
     </main>
@@ -30,6 +30,7 @@ export const metadata: Metadata = {
   authors: [{ name: "", url: "" }],
   abstract: "",
   publisher: "KSN PROPERTIES",
+
   // url: "",
   // image: "https://www.yourwebsite.com/images/property-thumbnail.jpg",
   // siteName: "Your Website Name",
