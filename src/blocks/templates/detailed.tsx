@@ -39,19 +39,19 @@ const PropertyDetailedPage: React.FC<Props> = ({
                             <h2 className="text-2xl font-semibold text-secondary mt-2 lg:mt-0"> AED {addCommasToNumber(price)} {type == 'rent' && <span className="text-sm uppercase text-primary" >/ per year</span>}</h2>
 
                             <div className="flex my-4 ">
-                                <div className="_center pr-5">
+                                <div className="_center md:pr-5  pr-3">
                                     <LuBedDouble className="mr-2 stroke-primary stroke-[2px]" />
                                     <span className="font-light text-primary">{bed}</span>
                                 </div>
-                                <div className="_center border-l border-r border-[#00000010] px-5">
+                                <div className="_center border-l border-r border-[#00000010] md:px-5 px-3 ">
                                     <LuBath className="mr-2 stroke-primary stroke-[2px] " />
                                     <span className="font-light text-primary">{bath}</span>
                                 </div>
-                                <div className="_center border-l border-r border-[#00000010] px-5">
+                                <div className="_center border-l border-r border-[#00000010] md:px-5 px-3">
                                     <LuParkingSquare className="mr-2 stroke-primary stroke-[2px] " />
                                     <span className="font-light text-primary">{parking}</span>
                                 </div>
-                                <div className="_center px-5">
+                                <div className="_center md:pl-5 pl-3  ">
                                     <LuMaximize className="mr-2 stroke-primary stroke-[2px]" />
                                     <span className="font-light text-primary">{addCommasToNumber(area)} sq.ft</span>
                                 </div>
