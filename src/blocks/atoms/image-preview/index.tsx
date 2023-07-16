@@ -37,7 +37,7 @@ const ImagePreviwSlider: React.FC<Props> = ({ media }) => {
                 </section>
             </section>
 
-            <section className="grid md:hidden my-5">
+            <section className="grid md:hidden mb-5">
                 <div className="max-w-[100vw]">
                     <Slider {...slider_settings}>
                         {media.splice(0, 5).map((src) => (
