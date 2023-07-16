@@ -3,6 +3,7 @@ import strapi, { populate } from "@/utils/strapi";
 import DataNotFound from "@/blocks/atoms/data-not-found";
 import PropertyDetailed from "@/blocks/molecules/cards/property-detailed";
 import Pagination from "@/blocks/molecules/pagination";
+import AppliedFilters from "@/blocks/molecules/filter/applied_filters";
 
 export default async function Buy({ searchParams }: any) {
   const { data, meta } = await strapi.find<any>("buy-properties", {
