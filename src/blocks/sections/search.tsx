@@ -91,7 +91,7 @@ const SimpleSearch = () => {
               value={search}
               onChange={(e) => setSearch(e.target.value)}
             />
-            <button className="hidden lg:block" onClick={handleCloseClick}>
+            <button aria-label="clear-input" className="hidden lg:block" onClick={handleCloseClick}>
               <FiX size={18} />
             </button>
             <button
