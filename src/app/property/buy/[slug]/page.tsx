@@ -1,4 +1,3 @@
-import Related_products from "@/blocks/sections/related_products";
 import Template from "@/blocks/templates/detailed";
 export default async function page({ params }: any) {
   const { slug } = params;
@@ -20,10 +19,6 @@ export default async function page({ params }: any) {
           short_address: attributes.Short_Address,
           images: [...attributes.Cron_Images.data.map((e: any) => e.url)],
         }}
-      />
-      <Related_products
-        property_type={attributes.Property_Type}
-        type="buy-properties"
       />
     </>
   );
