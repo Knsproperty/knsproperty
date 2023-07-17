@@ -12,6 +12,8 @@ interface Props {
   type: "buy" | "rent" | "offplan";
 }
 
+import RelatedProducts from "../sections/related_products";
+
 import React from "react";
 import dynamic from "next/dynamic";
 import Gallary from "../molecules/gallary";
@@ -91,7 +93,6 @@ const PropertyDetailedPage: React.FC<Props> = ({
 
               <Formetter text={description} />
 
-              <Gallary images={images} />
             </main>
 
             <aside className="flex flex-col gap-5 mb-5 min-w-[320px] h-auto">
@@ -99,6 +100,12 @@ const PropertyDetailedPage: React.FC<Props> = ({
               <LocationCard geopoint={geopoint} />
             </aside>
           </section>
+          <Gallary images={images} />
+
+          <RelatedProducts
+            property_type={property_type}
+            type={`${type}-properties` as any}
+          />
         </div>
       </Container>
     </>

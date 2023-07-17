@@ -16,7 +16,8 @@ const Gallary: React.FC<Props> = ({ images }) => {
     }
     return (
         <div>
-            <button name="media-toggle" onClick={toggle} className="flex justify-between w-full md:w-xl items-center py-3 bg-primary px-5 bg-opacity-10 rounded-md mb-5"> <h2 className="xl:text-xl text-lg font-semibold text-secondary">Gallary</h2> {Icon}</button>
+            <hr className="opacity-10" />
+            <button name="media-toggle" onClick={toggle} className="flex justify-between w-full md:w-xl items-center py-3  px-5 rounded-md  "> <h2 className="xl:text-xl text-lg font-semibold text-secondary">Gallary</h2> {Icon}</button>
             {visible && <div className="grid lg:grid-cols-2 gap-5">
                 {images.map((src) => (<AspectImage rounded src={src} alt={src} />))}
             </div>}
