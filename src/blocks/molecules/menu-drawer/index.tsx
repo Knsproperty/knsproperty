@@ -1,11 +1,10 @@
 'use client'
-
 import Link from "next/link"
 import { useRef } from "react";
 import { FiX } from "react-icons/fi";
 import { config } from "@/config/links";
 import { HiOutlineMenuAlt3 } from "react-icons/hi"
-import Contact from "@/blocks/atoms/buttons/contact";
+import { SmallContact } from "@/blocks/atoms/buttons/contact";
 
 const Drawer = () => {
     const overlayRef = useRef<any>(null)
@@ -45,7 +44,7 @@ const Drawer = () => {
                             </button>
                         </li>
                         {list}
-                        <Contact />
+                        <SmallContact />
                     </ul>
                 </div>
             </div>
