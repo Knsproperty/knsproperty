@@ -1,6 +1,9 @@
 "use client";
 import { ButtonHTMLAttributes, useRef, useState } from "react";
-
+interface Props {
+  url: string;
+  args: string;
+}
 import { FiArrowRight } from "react-icons/fi";
 function SearchSection() {
   return (
@@ -24,6 +27,7 @@ import { FiSearch, FiX } from "react-icons/fi";
 import strapi, { populate } from "@/utils/strapi";
 import { useDebouncedValue } from "@mantine/hooks";
 import { useRouter } from "next/navigation";
+import useSWR from "swr";
 
 const SimpleSearch = () => {
   const router = useRouter();
@@ -34,6 +38,21 @@ const SimpleSearch = () => {
   const handleContainerClick = () => {
     inputRef.current?.focus();
   };
+  const fetcher = async (query: Props) => {
+    if (query) {
+      const queryData = await fetch(
+        `https://ksnpropertiesstrapi-production.up.railway.app/api/fuzzy-search/search?query=${query.args}&filters[contentTypes]=buy-properties`
+      );
+      const res = await queryData.json();
+      return res["buy-properties"];
+    } else {
+      return [];
+    }
+  };
+  const { data } = useSWR(
+    debounced ? { url: "/api/orders", args: debounced } : null,
+    fetcher
+  );
 
   const hadleSearch = async (
     event: React.MouseEvent<HTMLButtonElement, MouseEvent>
@@ -55,13 +74,14 @@ const SimpleSearch = () => {
   };
   const handleCloseClick = (
     event: React.MouseEvent<HTMLButtonElement, MouseEvent>
-  ) => { };
+  ) => {};
   const onSubmit = (event: React.FormEvent) => {
     event.preventDefault();
     router.push(
-      `/property/${active === "residental"
-        ? "buy"
-        : active === "commercial"
+      `/property/${
+        active === "residental"
+          ? "buy"
+          : active === "commercial"
           ? "rent"
           : "offplan"
       }?query=${search}`
@@ -91,7 +111,11 @@ const SimpleSearch = () => {
               value={search}
               onChange={(e) => setSearch(e.target.value)}
             />
-            <button aria-label="clear-input" className="hidden lg:block" onClick={handleCloseClick}>
+            <button
+              aria-label="clear-input"
+              className="hidden lg:block"
+              onClick={handleCloseClick}
+            >
               <FiX size={18} />
             </button>
             <button
@@ -109,14 +133,14 @@ const SimpleSearch = () => {
             </button>
           </form>
         </section>
-        <section className="bg-white shadow-md rounded-md px-5 hidden">
+        <section className="bg-white shadow-md rounded-md px-5 ">
           <p className="text-sm pt-3 capitalize text-secondary font-semibold">
             results
           </p>
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veritatis
-          animi nam sit molestiae. Atque quibusdam aliquam eveniet nihil
-          deserunt, debitis quisquam dignissimos nemo dolore, odio quam ipsa
-          obcaecati porro nulla!
+          {data?.map(({ attributes }: any, index: number) => (
+            <li>{attributes?.Short_Address}</li>
+          ))}
+          {/* {JSON.stringify(data)} */}
         </section>
       </div>
     </div>
@@ -130,8 +154,9 @@ const PropertyType = ({ active, setActive }: any) => {
       onClick={() => {
         setActive(name);
       }}
-      className={`text-white px-5 py-2.5 rounded-full md:text-sm text-[13px] capitalize ${active == name ? "bg-primary " : "bg-transparent"
-        }`}
+      className={`text-white px-5 py-2.5 rounded-full md:text-sm text-[13px] capitalize ${
+        active == name ? "bg-primary " : "bg-transparent"
+      }`}
       key={name}
     >
       {name}
