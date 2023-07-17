@@ -61,17 +61,7 @@ const SimpleSearch = () => {
 
     alert("im first");
   };
-  const handleOnchange = async (e: any) => {
-    const buy_properties = await strapi.find<any>("buy-properties", {
-      populate: populate,
-      filters: {
-        Name: {
-          $containsi: debounced,
-        },
-      },
-    });
-    return buy_properties.data;
-  };
+
   const handleCloseClick = (
     event: React.MouseEvent<HTMLButtonElement, MouseEvent>
   ) => {};
@@ -137,10 +127,9 @@ const SimpleSearch = () => {
           <p className="text-sm pt-3 capitalize text-secondary font-semibold">
             results
           </p>
-          {data?.map(({ attributes }: any, index: number) => (
-            <li>{attributes?.Short_Address}</li>
+          {data?.map((it: any, index: number) => (
+            <li>{it.id}</li>
           ))}
-          {/* {JSON.stringify(data)} */}
         </section>
       </div>
     </div>
