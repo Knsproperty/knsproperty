@@ -30,14 +30,12 @@ const PropertyCard: React.FC<Props> = ({
   return (
     <Link href={`/property/${type}/${slug}`}>
       <div className=" h-[400px]  group rounded-md shadow-md overflow-hidden hover:bg-[#F3F8FD] m-2">
-        <header className="relative h-[200px] overflow-hidden">
+        <header className="relative h-[200px] overflow-hidden ">
           <Image
             className="w-full h-full group-hover:scale-150 transition ease-in-out"
-            width={300}
-            height={200}
             src={image}
             alt="property image"
-            // fill
+            fill
           />
         </header>
         <main>
