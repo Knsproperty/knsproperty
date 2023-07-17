@@ -1,9 +1,10 @@
 import Container from "@/blocks/atoms/container";
 import { Main } from "@/types/team";
+import strapi from "@/utils/strapi";
 import Image from "next/image";
 
 export default async function Page({ params: { slug } }: any) {
-  const { attributes }: Main = await getData(slug);
+  const { attributes } = await getData(slug);
   return (
     <main>
       <Container>
@@ -38,9 +39,21 @@ export default async function Page({ params: { slug } }: any) {
 }
 
 async function getData(slug: string) {
-  const res = await fetch(`${process.env.NEXT_PUBLIC_URL}/api/team/${slug}`, {
-    cache: "force-cache",
+  const blog = await strapi.find<any>("teams", {
+    populate: ["*", "Profile"],
+    filters: {
+      slug: slug,
+    },
   });
-  const team = await res.json();
-  return team[0];
+  return blog.data[0];
+}
+
+export async function generateStaticParams() {
+  const slugs = await strapi.find<any>("teams", {
+    fields: ["id", "slug"],
+  });
+
+  return slugs.data.map((post: any) => ({
+    slug: post.attributes.slug,
+  }));
 }
