@@ -1,5 +1,10 @@
 import { Search } from "@/blocks/sections";
-import Trendings from "@/blocks/sections/trending";
+import dynamic from "next/dynamic";
+const Trendings = dynamic(() => import("@/blocks/sections/trending"), {
+  ssr: true,
+});
+
+// import Trendings from "@/blocks/sections/trending";
 import Testimonals from "@/blocks/molecules/testimonals";
 import Book_Valuation from "@/blocks/sections/book-valuation";
 import { Metadata } from "next";
