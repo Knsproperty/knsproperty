@@ -29,7 +29,7 @@ export default async function Buy({ searchParams }: any) {
     },
     pagination: {
       page: searchParams.page ?? 1,
-      pageSize: 5,
+      pageSize: 8,
     },
   });
   return (

@@ -1,5 +1,6 @@
 import Container from "@/blocks/atoms/container";
 import Form from "@/blocks/molecules/forms/job";
+import strapi from "@/utils/strapi";
 import React from "react";
 import { FiMapPin, FiDollarSign } from "react-icons/fi";
 
@@ -45,15 +46,27 @@ export default async function page({ params }: any) {
             </section>
           </div>
         </div>
-
       </Container>
       <Form id={id} />
     </div>
   );
 }
 const getJob = async (slug: string) => {
-  const res = await fetch(`${process.env.NEXT_PUBLIC_URL}/api/job/${slug}`, {
-    cache: "force-cache",
+  const job = await strapi.find<any>("jobs", {
+    populate: ["*"],
+    filters: {
+      slug: slug,
+    },
   });
-  return await res.json();
+  return job.data;
 };
+
+export async function generateStaticParams() {
+  const slugs = await strapi.find<any>("jobs", {
+    fields: ["id", "slug"],
+  });
+
+  return slugs.data.map((post: any) => ({
+    slug: post.attributes.slug,
+  }));
+}
