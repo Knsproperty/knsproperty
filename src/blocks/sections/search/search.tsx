@@ -3,6 +3,7 @@ interface Props {
     url: string;
     args: string;
 }
+
 import useSWR from "swr";
 import Results from "./result";
 import { FiSearch } from "react-icons/fi";
@@ -12,11 +13,10 @@ import { useRouter } from "next/navigation";
 import { FiArrowRight } from "react-icons/fi";
 import { useDebouncedValue } from "@mantine/hooks";
 
-
 const SimpleSearch = () => {
     const router = useRouter();
-    const [active, setActive] = useState("buy");
     const [search, setSearch] = useState("");
+    const [active, setActive] = useState("buy");
     const inputRef = useRef<HTMLInputElement>(null);
     const [debounced] = useDebouncedValue(search, 500);
 
