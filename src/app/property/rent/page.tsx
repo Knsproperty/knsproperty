@@ -1,7 +1,7 @@
 import Container from "@/blocks/atoms/container";
 import strapi, { populate } from "@/utils/strapi";
 import DataNotFound from "@/blocks/atoms/data-not-found";
-import PropertyDetailed from "@/blocks/molecules/cards/property-detailed";
+import PropertyDetailed from "@/blocks/molecules/cards/property-lg";
 
 export default async function Buy({ searchParams }: any) {
   const { data } = await strapi.find<any>("rent-properties", {

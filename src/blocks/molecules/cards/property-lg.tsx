@@ -13,7 +13,7 @@ interface Props {
 
 import Link from "next/link";
 import Image from "next/image";
-import { FiPhoneOutgoing } from "react-icons/fi";
+import CallMe from "@/blocks/atoms/buttons/callme";
 import {
   LuBedDouble,
   LuBath,
@@ -110,9 +110,7 @@ const PropertyDetailed: React.FC<Props> = ({
           </div>
 
           <div className="border-t border-[#eef0f6]  lg:flex items-center px-5 hidden">
-            <button className="px-5 flex items-center text-sm bg-secondary py-3 rounded-full text-white">
-              <FiPhoneOutgoing className="mr-2 stroke-white" /> Call Now
-            </button>
+            <CallMe />
           </div>
         </div>
       </div>

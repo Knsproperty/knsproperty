@@ -5,7 +5,7 @@ interface Props {
 
 import React from "react";
 import strapi, { populate } from "@/utils/strapi";
-import PropertyDetailed from "@/blocks/molecules/cards/property-detailed";
+import PropertyDetailed from "@/blocks/molecules/cards/property-lg";
 
 export default async function Related_products({ type, property_type }: Props) {
   const related_products = await strapi.find<any>(type, {
