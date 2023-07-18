@@ -67,18 +67,17 @@ const SimpleSearch = () => {
                     <form
                         onSubmit={onSubmit}
                         onClick={handleContainerClick}
-                        className="bg-white shadow-md md:h-[60px] h-[55px] px-3 pl-5 items-center flex rounded-full gap-3 border  border-[#80808039]"
-                    >
+                        className="bg-white shadow-md md:h-[60px] h-[55px] px-3 pl-5 items-center flex rounded-full gap-3 border mx-auto  border-[#80808039] ">
                         <FiSearch size={18} className="mr-1" />
                         <p className="text-primary hidden lg:block">Where &nbsp; ›</p>
                         <input
                             ref={inputRef}
                             placeholder="Community or Building"
-                            className="border-none text-sm md:text-mdoutline-none xl:min-w-[400px] placeholder:text-light placeholder:text-sm flex-1 focus:border-none focus:outline-none"
+                            className="border-none text-sm md:text-md outline-none xl:min-w-[400px] placeholder:text-light flex-1 placeholder:text-sm focus:border-none focus:outline-none"
                             value={search}
                             onChange={(e) => setSearch(e.target.value)}
                         />
-                        <div className=" w-[50px] _center">
+                        <div className=" lg:w-[50px] w-[20px] _center">
                             {isLoading && <span className="loading loading-spinner loading-sm" />}
                         </div>
                         <button
