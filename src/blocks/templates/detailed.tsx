@@ -23,6 +23,7 @@ import Formetter from "@/blocks/atoms/text-formatter";
 import ContactCard from "@/blocks/molecules/cards/contact";
 import addCommasToNumber from "@/lib/addCommasToNumbers";
 import LocationCard from "@/blocks/molecules/cards/location";
+import BookAView from "../molecules/book-a-view";
 import {
   LuBedDouble,
   LuBath,
@@ -92,6 +93,8 @@ const PropertyDetailedPage: React.FC<Props> = ({
               <Table {...{ property_type, type, bed, bath, area, parking }} />
 
               <Formetter text={description} />
+
+              <hr className="opacity-10" />
 
             </main>
 
