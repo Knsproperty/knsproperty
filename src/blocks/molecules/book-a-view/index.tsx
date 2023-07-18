@@ -3,6 +3,7 @@ import { Fragment, useState, ChangeEvent } from "react";
 import DatePicker from "./picker";
 import { Dialog, Transition } from "@headlessui/react";
 import { submitForm } from "@/services/email/booking";
+import CountryInput from "./customphone";
 
 interface Props {
   isOpen: boolean;
@@ -10,14 +11,20 @@ interface Props {
 }
 
 const BookAView: React.FC<Props> = ({ isOpen, closeModal }) => {
+  const [isLoading, setIsLoading] = useState<boolean>(false);
+
   const [formError, setFormError] = useState<string>("");
   const [selectedDate, setSelectedDate] = useState<string>("");
   const [selectedHour, setSelectedHour] = useState<string>("8AM");
+  const [phone, setPhone] = useState<string>("");
   const handleDateChange = (event: ChangeEvent<HTMLSelectElement>) => {
     setSelectedDate(event.target.value);
   };
   const handleHourChange = (event: ChangeEvent<HTMLSelectElement>) => {
     setSelectedHour(event.target.value);
+  };
+  const handlePhoneChange = (event: string) => {
+    setPhone(event);
   };
 
   const nameInput = useFormInput("");
@@ -26,7 +33,6 @@ const BookAView: React.FC<Props> = ({ isOpen, closeModal }) => {
   const isFormValid = () => {
     const { value: name } = nameInput;
     const { value: email } = emailInput;
-    const { value: phone } = phoneInput;
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
     const errors = {
@@ -46,23 +52,26 @@ const BookAView: React.FC<Props> = ({ isOpen, closeModal }) => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (isFormValid()) {
-      const { value: name } = nameInput;
-      const { value: email } = emailInput;
-      const { value: phone } = phoneInput;
+    if (!isFormValid()) return;
 
-      // Your request payload
+    setIsLoading(true);
+
+    try {
       const requestData = {
-        name,
-        email,
-        phone,
+        name: nameInput.value,
+        email: emailInput.value,
+        phone: phone,
         selectedDate,
         selectedHour,
       };
 
-      // Make the POST request using the utility function
-      await submitForm(requestData);
+      const data = await submitForm(requestData);
+      console.log(data);
       closeModal();
+    } catch (error) {
+      console.error("Error submitting the form:", error);
+    } finally {
+      setIsLoading(false);
     }
   };
 
@@ -121,11 +130,9 @@ const BookAView: React.FC<Props> = ({ isOpen, closeModal }) => {
                         {...emailInput}
                         className="text-sm bg-lightgray border border-lightgreen p-2 rounded-md placeholder:text-sm placeholder:font-light"
                       />
-                      <input
-                        type="number"
-                        placeholder="Your Phone"
-                        {...phoneInput}
-                        className="text-sm bg-lightgray border border-lightgreen p-2 rounded-md placeholder:text-sm placeholder:font-light"
+                      <CountryInput
+                        value={phone}
+                        onChange={handlePhoneChange}
                       />
                     </div>
                   </div>
@@ -135,10 +142,13 @@ const BookAView: React.FC<Props> = ({ isOpen, closeModal }) => {
                       {formError}
                     </p>
                     <button
-                      // onClick={handleSubmit}
-                      className="bg-primary px-5 py-2.5 rounded-full text-white text-sm w-full"
+                      type="submit"
+                      className={`bg-primary px-5 py-2.5 rounded-full text-white text-sm w-full ${
+                        isLoading ? "opacity-50 pointer-events-none" : ""
+                      }`}
+                      disabled={isLoading}
                     >
-                      Request this time
+                      {isLoading ? "Loading..." : "Request this time"}
                     </button>
                   </div>
                 </form>

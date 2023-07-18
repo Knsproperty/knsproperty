@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const apiUrl = `${process.env.NEXT_PUBLIC_URL}/api/email`; // Adjust the URL according to your API endpoint
+const apiUrl = `${process.env.NEXT_PUBLIC_URL}/api/email/valuation`; // Adjust the URL according to your API endpoint
 
 export const submitForm = async (requestData: any) => {
   try {
