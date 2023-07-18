@@ -28,4 +28,11 @@
         background-color: darkgrey;
         border-radius: 10px;
     }
+
+    #blog p {
+        @apply py-2
+    }
+
+
+
 }
