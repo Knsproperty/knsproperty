@@ -1,5 +1,6 @@
 import Related_products from "@/blocks/sections/related_products";
 import Template from "@/blocks/templates/detailed";
+import strapi, { populate } from "@/utils/strapi";
 export default async function page({ params }: any) {
   const { slug } = params;
   const [{ attributes, related_products }] = await getProperty(slug);
@@ -29,8 +30,23 @@ export default async function page({ params }: any) {
 }
 // fetcher component
 const getProperty = async (slug: string) => {
-  const res = await fetch(`${process.env.NEXT_PUBLIC_URL}/api/rent/${slug}`, {
-    next: { revalidate: 60 },
+  const rent_properties = await strapi.find<any>("rent-properties", {
+    populate: populate,
+    filters: {
+      slug: slug,
+    },
   });
-  return await res.json();
+  return rent_properties.data;
 };
+
+export async function generateStaticParams() {
+  const slugs = await strapi.find<any>("rent-properties", {
+    fields: ["id", "slug"],
+  });
+
+  return slugs.data.map((post: any) => ({
+    slug: post.attributes.slug,
+  }));
+}
+
+export const revalidate = 43200000;

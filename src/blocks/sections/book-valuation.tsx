@@ -3,6 +3,7 @@ import Container from "../atoms/container";
 import Book_Input from "../atoms/inputs/book-v-input";
 import CountryPhoneNumberInput from "../atoms/inputs/country-input";
 import Image from "next/image";
+import BookValuationForm from "../molecules/forms/bookValuation";
 
 export default function Book_Valuation() {
   return (
@@ -36,24 +37,7 @@ export default function Book_Valuation() {
               />
             </div>
             <div className="lg:w-1/2 lg:mx-10">
-              <form className="mt-12 space-y-4">
-                <Book_Input type="text" placeholder="Full Name*" />
-                <Book_Input type="email" placeholder="Email*" />
-                <select className="select w-full bg-white rounded-full pl-8 font-light text-[#A7ADB8] ">
-                  <option disabled selected className="text-sm ">
-                    Property type
-                  </option>
-                  <option value={"buy"}>Buy</option>
-                  <option value={"rent"}>Rent</option>
-                </select>
-
-                <CountryPhoneNumberInput />
-                <Book_Input type="text" placeholder="Property Address*" />
-
-                <button className="bg-primary group flex items-center mt-5 py-4 text-white hover:bg-white  hover:text-primary font-medium text-sm rounded-full capitalize px-8 w-full justify-center ">
-                  Submit Details
-                </button>
-              </form>
+              <BookValuationForm />
             </div>
           </div>
         </div>

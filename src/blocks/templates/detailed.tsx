@@ -20,19 +20,21 @@ import Gallary from "../molecules/gallary";
 import Table from "../atoms/detailed-table";
 import Container from "@/blocks/atoms/container";
 import Formetter from "@/blocks/atoms/text-formatter";
-import ContactCard from "@/blocks/molecules/cards/contact";
 import addCommasToNumber from "@/lib/addCommasToNumbers";
 import LocationCard from "@/blocks/molecules/cards/location";
-import BookAView from "../molecules/book-a-view";
 import {
   LuBedDouble,
   LuBath,
   LuMaximize,
   LuParkingSquare,
 } from "react-icons/lu";
+import ContactCard from "../molecules/cards/contact";
 
 // Dynamic Imports
 const Images = dynamic(() => import("@/blocks/atoms/image-preview"));
+// const ContactCard = dynamic(() => import("@/blocks/molecules/cards/contact"), {
+//   ssr: false,
+// });
 
 const PropertyDetailedPage: React.FC<Props> = ({
   images,
@@ -95,7 +97,6 @@ const PropertyDetailedPage: React.FC<Props> = ({
               <Formetter text={description} />
 
               <hr className="opacity-10" />
-
             </main>
 
             <aside className="flex flex-col gap-5 mb-5 min-w-[320px] h-auto">
