@@ -1,8 +1,14 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Arsenal&display=swap');
 
 @layer {
+
+    .special-font {
+        font-family: 'Arsenal', sans-serif;
+    }
+
     * {
         @apply text-black;
     }
