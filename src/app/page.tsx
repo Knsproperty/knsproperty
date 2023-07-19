@@ -13,7 +13,6 @@ const QuizComponent = dynamic(() => import("@/blocks/sections/quiz"), {
 import Testimonals from "@/blocks/molecules/testimonals";
 import Book_Valuation from "@/blocks/sections/book-valuation";
 import { Metadata } from "next";
-
 export default async function Home() {
   return (
     <main>
