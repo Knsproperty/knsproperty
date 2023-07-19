@@ -10,13 +10,13 @@ interface Props {
 const NewsLetter: React.FC<Props> = ({ onclose }) => {
     return (
         <div className='grid lg:grid-cols-2'>
-            <div className='bg-primary text-white pt-5 pb-10 px-5 relative lg:static  rounded-t-md'>
+            <div className='bg-primary text-white pt-5 lg:pb-10 pb-5 px-5 relative lg:static  rounded-t-md'>
                 <button onClick={onclose} tabIndex={0} aria-label="close" className='absolute top-1.5 right-1.5 bg-white p-2 rounded-full lg:hidden inline-block'><FiX className=' stroke-primary' /></button>
-                <div className='bg-secondary p-3 inline-block rounded-md _center'>
+                <div className='bg-secondary p-3 inline-block rounded-md _center mb-3'>
                     <HiOutlineMail className='stroke-white' size={20} />
                 </div>
-                <h1 className='text-white text-3xl font-light mb-2'> Sign Up <br /> and stay updated</h1>
-                <p className='text-sm font-light text-[#e4e4e4]'>Lorem ipsum dolor <b className='text-[#e4e4e4]'>sit amet consectetur adipisicing</b> elit. Alias illo itaque ab consequuntur. Dolorem quam aperiam repudiandae. Odit, perspiciatis dolore?</p>
+                <h1 className='text-white text-3xl font-light mb-5'> Sign Up <br /> and stay updated</h1>
+                <p className='text-sm font-light text-[#e4e4e4]'>Stay tuned for exciting updates, exclusive offers, and valuable insights in our upcoming newsletter. Don't miss out!</p>
             </div>
 
             <div className='px-5 py-10 bg-white lg:relative rounded-b-md'>
