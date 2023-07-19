@@ -4,8 +4,6 @@ import NewsLetter from ".";
 import { useScrollLock } from "@mantine/hooks";
 import { useState, useEffect } from "react";
 
-
-
 const NewsLetterSection = () => {
     const [showPopup, setShowPopup] = useState(false);
 

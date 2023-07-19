@@ -33,7 +33,6 @@ const NewsLetter: React.FC<Props> = ({ onclose }) => {
           <HiOutlineMail className="stroke-white" size={20} />
         </div>
         <h1 className="text-white text-3xl font-light mb-5">
-          {" "}
           Sign Up <br /> and stay updated
         </h1>
         <p className="text-sm font-light text-[#e4e4e4]">
@@ -52,9 +51,9 @@ const NewsLetter: React.FC<Props> = ({ onclose }) => {
           <FiX className=" stroke-white" />
         </button>
         {isSubscribed ? (
-          <p className="text-green-500 font-light text-sm">
-            You are subscribed!
-          </p>
+          <div className="_center w-full h-full flex-col">
+            <p className="text-green-500  text-lg mb-2">You are subscribed!</p>
+          </div>
         ) : (
           <form onSubmit={handleSubmit}>
             <input
