@@ -3,7 +3,7 @@ import Template from "@/blocks/templates/property";
 import strapi, { populate } from "@/utils/strapi";
 export default async function page({ params }: any) {
   const { slug } = params;
-  const [{ attributes, related_products }] = await getProperty(slug);
+  const [{ attributes }] = await getProperty(slug);
   return (
     <>
       <Template

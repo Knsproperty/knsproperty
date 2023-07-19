@@ -4,8 +4,13 @@ import SearchSection from "@/blocks/sections/search";
 import Testimonals from "@/blocks/molecules/testimonals";
 import Book_Valuation from "@/blocks/sections/book-valuation";
 // dynamic imports
-const Trendings = dynamic(() => import("@/blocks/sections/trending"), { ssr: true, });
-const QuizComponent = dynamic(() => import("@/blocks/sections/quiz"), { ssr: false, loading: () => <div>Loadingg.......</div> });
+const Trendings = dynamic(() => import("@/blocks/sections/trending"), {
+  ssr: true,
+});
+const QuizComponent = dynamic(() => import("@/blocks/sections/quiz"), {
+  ssr: false,
+  loading: () => <div>Loadingg.......</div>,
+});
 
 export default async function Home() {
   return (

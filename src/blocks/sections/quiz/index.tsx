@@ -283,19 +283,23 @@ const QuizComponent: React.FC = () => {
   const [error, setError] = useState("");
 
   const isValidForm = () => {
-    const { name, email, mobile } = state;
+    const { name, email, mobile, first, second, min, max } = state;
 
-    if (name.trim() === "") {
-      setError("Name is required");
+    if (
+      name.trim() === "" ||
+      email.trim() === "" ||
+      mobile.trim() === "" ||
+      first.trim() === "" ||
+      second.trim() === "" ||
+      min.trim() === "" ||
+      max.trim() === ""
+    ) {
+      setError("All fields are required");
       return false;
-    } else if (email.trim() === "") {
-      setError("Email is required");
-      return false;
-    } else if (!isValidEmail(email)) {
+    }
+
+    if (!isValidEmail(email)) {
       setError("Invalid email format");
-      return false;
-    } else if (mobile.trim() === "") {
-      setError("Mobile phone is required");
       return false;
     }
 

@@ -5,7 +5,7 @@ const Logo = () => {
   return (
     <Link href={"/"}>
       <button aria-label="logo" className="flex items-center gap-2">
-        <Image src="/ksn.png" alt="logo" width={50} height={50} />
+        <Image src="/ksnlogo.png" alt="logo" width={50} height={50} />
       </button>
     </Link>
   );
