@@ -1,5 +1,6 @@
 import { Search } from "@/blocks/sections";
 import dynamic from "next/dynamic";
+import QuizComponent from "@/blocks/sections/quiz";
 const Trendings = dynamic(() => import("@/blocks/sections/trending"), {
   ssr: true,
 });
@@ -16,6 +17,7 @@ export default async function Home() {
       <Trendings title="Properties for Sale" type="buy" />
       <Trendings title="Properties for Rent" type="rent" />
       <Book_Valuation />
+      <QuizComponent />
       <Testimonals />
     </main>
   );
