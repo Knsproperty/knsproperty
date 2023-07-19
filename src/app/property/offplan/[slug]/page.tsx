@@ -1,4 +1,4 @@
-import Template from "@/blocks/templates/detailed";
+import Template from "@/blocks/templates/property";
 export default async function page({ params }: any) {
   const { slug } = params;
   const [{ attributes }] = await getProperty(slug);

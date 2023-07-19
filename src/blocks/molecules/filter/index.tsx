@@ -1,15 +1,16 @@
 'use client'
-import { useState } from "react"
 import {
     property_types,
     beds_options,
     price_min_max
-} from "../search/filterbar/data"
+} from "@/config/params"
+
+import { useState } from "react"
 import Dropdown from "./dropdown"
-import { usePathname, useSearchParams } from "next/navigation"
-import Container from "@/blocks/atoms/container"
 import { FiSearch } from "react-icons/fi"
 import { LuFilter } from "react-icons/lu"
+import Container from "@/blocks/atoms/container"
+import { usePathname, useSearchParams } from "next/navigation"
 
 const Filter = () => {
     const query = useSearchParams()
@@ -29,7 +30,6 @@ const Filter = () => {
     const handleFilterClick = () => {
         setFilterVisibility((prevState) => !prevState);
     };
-
 
     if (!["/property/buy", "/property/rent"].includes(pathname)) {
         return null;

@@ -12,12 +12,12 @@ interface Props {
   type: "buy" | "rent" | "offplan";
 }
 
-import RelatedProducts from "../sections/related_products";
+import RelatedProducts from "./related_products";
 
 import React from "react";
 import dynamic from "next/dynamic";
-import Gallary from "../molecules/gallary";
-import Table from "../atoms/detailed-table";
+import Gallary from "../../molecules/gallary";
+import Table from "./table";
 import Container from "@/blocks/atoms/container";
 import Formetter from "@/blocks/atoms/text-formatter";
 import addCommasToNumber from "@/lib/addCommasToNumbers";
@@ -28,13 +28,10 @@ import {
   LuMaximize,
   LuParkingSquare,
 } from "react-icons/lu";
-import ContactCard from "../molecules/cards/contact";
+import ContactCard from "../../molecules/cards/contact";
 
 // Dynamic Imports
 const Images = dynamic(() => import("@/blocks/atoms/image-preview"));
-// const ContactCard = dynamic(() => import("@/blocks/molecules/cards/contact"), {
-//   ssr: false,
-// });
 
 const PropertyDetailedPage: React.FC<Props> = ({
   images,

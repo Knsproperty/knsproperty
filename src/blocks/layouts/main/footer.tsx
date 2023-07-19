@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { config } from "@/config/links";
+import SocialIcon from "./social-icon";
 import Container from "@/blocks/atoms/container";
 
 const Footer = () => {
@@ -34,37 +35,21 @@ const Footer = () => {
 };
 export default Footer;
 
-const SocialIcon = ({ links }: any) => {
-  return (
-    <a href={links.href} target="_">
-      <button
-        aria-label={links.name}
-        className=" bg-white shadow-md py-3.5 group font-semibold text-sm rounded-full capitalize px-3.5"
-      >
-        <links.Icon className="stroke-black" size={18} />
-      </button>
-    </a>
-  );
-};
-
 const List = () => {
+  const keys = Object.keys(config.footer.links);
   return (
     <>
-      {Object.keys(config.footer.links).map((key, index) => (
+      {keys.map((key, index) => (
         <div key={index}>
-          <h6 className="capitalize font-medium py-2 md:text-md text-md">
-            {key}
-          </h6>
+          <h6 className="capitalize font-medium py-2 md:text-md text-md">{key}</h6>
           <ul className="flex flex-col gap-1">
             {(config.footer.links as any)[key].map(
               (links: any, index2: number) => (
                 <li key={index2}>
                   <Link
                     href={links.href}
-                    className="text-sm font-light hover:underline capitalize"
-                  >
-                    {links.text}
-                  </Link>
+                    className="text-sm font-light hover:underline capitalize">
+                    {links.text}</Link>
                 </li>
               )
             )}

@@ -4,9 +4,9 @@ import Logo from "@/blocks/atoms/logo";
 import Container from "@/blocks/atoms/container";
 import Drawer from "@/blocks/molecules/menu-drawer";
 import Contact from "@/blocks/atoms/buttons/contact";
-import Dropdown from "@/blocks/atoms/dropdown/header";
+import Dropdown from "@/blocks/layouts/main/dropdown";
 
-const Headar: React.FC = () => {
+const Header: React.FC = () => {
   const buttons = config.desktop.map((link, index) =>
     link.options ? (
       <Dropdown
@@ -49,4 +49,4 @@ const Headar: React.FC = () => {
   );
 };
 
-export default Headar;
+export default Header;

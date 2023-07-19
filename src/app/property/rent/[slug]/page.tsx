@@ -1,5 +1,5 @@
-import Related_products from "@/blocks/sections/related_products";
-import Template from "@/blocks/templates/detailed";
+import Related_products from "@/blocks/templates/property/related_products";
+import Template from "@/blocks/templates/property";
 import strapi, { populate } from "@/utils/strapi";
 export default async function page({ params }: any) {
   const { slug } = params;

@@ -1,22 +1,16 @@
-import { Search } from "@/blocks/sections";
+import { Metadata } from "next";
 import dynamic from "next/dynamic";
-// import QuizComponent from "@/blocks/sections/quiz";
-const Trendings = dynamic(() => import("@/blocks/sections/trending"), {
-  ssr: true,
-});
-const QuizComponent = dynamic(() => import("@/blocks/sections/quiz"), {
-  ssr: false,
-  loading: () => <div>Loadingg.......</div>,
-});
-
-// import Trendings from "@/blocks/sections/trending";
+import SearchSection from "@/blocks/sections/search";
 import Testimonals from "@/blocks/molecules/testimonals";
 import Book_Valuation from "@/blocks/sections/book-valuation";
-import { Metadata } from "next";
+// dynamic imports
+const Trendings = dynamic(() => import("@/blocks/sections/trending"), { ssr: true, });
+const QuizComponent = dynamic(() => import("@/blocks/sections/quiz"), { ssr: false, loading: () => <div>Loadingg.......</div> });
+
 export default async function Home() {
   return (
     <main>
-      <Search />
+      <SearchSection />
       <Trendings title="Properties for Sale" type="buy" />
       <Trendings title="Properties for Rent" type="rent" />
       <Book_Valuation />

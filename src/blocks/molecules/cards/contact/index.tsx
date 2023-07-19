@@ -1,10 +1,11 @@
 "use client";
 
 import React from "react";
-import { FiClock, FiCalendar, FiHome } from "react-icons/fi";
 import { useState } from "react";
 import dynamic from "next/dynamic";
-const BookAView = dynamic(() => import("../book-a-view"), {
+import { FiClock, FiCalendar, FiHome } from "react-icons/fi";
+
+const BookAView = dynamic(() => import("./popup"), {
   ssr: false,
   loading: () => <div>Loading...</div>,
 });
