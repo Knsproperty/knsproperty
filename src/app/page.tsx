@@ -9,7 +9,6 @@ const Trendings = dynamic(() => import("@/blocks/sections/trending"), {
 import Testimonals from "@/blocks/molecules/testimonals";
 import Book_Valuation from "@/blocks/sections/book-valuation";
 import { Metadata } from "next";
-
 export default async function Home() {
   return (
     <main>

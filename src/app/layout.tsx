@@ -3,6 +3,7 @@ import "slick-carousel/slick/slick.css";
 import { Lexend } from "next/font/google";
 import "slick-carousel/slick/slick-theme.css";
 import { Header, Footer } from "@/blocks/layouts/main";
+import NewsLetterSection from "@/blocks/sections/newsletter/popup";
 
 // font initlization
 const lexend = Lexend({ subsets: ["latin"] });
@@ -20,6 +21,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={lexend.className}>
+        <NewsLetterSection />
         <Header />
         {children}
         <Footer />
