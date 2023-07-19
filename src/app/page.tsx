@@ -1,8 +1,12 @@
 import { Search } from "@/blocks/sections";
 import dynamic from "next/dynamic";
-import QuizComponent from "@/blocks/sections/quiz";
+// import QuizComponent from "@/blocks/sections/quiz";
 const Trendings = dynamic(() => import("@/blocks/sections/trending"), {
   ssr: true,
+});
+const QuizComponent = dynamic(() => import("@/blocks/sections/quiz"), {
+  ssr: false,
+  loading: () => <div>Loadingg.......</div>,
 });
 
 // import Trendings from "@/blocks/sections/trending";
