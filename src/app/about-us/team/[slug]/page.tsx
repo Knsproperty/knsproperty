@@ -1,5 +1,4 @@
 import Container from "@/blocks/atoms/container";
-import { Main } from "@/types/team";
 import strapi from "@/utils/strapi";
 import Image from "next/image";
 

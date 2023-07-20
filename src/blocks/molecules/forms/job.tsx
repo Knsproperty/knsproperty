@@ -1,5 +1,6 @@
 "use client";
 import Container from "@/blocks/atoms/container";
+import { submitForm } from "@/services/email/job";
 import strapi from "@/utils/strapi";
 import axios from "axios";
 import { useState, ChangeEvent, FormEvent } from "react";
@@ -86,9 +87,15 @@ export default function Form({ id }: any) {
     setErrors(validationErrors);
 
     if (Object.keys(validationErrors).length === 0) {
-      await applyJob();
-      // Form is valid, perform submission logic
-      // ...
+      const pdf = await handleFileUpload(formData.resume);
+      let data = {
+        Name: formData.fullName,
+        email: formData.email,
+        number: formData.phone,
+        Cv: pdf,
+        job: id,
+      };
+      await submitForm(data);
     }
   };
 
@@ -98,7 +105,11 @@ export default function Form({ id }: any) {
         <div className="lg:pt-[60px] lg:pb-[80px] py-10 rounded-lg px-5 text-center">
           <div className="w-full">
             <div className="pb-6">
-              <h2 className={'text-secondary pb-[1.5rem] lg:text-2xl md:text-xl text-xl font-medium'}>
+              <h2
+                className={
+                  "text-secondary pb-[1.5rem] lg:text-2xl md:text-xl text-xl font-medium"
+                }
+              >
                 Apply to Job
               </h2>
               <p className="col-md-7 col-11 mx-auto text-primary text-base sm:w-[60%] pb-[10px] font-light">
@@ -129,7 +140,9 @@ export default function Form({ id }: any) {
                   value={formData.fullName}
                   onChange={handleInputChange}
                 />
-                {errors.fullName && <p className="text-error">{errors.fullName}</p>}
+                {errors.fullName && (
+                  <p className="text-error">{errors.fullName}</p>
+                )}
 
                 <label className="label">
                   <span className="label-text text-black">Email*</span>
@@ -176,15 +189,10 @@ export default function Form({ id }: any) {
                   Submit Details
                 </button>
               </form>
-
-
             </div>
-
           </div>
         </div>
       </Container>
     </section>
-
-
   );
 }

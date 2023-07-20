@@ -1,3 +1,4 @@
+import { submitForm } from "@/services/email/subcription";
 import React, { useState } from "react";
 import { FiX } from "react-icons/fi";
 import { HiOutlineMail } from "react-icons/hi";
@@ -11,10 +12,9 @@ const NewsLetter: React.FC<Props> = ({ onclose }) => {
   const [email, setEmail] = useState("");
   const [isSubscribed, setIsSubscribed] = useState(false);
 
-  const handleSubmit = (event: React.FormEvent) => {
+  const handleSubmit = async (event: React.FormEvent) => {
     event.preventDefault();
-    // Perform any form validation or submission logic here
-    // For simplicity, let's assume the form is valid and proceed with the subscription
+    await submitForm({ name, email });
     setIsSubscribed(true);
   };
 
