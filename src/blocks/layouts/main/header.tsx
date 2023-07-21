@@ -6,6 +6,7 @@ import Drawer from "@/blocks/molecules/menu-drawer";
 import Contact from "@/blocks/atoms/buttons/contact";
 import Dropdown from "@/blocks/layouts/main/dropdown";
 import Hero from "@/blocks/molecules/hero";
+import GoogleTranslate from "@/blocks/molecules/translate/GoogleTranslate";
 const Header: React.FC = () => {
   const buttons = config.desktop.map((link, index) =>
     link.options ? (
