@@ -5,7 +5,7 @@ import Testimonals from "@/blocks/molecules/testimonals";
 import Book_Valuation from "@/blocks/sections/book-valuation";
 
 import Hero from "@/blocks/molecules/hero";
-
+import Service from "@/blocks/sections/services";
 // dynamic imports
 const Trendings = dynamic(() => import("@/blocks/sections/trending"), {
   ssr: true,
@@ -20,6 +20,7 @@ export default async function Home() {
     <main>
       <Hero />
       {/* <SearchSection /> */}
+      <Service />
       <Trendings title="Properties for Sale" type="buy" />
       <Trendings title="Properties for Rent" type="rent" />
       <Book_Valuation />
