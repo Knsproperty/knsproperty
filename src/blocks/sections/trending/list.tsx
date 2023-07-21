@@ -12,8 +12,6 @@ const List = ({ data, type }: any) => {
     useEffect(() => {
         if (inView) {
             controls.start("visible");
-        } else {
-            controls.start('hidden')
         }
     }, [controls, inView]);
     return (
