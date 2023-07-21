@@ -32,7 +32,7 @@ const Header: React.FC = () => {
             <div className="flex items-center lg:justify-center">
               <Logo />
             </div>
-            <GoogleTranslate />
+            {/* <GoogleTranslate /> */}
             <nav className="xl:flex items-center justify-around ml-5 hidden">
               {buttons}
             </nav>
