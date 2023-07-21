@@ -26,17 +26,11 @@ export default function LetUsKnow() {
             c1.start({ y: 0, opacity: 1 })
             c2.start({ x: 0, opacity: 1 })
             c3.start({ x: 0, opacity: 1 })
-
         }
     }, [controls, inView]);
 
     return (
-        <motion.div
-            ref={ref}
-
-            className="bg-lightgray overflow-hidden ">
-
-
+        <motion.div ref={ref} className="bg-lightgray overflow-hidden ">
             <Container>
                 <div className="px-4 py-16 md:px-24 lg:px-8 lg:py-20 ">
                     <div className="grid gap-10 lg:grid-cols-2 ">
@@ -73,7 +67,7 @@ export default function LetUsKnow() {
                                 <motion.img
                                     initial={{ y: 100, opacity: 0 }}
                                     animate={{ y: 0, opacity: 1 }}
-                                    transition={{ duration: .5 }}
+                                    transition={{ duration: 1, delay: 1 }}
                                     className="object-cover mb-6 rounded shadow-lg h-28 sm:h-48 xl:h-56 w-28 sm:w-48 xl:w-56 hover:shadow-2xl hover:scale-105 ease-linear transition duration-200"
                                     src="https://images.pexels.com/photos/3184287/pexels-photo-3184287.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=750&amp;w=1260"
                                     alt=""
@@ -81,7 +75,7 @@ export default function LetUsKnow() {
                                 <motion.img
                                     initial={{ x: -100, opacity: 0 }}
                                     animate={c2}
-                                    transition={{ duration: .5 }}
+                                    transition={{ duration: 1, delay: 1 }}
                                     className="object-cover w-20 h-20 rounded shadow-lg sm:h-32 xl:h-40 sm:w-32 xl:w-40 hover:shadow-2xl hover:scale-105 ease-linear transition duration-200"
                                     src="https://images.pexels.com/photos/3182812/pexels-photo-3182812.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=750&amp;w=1260"
                                     alt=""
@@ -92,7 +86,7 @@ export default function LetUsKnow() {
                                     initial={{ x: 100, opacity: 0 }}
                                     animate={c3}
 
-                                    transition={{ duration: .5 }}
+                                    transition={{ duration: 1, delay: 1 }}
                                     className="object-cover w-40 h-40 rounded shadow-lg sm:h-64 xl:h-80 sm:w-64 xl:w-80 hover:shadow-2xl hover:scale-105 ease-linear transition duration-200"
                                     src="https://images.pexels.com/photos/3182739/pexels-photo-3182739.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;w=500"
                                     alt=""
