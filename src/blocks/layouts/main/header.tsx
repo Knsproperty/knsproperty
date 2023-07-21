@@ -5,6 +5,7 @@ import Container from "@/blocks/atoms/container";
 import Drawer from "@/blocks/molecules/menu-drawer";
 import Contact from "@/blocks/atoms/buttons/contact";
 import Dropdown from "@/blocks/layouts/main/dropdown";
+import GoogleTranslate from "@/blocks/molecules/translate/GoogleTranslate";
 
 const Header: React.FC = () => {
   const buttons = config.desktop.map((link, index) =>
@@ -16,13 +17,13 @@ const Header: React.FC = () => {
         options={link.options}
       />
     ) : (
-      <Link
-        key={index}
-        href={link.href}>
-        <button className="text-sm font-light hover:underline capitalize">{link.text}</button>
+      <Link key={index} href={link.href}>
+        <button className="text-sm font-light hover:underline capitalize">
+          {link.text}
+        </button>
       </Link>
     )
-  )
+  );
   return (
     <>
       <header className="px-3 fixed top-0 w-full bg-white border-b border-b-[#8080804a] z-50">
@@ -31,18 +32,16 @@ const Header: React.FC = () => {
             <div className="flex items-center lg:justify-center">
               <Logo />
             </div>
-
+            <GoogleTranslate />
             <nav className="xl:flex items-center justify-around ml-5 hidden">
               {buttons}
             </nav>
 
             <Drawer />
             <Contact />
-
           </div>
         </Container>
       </header>
-
 
       <div className="h-[70px]">&nbsp;</div>
     </>
