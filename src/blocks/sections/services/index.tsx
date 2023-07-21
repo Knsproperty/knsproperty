@@ -9,10 +9,8 @@ const Service = () => {
                     <div className="container">
                         <div className="flex flex-wrap -mx-4">
                             <div className="w-full px-4">
-                                <div className=" mb-12 max-w-[510px] text lg:mb-20">
-                                    <span className="block mb-2 text-sm font-semibold text-primary">
-                                        Our Services
-                                    </span>
+                                <div className=" mb-12 max-w-[510px] mx-auto text lg:mb-20 text-center">
+
                                     <h2 className="mb-4 text-3xl">
                                         What We Offer
                                     </h2>

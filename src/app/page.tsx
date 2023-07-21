@@ -20,9 +20,8 @@ import LetUsKnow from "@/blocks/sections/let-us-handle";
 export default async function Home() {
   return (
     <main>
-      <Hero />
       <LetUsKnow />
-      <Service />
+      {/* <Service /> */}
       <Trendings title="Properties for Sale" type="buy" />
       <Trendings title="Properties for Rent" type="rent" />
       <Book_Valuation />
