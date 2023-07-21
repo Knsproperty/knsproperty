@@ -16,6 +16,7 @@ const QuizComponent = dynamic(() => import("@/blocks/sections/quiz"), {
 });
 
 import LetUsKnow from "@/blocks/sections/let-us-handle";
+import Blog_Main from "@/blocks/sections/blog/main";
 
 export default async function Home() {
   return (
@@ -25,6 +26,7 @@ export default async function Home() {
       <Trendings title="Properties for Sale" type="buy" />
       <Trendings title="Properties for Rent" type="rent" />
       <Book_Valuation />
+      <Blog_Main />
       <QuizComponent />
       <Testimonals />
     </main>
