@@ -31,6 +31,7 @@
     "react-dom": "18.2.0",
     "react-html-parser": "^2.0.2",
     "react-icons": "^4.10.1",
+    "react-intersection-observer": "^9.5.2",
     "react-markdown": "^8.0.7",
     "react-phone-number-input": "^3.2.25",
     "react-slick": "^0.29.0",
