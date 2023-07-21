@@ -29,7 +29,7 @@ const PropertyCard: React.FC<Props> = ({
 }) => {
   return (
     // <Link href={`/property/${type}/${slug}`}>
-    <div className=" h-[400px]  group rounded-md shadow-md hover:shadow-lg transition duration-500 hover:border-[tomato] border-transparent border-2 ease-in-out hover:-translate-y-5 overflow-hidden bg-white m-2">
+    <div className=" h-full  group rounded-md shadow-md hover:shadow-lg transition duration-500 hover:border-[tomato] border-transparent border-2 ease-in-out hover:-translate-y-5 overflow-hidden bg-white m-2">
       <header className="relative h-[200px] overflow-hidden ">
         <Image
           className="w-full h-full group-hover:scale-150 transition duration-500 ease-in-out"
@@ -39,9 +39,7 @@ const PropertyCard: React.FC<Props> = ({
         />
       </header>
       <main>
-        <p className="text-sm ml-3 mt-4 font-light inline-block bg-secondary p-1 px-3 rounded-full text-white ">
-          AED {addCommasToNumber(parseInt(price))} Per Annum
-        </p>
+
         <div className="px-5">
           <h2 className="text-md text-primary font-medium my-3">{title}</h2>
           <p className="text-sm font-light  text-primary mb-2">
