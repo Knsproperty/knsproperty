@@ -30,7 +30,7 @@ export default function LetUsKnow() {
     }, [controls, inView]);
 
     return (
-        <motion.div ref={ref} className="bg-lightgray overflow-hidden ">
+        <motion.div ref={ref} className="bg-lightgray overflow-hidden mt-5 ">
             <Container>
                 <div className="px-4 py-16 md:px-24 lg:px-8 lg:py-20 ">
                     <div className="grid gap-10 lg:grid-cols-2 ">

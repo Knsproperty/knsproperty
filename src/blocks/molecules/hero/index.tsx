@@ -22,7 +22,7 @@ const Hero = () => {
             </div>
 
             <video autoPlay muted loop className="absolute top-0 z-20 left-0 w-full h-full object-cover"  >
-                <source src="video.mp4" type="video/mp4" />
+                <source src="video_new.mov" />
             </video>
         </div>
     )
