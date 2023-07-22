@@ -333,10 +333,9 @@ const QuizComponent: React.FC = () => {
   };
 
   return (
-    <div className="py-10 px-2 bg-gradient-to-l- bg-lightgray  from-[skyblue]  to-white">
+    <div className="py-10 bg-lightgray ">
       <Container>
-
-        <section className="py-10 bg-gray-100 sm:py-16 lg:py-24 ">
+        <section className="py-10  sm:py-16 lg:py-24 ">
           <div className="max-w-5xl px-4 mx-auto sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 md:grid-cols-2 md:gap-x-16 lg:gap-x-24 gap-y-10 items-center ">
               <div>
