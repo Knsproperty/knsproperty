@@ -1,6 +1,6 @@
 import "./globals.css";
 import "slick-carousel/slick/slick.css";
-import { Lexend } from "next/font/google";
+import { Lexend, Inter } from "next/font/google";
 import "slick-carousel/slick/slick-theme.css";
 import { Header, Footer } from "@/blocks/layouts/main";
 import NewsLetterSection from "@/blocks/sections/newsletter/popup";
@@ -8,7 +8,7 @@ import Script from "next/script";
 const GTM_ID = "GTM-MT9PWSWC";
 
 // font initlization
-const lexend = Lexend({ subsets: ["latin"] });
+const lexend = Inter({ subsets: ["latin"] });
 
 export const metadata = {
   title: "Ksnproperty",

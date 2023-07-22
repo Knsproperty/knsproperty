@@ -12,12 +12,8 @@ const Hero = () => {
             <div className="absolute w-full h-full top-0 left-0 z-30  bg-black bg-opacity-40 _center flex-col">
                 <div className=" p-10 rounded-md max-w-[800px] -mb-[10rem]--  skew-y-12 bg-black bg-opacity-50 ] ">
                     <Parallax>
-                        <h1 className=" text-white text-8xl  text-center mb-2 font-bold uppercase -skew-y-12">Buy & Rent Properties</h1>
+                        <h1 className=" text-white md:text-3xl text-xl text-center mb-2 special-font -skew-y-12">"To Build true long-term wealth. <br /> You must buy and hold real estate"</h1>
                     </Parallax>
-
-
-
-
                 </div>
             </div>
 
@@ -43,7 +39,7 @@ type ParallaxProps = {
     offset?: number;
 };
 
-const Parallax = ({ children, offset = 100 }: ParallaxProps): JSX.Element => {
+const Parallax = ({ children, offset = 50 }: ParallaxProps): JSX.Element => {
     const prefersReducedMotion = useReducedMotion();
     const [elementTop, setElementTop] = useState(0);
     const [clientHeight, setClientHeight] = useState(0);

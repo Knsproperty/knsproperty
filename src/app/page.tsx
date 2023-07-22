@@ -18,17 +18,30 @@ const QuizComponent = dynamic(() => import("@/blocks/sections/quiz"), {
 import LetUsKnow from "@/blocks/sections/let-us-handle";
 import Blog_Main from "@/blocks/sections/blog/main";
 
+import NewsletterSection from "@/blocks/sections/newsletter-section";
+import Trusted from "@/blocks/sections/trusted";
+import ContactUs from "@/blocks/sections/contact-us";
+import PropertyType from "@/blocks/sections/property-type";
+
 export default async function Home() {
   return (
     <main>
+
+
+      <PropertyType />
+
       <LetUsKnow />
-      {/* <Service /> */}
+      <Service />
       <Trendings title="Properties for Sale" type="buy" />
       <Trendings title="Properties for Rent" type="rent" />
-      <Book_Valuation />
-      <Blog_Main />
+
       <QuizComponent />
+      <Trusted />
+      <ContactUs />
       <Testimonals />
+      <Blog_Main />
+      <NewsletterSection />
+
     </main>
   );
 }
