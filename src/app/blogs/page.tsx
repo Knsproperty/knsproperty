@@ -1,6 +1,10 @@
+import Banner from "@/blocks/molecules/banner/banner";
 import Latest_Blogs from "@/blocks/molecules/cards/blog/blogs";
 import Blog_Header from "@/blocks/molecules/cards/blog/header";
+import Card from "@/blocks/sections/blog/card";
+import Container from "@/blocks/sections/blog/main";
 import LandingSection from "@/blocks/sections/landing";
+import { cardsdata } from "@/data/blogs";
 import { Main } from "@/types/blog";
 import strapi from "@/utils/strapi";
 import React from "react";
@@ -11,7 +15,13 @@ export default async function page() {
   // });
   return (
     <>
-      <LandingSection background="url('/blogs.jpg')">
+      <Banner heading="Blog & News" />
+      <Container>
+        {cardsdata.map((cardData, index) => (
+          <Card key={index} cardData={cardData} />
+        ))}
+      </Container>
+      {/* <LandingSection background="url('/blogs.jpg')">
         <div>
           <h1 className="text-5xl font-semibold text-white text-center">
             Blogs
@@ -119,7 +129,7 @@ export default async function page() {
             </div>
           </div>
         </section>
-      </div>
+      </div> */}
     </>
   );
 }

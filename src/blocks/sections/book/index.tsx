@@ -2,7 +2,7 @@ import React from "react";
 
 export default function Booking() {
   return (
-    <section className="bg-white py-10 md:py-16">
+    <section className="bg-white py-10 md:py-16 ">
       <div className="container max-w-screen-xl mx-auto px-4 xl:relative">
         <div className="bg-primary flex flex-col lg:flex-row items-center justify-evenly py-14 rounded-3xl">
           <div className="text-center lg:text-left mb-10 lg:mb-0">
