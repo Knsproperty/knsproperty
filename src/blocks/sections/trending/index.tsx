@@ -21,12 +21,11 @@ const Trendings: React.FC<Props> = async ({ title, type }) => {
         <div className=" grid  pt-10 pb-10">
           <div className="flex items-center justify-between px-3 mb-5">
             <div>
-              <h2 className="lg:text-2xl text-xl text-primary">{title}</h2>
-              <p className="text-sm font-light">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nostrum, aut.</p>
+              <h2 className="lg:text-3xl text-xl text-primary font-bold">{title}</h2>
             </div>
             <Link
               href={`/property/${type}`}
-              className="text-sm text-secondary hover:underline"
+              className="text-sm  hover:underline bg-primary px-5 py-2 rounded-md text-white"
             >
               Explore more
             </Link>

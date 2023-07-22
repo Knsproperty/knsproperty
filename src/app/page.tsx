@@ -22,13 +22,12 @@ import Community from "@/blocks/sections/community";
 export default async function Home() {
   return (
     <main>
-      {/* <PropertyType />   */}
+      <QuizComponent />
 
       <Service />
       <Trendings title="Properties for Sale" type="buy" />
       <Trendings title="Properties for Rent" type="rent" />
 
-      <QuizComponent />
       <Trusted />
       <ContactUs />
       <Testimonals />

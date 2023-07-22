@@ -50,6 +50,7 @@ const List = ({ data, type }: any) => {
                     />
                 </motion.div>
             ))}
+
         </motion.div>
     )
 }
