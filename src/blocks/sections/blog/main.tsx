@@ -69,11 +69,11 @@ export default function Blog_Main() {
                 <div className="sm:w-full sm:mt-0 mt-4 relative">
                   <div>
                     <p className="p-6 text-xs font-medium leading-3 text-white absolute top-0 right-0">
-                      12 April 2021
+                      12 April 2022
                     </p>
                     <div className="absolute bottom-0 left-0 p-6">
                       <h2 className="text-xl font-semibold 5 text-white">
-                        The Decorated Ways
+                        Best
                       </h2>
                       <p className="text-base leading-4 text-white mt-2">
                         Dive into minimalism
