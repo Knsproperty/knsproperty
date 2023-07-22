@@ -1,111 +1,53 @@
-import Image from "next/image";
 import React from "react";
 
 export default function Community() {
   return (
-    <div className="bg-white py-6 sm:py-8 lg:py-12">
-      <div className="mx-auto max-w-screen-2xl px-4 md:px-8">
-        <div className="mb-4 flex items-center justify-between gap-8 sm:mb-8 md:mb-12">
-          <div className="flex items-center gap-12">
-            <h2 className="text-2xl font-bold text-gray-800 lg:text-3xl">
-              Featured Properties
-            </h2>
-            <p className="hidden max-w-screen-sm text-gray-500 md:block">
-              Explore the most popular and sought-after properties with our
-              exclusive Range Concierge service. We provide this cost-free
-              service to help you find the best real estate to invest in Dubai,
-            </p>
-          </div>
-          <a
-            href="#"
-            className="inline-block rounded-lg border bg-white px-4 py-2 text-center text-sm font-semibold text-gray-500 outline-none ring-indigo-300 transition duration-100 hover:bg-gray-100 focus-visible:ring active:bg-gray-200 md:px-8 md:py-3 md:text-base"
-          >
-            More
-          </a>
+    <section className="py-10 bg-white sm:py-16 lg:py-24">
+      <div className="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
+        <div className="max-w-3xl mx-auto text-center">
+          <h2 className="text-3xl font-bold leading-tight text-black sm:text-4xl lg:text-5xl lg:leading-tight">
+            People who made it successful
+          </h2>
+          <p className="max-w-2xl mx-auto mt-4 text-xl text-gray-600">
+            Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
+            sint. Velit officia consequat duis.
+          </p>
         </div>
-        <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:gap-6 xl:gap-8">
-          {/* image - start */}
+        <div className="grid grid-cols-1 gap-6 mt-8 sm:grid-cols-3 md:mt-16 lg:gap-x-12">
+          <div>
+            <img
+              className="w-full"
+              src="https://cdn.rareblocks.xyz/collection/celebration/images/team/6/team-member-1.jpg"
+              alt=""
+            />
+          </div>
+          <div>
+            <img
+              className="w-full"
+              src="https://cdn.rareblocks.xyz/collection/celebration/images/team/6/team-member-2.jpg"
+              alt=""
+            />
+          </div>
+          <div>
+            <img
+              className="w-full"
+              src="https://cdn.rareblocks.xyz/collection/celebration/images/team/6/team-member-3.jpg"
+              alt=""
+            />
+          </div>
+        </div>
+        <div className="mt-8 text-center md:mt-16">
           <a
             href="#"
-            className="group relative flex h-48 items-end overflow-hidden rounded-lg bg-gray-100 shadow-lg md:h-80 "
+            title=""
+            className="inline-flex items-center justify-center py-4 font-semibold text-white transition-all duration-200 bg-blue-600 border border-transparent rounded-md px-14 hover:bg-blue-700 focus:bg-blue-700"
+            role="button"
           >
-            <Image
-              src="https://range.ae/frontend/assets/images/property/img_1394305377.jpg"
-              fill
-              alt="Photo by Minh Pham"
-              className="absolute inset-0 h-full w-full object-cover object-center transition duration-200 group-hover:scale-110"
-            />
-            <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-gray-800 via-transparent to-transparent opacity-50"></div>
-            <span className="relative ml-4 mb-3 inline-block text-sm text-white md:ml-5 md:text-lg">
-              The Heart of Europe
-            </span>
-            <p className="relative ml-4 mb-3 inline-block text-sm text-white md:ml-5 md:text-lg">
-              AED 1,800,000
-            </p>
+            {" "}
+            Join our team{" "}
           </a>
-          {/* image - end */}
-          {/* image - start */}
-          <a
-            href="#"
-            className="group relative flex h-48 items-end overflow-hidden rounded-lg bg-gray-100 shadow-lg md:col-span-2 md:h-80"
-          >
-            <Image
-              src="https://range.ae/frontend/assets/images/property/img_1656664970.jpg"
-              fill
-              alt="Photo by Magicle"
-              className="absolute inset-0 h-full w-full object-cover object-center transition duration-200 group-hover:scale-110"
-            />
-            <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-gray-800 via-transparent to-transparent opacity-50"></div>
-            <span className="relative ml-4 mb-3 inline-block text-sm text-white md:ml-5 md:text-lg">
-              Six Senses Residences
-            </span>
-            <p className="relative ml-4 mb-3 inline-block text-sm text-white md:ml-5 md:text-lg">
-              AED 9,400,000
-            </p>
-          </a>
-          {/* image - end */}
-          {/* image - start */}
-          <a
-            href="#"
-            className="group relative flex h-48 items-end overflow-hidden rounded-lg bg-gray-100 shadow-lg md:col-span-2 md:h-80"
-          >
-            <Image
-              src="https://range.ae/frontend/assets/images/property/img_1681212060.jpg"
-              fill
-              alt="Photo by Martin Sanchez"
-              className="absolute inset-0 h-full w-full object-cover object-center transition duration-200 group-hover:scale-110"
-            />
-            <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-gray-800 via-transparent to-transparent opacity-50"></div>
-            <span className="relative ml-4 mb-3 inline-block text-sm text-white md:ml-5 md:text-lg">
-              DAMAC Cavalli Estates Villas
-            </span>
-            <span className="relative ml-4 mb-3 inline-block text-sm text-white md:ml-5 md:text-lg">
-              19,796,630
-            </span>
-          </a>
-          {/* image - end */}
-          {/* image - start */}
-          <a
-            href="#"
-            className="group relative flex h-48 items-end overflow-hidden rounded-lg bg-gray-100 shadow-lg md:h-80"
-          >
-            <Image
-              fill
-              src="https://range.ae/frontend/assets/images/property/img_11633276.jpg"
-              alt="Photo by Lorenzo Herrera"
-              className="absolute inset-0 h-full w-full object-cover object-center transition duration-200 group-hover:scale-110"
-            />
-            <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-gray-800 via-transparent to-transparent opacity-50"></div>
-            <span className="relative ml-4 mb-3 inline-block text-sm text-white md:ml-5 md:text-lg">
-              DAMAC Safa Two by de GRISOGONO
-            </span>
-            <span className="relative ml-4 mb-3 inline-block text-sm text-white md:ml-5 md:text-lg">
-              AED 750,000
-            </span>
-          </a>
-          {/* image - end */}
         </div>
       </div>
-    </div>
+    </section>
   );
 }

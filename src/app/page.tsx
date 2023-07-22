@@ -17,7 +17,9 @@ import NewsletterSection from "@/blocks/sections/newsletter-section";
 import Trusted from "@/blocks/sections/trusted";
 import ContactUs from "@/blocks/sections/contact-us";
 import PropertyType from "@/blocks/sections/property-type";
-import Community from "@/blocks/sections/community";
+import Featured from "@/blocks/sections/featured";
+import Features from "@/blocks/sections/features";
+import Booking from "@/blocks/sections/book";
 
 export default async function Home() {
   return (
@@ -31,8 +33,9 @@ export default async function Home() {
       <Trusted />
       <ContactUs />
       <Testimonals />
-      <Blog_Main />
-      <Community />
+      <Features />
+      <Featured />
+      <Booking />
       <NewsletterSection />
     </main>
   );
