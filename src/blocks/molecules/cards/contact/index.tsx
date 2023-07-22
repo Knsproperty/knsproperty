@@ -23,18 +23,20 @@ const ContactCard = () => {
   return (
     <div className=" px-10 pb-8 pt-6 bg-[#E3ECEE] grid gap-5 rounded-md ">
       <div>
-        <h4 className="text-xl">Contact</h4>
+        <h2 className="xl:text-xl text-lg font-semibold text-secondary mt-5 mb-2.5">
+          Contact
+        </h2>
       </div>
       <div className="grid gap-2">
-        <p className="text-sm font-light flex items-center gap-2">
+        <p className="text-sm flex items-center gap-2">
           <FiClock />
           Arrange a viewing, 24/7
         </p>
-        <p className="text-sm font-light flex items-center gap-2">
+        <p className="text-sm flex items-center gap-2">
           <FiCalendar />
           Choose a date & time
         </p>
-        <p className="text-sm font-light flex items-center gap-2">
+        <p className="text-sm flex items-center gap-2">
           <FiHome />
           Need to sell first? Book a valuation
         </p>

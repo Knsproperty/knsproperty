@@ -48,7 +48,7 @@ export default Table
 
 const Row = ({ name, value }: { name: string, value: string | number }) => (
     <div className="flex items-center justify-between odd:border-y px-5 border-lightgreen md:text-md text-sm">
-        <span className="py-2 font-light">{name}</span>
+        <span className="py-2">{name}</span>
         <span className="py-2 capitalize ">{value}</span>
     </div>
 )
