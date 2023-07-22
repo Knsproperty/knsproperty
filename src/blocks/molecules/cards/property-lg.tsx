@@ -40,8 +40,9 @@ const PropertyDetailed: React.FC<Props> = ({
     <Link href={href}>
       <div className="lg:h-[328px] h-auto w-full grid lg:grid-cols-[1.5fr_1fr] my-5 md:border md:border-[#eef0f6] md:rounded-md overflow-hidden md:shadow-md bg-white hover:bg-[#F3F8FD] relative border-b border-[#80808027]">
         <div className="grid md:grid-cols-[2fr_1fr]  gap-2 lg:h-full p-2">
-          <div className="overflow-hidden rounded-md bg-lightgray aspect-w-16 aspect-h-9">
+          <div className="overflow-hidden rounded-md bg-lightgray aspect-w-16 aspect-h-9 ">
             <Image
+              className="hover:scale-125 duration-500 ease-in-out transition-all "
               blurDataURL={dataUrl}
               placeholder="blur"
               alt={title}
@@ -50,8 +51,9 @@ const PropertyDetailed: React.FC<Props> = ({
             />
           </div>
           <div className="hidden md:grid gap-2">
-            <div className="relative overflow-hidden rounded-md bg-lightgray aspect-w-16 aspect-h-9">
+            <div className="relative overflow-hidden rounded-md bg-lightgray aspect-w-16 aspect-h-9 ">
               <Image
+                className="hover:scale-125 duration-500 ease-in-out transition-all "
                 blurDataURL={dataUrl}
                 placeholder="blur"
                 alt={title}
@@ -59,8 +61,9 @@ const PropertyDetailed: React.FC<Props> = ({
                 fill
               />
             </div>
-            <div className="relative overflow-hidden rounded-md bg-lightgray aspect-w-16 aspect-h-9">
+            <div className="relative overflow-hidden rounded-md bg-lightgray aspect-w-16 aspect-h-9 ">
               <Image
+                className="hover:scale-125 duration-500 ease-in-out transition-all "
                 blurDataURL={dataUrl}
                 placeholder="blur"
                 alt={title}
@@ -73,38 +76,37 @@ const PropertyDetailed: React.FC<Props> = ({
 
         <div className=" lg:pt-4 grid lg:grid-rows-[auto_70px] pb-3">
           <div className="px-5">
-            <p className="font-light text-sm md:my-2 mb-2 lg:hidden">
-              {" "}
+            <p className=" text-sm md:my-2 mb-2 lg:hidden">
               AED {price}
             </p>
-            <h2 className="lg:text-xl md:text-lg text-md font-medium text-secondary mb-2 capitalize">
+            <h2 className="lg:text-xl md:text-lg text-md font-semibold   text-secondary mb-2 capitalize">
               {title}
             </h2>
             <p className="text-sm capitalize hidden md:block">{discription}</p>
 
-            <p className="font-light text-sm my-5 hidden lg:block">
+            <p className=" text-sm my-5 hidden lg:block">
               AED {price} Per Annum
             </p>
             <div className="flex lg:my-5 my-2 ">
               <div className="_center pr-5">
                 <LuBedDouble className="mr-2 stroke-primary stroke-[2px]" />{" "}
-                <span className="font-light text-primary">{bed}</span>
+                <span className=" text-primary">{bed}</span>
               </div>
               <div className="_center border-l border-r border-[#00000010] px-5">
                 <LuBath className="mr-2 stroke-primary stroke-[2px] " />{" "}
-                <span className="font-light text-primary">{bathroom}</span>
+                <span className=" text-primary">{bathroom}</span>
               </div>
               <div className="_center border-l border-r border-[#00000010] px-5">
                 <LuParkingSquare className="mr-2 stroke-primary stroke-[2px] " />
-                <span className="font-light text-primary">{parking}</span>
+                <span className=" text-primary">{parking}</span>
               </div>
               <div className="_center pl-5">
                 <LuMaximize className="mr-2 stroke-primary stroke-[2px]" />{" "}
-                <span className="font-light text-primary">{area} sq.ft</span>
+                <span className=" text-primary">{area} sq.ft</span>
               </div>
             </div>
 
-            <p className="text-sm font-light text-secondary mb-5 lg:mb-0 hidden lg:block">
+            <p className="text-sm  text-secondary mb-5 lg:mb-0 hidden lg:block">
               {bed} Bedrooms <br /> {bathroom} Bathrooms <br /> {area} sq.ft{" "}
             </p>
           </div>
