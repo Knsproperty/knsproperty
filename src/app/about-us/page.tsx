@@ -1,5 +1,6 @@
 import React from "react";
 import Landing from "@/blocks/sections/landing";
+import Banner from "@/blocks/molecules/banner/banner";
 const para = {
   styles:
     "mt-3 max-w-md mx-auto text-base text-gray-500 sm:text-lg md:mt-5 md:text-xl md:max-w-7xl text-left",
@@ -7,160 +8,227 @@ const para = {
 const About = () => {
   return (
     <div className="">
-      <Landing background="url('https://images.unsplash.com/photo-1512453979798-5ea266f8880c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8cHJvcGVydHklMjBkdWJhaXxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=600&q=60')">
-        <div>
-          <h1 className="text-5xl font-semibold text-white text-center">
+      <Banner>
+        <div className="grid grid-cols-1 text-center mt-10 ">
+          <h3 className="md:text-4xl text-3xl md:leading-normal leading-normal font-medium !text-white z-50">
             About Us
-          </h1>
+          </h3>
         </div>
-      </Landing>
-
-      <section className="py-10 bg-gray-100 sm:py-16 lg:py-24">
-        <div className="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
-          <div className="grid items-center grid-cols-1 gap-y-8 lg:grid-cols-2 gap-x-16 xl:gap-x-24">
-            <div className="relative mb-12">
-              <img
-                className="w-full rounded-md"
-                src="https://cdn.rareblocks.xyz/collection/celebration/images/content/1/team-work.jpg"
-                alt=""
-              />
-              <div className="absolute w-full max-w-xs px-4 -translate-x-1/2 sm:px-0 sm:max-w-sm left-1/2 -bottom-12">
-                <div className="overflow-hidden bg-white rounded">
-                  <div className="px-10 py-6">
-                    <div className="flex items-center">
-                      <p className="flex-shrink-0 text-3xl font-bold text-blue-600 sm:text-4xl">
-                        37%
-                      </p>
-                      <p className="pl-6 text-sm font-medium text-black sm:text-lg">
-                        High Conversions <br />
-                        on Landing Pages
-                      </p>
-                    </div>
-                  </div>
+      </Banner>
+      <section className="relative lg:py-24 py-16">
+        <div className="container">
+          <div className="grid md:grid-cols-12 grid-cols-1 items-center gap-[30px]">
+            <div className="md:col-span-5">
+              <div className="relative">
+                <img
+                  src="assets/images/about.jpg"
+                  className="rounded-xl shadow-md"
+                  alt=""
+                />
+                <div className="absolute bottom-2/4 translate-y-2/4 start-0 end-0 text-center">
+                  <a
+                    href="#!"
+                    data-type="youtube"
+                    data-id="yba7hPeTSjk"
+                    className="lightbox h-20 w-20 rounded-full shadow-md dark:shadow-gyay-700 inline-flex items-center justify-center bg-white dark:bg-slate-900 text-green-600"
+                  >
+                    <i className="mdi mdi-play inline-flex items-center justify-center text-2xl" />
+                  </a>
                 </div>
               </div>
             </div>
-            <div>
-              <div className="flex items-center justify-center w-16 h-16 bg-white rounded-full">
-                <svg
-                  className="w-8 h-8 text-orange-400"
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="1.5"
-                    d="M13 10V3L4 14h7v7l9-11h-7z"
-                  />
-                </svg>
-              </div>
-              <h2 className="mt-10 text-3xl font-bold leading-tight text-black sm:text-4xl lg:text-5xl lg:leading-tight">
-                Build a perfect team within hours.
-              </h2>
-              <p className="mt-6 text-lg leading-relaxed text-gray-600">
-                Amet minim mollit non deserunt ullamco est sit aliqua dolor do
-                amet sint. Velit officia conse duis enim velit mollit.
-                Exercitation veniam.
-              </p>
-              <a
-                href="#"
-                title=""
-                className="inline-flex items-center justify-center px-10 py-4 text-base font-semibold text-white transition-all duration-200 rounded-md mt-9 bg-gradient-to-r from-fuchsia-600 to-blue-600 hover:opacity-80 focus:opacity-80"
-                role="button"
-              >
-                {" "}
-                Explore more{" "}
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="py-10 bg-gray-50 sm:py-16 lg:py-24">
-        <div className="max-w-5xl px-4 mx-auto sm:px-6 lg:px-8">
-          <div className="grid items-center grid-cols-1 gap-y-6 md:grid-cols-2 md:gap-x-20">
-            <div className="">
-              <h2 className="text-3xl font-bold leading-tight text-black sm:text-4xl lg:text-5xl">
-                Grow business with Celebration.
-              </h2>
-              <p className="mt-4 text-base leading-relaxed text-gray-600">
-                Amet minim mollit non deserunt ullamco est sit aliqua dolor do
-                amet sint. Velit officia consequat duis enim velit mollit.
-                Exercitation veniam consequat sunt nostrud amet.
-              </p>
-            </div>
-            <div className="relative pl-20 pr-6 sm:pl-6 md:px-0">
-              <div className="relative w-full max-w-xs mt-4 mb-10 ml-auto">
-                <img
-                  className="ml-auto"
-                  src="https://cdn.rareblocks.xyz/collection/celebration/images/features/1/person.jpg"
-                  alt=""
-                />
-                <img
-                  className="absolute -top-4 -left-12"
-                  src="https://cdn.rareblocks.xyz/collection/celebration/images/features/1/wavey-lines.svg"
-                  alt=""
-                />
-                <div className="absolute -bottom-10 -left-16">
-                  <div className="bg-yellow-300">
-                    <div className="px-8 py-10">
-                      <span className="block text-4xl font-bold text-black lg:text-5xl">
-                        {" "}
-                        53%{" "}
-                      </span>
-                      <span className="block mt-2 text-base leading-tight text-black">
-                        {" "}
-                        High Conversions
-                        <br />
-                        Everything{" "}
-                      </span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <div className="2xl:container 2xl:mx-auto lg:py-16 lg:px-20  md:px-6 py-3 px-4 ">
-        <section className="bg-white ">
-          <div className="container px-6 py-16 mx-auto ">
-            <div className="max-w-7xl mx-auto">
-              <h1 className="text-4xl font-bold mt-24">About Us</h1>
-              <p className=" text-gray-700 ">
-                <p className={para.styles}>
-                  Incancestry is a social enterprise with a mission to empower
-                  Andean communities and preserve their ancestral textile
-                  traditions. We do this by giving visibility to the finest
-                  artisans in these communities and sharing their handcrafted
-                  products with the world.
-                  <p className={para.styles}>
-                    Our focus is on sustainability and fair trade values, which
-                    means we work to create positive social and economic impact
-                    while being environmentally responsible. We believe that by
-                    supporting these artisans and their traditional crafts, we
-                    can make a real difference not just in their lives but in
-                    the Andean communities they are part of.
-                  </p>
-                  <p className={para.styles}>
-                    At Incancestry, we are passionate about connecting people
-                    with products that tell a story and preserve cultural
-                    traditions. We are committed to being a force for good, both
-                    for the artisans we work with and the supporters who share
-                    our beliefs.
-                  </p>
+            {/*end col*/}
+            <div className="md:col-span-7">
+              <div className="lg:ms-4">
+                <h4 className="mb-6 md:text-3xl text-2xl lg:leading-normal leading-normal font-semibold">
+                  Efficiency. Transparency. <br /> Control.
+                </h4>
+                <p className="text-slate-400 max-w-xl">
+                  Hously developed a platform for the Real Estate marketplace
+                  that allows buyers and sellers to easily execute a transaction
+                  on their own. The platform drives efficiency, cost
+                  transparency and control into the hands of the consumers.
+                  Hously is Real Estate Redefined.
                 </p>
-              </p>
+                <div className="mt-4">
+                  <a
+                    href=""
+                    className="btn bg-green-600 hover:bg-green-700 text-white rounded-md mt-3"
+                  >
+                    Learn More{" "}
+                  </a>
+                </div>
+              </div>
             </div>
+            {/*end col*/}
           </div>
-        </section>
-      </div>
+          {/*end grid*/}
+        </div>
+        {/*end container*/}
+        <div className="container lg:mt-24 mt-16">
+          <div className="grid grid-cols-1 pb-8 text-center">
+            <h3 className="mb-4 md:text-3xl md:leading-normal text-2xl leading-normal font-semibold">
+              How It Works
+            </h3>
+            <p className="text-slate-400 max-w-xl mx-auto">
+              A great plateform to buy, sell and rent your properties without
+              any agent or commisions.
+            </p>
+          </div>
+          {/*end grid*/}
+          <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 mt-8 gap-[30px]">
+            {/* Content */}
+            <div className="group relative lg:px-10 transition-all duration-500 ease-in-out rounded-xl bg-transparent overflow-hidden text-center">
+              <div className="relative overflow-hidden text-transparent -m-3">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width={24}
+                  height={24}
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth={2}
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  className="feather feather-hexagon h-32 w-32 fill-green-600/5 mx-auto"
+                >
+                  <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z" />
+                </svg>
+                <div className="absolute top-2/4 -translate-y-2/4 start-0 end-0 mx-auto text-green-600 rounded-xl transition-all duration-500 ease-in-out text-4xl flex align-middle justify-center items-center">
+                  <i className="uil uil-estate" />
+                </div>
+              </div>
+              <div className="mt-6">
+                <h5 className="text-xl font-medium">Evaluate Property</h5>
+                <p className="text-slate-400 mt-3">
+                  If the distribution of letters and 'words' is random, the
+                  reader will not be distracted from making.
+                </p>
+              </div>
+            </div>
+            {/* Content */}
+            {/* Content */}
+            <div className="group relative lg:px-10 transition-all duration-500 ease-in-out rounded-xl bg-transparent overflow-hidden text-center">
+              <div className="relative overflow-hidden text-transparent -m-3">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width={24}
+                  height={24}
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth={2}
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  className="feather feather-hexagon h-32 w-32 fill-green-600/5 mx-auto"
+                >
+                  <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z" />
+                </svg>
+                <div className="absolute top-2/4 -translate-y-2/4 start-0 end-0 mx-auto text-green-600 rounded-xl transition-all duration-500 ease-in-out text-4xl flex align-middle justify-center items-center">
+                  <i className="uil uil-bag" />
+                </div>
+              </div>
+              <div className="mt-6">
+                <h5 className="text-xl font-medium">Meeting with Agent</h5>
+                <p className="text-slate-400 mt-3">
+                  If the distribution of letters and 'words' is random, the
+                  reader will not be distracted from making.
+                </p>
+              </div>
+            </div>
+            {/* Content */}
+            {/* Content */}
+            <div className="group relative lg:px-10 transition-all duration-500 ease-in-out rounded-xl bg-transparent overflow-hidden text-center">
+              <div className="relative overflow-hidden text-transparent -m-3">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width={24}
+                  height={24}
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth={2}
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  className="feather feather-hexagon h-32 w-32 fill-green-600/5 mx-auto"
+                >
+                  <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z" />
+                </svg>
+                <div className="absolute top-2/4 -translate-y-2/4 start-0 end-0 mx-auto text-green-600 rounded-xl transition-all duration-500 ease-in-out text-4xl flex align-middle justify-center items-center">
+                  <i className="uil uil-key-skeleton" />
+                </div>
+              </div>
+              <div className="mt-6">
+                <h5 className="text-xl font-medium">Close the Deal</h5>
+                <p className="text-slate-400 mt-3">
+                  If the distribution of letters and 'words' is random, the
+                  reader will not be distracted from making.
+                </p>
+              </div>
+            </div>
+            {/* Content */}
+          </div>
+          {/*end grid*/}
+        </div>
+        {/*end container*/}
+      </section>
+      <Award />
     </div>
   );
 };
 
 export default About;
+
+const Award = () => {
+  return (
+    <section className="relative py-24 bg-[url('/01.jpg')] bg-no-repeat bg-center bg-fixed bg-cover">
+      <div className="absolute inset-0 bg-black/60" />
+      <div className="container">
+        <div className="grid lg:grid-cols-12 grid-cols-1 md:text-left text-center justify-center">
+          <div className="lg:col-start-2 lg:col-span-10">
+            <div className="grid md:grid-cols-3 grid-cols-1 items-center">
+              <div className="counter-box text-center">
+                <h1 className="text-white lg:text-5xl text-4xl font-semibold mb-2">
+                  <span className="counter-value" data-target={1548}>
+                    1548
+                  </span>
+                  +
+                </h1>
+                <h5 className="counter-head text-white text-lg font-medium">
+                  Properties Sell
+                </h5>
+              </div>
+              {/*end counter box*/}
+              <div className="counter-box text-center">
+                <h1 className="text-white lg:text-5xl text-4xl font-semibold mb-2">
+                  <span className="counter-value" data-target={25}>
+                    25
+                  </span>
+                  +
+                </h1>
+                <h5 className="counter-head text-white text-lg font-medium">
+                  Award Gained
+                </h5>
+              </div>
+              {/*end counter box*/}
+              <div className="counter-box text-center">
+                <h1 className="text-white lg:text-5xl text-4xl font-semibold mb-2">
+                  <span className="counter-value" data-target={9}>
+                    9
+                  </span>
+                  +
+                </h1>
+                <h5 className="counter-head text-white text-lg font-medium">
+                  Years Experience
+                </h5>
+              </div>
+              {/*end counter box*/}
+            </div>
+          </div>
+        </div>
+        {/*end grid*/}
+      </div>
+      {/*end container*/}
+    </section>
+  );
+};
