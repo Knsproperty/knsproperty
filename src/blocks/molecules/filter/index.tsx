@@ -50,7 +50,7 @@ const Filter = () => {
             </div>
 
             <input
-              className="border-none outline-none placeholder:text-sm text-sm placeholder:font-light w-full"
+              className="border-none outline-none placeholder:text-sm text-sm placeholder: w-full"
               placeholder="Community or Building"
               type="text"
               value={searchInput}
