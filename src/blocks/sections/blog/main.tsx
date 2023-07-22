@@ -7,7 +7,8 @@ export default function Blog_Main() {
         <div className="2xl:mx-auto 2xl:container lg:px-20 lg:py-16 md:py-12 md:px-6 py-9 px-4 w-96 sm:w-auto">
           <div
             role="main"
-            className="flex flex-col items-center justify-center">
+            className="flex flex-col items-center justify-center"
+          >
             <h1 className="text-4xl font-semibold leading-9 text-center text-gray-800 dark:text-gray-50">
               This Week Blogs
             </h1>
@@ -19,7 +20,7 @@ export default function Blog_Main() {
           <div className="lg:flex items-stretch md:mt-12 mt-8">
             <div className="lg:w-1/2">
               <div className="sm:flex items-center justify-between xl:gap-x-8 gap-x-6 relative">
-                <div className="sm:w-1/2 relative ">
+                {/* <div className="sm:w-1/2 relative ">
                   <div>
                     <p className="p-6 text-xs font-medium leading-3 text-white absolute top-0 right-0">
                       12 April 2021
@@ -64,8 +65,8 @@ export default function Blog_Main() {
                     className="w-full rounded-md"
                     alt="chair"
                   />
-                </div>
-                <div className="sm:w-1/2 sm:mt-0 mt-4 relative">
+                </div> */}
+                <div className="sm:w-full sm:mt-0 mt-4 relative">
                   <div>
                     <p className="p-6 text-xs font-medium leading-3 text-white absolute top-0 right-0">
                       12 April 2021

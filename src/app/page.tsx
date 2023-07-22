@@ -17,12 +17,11 @@ import NewsletterSection from "@/blocks/sections/newsletter-section";
 import Trusted from "@/blocks/sections/trusted";
 import ContactUs from "@/blocks/sections/contact-us";
 import PropertyType from "@/blocks/sections/property-type";
+import Community from "@/blocks/sections/community";
 
 export default async function Home() {
   return (
     <main>
-
-
       {/* <PropertyType />   */}
 
       <Service />
@@ -34,8 +33,8 @@ export default async function Home() {
       <ContactUs />
       <Testimonals />
       <Blog_Main />
+      <Community />
       <NewsletterSection />
-
     </main>
   );
 }
