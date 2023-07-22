@@ -335,51 +335,6 @@ const QuizComponent: React.FC = () => {
   return (
     <div className="py-10 px-2 bg-gradient-to-l- bg-lightgray  from-[skyblue]  to-white">
       <Container>
-        {/* {storage && (
-          <div>
-            <h1 className="text-center md:text-xl text-lg bg-lightgreen py-10 rounded-md">
-              Quiz is completed
-            </h1>
-          </div>
-        )}
-        {!storage && (
-          <div className="flex justify-center">
-            <div className="px-5 pb-10 bg-white border rounded-md max-w-[500px] lg:min-w-[500px] w-full">
-              <div className="grid grid-cols-4 gap-5 mb-5 mt-10 mx-auto max-w-[200px]">
-                {[0, 1, 2, 3].map((j) => (
-                  <button
-                    key={j}
-                    onClick={() => {
-                      setIndex(j);
-                    }}
-                    className={`${index == j ? "bg-primary" : "bg-[#80808080]"
-                      } h-[5px] rounded-md`}
-                  ></button>
-                ))}
-              </div>
-
-              <AnimatePresence>
-                {index == 0 && <First set={set} next={next} state={state} />}
-                {index == 1 && <Second set={set} next={next} state={state} />}
-                {index == 2 && <Third set={set} next={next} state={state} />}
-                {index == 3 && (
-                  <Fourth
-                    set={set}
-                    next={next}
-                    state={state}
-                    error={error}
-                    Loading={Loading}
-                  />
-                )}
-              </AnimatePresence>
-            </div>
-          </div>
-        )} */}
-
-
-
-
-
 
         <section className="py-10 bg-gray-100 sm:py-16 lg:py-24 ">
           <div className="max-w-5xl px-4 mx-auto sm:px-6 lg:px-8">

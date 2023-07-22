@@ -6,10 +6,9 @@ import Testimonals from "@/blocks/molecules/testimonals";
 const Trendings = dynamic(() => import("@/blocks/sections/trending"), {
   ssr: true,
 });
-const QuizComponent = dynamic(() => import("@/blocks/sections/quiz"), {
-  ssr: false,
-  loading: () => <div>Loadingg.......</div>,
-});
+
+import QuizComponent from "@/blocks/sections/quiz";
+
 
 import Blog_Main from "@/blocks/sections/blog/main";
 
