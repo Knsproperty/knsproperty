@@ -25,7 +25,7 @@ export default function GoogleTranslate(): JSX.Element {
       {
         pageLanguage: "auto",
         autoDisplay: false,
-        includedLanguages: "ru,en,pl",
+        includedLanguages: "ru,en,pl,ar",
         // @ts-ignore
         layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
       },

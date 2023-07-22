@@ -151,7 +151,7 @@ export async function GET() {
     const buy_properties = await strapi.find("buy-properties", {
       populate,
     });
-    const combinedArray = await convertedArray.concat(buy_properties.data);
+    // const combinedArray = await convertedArray.concat(buy_properties.data);
     return NextResponse.json(parsedXml);
   } catch (error: any) {
     console.error("Error fetching XML data:", error);

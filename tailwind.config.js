@@ -1,4 +1,5 @@
 /** @type {import('tailwindcss').Config} */
+
 module.exports = {
   content: [
     "./src/blocks/**/**/**/*.{js,ts,jsx,tsx,mdx}",
@@ -20,6 +21,11 @@ module.exports = {
       lightgray: "#f8f9fb",
       lightgreen: "#e5ebe9",
       lightviolet: "#e8e5ea",
+      gray: {
+        600: "#52525b",
+        500: "#6b7280",
+      },
+      sky: { 100: "#e0f2fe" },
     },
     fontFamily: {
       sans: ["Graphik", "sans-serif"],
@@ -49,10 +55,18 @@ module.exports = {
           lightgreen: "#e5ebe9",
           lightviolet: "#e8e5ea",
           lightblue: "#eef0f6",
+          gray: {
+            600: "#52525b",
+          },
+          sky: { 100: "#e0f2fe" },
         },
       },
     ],
   },
 
-  plugins: [require("daisyui"), require("@tailwindcss/line-clamp"), require("@tailwindcss/aspect-ratio")],
+  plugins: [
+    require("daisyui"),
+    require("@tailwindcss/line-clamp"),
+    require("@tailwindcss/aspect-ratio"),
+  ],
 };
