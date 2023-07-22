@@ -58,6 +58,9 @@
     * {
         @apply text-black;
         font-family: 'Lato';
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        text-rendering: optimizeLegibility;
     }
 
     /* custom css goes here... */
