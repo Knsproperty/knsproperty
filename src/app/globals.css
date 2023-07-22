@@ -2,12 +2,62 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Tektur:wght@400;500;600;800;900&display=swap');
+
+@font-face {
+    font-family: 'Lato';
+    font-weight: 300;
+    font-style: normal;
+    src: url('../../fonts/Lato/Lato-Light.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Lato';
+    font-weight: 400;
+    font-style: normal;
+    src: url('../../fonts/Lato/Lato-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Lato';
+    font-weight: 600;
+    font-style: normal;
+    src: url('../../fonts/Lato/Lato-Bold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Lato';
+    font-weight: 700;
+    font-style: normal;
+    src: url('../../fonts/Lato/Lato-Black.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Optima';
+    font-weight: 300;
+    font-style: normal;
+    src: url('../../fonts/Optima/OPTIMA.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Optima';
+    font-weight: 400;
+    font-style: normal;
+    src: url('../../fonts/Optima/Optima Medium.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Optima';
+    font-weight: 600;
+    font-style: normal;
+    src: url('../../fonts/Optima/OPTIMA_B.woff') format('woff');
+}
+
 
 @layer {
 
     * {
         @apply text-black;
+        font-family: 'Lato';
     }
 
     /* custom css goes here... */
@@ -35,7 +85,6 @@
     #blog p {
         @apply py-2
     }
-
 
 
 }

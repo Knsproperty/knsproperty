@@ -31,7 +31,7 @@ const Drawer = () => {
                 <div className="drawer-content flex items-center justify-end">
                     <button aria-label="menu-toggle">
                         <label htmlFor="my-drawer" className="drawer-button px-3">
-                            <HiOutlineMenuAlt3 size={28} className="stroke-primary" />
+                            <HiOutlineMenuAlt3 size={28} className="stroke-white" color="white" />
                         </label>
                     </button>
                 </div>

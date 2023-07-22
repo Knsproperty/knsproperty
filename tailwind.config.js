@@ -28,8 +28,8 @@ module.exports = {
       sky: { 100: "#e0f2fe" },
     },
     fontFamily: {
-      sans: ["Graphik", "sans-serif"],
-      serif: ["Merriweather", "serif"],
+      sans: ["Lato"],
+      heading: ["Optima"],
     },
     extend: {
       spacing: {

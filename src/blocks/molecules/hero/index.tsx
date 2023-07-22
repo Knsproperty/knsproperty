@@ -1,18 +1,32 @@
 'use client'
 import { usePathname } from "next/navigation"
+import { FiChevronDown } from "react-icons/fi"
 const Hero = () => {
     const pathname = usePathname()
-
     if (pathname !== "/") {
         return null
     }
+
     return (
         <div className="relative w-full h-[100vh] bg-black">
-
+            <motion.button
+                animate={{
+                    y: [0, 50],
+                    transition: {
+                        duration: 1,
+                        repeat: Infinity,
+                        repeatType: "reverse"
+                    }
+                }} className="absolute bottom-1/4 left-[calc(50%-31px)] transform -translate-x-1/2 text-white text-center z-40 bg-black bg-opacity-50 rounded-full p-5 ">
+                <FiChevronDown
+                    color="white"
+                    size={22}
+                    className="stroke-white " />
+            </motion.button>
             <div className="absolute w-full h-full top-0 left-0 z-30  bg-black bg-opacity-40 _center flex-col">
-                <div className=" p-10 rounded-md max-w-[800px] -mb-[10rem]--  skew-y-12 bg-black bg-opacity-50 ] ">
+                <div className="p-10 rounded-md max-w-[800px] bg-opacity-50">
                     <Parallax>
-                        <h1 className=" text-white md:text-3xl text-xl text-center mb-2 special-font -skew-y-12">"To Build true long-term wealth. <br /> You must buy and hold real estate"</h1>
+                        <h1 className="text-white md:text-3xl text-xl text-center font-heading mb-2">"To Build true long-term wealth. <br /> You must buy and hold real estate"</h1>
                     </Parallax>
                 </div>
             </div>
@@ -32,6 +46,7 @@ import {
     useTransform,
     useSpring,
     useReducedMotion,
+    easeIn,
 } from "framer-motion";
 
 type ParallaxProps = {

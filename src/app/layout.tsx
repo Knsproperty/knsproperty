@@ -1,14 +1,10 @@
 import "./globals.css";
+const GTM_ID = "GTM-MT9PWSWC";
+import Script from "next/script";
 import "slick-carousel/slick/slick.css";
-import { Lexend, Inter } from "next/font/google";
 import "slick-carousel/slick/slick-theme.css";
 import { Header, Footer } from "@/blocks/layouts/main";
 import NewsLetterSection from "@/blocks/sections/newsletter/popup";
-import Script from "next/script";
-const GTM_ID = "GTM-MT9PWSWC";
-
-// font initlization
-const lexend = Inter({ subsets: ["latin"] });
 
 export const metadata = {
   title: "Ksnproperty",
@@ -34,7 +30,7 @@ export default function RootLayout({
       <head>
         <link rel="icon" href="/favicon.ico" sizes="any" />
       </head>
-      <body className={lexend.className}>
+      <body>
         <noscript
           dangerouslySetInnerHTML={{
             __html: `<iframe src="https://www.googletagmanager.com/ns.html?id=${GTM_ID}" height="0" width="0" style="display: none; visibility: hidden;"></iframe>`,

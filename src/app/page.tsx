@@ -28,7 +28,7 @@ export default async function Home() {
     <main>
 
 
-      <PropertyType />
+      {/* <PropertyType />   */}
 
       <LetUsKnow />
       <Service />

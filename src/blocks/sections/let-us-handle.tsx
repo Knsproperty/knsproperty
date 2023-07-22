@@ -39,7 +39,7 @@ export default function LetUsKnow() {
                                 <Image src="/skyline.png" alt="iamge" width={50} height={50} />
                             </div>
                             <div className="max-w-xl mb-6">
-                                <h2 className="max-w-lg mb-6 font-sans text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl sm:leading-none">
+                                <h2 className="max-w-lg mb-6  text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl sm:leading-none !font-heading">
                                     Let us handle
                                     <br className="hidden md:block" />
                                     your next{' '}

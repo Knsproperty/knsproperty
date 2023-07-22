@@ -6,7 +6,7 @@ import Drawer from "@/blocks/molecules/menu-drawer";
 import Contact from "@/blocks/atoms/buttons/contact";
 import Dropdown from "@/blocks/layouts/main/dropdown";
 import Hero from "@/blocks/molecules/hero";
-import GoogleTranslate from "@/blocks/molecules/translate/GoogleTranslate";
+// import GoogleTranslate from "@/blocks/molecules/translate/GoogleTranslate";
 const Header: React.FC = () => {
   const buttons = config.desktop.map((link, index) =>
     link.options ? (
@@ -18,7 +18,7 @@ const Header: React.FC = () => {
       />
     ) : (
       <Link key={index} href={link.href}>
-        <button className="text-md font-light hover:underline capitalize text-white">
+        <button className="text-md font-medium hover:underline capitalize text-white">
           {link.text}
         </button>
       </Link>
