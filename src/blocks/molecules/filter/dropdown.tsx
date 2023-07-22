@@ -16,7 +16,7 @@ const Dropdown: React.FC<dropdown> = ({ value, name, options }) => {
     return (
         <div className="dropdown">
             <label tabIndex={0}>
-                <button tabIndex={-1} className="py-2.5 px-5 rounded-full border border-primary text-primary w-full capitalize flex items-center justify-center font-[300] text-sm">
+                <button tabIndex={-1} className="py-2.5 px-5 rounded-full border border-primary text-primary w-full capitalize flex items-center justify-center  text-sm">
                     {title}
                     <FiChevronDown className="ml-5" />
                 </button>
