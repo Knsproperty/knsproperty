@@ -3,14 +3,11 @@ import Image from "next/image";
 export default function Blog_Main() {
   return (
     <>
-      {/* component */}
       <div className="flex justify-center items-center">
-        {/*- more free and premium Tailwind CSS components at https://tailwinduikit.com/ -*/}
         <div className="2xl:mx-auto 2xl:container lg:px-20 lg:py-16 md:py-12 md:px-6 py-9 px-4 w-96 sm:w-auto">
           <div
             role="main"
-            className="flex flex-col items-center justify-center"
-          >
+            className="flex flex-col items-center justify-center">
             <h1 className="text-4xl font-semibold leading-9 text-center text-gray-800 dark:text-gray-50">
               This Week Blogs
             </h1>

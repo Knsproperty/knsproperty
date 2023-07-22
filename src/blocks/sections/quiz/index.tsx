@@ -8,12 +8,15 @@ import { submitForm } from "@/services/email/quiz";
 
 const Continue = ({ onClick }: any) => {
   return (
-    <button
-      className="bg-primary px-10 py-2.5 rounded-md text-white mx-auto block md:text-md text-sm"
-      onClick={onClick}
-    >
-      Continue →
-    </button>
+    <div className="_center">
+      <a onClick={onClick} className="relative inline-flex items-center justify-center p-4 px-10 py-2 overflow-hidden font-medium text-indigo-600 transition duration-300 ease-out bg-[tomato] rounded-full shadow-md group">
+        <span className="absolute inset-0 flex items-center justify-center w-full h-full text-white duration-300 -translate-x-full bg-purple-500 group-hover:translate-x-0 ease">
+          <svg className="w-6 h-6" fill="none" stroke="white" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+        </span>
+        <span className="absolute flex items-center justify-center w-full h-full text-white transition-all duration-300 transform group-hover:translate-x-full ease">Continue</span>
+        <span className="relative invisible">Continue</span>
+      </a>
+    </div>
   );
 };
 
@@ -54,14 +57,13 @@ const First: React.FC<Props> = ({ set, next, state }) => {
       }}
       className="flex flex-col gap-8"
     >
-      <h1 className="text-3xl font-medium text-primary text-center mt-5">
+      <h1 className="text-3xl font-bold text-primary text-center mt-5">
         I am interested to
       </h1>
       <div className="_center gap-5 ">
         <button
-          className={`capitalize px-10 py-2.5 text-sm border border-secondary rounded-full ${
-            state.first == "buy" ? "bg-secondary text-white" : ""
-          }`}
+          className={`capitalize px-10 py-2.5 text-sm border border-secondary rounded-full ${state.first == "buy" ? "bg-secondary text-white" : ""
+            }`}
           onClick={() => {
             set("first", "buy");
           }}
@@ -69,9 +71,8 @@ const First: React.FC<Props> = ({ set, next, state }) => {
           buy
         </button>
         <button
-          className={`capitalize px-10 py-2.5 text-sm border border-szecondary rounded-full ${
-            state.first == "rent" ? "bg-secondary text-white" : ""
-          }`}
+          className={`capitalize px-10 py-2.5 text-sm border border-szecondary rounded-full ${state.first == "rent" ? "bg-secondary text-white" : ""
+            }`}
           onClick={() => {
             set("first", "rent");
           }}
@@ -96,14 +97,13 @@ const Second: React.FC<Props> = ({ set, next, state }) => {
       }}
       className=" p-5  flex-col h-full gap-5"
     >
-      <h1 className="text-3xl font-medium text-primary text-center">
+      <h1 className="text-3xl font-bold text-primary text-center">
         I am looking for
       </h1>
       <div className="_center gap-5 flex-wrap py-5">
         <button
-          className={`capitalize px-10 py-2.5 text-sm border border-secondary rounded-full ${
-            state.second == "1" ? "bg-secondary text-white" : ""
-          }`}
+          className={`capitalize px-10 py-2.5 text-sm border border-secondary rounded-full ${state.second == "1" ? "bg-secondary text-white" : ""
+            }`}
           onClick={() => {
             set("second", "1");
           }}
@@ -111,9 +111,8 @@ const Second: React.FC<Props> = ({ set, next, state }) => {
           1 Bed
         </button>
         <button
-          className={`capitalize px-10 py-2.5 text-sm border border-secondary rounded-full ${
-            state.second == "2" ? "bg-secondary text-white" : ""
-          }`}
+          className={`capitalize px-10 py-2.5 text-sm border border-secondary rounded-full ${state.second == "2" ? "bg-secondary text-white" : ""
+            }`}
           onClick={() => {
             set("second", "2");
           }}
@@ -121,9 +120,8 @@ const Second: React.FC<Props> = ({ set, next, state }) => {
           2 Bed
         </button>
         <button
-          className={`capitalize px-10 py-2.5 text-sm border border-secondary rounded-full ${
-            state.second == "3" ? "bg-secondary text-white" : ""
-          }`}
+          className={`capitalize px-10 py-2.5 text-sm border border-secondary rounded-full ${state.second == "3" ? "bg-secondary text-white" : ""
+            }`}
           onClick={() => {
             set("second", "3");
           }}
@@ -131,9 +129,8 @@ const Second: React.FC<Props> = ({ set, next, state }) => {
           3 Bed
         </button>
         <button
-          className={`capitalize px-10 py-2.5 text-sm border border-secondary rounded-full ${
-            state.second == "4" ? "bg-secondary text-white" : ""
-          }`}
+          className={`capitalize px-10 py-2.5 text-sm border border-secondary rounded-full ${state.second == "4" ? "bg-secondary text-white" : ""
+            }`}
           onClick={() => {
             set("second", "4");
           }}
@@ -141,9 +138,8 @@ const Second: React.FC<Props> = ({ set, next, state }) => {
           4 Bed
         </button>
         <button
-          className={`capitalize px-10 py-2.5 text-sm border border-secondary rounded-full ${
-            state.second == "5+" ? "bg-secondary text-white" : ""
-          }`}
+          className={`capitalize px-10 py-2.5 text-sm border border-secondary rounded-full ${state.second == "5+" ? "bg-secondary text-white" : ""
+            }`}
           onClick={() => {
             set("second", "5+");
           }}
@@ -168,7 +164,7 @@ const Third: React.FC<Props> = ({ set, next, state }) => {
       }}
       className=" p-5  flex-col h-full gap-5"
     >
-      <h1 className="text-3xl font-medium text-primary text-center">
+      <h1 className="text-3xl font-bold text-primary text-center">
         Price range (AED)
       </h1>
       <div className="_center gap-5 flex-wrap py-5">
@@ -214,7 +210,7 @@ const Fourth: React.FC<Fouth_Props> = ({
       }}
       className=" p-5 flex-col h-full gap-5"
     >
-      <h1 className="text-3xl font-medium text-primary text-center">
+      <h1 className="text-3xl font-bold text-primary text-center">
         Amazing, give us a way to contact you
       </h1>
       <div className="_center gap-5 flex-wrap py-5">
@@ -246,7 +242,7 @@ const Fourth: React.FC<Fouth_Props> = ({
           type="number"
         />
       </div>
-      <p className="text-error text-center">{error}</p>
+      <p className="text-error text-center py-2">{error}</p>
       {Loading ? (
         <button
           className="bg-primary px-10 py-2.5 rounded-md text-white mx-auto block md:text-md text-sm disabled:cursor-not-allowed disabled:opacity-60"
@@ -337,9 +333,9 @@ const QuizComponent: React.FC = () => {
   };
 
   return (
-    <div className="py-10 px-2">
+    <div className="py-10 px-2 bg-gradient-to-l- bg-lightgray  from-[skyblue]  to-white">
       <Container>
-        {storage && (
+        {/* {storage && (
           <div>
             <h1 className="text-center md:text-xl text-lg bg-lightgreen py-10 rounded-md">
               Quiz is completed
@@ -356,9 +352,8 @@ const QuizComponent: React.FC = () => {
                     onClick={() => {
                       setIndex(j);
                     }}
-                    className={`${
-                      index == j ? "bg-primary" : "bg-[#80808080]"
-                    } h-[5px] rounded-md`}
+                    className={`${index == j ? "bg-primary" : "bg-[#80808080]"
+                      } h-[5px] rounded-md`}
                   ></button>
                 ))}
               </div>
@@ -379,7 +374,84 @@ const QuizComponent: React.FC = () => {
               </AnimatePresence>
             </div>
           </div>
-        )}
+        )} */}
+
+
+
+
+
+
+        <section className="py-10 bg-gray-100 sm:py-16 lg:py-24 ">
+          <div className="max-w-5xl px-4 mx-auto sm:px-6 lg:px-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 md:gap-x-16 lg:gap-x-24 gap-y-10 items-center ">
+              <div>
+                <h2 className="text-5xl font-bold">Find Your <b className="text-[tomato] underline">Perfect Property</b> Match</h2>
+                <blockquote>
+                  <p className="mt-6 text-sm leading-relaxed text-black">
+                    Welcome to our interactive property quiz! Whether you're looking to rent or buy, we understand that finding the ideal property can be a daunting task. That's why we've created this quick and easy quiz to help you discover your perfect property match.
+                  </p>
+                </blockquote>
+              </div>
+              <div>
+                <div className="overflow-hidden bg-white">
+                  <div className="p-8 lg:px-12 lg:py-10">
+                    {!storage && (
+                      <div className="flex justify-center">
+                        <div className="px-5 pb-10 bg-white rounded-md max-w-[500px] lg:min-w-[500px] w-full">
+                          <div className="flex justify-center gap-5 mb-5 mt-10 mx-auto ">
+                            {[0, 1, 2, 3].map((j) => (
+                              <div className="_center">
+                                <button
+                                  key={j}
+                                  onClick={() => {
+                                    setIndex(j);
+                                  }}
+                                  className={`${index == j ? "border-2 border-[tomato]" : "bg-lightgray"
+                                    } h-[30px] w-[30px] rounded-full`}
+                                >{j + 1}</button>
+                              </div>
+
+                            ))}
+                          </div>
+
+                          <AnimatePresence>
+                            {index == 0 && <First set={set} next={next} state={state} />}
+                            {index == 1 && <Second set={set} next={next} state={state} />}
+                            {index == 2 && <Third set={set} next={next} state={state} />}
+                            {index == 3 && (
+                              <Fourth
+                                set={set}
+                                next={next}
+                                state={state}
+                                error={error}
+                                Loading={Loading}
+                              />
+                            )}
+                          </AnimatePresence>
+                        </div>
+                      </div>
+                    )}
+                    {storage && (
+                      <div>
+                        <h1 className="text-center font-semibold text-xl py-10 rounded-md">
+                          ✅ Quiz is Completed.
+                        </h1>
+                      </div>
+                    )}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+
+
+
+
+
+
+
       </Container>
     </div>
   );
