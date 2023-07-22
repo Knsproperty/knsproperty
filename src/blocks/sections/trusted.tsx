@@ -3,10 +3,10 @@ import Slider from "react-slick";
 
 export default function Trusted() {
   const settings = {
-    dots: true,
+    // dots: true,
     infinite: true,
     speed: 500,
-    slidesToShow: 4,
+    slidesToShow: 5,
     slidesToScroll: 1,
     autoplay: true,
     responsive: [
