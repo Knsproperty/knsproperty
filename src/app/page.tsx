@@ -21,15 +21,14 @@ import PropertyType from "@/blocks/sections/property-type";
 export default async function Home() {
   return (
     <main>
+      <QuizComponent />
 
 
-      {/* <PropertyType />   */}
 
       <Service />
       <Trendings title="Properties for Sale" type="buy" />
       <Trendings title="Properties for Rent" type="rent" />
 
-      <QuizComponent />
       <Trusted />
       <ContactUs />
       <Testimonals />
