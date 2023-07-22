@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React from "react";
 
 export default function Community() {
@@ -26,11 +27,11 @@ export default function Community() {
           {/* image - start */}
           <a
             href="#"
-            className="group relative flex h-48 items-end overflow-hidden rounded-lg bg-gray-100 shadow-lg md:h-80"
+            className="group relative flex h-48 items-end overflow-hidden rounded-lg bg-gray-100 shadow-lg md:h-80 "
           >
-            <img
+            <Image
               src="https://range.ae/frontend/assets/images/property/img_1394305377.jpg"
-              loading="lazy"
+              fill
               alt="Photo by Minh Pham"
               className="absolute inset-0 h-full w-full object-cover object-center transition duration-200 group-hover:scale-110"
             />
@@ -48,9 +49,9 @@ export default function Community() {
             href="#"
             className="group relative flex h-48 items-end overflow-hidden rounded-lg bg-gray-100 shadow-lg md:col-span-2 md:h-80"
           >
-            <img
+            <Image
               src="https://range.ae/frontend/assets/images/property/img_1656664970.jpg"
-              loading="lazy"
+              fill
               alt="Photo by Magicle"
               className="absolute inset-0 h-full w-full object-cover object-center transition duration-200 group-hover:scale-110"
             />
@@ -68,9 +69,9 @@ export default function Community() {
             href="#"
             className="group relative flex h-48 items-end overflow-hidden rounded-lg bg-gray-100 shadow-lg md:col-span-2 md:h-80"
           >
-            <img
+            <Image
               src="https://range.ae/frontend/assets/images/property/img_1681212060.jpg"
-              loading="lazy"
+              fill
               alt="Photo by Martin Sanchez"
               className="absolute inset-0 h-full w-full object-cover object-center transition duration-200 group-hover:scale-110"
             />
@@ -88,9 +89,9 @@ export default function Community() {
             href="#"
             className="group relative flex h-48 items-end overflow-hidden rounded-lg bg-gray-100 shadow-lg md:h-80"
           >
-            <img
+            <Image
+              fill
               src="https://range.ae/frontend/assets/images/property/img_11633276.jpg"
-              loading="lazy"
               alt="Photo by Lorenzo Herrera"
               className="absolute inset-0 h-full w-full object-cover object-center transition duration-200 group-hover:scale-110"
             />
