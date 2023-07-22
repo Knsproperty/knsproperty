@@ -1,11 +1,7 @@
 import { Metadata } from "next";
 import dynamic from "next/dynamic";
-import SearchSection from "@/blocks/sections/search";
-import Testimonals from "@/blocks/molecules/testimonals";
-import Book_Valuation from "@/blocks/sections/book-valuation";
-
-import Hero from "@/blocks/molecules/hero";
 import Service from "@/blocks/sections/services";
+import Testimonals from "@/blocks/molecules/testimonals";
 // dynamic imports
 const Trendings = dynamic(() => import("@/blocks/sections/trending"), {
   ssr: true,
@@ -15,7 +11,6 @@ const QuizComponent = dynamic(() => import("@/blocks/sections/quiz"), {
   loading: () => <div>Loadingg.......</div>,
 });
 
-import LetUsKnow from "@/blocks/sections/let-us-handle";
 import Blog_Main from "@/blocks/sections/blog/main";
 
 import NewsletterSection from "@/blocks/sections/newsletter-section";
@@ -30,7 +25,6 @@ export default async function Home() {
 
       {/* <PropertyType />   */}
 
-      <LetUsKnow />
       <Service />
       <Trendings title="Properties for Sale" type="buy" />
       <Trendings title="Properties for Rent" type="rent" />
