@@ -18,15 +18,16 @@ import FadeIn from "@/blocks/animation/fade-in";
 export default async function Home() {
   return (
     <main>
+      <Features />
 
-      <Trusted />
       {/* <FadeIn>
       <Booking />
       <QuizComponent />
       <Testimonals />
       <Service />
-        <Trendings title="Properties for Sale" type="buy" />
+      <Trendings title="Properties for Sale" type="buy" />
       </FadeIn>
+      <Trusted />
 
       <Trendings title="Properties for Rent" type="rent" />
 
@@ -39,7 +40,6 @@ export default async function Home() {
       <FadeIn>
       </FadeIn>
 
-      <Features />
       <Featured />
       <NewsletterSection /> */}
     </main>
