@@ -30,7 +30,7 @@ const List = ({ data, type }: any) => {
                 },
                 hidden: { opacity: 0, y: 200 }
             }}
-            className="grid grid-cols-4">
+            className="grid lg:grid-cols-3 gap-y-5 xl:grid-cols-4 md:grid-cols-2 grid-cols-1" >
             {data.map(({ attributes }: any, index: number) => (
                 <motion.div
                     key={index}
