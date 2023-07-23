@@ -38,6 +38,7 @@ export const config = {
       text: "explore more",
       href: "/",
       options: [
+        { text: "about", href: "/about-us" },
         { text: "careers", href: "/about-us/careers" },
         { text: "our team", href: "/about-us/team" },
         { text: "contact us", href: "/contact" },

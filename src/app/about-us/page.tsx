@@ -1,13 +1,19 @@
 import React from "react";
 import Landing from "@/blocks/sections/landing";
 import Banner from "@/blocks/molecules/banner/banner";
+import Testimonals from "@/blocks/molecules/testimonals";
+import Container from "@/blocks/atoms/container";
+import { BsHouseHeart } from "react-icons/bs";
+import { PiSuitcaseSimpleThin } from "react-icons/pi";
+import { GiKey } from "react-icons/gi";
+import Contact from "@/blocks/atoms/buttons/contact";
 const para = {
   styles:
     "mt-3 max-w-md mx-auto text-base text-gray-500 sm:text-lg md:mt-5 md:text-xl md:max-w-7xl text-left",
 };
 const About = () => {
   return (
-    <div className="">
+    <Container>
       <Banner>
         <div className="grid grid-cols-1 text-center mt-10 ">
           <h3 className="md:text-4xl text-3xl md:leading-normal leading-normal font-medium !text-white z-50">
@@ -20,21 +26,8 @@ const About = () => {
           <div className="grid md:grid-cols-12 grid-cols-1 items-center gap-[30px]">
             <div className="md:col-span-5">
               <div className="relative">
-                <img
-                  src="assets/images/about.jpg"
-                  className="rounded-xl shadow-md"
-                  alt=""
-                />
-                <div className="absolute bottom-2/4 translate-y-2/4 start-0 end-0 text-center">
-                  <a
-                    href="#!"
-                    data-type="youtube"
-                    data-id="yba7hPeTSjk"
-                    className="lightbox h-20 w-20 rounded-full shadow-md dark:shadow-gyay-700 inline-flex items-center justify-center bg-white dark:bg-slate-900 text-green-600"
-                  >
-                    <i className="mdi mdi-play inline-flex items-center justify-center text-2xl" />
-                  </a>
-                </div>
+                <img src="/about.jpg" className="rounded-xl shadow-md" alt="" />
+                <div className="absolute bottom-2/4 translate-y-2/4 start-0 end-0 text-center"></div>
               </div>
             </div>
             {/*end col*/}
@@ -53,7 +46,7 @@ const About = () => {
                 <div className="mt-4">
                   <a
                     href=""
-                    className="btn bg-green-600 hover:bg-green-700 text-white rounded-md mt-3"
+                    className="btn bg-primary hover:bg-green-700 text-white rounded-md mt-3"
                   >
                     Learn More{" "}
                   </a>
@@ -85,17 +78,17 @@ const About = () => {
                   width={24}
                   height={24}
                   viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
+                  // fill="none"
+                  // stroke="currentColor"
                   strokeWidth={2}
                   strokeLinecap="round"
                   strokeLinejoin="round"
-                  className="feather feather-hexagon h-32 w-32 fill-green-600/5 mx-auto"
+                  className="feather feather-hexagon h-32 w-32 fill-primary/5 mx-auto text-primary"
                 >
                   <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z" />
                 </svg>
-                <div className="absolute top-2/4 -translate-y-2/4 start-0 end-0 mx-auto text-green-600 rounded-xl transition-all duration-500 ease-in-out text-4xl flex align-middle justify-center items-center">
-                  <i className="uil uil-estate" />
+                <div className="absolute top-2/4 -translate-y-2/4 start-0 end-0 mx-auto text-primary rounded-xl transition-all duration-500 ease-in-out text-4xl flex align-middle justify-center items-center">
+                  <BsHouseHeart className="text-secondary" />
                 </div>
               </div>
               <div className="mt-6">
@@ -115,17 +108,17 @@ const About = () => {
                   width={24}
                   height={24}
                   viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
+                  // fill="none"
+                  // stroke="currentColor"
                   strokeWidth={2}
                   strokeLinecap="round"
                   strokeLinejoin="round"
-                  className="feather feather-hexagon h-32 w-32 fill-green-600/5 mx-auto"
+                  className="feather feather-hexagon h-32 w-32 fill-primary/5 mx-auto text-primary"
                 >
                   <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z" />
                 </svg>
-                <div className="absolute top-2/4 -translate-y-2/4 start-0 end-0 mx-auto text-green-600 rounded-xl transition-all duration-500 ease-in-out text-4xl flex align-middle justify-center items-center">
-                  <i className="uil uil-bag" />
+                <div className="absolute top-2/4 -translate-y-2/4 start-0 end-0 mx-auto text-primary rounded-xl transition-all duration-500 ease-in-out text-4xl flex align-middle justify-center items-center">
+                  <PiSuitcaseSimpleThin className="text-secondary" />
                 </div>
               </div>
               <div className="mt-6">
@@ -145,17 +138,17 @@ const About = () => {
                   width={24}
                   height={24}
                   viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
+                  // fill="none"
+                  // stroke="currentColor"
                   strokeWidth={2}
                   strokeLinecap="round"
                   strokeLinejoin="round"
-                  className="feather feather-hexagon h-32 w-32 fill-green-600/5 mx-auto"
+                  className="feather feather-hexagon h-32 w-32 fill-primary/5 mx-auto text-primary"
                 >
                   <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z" />
                 </svg>
-                <div className="absolute top-2/4 -translate-y-2/4 start-0 end-0 mx-auto text-green-600 rounded-xl transition-all duration-500 ease-in-out text-4xl flex align-middle justify-center items-center">
-                  <i className="uil uil-key-skeleton" />
+                <div className="absolute top-2/4 -translate-y-2/4 start-0 end-0 mx-auto text-primary rounded-xl transition-all duration-500 ease-in-out text-4xl flex align-middle justify-center items-center">
+                  <GiKey className="text-secondary" />
                 </div>
               </div>
               <div className="mt-6">
@@ -173,7 +166,8 @@ const About = () => {
         {/*end container*/}
       </section>
       <Award />
-    </div>
+      <Agents />
+    </Container>
   );
 };
 
@@ -181,15 +175,15 @@ export default About;
 
 const Award = () => {
   return (
-    <section className="relative py-24 bg-[url('/01.jpg')] bg-no-repeat bg-center bg-fixed bg-cover">
-      <div className="absolute inset-0 bg-black/60" />
-      <div className="container">
+    <section className="relative -z-10 py-24 bg-[url('/01.jpg')] bg-no-repeat bg-center bg-fixed bg-cover">
+      <div className="absolute inset-0 bg-black/60 -z-20" />
+      <div className="container ">
         <div className="grid lg:grid-cols-12 grid-cols-1 md:text-left text-center justify-center">
           <div className="lg:col-start-2 lg:col-span-10">
-            <div className="grid md:grid-cols-3 grid-cols-1 items-center">
+            <div className="grid md:grid-cols-3 grid-cols-1 items-center z-10">
               <div className="counter-box text-center">
                 <h1 className="text-white lg:text-5xl text-4xl font-semibold mb-2">
-                  <span className="counter-value" data-target={1548}>
+                  <span className="counter-value text-white" data-target={1548}>
                     1548
                   </span>
                   +
@@ -200,8 +194,8 @@ const Award = () => {
               </div>
               {/*end counter box*/}
               <div className="counter-box text-center">
-                <h1 className="text-white lg:text-5xl text-4xl font-semibold mb-2">
-                  <span className="counter-value" data-target={25}>
+                <h1 className="!text-white lg:text-5xl text-4xl font-semibold mb-2">
+                  <span className="counter-value text-white" data-target={25}>
                     25
                   </span>
                   +
@@ -213,7 +207,7 @@ const Award = () => {
               {/*end counter box*/}
               <div className="counter-box text-center">
                 <h1 className="text-white lg:text-5xl text-4xl font-semibold mb-2">
-                  <span className="counter-value" data-target={9}>
+                  <span className="counter-value text-white" data-target={9}>
                     9
                   </span>
                   +
@@ -229,6 +223,135 @@ const Award = () => {
         {/*end grid*/}
       </div>
       {/*end container*/}
+    </section>
+  );
+};
+
+const Agents = () => {
+  return (
+    <section className="relative md:pb-24 pb-16">
+      <div className="container lg:mt-24 my-16 ">
+        <div className="grid grid-cols-1 pb-8 text-center">
+          <h3 className="mb-4 md:text-3xl md:leading-normal text-2xl leading-normal font-semibold">
+            Meet The Agent Team
+          </h3>
+          <p className="text-slate-400 max-w-xl mx-auto">
+            A great plateform to buy, sell and rent your properties without any
+            agent or commisions.
+          </p>
+        </div>
+        <div className="grid md:grid-cols-12 grid-cols-1 mt-8 gap-[30px]">
+          <div className="lg:col-span-3 md:col-span-6">
+            <div className="group text-center">
+              <div className="relative inline-block mx-auto h-52 w-52 rounded-full overflow-hidden">
+                <img src="/04.35463172278c4051b5f4.jpg" className="" alt="" />
+                <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black h-52 w-52 rounded-full opacity-0 group-hover:opacity-100 transition-all duration-500 ease-in-out" />
+                <ul className="list-none absolute start-0 end-0 -bottom-20 group-hover:bottom-5 transition-all duration-500 ease-in-out ms-1 w-full h-full flex justify-center items-center">
+                  {/* <li className=" "> */}
+                  <Contact />
+                  {/* </li> */}
+                </ul>
+              </div>
+              <div className="content mt-3">
+                <a
+                  className="text-xl font-medium hover:text-green-600 transition-all duration-500 ease-in-out"
+                  href="/aboutus"
+                >
+                  Jack John
+                </a>
+                <p className="text-slate-400">Designer</p>
+              </div>
+            </div>
+          </div>
+          <div className="lg:col-span-3 md:col-span-6">
+            <div className="group text-center">
+              <div className="relative inline-block mx-auto h-52 w-52 rounded-full overflow-hidden">
+                <img src="/05.a7ab2c82813cb95da9d6.jpg" className="" alt="" />
+                <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black h-52 w-52 rounded-full opacity-0 group-hover:opacity-100 transition-all duration-500 ease-in-out" />
+                <ul className="list-none absolute start-0 end-0 -bottom-20 group-hover:bottom-5 transition-all duration-500 ease-in-out ms-1 w-full h-full flex justify-center items-center">
+                  {/* <li className=" "> */}
+                  <Contact />
+                  {/* </li> */}
+                </ul>
+              </div>
+              <div className="content mt-3">
+                <a
+                  className="text-xl font-medium hover:text-green-600 transition-all duration-500 ease-in-out"
+                  href="/aboutus"
+                >
+                  Krista John
+                </a>
+                <p className="text-slate-400">Designer</p>
+              </div>
+            </div>
+          </div>
+          <div className="lg:col-span-3 md:col-span-6">
+            <div className="group text-center">
+              <div className="relative inline-block mx-auto h-52 w-52 rounded-full overflow-hidden">
+                <img src="/06.7365b7fa25b4bccc5ff9.jpg" className="" alt="" />
+                <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black h-52 w-52 rounded-full opacity-0 group-hover:opacity-100 transition-all duration-500 ease-in-out" />
+                <ul className="list-none absolute start-0 end-0 -bottom-20 group-hover:bottom-5 transition-all duration-500 ease-in-out ms-1 w-full h-full flex justify-center items-center">
+                  {/* <li className=" "> */}
+                  <Contact />
+                  {/* </li> */}
+                </ul>
+              </div>
+              <div className="content mt-3">
+                <a
+                  className="text-xl font-medium hover:text-green-600 transition-all duration-500 ease-in-out"
+                  href="/aboutus"
+                >
+                  Roger Jackson
+                </a>
+                <p className="text-slate-400">Designer</p>
+              </div>
+            </div>
+          </div>
+          <div className="lg:col-span-3 md:col-span-6">
+            <div className="group text-center">
+              <div className="relative inline-block mx-auto h-52 w-52 rounded-full overflow-hidden">
+                <img src="/07.e3f0e9f968929876ad53.jpg" className="" alt="" />
+                <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black h-52 w-52 rounded-full opacity-0 group-hover:opacity-100 transition-all duration-500 ease-in-out" />
+                <ul className="list-none absolute start-0 end-0 -bottom-20 group-hover:bottom-5 transition-all duration-500 ease-in-out ms-1 w-full h-full flex justify-center items-center">
+                  {/* <li className=" "> */}
+                  <Contact />
+                  {/* </li> */}
+                </ul>
+              </div>
+              <div className="content mt-3">
+                <a
+                  className="text-xl font-medium hover:text-green-600 transition-all duration-500 ease-in-out"
+                  href="/aboutus"
+                >
+                  Johnny English
+                </a>
+                <p className="text-slate-400">Designer</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      {/* End */}
+      <Testimonals />
+      <div className="container lg:mt-24 mt-16">
+        <div className="grid grid-cols-1 text-center">
+          <h3 className="mb-6 md:text-3xl text-2xl md:leading-normal leading-normal font-medium text-black ">
+            Have Question ? Get in touch!
+          </h3>
+          <p className="text-slate-400 max-w-xl mx-auto">
+            A great plateform to buy, sell and rent your properties without any
+            agent or commisions.
+          </p>
+          <div className="mt-6">
+            <a
+              className="btn bg-primary hover:bg-green-700 text-white rounded-md"
+              href="/contact"
+            >
+              <i className="uil uil-phone align-middle me-2" /> Contact us
+            </a>
+          </div>
+        </div>
+      </div>
     </section>
   );
 };
