@@ -29,10 +29,10 @@ export default function Book_Valuation() {
           <div className="lg:flex lg:items-center lg:max-w-none lg:mx-0 max-w-[500px] mx-auto">
             <div className="mt-16 lg:flex lg:mt-0 lg:flex-col lg:items-center lg:w-1/2 lg:mx-10 ">
               <Image
-                width={550}
-                height={300}
+                width={450}
+                height={200}
                 className="hidden object-cover mx-auto rounded-lg lg:block shrink-0 mt-6"
-                src="https://plus.unsplash.com/premium_photo-1661371767935-aeeb44523816?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+                src="/person13.webp"
                 alt=""
               />
             </div>
