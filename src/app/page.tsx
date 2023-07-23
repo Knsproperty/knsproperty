@@ -9,7 +9,6 @@ const Trendings = dynamic(() => import("@/blocks/sections/trending"), {
 
 import QuizComponent from "@/blocks/sections/quiz";
 
-
 import Blog_Main from "@/blocks/sections/blog/main";
 
 import NewsletterSection from "@/blocks/sections/newsletter-section";
@@ -19,6 +18,7 @@ import PropertyType from "@/blocks/sections/property-type";
 import Featured from "@/blocks/sections/featured";
 import Features from "@/blocks/sections/features";
 import Booking from "@/blocks/sections/book";
+import Community from "@/blocks/sections/community";
 
 export default async function Home() {
   return (
@@ -35,6 +35,7 @@ export default async function Home() {
       <Features />
       <Featured />
       <Booking />
+      <Community />
       <NewsletterSection />
     </main>
   );

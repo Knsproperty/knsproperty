@@ -1,53 +1,59 @@
 import React from "react";
+import Container from "../atoms/container";
 
 export default function Community() {
   return (
-    <section className="py-10 bg-white sm:py-16 lg:py-24">
-      <div className="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
-        <div className="max-w-3xl mx-auto text-center">
-          <h2 className="text-3xl font-bold leading-tight text-black sm:text-4xl lg:text-5xl lg:leading-tight">
-            People who made it successful
-          </h2>
-          <p className="max-w-2xl mx-auto mt-4 text-xl text-gray-600">
-            Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
-            sint. Velit officia consequat duis.
-          </p>
-        </div>
-        <div className="grid grid-cols-1 gap-6 mt-8 sm:grid-cols-3 md:mt-16 lg:gap-x-12">
-          <div>
-            <img
-              className="w-full"
-              src="https://cdn.rareblocks.xyz/collection/celebration/images/team/6/team-member-1.jpg"
-              alt=""
-            />
+    <Container>
+      {" "}
+      <section className="relative -z-10 py-20 bg-[url('/commune.jpg')] bg-no-repeat bg-center bg-fixed bg-cover mb-10">
+        <div className="absolute inset-0 bg-black/60 -z-20" />
+        <div className="container ">
+          <div className="max-w-2xl mx-auto text-center">
+            <h2 className="text-3xl font-bold text-white sm:text-4xl sm:leading-tight mb-3">
+              {" "}
+              Community Guide
+            </h2>
+            <p className="text-white">
+              We are partnered with the leading developers of Dubai to provide
+              you top quality properties guaranteed to satisfy your expectations
+              in both terms; your Living Standards as well a Sound Investment
+            </p>
           </div>
-          <div>
-            <img
-              className="w-full"
-              src="https://cdn.rareblocks.xyz/collection/celebration/images/team/6/team-member-2.jpg"
-              alt=""
-            />
-          </div>
-          <div>
-            <img
-              className="w-full"
-              src="https://cdn.rareblocks.xyz/collection/celebration/images/team/6/team-member-3.jpg"
-              alt=""
-            />
-          </div>
+          <section className="py-10  ">
+            <div className="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
+              <div className="grid grid-cols-1 gap-6 mt-8 sm:grid-cols-4 md:mt-16 lg:gap-x-12">
+                <div>
+                  <img className="w-full h-96" src="/pic2.jpg" alt="" />
+                  <p className="bg-primary text-white text-center font-semibold py-1">
+                    DownTown Dubai
+                  </p>
+                </div>
+                <div>
+                  <img className="w-full h-96" src="/pic3.jpg" alt="" />
+                  <p className="bg-primary text-white text-center font-semibold py-1">
+                    Dubai Marina
+                  </p>
+                </div>
+                <div>
+                  <img className="w-full h-96" src="/pic4.jpg" alt="" />
+                  <p className="bg-primary text-white text-center font-semibold py-1">
+                    Business Bay
+                  </p>
+                </div>
+                <div>
+                  <img className="w-full h-96" src="/pic5.jpg" alt="" />
+                  <p className="bg-primary text-white text-center font-semibold py-1">
+                    Meydan
+                  </p>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          {/*end grid*/}
         </div>
-        <div className="mt-8 text-center md:mt-16">
-          <a
-            href="#"
-            title=""
-            className="inline-flex items-center justify-center py-4 font-semibold text-white transition-all duration-200 bg-blue-600 border border-transparent rounded-md px-14 hover:bg-blue-700 focus:bg-blue-700"
-            role="button"
-          >
-            {" "}
-            Join our team{" "}
-          </a>
-        </div>
-      </div>
-    </section>
+        {/*end container*/}
+      </section>
+    </Container>
   );
 }
