@@ -9,8 +9,7 @@ import QuizComponent from "@/blocks/sections/quiz";
 import Featured from "@/blocks/sections/featured";
 import Features from "@/blocks/sections/features";
 import NewsletterSection from "@/blocks/sections/newsletter-section";
-
-
+import Blog from "@/blocks/sections/blog/home";
 export default async function Home() {
   return (
     <main>
@@ -33,7 +32,7 @@ export default async function Home() {
       <FadeIn>
         <Trusted />
       </FadeIn>
-
+      <Blog />
       <Features />
       <Featured />
       <Booking />
