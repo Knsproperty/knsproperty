@@ -3,21 +3,24 @@ interface Props {
         text: string,
         href: string
     }[],
-    text: string, href: string
+    text: string, href: string,
+    color: 'black' | 'white'
 }
 
 import Link from "next/link"
 import { FiChevronDown } from "react-icons/fi"
 
-const HeaderDropdown: React.FC<Props> = ({ options, text, href }) => {
+const HeaderDropdown: React.FC<Props> = ({ options, text, href, color }) => {
+    const textColor = color == 'black' ? 'text-black' : 'text-white'
+    const strokeColor = color == 'black' ? '!stroke-black' : '!stroke-white'
     return (
         <div className="dropdown dropdown-hover">
 
             <Link href={href}>
                 <button
                     tabIndex={0}
-                    className="text-md font-medium hover:underline capitalize flex items-center text-white">
-                    {text}<FiChevronDown className="ml-2 !stroke-white" />
+                    className={`text-md font-medium hover:underline capitalize flex items-center ${textColor}`}>
+                    {text}<FiChevronDown className={`ml-2 ${strokeColor}`} />
                 </button>
             </Link>
 

@@ -2,7 +2,7 @@ import Link from "next/link";
 import { config } from "@/config/links";
 import SocialIcon from "./social-icon";
 import Container from "@/blocks/atoms/container";
-
+import GoogleTranslate from "@/blocks/molecules/translate/GoogleTranslate";
 const Footer = () => {
   return (
     <footer className="bg-lightgray p-5 lg:p-3">
@@ -15,10 +15,11 @@ const Footer = () => {
               ))}
             </div>
 
-            <p className="text-sm  max-w-md">
+            <p className="text-sm  max-w-md mb-5s">
               <b>Office address - </b>Office #106, KIA Flagship Building, 1 Al
               Safeena Street, Near Al Quoz Cemetery, Al Quoz 1 - Dubai.
             </p>
+            <GoogleTranslate />
           </div>
 
           <div className="grid lg:grid-cols-3 gap-5 lg:gap-0 order-1 lg:order-2">
