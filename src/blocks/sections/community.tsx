@@ -10,7 +10,6 @@ export default function Community() {
         <div className="container ">
           <div className="max-w-2xl mx-auto text-center">
             <h2 className="text-3xl font-bold text-white sm:text-4xl sm:leading-tight mb-3">
-              {" "}
               Community Guide
             </h2>
             <p className="text-white">
