@@ -35,7 +35,6 @@ export default async function Home() {
       <Blog />
       <Features />
       <Featured />
-      <Booking />
       <NewsletterSection />
     </main>
   );
