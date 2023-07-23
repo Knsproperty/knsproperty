@@ -19,15 +19,15 @@ export default async function Home() {
   return (
     <main>
 
-      <QuizComponent />
+      <Service />
       {/* <FadeIn>
+      <QuizComponent />
         <Trendings title="Properties for Sale" type="buy" />
       </FadeIn>
 
       <Trendings title="Properties for Rent" type="rent" />
 
       <FadeIn>
-        <Service />
       </FadeIn>
 
       <FadeIn>
