@@ -33,11 +33,11 @@ export default function Trusted() {
     ],
   };
   return (
-    <section className="py-10 bg-white sm:py-16 lg:py-24">
+    <section className="py-10 bg-white sm:py-16 lg:py-24 overflow-hidden border-2">
       <Container>
         <div className="">
           <div className="max-w-2xl mx-auto text-center">
-            <h2 className="text-4xl font-bold text-gray-800 sm:text-4xl sm:leading-tight mb-3">
+            <h2 className="lg:text-4xl md:text-3xl text-2xl font-bold text-gray-800 sm:text-4xl sm:leading-tight mb-3">
               Our Partners
             </h2>
             <hr className="my-10" />
@@ -123,11 +123,6 @@ export default function Trusted() {
                 />
               </div>
             </Slider>
-          </div>
-          <div className="flex items-center justify-center mt-10 space-x-3 md:hidden">
-            <div className="w-2.5 h-2.5 rounded-full bg-[red] block" />
-            <div className="w-2.5 h-2.5 rounded-full bg-[red] block" />
-            <div className="w-2.5 h-2.5 rounded-full bg-[red] block" />
           </div>
         </div>
       </Container>
