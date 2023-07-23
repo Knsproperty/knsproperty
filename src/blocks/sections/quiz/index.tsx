@@ -5,7 +5,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { useLocalStorage } from "@mantine/hooks";
 import { isValidEmail } from "@/utils/helpers";
 import { submitForm } from "@/services/email/quiz";
-
+import Parallax from "@/blocks/atoms/parallex";
 const Continue = ({ onClick }: any) => {
   return (
     <div className="_center">
@@ -347,53 +347,55 @@ const QuizComponent: React.FC = () => {
                 </blockquote>
               </div>
               <div>
-                <div className="overflow-hidden bg-white">
-                  <div className="p-8 lg:px-12 lg:py-10">
-                    {!storage && (
-                      <div className="flex justify-center">
-                        <div className="px-5 pb-10 bg-white rounded-md max-w-[500px] lg:min-w-[500px] w-full">
-                          <div className="flex justify-center gap-5 mb-5 mt-10 mx-auto ">
-                            {[0, 1, 2, 3].map((j) => (
-                              <div className="_center">
-                                <button
-                                  key={j}
-                                  onClick={() => {
-                                    setIndex(j);
-                                  }}
-                                  className={`${index == j ? "border-2 border-[tomato]" : "bg-lightgray"
-                                    } h-[30px] w-[30px] rounded-full`}
-                                >{j + 1}</button>
-                              </div>
+                <Parallax>
+                  <div className="overflow-hidden bg-white drop-shadow-sm rounded-md">
+                    <div className="p-8 lg:px-12 lg:py-10">
+                      {!storage && (
+                        <div className="flex justify-center">
+                          <div className="px-5 pb-10 bg-white rounded-md max-w-[500px] lg:min-w-[500px] w-full">
+                            <div className="flex justify-center gap-5 mb-5 mt-10 mx-auto ">
+                              {[0, 1, 2, 3].map((j) => (
+                                <div className="_center">
+                                  <button
+                                    key={j}
+                                    onClick={() => {
+                                      setIndex(j);
+                                    }}
+                                    className={`${index == j ? "border-2 border-[tomato]" : "bg-lightgray"
+                                      } h-[30px] w-[30px] rounded-full`}
+                                  >{j + 1}</button>
+                                </div>
 
-                            ))}
+                              ))}
+                            </div>
+
+                            <AnimatePresence>
+                              {index == 0 && <First set={set} next={next} state={state} />}
+                              {index == 1 && <Second set={set} next={next} state={state} />}
+                              {index == 2 && <Third set={set} next={next} state={state} />}
+                              {index == 3 && (
+                                <Fourth
+                                  set={set}
+                                  next={next}
+                                  state={state}
+                                  error={error}
+                                  Loading={Loading}
+                                />
+                              )}
+                            </AnimatePresence>
                           </div>
-
-                          <AnimatePresence>
-                            {index == 0 && <First set={set} next={next} state={state} />}
-                            {index == 1 && <Second set={set} next={next} state={state} />}
-                            {index == 2 && <Third set={set} next={next} state={state} />}
-                            {index == 3 && (
-                              <Fourth
-                                set={set}
-                                next={next}
-                                state={state}
-                                error={error}
-                                Loading={Loading}
-                              />
-                            )}
-                          </AnimatePresence>
                         </div>
-                      </div>
-                    )}
-                    {storage && (
-                      <div>
-                        <h1 className="text-center font-semibold text-xl py-10 rounded-md">
-                          ✅ Quiz is Completed.
-                        </h1>
-                      </div>
-                    )}
+                      )}
+                      {storage && (
+                        <div>
+                          <h1 className="text-center font-semibold text-xl py-10 rounded-md">
+                            ✅ Quiz is Completed.
+                          </h1>
+                        </div>
+                      )}
+                    </div>
                   </div>
-                </div>
+                </Parallax>
               </div>
             </div>
           </div>
@@ -407,7 +409,7 @@ const QuizComponent: React.FC = () => {
 
 
       </Container>
-    </div>
+    </div >
   );
 };
 

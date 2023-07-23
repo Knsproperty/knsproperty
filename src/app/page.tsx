@@ -9,33 +9,38 @@ const Trendings = dynamic(() => import("@/blocks/sections/trending"), {
 
 import QuizComponent from "@/blocks/sections/quiz";
 
-import Blog_Main from "@/blocks/sections/blog/main";
-
-import NewsletterSection from "@/blocks/sections/newsletter-section";
 import Trusted from "@/blocks/sections/trusted";
-import ContactUs from "@/blocks/sections/contact-us";
-import PropertyType from "@/blocks/sections/property-type";
 import Featured from "@/blocks/sections/featured";
 import Features from "@/blocks/sections/features";
 import Booking from "@/blocks/sections/book";
-import Community from "@/blocks/sections/community";
-
+import NewsletterSection from "@/blocks/sections/newsletter-section";
+import FadeIn from "@/blocks/animation/fade-in";
 export default async function Home() {
   return (
     <main>
-      <QuizComponent />
+      <FadeIn>
+        <QuizComponent />
+      </FadeIn>
 
-      <Service />
       <Trendings title="Properties for Sale" type="buy" />
       <Trendings title="Properties for Rent" type="rent" />
 
-      <Trusted />
-      <ContactUs />
-      <Testimonals />
+      <FadeIn>
+        <Service />
+      </FadeIn>
+
+      <FadeIn>
+        <Testimonals />
+      </FadeIn>
+      <Booking />
+
+      <FadeIn>
+        <Trusted />
+      </FadeIn>
+
       <Features />
       <Featured />
       <Booking />
-      <Community />
       <NewsletterSection />
     </main>
   );
