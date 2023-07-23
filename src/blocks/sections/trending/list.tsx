@@ -45,7 +45,7 @@ const List = ({ data, type }: any) => {
                             bathroom: attributes.Bathrooms,
                             title: attributes.Short_Address,
                             description: attributes.Location,
-                            image: attributes.Cron_Images?.data[0].url,
+                            image: attributes.Cron_Images?.data.map((img: any) => img.url) as any,
                         }}
                     />
                 </motion.div>
