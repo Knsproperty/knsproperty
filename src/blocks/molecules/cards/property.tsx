@@ -13,11 +13,12 @@ export interface Props {
 }
 
 // import Link from "next/link";
+import Link from "next/link";
 import Image from "next/image";
+import Slider from "react-slick";
 import clampText from "@/lib/clampText";
 import { LuBedDouble, LuBath, LuMaximize } from "react-icons/lu";
-import Slider from "react-slick";
-import Link from "next/link";
+
 const PropertyCard: React.FC<Props> = ({
   area,
   bathroom,
@@ -29,9 +30,7 @@ const PropertyCard: React.FC<Props> = ({
   type,
   slug,
 }) => {
-
   const [hovered, setHovered] = useState(false)
-
   const settings = {
     nextArrow: hovered ? <SampleNextArrow /> : undefined,
     prevArrow: hovered ? <SamplePrevArrow /> : undefined,
@@ -41,26 +40,6 @@ const PropertyCard: React.FC<Props> = ({
     infinite: true,
     slidesToShow: 1,
     slidesToScroll: 1,
-    responsive: [
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 3,
-        },
-      },
-      {
-        breakpoint: 768,
-        settings: {
-          slidesToShow: 2,
-        },
-      },
-      {
-        breakpoint: 480,
-        settings: {
-          slidesToShow: 1,
-        },
-      },
-    ],
   };
 
   return (

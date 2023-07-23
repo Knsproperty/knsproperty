@@ -15,13 +15,9 @@ const Footer = () => {
               ))}
             </div>
 
-            <p className="text-sm font-light max-w-md">
+            <p className="text-sm  max-w-md">
               <b>Office address - </b>Office #106, KIA Flagship Building, 1 Al
               Safeena Street, Near Al Quoz Cemetery, Al Quoz 1 - Dubai.
-            </p>
-
-            <p className="text-[13px] font-light  capitalize mt-2">
-              Copyright © k&sproperty
             </p>
           </div>
 
@@ -29,6 +25,7 @@ const Footer = () => {
             <List />
           </div>
         </section>
+        <p className="text-sm">Copyright© K&S PROPERTIES L.L.C. All Rights Reserved</p>
       </Container>
     </footer>
   );
@@ -48,7 +45,7 @@ const List = () => {
                 <li key={index2}>
                   <Link
                     href={links.href}
-                    className="text-sm font-light hover:underline capitalize">
+                    className="text-sm  hover:underline capitalize">
                     {links.text}</Link>
                 </li>
               )

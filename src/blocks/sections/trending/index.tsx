@@ -18,7 +18,7 @@ const Trendings: React.FC<Props> = async ({ title, type }) => {
     <section
       className="bg-gray">
       <Container>
-        <div className=" grid  pt-10 pb-10">
+        <div className=" grid pt-10 pb-10">
           <div className="flex items-center justify-between px-3 mb-5">
             <div>
               <h2 className="lg:text-3xl text-xl text-primary font-bold">{title}</h2>

@@ -26,7 +26,6 @@ export default function Featured() {
             </a>
           </div>
           <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:gap-6 xl:gap-8">
-            {/* image - start */}
             <a
               href="#"
               className="group relative flex h-48 items-end overflow-hidden rounded-lg bg-gray-100 shadow-lg md:h-80 "
@@ -37,7 +36,7 @@ export default function Featured() {
                 alt="Photo by Minh Pham"
                 className="absolute inset-0 h-full w-full object-cover object-center transition duration-200 group-hover:scale-110"
               />
-              <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-gray-800 via-transparent to-transparent opacity-50"></div>
+              <div className="pointer-events-none absolute inset-0 opacity-100 bg-gradient-to-t from-black to-transparent"></div>
               <span className="relative ml-4 mb-3 inline-block text-sm text-white md:ml-5 md:text-lg">
                 The Heart of Europe
               </span>
@@ -57,7 +56,7 @@ export default function Featured() {
                 alt="Photo by Magicle"
                 className="absolute inset-0 h-full w-full object-cover object-center transition duration-200 group-hover:scale-110"
               />
-              <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-gray-800 via-transparent to-transparent opacity-50"></div>
+              <div className="pointer-events-none absolute inset-0 opacity-100 bg-gradient-to-t from-black to-transparent"></div>
               <span className="relative ml-4 mb-3 inline-block text-sm text-white md:ml-5 md:text-lg">
                 Six Senses Residences
               </span>
@@ -77,7 +76,7 @@ export default function Featured() {
                 alt="Photo by Martin Sanchez"
                 className="absolute inset-0 h-full w-full object-cover object-center transition duration-200 group-hover:scale-110"
               />
-              <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-gray-800 via-transparent to-transparent opacity-50"></div>
+              <div className="pointer-events-none absolute inset-0 opacity-100 bg-gradient-to-t from-black to-transparent"></div>
               <span className="relative ml-4 mb-3 inline-block text-sm text-white md:ml-5 md:text-lg">
                 DAMAC Cavalli Estates Villas
               </span>
@@ -97,7 +96,7 @@ export default function Featured() {
                 alt="Photo by Lorenzo Herrera"
                 className="absolute inset-0 h-full w-full object-cover object-center transition duration-200 group-hover:scale-110"
               />
-              <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-gray-800 via-transparent to-transparent opacity-50"></div>
+              <div className="pointer-events-none absolute inset-0 opacity-100 bg-gradient-to-t from-black to-transparent"></div>
               <span className="relative ml-4 mb-3 inline-block text-sm text-white md:ml-5 md:text-lg">
                 DAMAC Safa Two by de GRISOGONO
               </span>

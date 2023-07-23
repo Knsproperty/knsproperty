@@ -57,7 +57,7 @@ const First: React.FC<Props> = ({ set, next, state }) => {
       }}
       className="flex flex-col gap-8"
     >
-      <h1 className="text-3xl font-bold text-primary text-center mt-5">
+      <h1 className="md:text-3xl text-2xl  font-bold text-primary text-center mt-5">
         I am interested to
       </h1>
       <div className="_center gap-5 ">
@@ -97,7 +97,7 @@ const Second: React.FC<Props> = ({ set, next, state }) => {
       }}
       className=" p-5  flex-col h-full gap-5"
     >
-      <h1 className="text-3xl font-bold text-primary text-center">
+      <h1 className="md:text-3xl text-2xl font-bold text-primary text-center">
         I am looking for
       </h1>
       <div className="_center gap-5 flex-wrap py-5">
@@ -164,7 +164,7 @@ const Third: React.FC<Props> = ({ set, next, state }) => {
       }}
       className=" p-5  flex-col h-full gap-5"
     >
-      <h1 className="text-3xl font-bold text-primary text-center">
+      <h1 className="md:text-3xl text-2xl font-bold text-primary text-center">
         Price range (AED)
       </h1>
       <div className="_center gap-5 flex-wrap py-5">
@@ -210,7 +210,7 @@ const Fourth: React.FC<Fouth_Props> = ({
       }}
       className=" p-5 flex-col h-full gap-5"
     >
-      <h1 className="text-3xl font-bold text-primary text-center">
+      <h1 className="lg:text-3xl text-xl font-bold text-primary text-center">
         Amazing, give us a way to contact you
       </h1>
       <div className="_center gap-5 flex-wrap py-5">
@@ -339,7 +339,7 @@ const QuizComponent: React.FC = () => {
           <div className="max-w-5xl px-4 mx-auto sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 md:grid-cols-2 md:gap-x-16 lg:gap-x-24 gap-y-10 items-center ">
               <div>
-                <h2 className="text-5xl font-bold">Find Your <b className="text-[tomato] underline">Perfect Property</b> Match</h2>
+                <h2 className="xl:text-5xl lg:text-4xl md:text-3xl text-2xl font-bold">Find Your <b className="text-[tomato] underline">Perfect Property</b> Match</h2>
                 <blockquote>
                   <p className="mt-6 text-sm leading-relaxed text-black">
                     Welcome to our interactive property quiz! Whether you're looking to rent or buy, we understand that finding the ideal property can be a daunting task. That's why we've created this quick and easy quiz to help you discover your perfect property match.
@@ -349,10 +349,10 @@ const QuizComponent: React.FC = () => {
               <div>
                 <Parallax>
                   <div className="overflow-hidden bg-white drop-shadow-sm rounded-md">
-                    <div className="p-8 lg:px-12 lg:py-10">
+                    <div className="md:p-8 lg:px-12 lg:py-10">
                       {!storage && (
                         <div className="flex justify-center">
-                          <div className="px-5 pb-10 bg-white rounded-md max-w-[500px] lg:min-w-[500px] w-full">
+                          <div className="md:px-5 pb-10 bg-white rounded-md max-w-[500px] lg:min-w-[500px] w-full">
                             <div className="flex justify-center gap-5 mb-5 mt-10 mx-auto ">
                               {[0, 1, 2, 3].map((j) => (
                                 <div className="_center">
