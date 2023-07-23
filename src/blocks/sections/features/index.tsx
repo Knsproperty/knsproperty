@@ -9,14 +9,19 @@ export default function Features() {
           <div className="px-4">
             <div className="grid lg:grid-cols-2 grid-cols-1 lg:gap-0 gap-5">
               <div className="_center hidden lg:block">
-                <img src="/feature-img.png" className="max-h-[600px]" alt="Feature img" />
+                <img
+                  src="/feature-img.png"
+                  className="max-h-[600px]"
+                  alt="Feature img"
+                />
               </div>
               <div className="">
                 <h1 className="font-semibold text-gray-900 lg:text-4xl md:text-3xl text-2xl text-center leading-normal mb-6">
                   Choice of various types of <br /> house
                 </h1>
                 <p className="font-normal  text-center mb-16">
-                  We provide a wide of selection of home types for you and your family and are free to choose a home model
+                  We provide a wide of selection of home types for you and your
+                  family and are free to choose a home model
                 </p>
                 <div className="max-w-[450px] mx-auto">
                   <div className="flex flex-col md:flex-row justify-center xl:justify-start space-x-4 mb-5 ">
@@ -42,7 +47,8 @@ export default function Features() {
                         Best Home Guarantee
                       </h4>
                       <p className="font-normal  leading-relaxed">
-                        We guarantees the quality of your home you bought from K&S
+                        We guarantees the quality of your home you bought from
+                        K&S
                       </p>
                     </div>
                   </div>
@@ -60,7 +66,14 @@ export default function Features() {
                         strokeLinejoin="round"
                         className="feather feather-lock  text-green-900"
                       >
-                        <rect x={3} y={11} width={18} height={11} rx={2} ry={2} />
+                        <rect
+                          x={3}
+                          y={11}
+                          width={18}
+                          height={11}
+                          rx={2}
+                          ry={2}
+                        />
                         <path d="M7 11V7a5 5 0 0 1 10 0v4" />
                       </svg>
                     </div>
@@ -69,8 +82,8 @@ export default function Features() {
                         Safe Transaction
                       </h4>
                       <p className="font-normal  leading-relaxed">
-                        Your transactions will always be kept confidential <br />{" "}
-                        and will get discounted
+                        Your transactions will always be kept confidential{" "}
+                        <br /> and will get discounted
                       </p>
                     </div>
                   </div>
@@ -88,7 +101,14 @@ export default function Features() {
                         strokeLinejoin="round"
                         className="feather feather-credit-card  text-green-900"
                       >
-                        <rect x={1} y={4} width={22} height={16} rx={2} ry={2} />
+                        <rect
+                          x={1}
+                          y={4}
+                          width={22}
+                          height={16}
+                          rx={2}
+                          ry={2}
+                        />
                         <line x1={1} y1={10} x2={23} y2={10} />
                       </svg>
                     </div>
@@ -97,8 +117,8 @@ export default function Features() {
                         Low and Cost Home Taxes
                       </h4>
                       <p className="font-normal leading-relaxed">
-                        By buying a house from D’house, you will get a tax <br />{" "}
-                        discount
+                        By buying a house from D’house, you will get a tax{" "}
+                        <br /> discount
                       </p>
                     </div>
                   </div>
@@ -109,6 +129,5 @@ export default function Features() {
         </div>
       </Container>
     </div>
-
   );
 }
