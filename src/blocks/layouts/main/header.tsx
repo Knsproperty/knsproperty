@@ -1,4 +1,4 @@
-'use client'
+"use client";
 
 import Link from "next/link";
 import { config } from "@/config/links";
@@ -11,15 +11,18 @@ import Hero from "@/blocks/molecules/hero";
 import { usePathname } from "next/navigation";
 import Image from "next/image";
 const Header: React.FC = () => {
+  const pathname = usePathname();
 
-  const pathname = usePathname()
-
-  if (['/property/buy', '/property/rent', '/property/offplan', '/'].includes(pathname)) {
+  if (
+    ["/property/buy", "/property/rent", "/property/offplan", "/"].includes(
+      pathname
+    )
+  ) {
     return (
       <>
         <header className="px-3 absolute top-0 left-0 w-full bg-transparent hover:bg-black hover:bg-opacity-50  z-50">
           <Container>
-            <div className="h-[100px] grid lg:grid-cols-[1fr_2fr_1fr] grid-cols-[1fr_1fr] ">
+            <div className="h-[150px] grid lg:grid-cols-[1fr_2fr_1fr] grid-cols-[1fr_1fr] ">
               <div className="flex items-center lg:justify-center">
                 <Logo />
               </div>
@@ -51,7 +54,7 @@ const Header: React.FC = () => {
 
         <Hero />
       </>
-    )
+    );
   }
 
   return (
@@ -85,7 +88,6 @@ const Header: React.FC = () => {
                   </Link>
                 )
               )}
-
             </nav>
             <Drawer />
             <Contact />

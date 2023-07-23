@@ -4,7 +4,7 @@ import Container from "@/blocks/atoms/container";
 export default function Page() {
   return (
     <div>
-      <Landing background="url('https://www.allsoppandallsopp.com/images/banners/career.jpg')">
+      <Landing background="url('bg-1.webp')">
         <div>
           <h5 className="text-white text-center mb-10">Join us</h5>
           <h1 className="text-5xl font-semibold text-white text-center">
@@ -102,7 +102,84 @@ export default function Page() {
             </form>
           </div>
         </div>
+        <Details />
       </Container>
     </div>
   );
 }
+
+const Details = () => {
+  return (
+    <section className="py-[80px] lg:py-[120px]">
+      <div className="container">
+        <div className="grid col-span-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-[30px] mb-[-30px]">
+          <div className="flex hover:drop-shadow-[0px_16px_10px_rgba(0,0,0,0.1)] hover:bg-[#F5F9F8] transition-all p-[20px] xl:p-[35px] rounded-[8px] mb-[30px] group">
+            <img
+              className="self-center mr-[20px] sm:mr-[40px] lg:mr-[20px] xl:mr-[40px] sm:mb-[15px] lg:mb-0"
+              src="/map.webp"
+              width={40}
+              height={55}
+              loading="lazy"
+              alt="image icon"
+            />
+            <div className="flex-1">
+              <h4 className="font-lora group-hover:text-secondary group-hover:transition-all leading-none text-[28px] text-primary mb-[10px]">
+                Address <span className="text-secondary">.</span>
+              </h4>
+              <p className="font-light text-[18px] lg:max-w-[230px]">
+                Office #106, KIA Flagship Building, 1 Al Safeena Street,
+              </p>
+            </div>
+          </div>
+          <div className="flex hover:drop-shadow-[0px_16px_10px_rgba(0,0,0,0.1)] hover:bg-[#F5F9F8] transition-all p-[20px] xl:p-[35px] rounded-[8px] mb-[30px] group">
+            <img
+              className="self-center mr-[20px] sm:mr-[40px] lg:mr-[20px] xl:mr-[40px] sm:mb-[15px] lg:mb-0"
+              src="/phone.webp"
+              width={46}
+              height={46}
+              loading="lazy"
+              alt="image icon"
+            />
+            <div className="flex-1">
+              <h4 className="font-lora group-hover:text-secondary group-hover:transition-all leading-none text-[28px] text-primary mb-[10px]">
+                Call us <span className="text-secondary">.</span>
+              </h4>
+              <p className="font-light text-[18px] lg:max-w-[230px]">
+                (+971) 5022652650
+              </p>
+            </div>
+          </div>
+          <div className="flex hover:drop-shadow-[0px_16px_10px_rgba(0,0,0,0.1)] hover:bg-[#F5F9F8] transition-all p-[20px] xl:p-[35px] rounded-[8px] mb-[30px] xl:pl-[65px] group">
+            <img
+              className="self-center mr-[20px] sm:mr-[40px] lg:mr-[20px] xl:mr-[40px] sm:mb-[15px] lg:mb-0"
+              src="/mail.webp"
+              width={46}
+              height={52}
+              loading="lazy"
+              alt="image icon"
+            />
+            <div className="flex-1">
+              <h4 className="font-lora group-hover:text-secondary group-hover:transition-all leading-none text-[28px] text-primary mb-[10px]">
+                Email us <span className="text-secondary">.</span>
+              </h4>
+              <p className="font-light text-[18px] lg:max-w-[230px]">
+                <a
+                  href="mailto:admin@examples.com"
+                  className="hover:text-secondary"
+                >
+                  admin@examples.com
+                </a>
+                <a
+                  href="mailto:info@examples.com"
+                  className="hover:text-secondary"
+                >
+                  info@examples.com
+                </a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
