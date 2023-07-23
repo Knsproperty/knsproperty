@@ -15,6 +15,7 @@ import Features from "@/blocks/sections/features";
 import Booking from "@/blocks/sections/book";
 import NewsletterSection from "@/blocks/sections/newsletter-section";
 import FadeIn from "@/blocks/animation/fade-in";
+import Blog from "@/blocks/sections/blog/home";
 export default async function Home() {
   return (
     <main>
@@ -37,7 +38,7 @@ export default async function Home() {
       <FadeIn>
         <Trusted />
       </FadeIn>
-
+      <Blog />
       <Features />
       <Featured />
       <NewsletterSection />
