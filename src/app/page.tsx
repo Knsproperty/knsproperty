@@ -1,47 +1,43 @@
 import { Metadata } from "next";
-import dynamic from "next/dynamic";
+import Booking from "@/blocks/sections/book";
 import Service from "@/blocks/sections/services";
-import Testimonals from "@/blocks/molecules/testimonals";
-// dynamic imports
-const Trendings = dynamic(() => import("@/blocks/sections/trending"), {
-  ssr: true,
-});
-
-import QuizComponent from "@/blocks/sections/quiz";
-
 import Trusted from "@/blocks/sections/trusted";
+import Trendings from "@/blocks/sections/trending";
+import FadeIn from "@/blocks/animation/fade-in";
+import Testimonals from "@/blocks/molecules/testimonals";
+import QuizComponent from "@/blocks/sections/quiz";
 import Featured from "@/blocks/sections/featured";
 import Features from "@/blocks/sections/features";
-import Booking from "@/blocks/sections/book";
 import NewsletterSection from "@/blocks/sections/newsletter-section";
-import FadeIn from "@/blocks/animation/fade-in";
+
+
 export default async function Home() {
   return (
     <main>
-      <Featured />
-
-      {/* <FadeIn>
-      <Features />
-      <Booking />
-      <QuizComponent />
-      <Testimonals />
-      <Service />
-      <Trendings title="Properties for Sale" type="buy" />
+      <FadeIn>
+        <QuizComponent />
       </FadeIn>
-      <Trusted />
 
+      <Trendings title="Properties for Sale" type="buy" />
       <Trendings title="Properties for Rent" type="rent" />
 
       <FadeIn>
+        <Service />
       </FadeIn>
 
       <FadeIn>
+        <Testimonals />
       </FadeIn>
+      <Booking />
 
       <FadeIn>
+        <Trusted />
       </FadeIn>
 
-      <NewsletterSection /> */}
+      <Features />
+      <Featured />
+      <Booking />
+      <NewsletterSection />
     </main>
   );
 }
