@@ -19,7 +19,7 @@ export default function GoogleTranslate(): JSX.Element {
       {
         pageLanguage: "auto",
         autoDisplay: false,
-        includedLanguages: "ru,en,pl,ar",
+        includedLanguages: "ru,en,fr,ar",
         // @ts-ignore
         layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
       },
@@ -35,13 +35,10 @@ export default function GoogleTranslate(): JSX.Element {
           style={{
             width: "180px",
             height: "10px",
-            padding: '5px'
+            padding: "5px",
           }}
         ></div>
       </div>
     </>
   );
 }
-
-
-
