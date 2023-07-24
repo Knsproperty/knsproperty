@@ -7,7 +7,7 @@ export default function Booking() {
       <Container>
         <div className="px-4 xl:relative">
           <div className=" flex flex-col lg:flex-row items-center justify-evenly py-14 rounded-3xl">
-            <div className=" lg:text-left mb-10 lg:mb-0">
+            <div className=" lg:text-left mb-10 lg:mb-0 max-w-md">
               <h1 className="font-semibold text-white md:text-5xl text-2xl  mb-4">
                 Talk to us <br /> to discuss
               </h1>

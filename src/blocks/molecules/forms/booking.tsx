@@ -92,7 +92,7 @@ export default function Booking_Form() {
 
   return (
     <form
-      className=" bg-white xl:relative px-6 py-3 rounded-3xl min-w-[90%]"
+      className=" bg-white xl:relative px-6 py-3 rounded-3xl "
       onSubmit={handleFormSubmit}
     >
       <div className="py-3">
@@ -102,7 +102,7 @@ export default function Booking_Form() {
         <input
           type="text"
           placeholder="Full Name"
-          className="px-4 py-4 w-full bg-gray-100 placeholder-gray-400 rounded-xl outline-none"
+          className="px-4 py-4 w-64 md:w-96 bg-gray-100 placeholder-gray-400 rounded-xl outline-none"
           value={formData.fullName}
           onChange={(e) =>
             setFormData({ ...formData, fullName: e.target.value })
@@ -116,7 +116,7 @@ export default function Booking_Form() {
         <input
           type="text"
           placeholder="Email"
-          className="px-4 py-4 w-full bg-gray-100 placeholder-gray-400 rounded-xl outline-none"
+          className="px-4 py-4 w-64 md:w-96 bg-gray-100 placeholder-gray-400 rounded-xl outline-none"
           value={formData.email}
           onChange={(e) => setFormData({ ...formData, email: e.target.value })}
         />
@@ -128,7 +128,7 @@ export default function Booking_Form() {
         <input
           type="date"
           placeholder="Date"
-          className="px-4 py-4 w-full bg-gray-100 font-normal text-lg placeholder-gray-400 rounded-xl outline-none"
+          className="px-4 py-4 w-64 md:w-96 bg-gray-100 font-normal text-lg placeholder-gray-400 rounded-xl outline-none"
           value={formData.selectedDate}
           onChange={(e) =>
             setFormData({ ...formData, selectedDate: e.target.value })
@@ -139,7 +139,7 @@ export default function Booking_Form() {
         <input
           type="number"
           placeholder="Phone Number"
-          className="px-4 py-4 w-full bg-gray-100 placeholder-gray-400 rounded-xl outline-none"
+          className="px-4 py-4 w-64 md:w-96 bg-gray-100 placeholder-gray-400 rounded-xl outline-none"
           value={formData.phoneNumber}
           onChange={(e) =>
             setFormData({ ...formData, phoneNumber: e.target.value })
