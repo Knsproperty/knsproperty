@@ -41,84 +41,83 @@ export default function Trusted() {
               Our Partners
             </h2>
             <hr className="my-10" />
-
           </div>
           <div className=" mt-12 md:mt-20 md:grid-cols-4 gap-x-10 gap-y-16">
             <Slider {...settings} className="">
               <div>
                 <img
-                  className="object-contain w-full h-8 mx-auto"
-                  src="https://cdn.rareblocks.xyz/collection/celebration/images/logos/3/logo-2.png"
+                  className="object-contain w-full h-20 mx-auto"
+                  src="/1.png"
                   alt=""
                 />
               </div>
               <div>
                 <img
-                  className="object-contain w-full h-8 mx-auto"
-                  src="https://cdn.rareblocks.xyz/collection/celebration/images/logos/3/logo-3.png"
+                  className="object-contain w-full h-20 mx-auto"
+                  src="/2.png"
                   alt=""
                 />
               </div>
               <div>
                 <img
-                  className="object-contain w-full mx-auto h-7"
-                  src="https://cdn.rareblocks.xyz/collection/celebration/images/logos/3/logo-4.png"
+                  className="object-contain w-full mx-auto h-14"
+                  src="/4.png"
                   alt=""
                 />
               </div>
               <div className="hidden md:block">
                 <img
-                  className="object-contain w-full h-8 mx-auto"
-                  src="https://cdn.rareblocks.xyz/collection/celebration/images/logos/3/logo-5.png"
+                  className="object-contain w-full h-20 mx-auto"
+                  src="/5.png"
                   alt=""
                 />
               </div>
               <div className="hidden md:block">
                 <img
-                  className="object-contain w-full h-8 mx-auto"
-                  src="https://cdn.rareblocks.xyz/collection/celebration/images/logos/3/logo-6.png"
+                  className="object-contain w-full h-20 mx-auto"
+                  src="/6.png"
                   alt=""
                 />
               </div>
               <div className="hidden md:block">
                 <img
-                  className="object-contain w-full h-8 mx-auto"
-                  src="https://cdn.rareblocks.xyz/collection/celebration/images/logos/3/logo-7.png"
+                  className="object-contain w-full h-20 mx-auto"
+                  src="/7.png"
                   alt=""
                 />
               </div>
               <div className="hidden md:block">
                 <img
-                  className="object-contain w-full h-8 mx-auto"
-                  src="https://cdn.rareblocks.xyz/collection/celebration/images/logos/3/logo-8.png"
+                  className="object-contain w-full h-20 mx-auto"
+                  src="/8.png"
                   alt=""
                 />
               </div>
               <div className="hidden md:block">
                 <img
-                  className="object-contain w-full h-8 mx-auto"
-                  src="https://cdn.rareblocks.xyz/collection/celebration/images/logos/3/logo-9.png"
+                  className="object-contain w-full h-16 mx-auto"
+                  src="/9.png"
                   alt=""
                 />
               </div>
               <div className="hidden md:block">
                 <img
-                  className="object-contain w-full mx-auto h-7"
-                  src="https://cdn.rareblocks.xyz/collection/celebration/images/logos/3/logo-10.png"
+                  className="object-contain w-full mx-auto h-20"
+                  src="/10.png"
                   alt=""
                 />
               </div>
               <div className="hidden md:block">
                 <img
-                  className="object-contain w-full h-8 mx-auto"
-                  src="https://cdn.rareblocks.xyz/collection/celebration/images/logos/3/logo-11.png"
+                  className="object-contain w-full h-20 mx-auto"
+                  src="/11.png"
                   alt=""
                 />
               </div>
               <div className="hidden md:block">
                 <img
-                  className="object-contain w-full h-8 mx-auto"
-                  src="https://cdn.rareblocks.xyz/collection/celebration/images/logos/3/logo-12.png"
+                  className="object-contain w-full h-20 mx-auto"
+                  src="/12.png"
                   alt=""
                 />
               </div>

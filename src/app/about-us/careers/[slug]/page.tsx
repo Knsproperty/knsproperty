@@ -70,3 +70,5 @@ export async function generateStaticParams() {
     slug: post.attributes.slug,
   }));
 }
+
+export const revalidate = 60;
