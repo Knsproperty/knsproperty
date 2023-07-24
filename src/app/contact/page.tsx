@@ -4,7 +4,7 @@ import Container from "@/blocks/atoms/container";
 export default function Page() {
   return (
     <div>
-      <Landing background="url('bg-1.webp')">
+      <Landing background="url('contact-us.jpg')">
         <div>
           <h1 className="lg:text-4xl md:text-3xl text-2xl font-bold text-white text-center">
             Contact Us
