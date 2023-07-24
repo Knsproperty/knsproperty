@@ -6,7 +6,9 @@ export default function Page() {
     <div>
       <Landing background="url('bg-1.webp')">
         <div>
-          <h1 className="lg:text-4xl md:text-3xl text-2xl font-bold text-white text-center">Contact Us</h1>
+          <h1 className="lg:text-4xl md:text-3xl text-2xl font-bold text-white text-center">
+            Contact Us
+          </h1>
         </div>
       </Landing>
 
@@ -79,11 +81,11 @@ export default function Page() {
                 <div className="col-span-12 lg:col-span-5 mb-[30px] order-last lg:order-none">
                   <div className="h-[385px] rounded-[6px] overflow-hidden xl:ml-[40px]">
                     <iframe
-                      className="w-full h-full"
-                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4814229.011985735!2d-65.89121968758322!3d-7.7486900084225026!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91e8605342744385%3A0x3d3c6dc1394a7fc7!2sAmazon%20Rainforest!5e0!3m2!1sen!2sbd!4v1644813708270!5m2!1sen!2sbd"
-                      style={{ border: 0 }}
+                      src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3608.435193434183!2d55.3007163745862!3d25.255941777673208!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjXCsDE1JzIxLjQiTiA1NcKwMTgnMTEuOSJF!5e0!3m2!1sen!2sin!4v1690185264936!5m2!1sen!2sin"
+                      width="600"
+                      height="450"
                       loading="lazy"
-                    />
+                    ></iframe>
                   </div>
                 </div>
                 <div className="col-span-12 mb-[30px] lg:mb-0  order-2 lg:order-none">
@@ -121,8 +123,7 @@ const Details = () => {
             />
             <div className="flex-1">
               Address
-              <h4 className="lg:text-3xl md:text-2xl text-xl font-bold leading-none text-[28px] text-primary mb-[10px]">
-              </h4>
+              <h4 className="lg:text-3xl md:text-2xl text-xl font-bold leading-none text-[28px] text-primary mb-[10px]"></h4>
               <p className="lg:max-w-[230px]">
                 Office #106, KIA Flagship Building, 1 Al Safeena Street,
               </p>
@@ -139,11 +140,8 @@ const Details = () => {
             />
             <div className="flex-1">
               Call Us
-              <h4 className="lg:text-3xl md:text-2xl text-xl font-bold leading-none text-[28px] text-primary mb-[10px]">
-              </h4>
-              <p className="lg:max-w-[230px]">
-                (+971) 5022652650
-              </p>
+              <h4 className="lg:text-3xl md:text-2xl text-xl font-bold leading-none text-[28px] text-primary mb-[10px]"></h4>
+              <p className="lg:max-w-[230px]">(+971) 5022652650</p>
             </div>
           </div>
           <div className="flex hover:drop-shadow-[0px_16px_10px_rgba(0,0,0,0.1)] hover:bg-[#F5F9F8] transition-all p-[20px] xl:p-[35px] rounded-[8px] mb-[30px] xl:pl-[65px] group">
@@ -157,10 +155,8 @@ const Details = () => {
             />
             <div className="flex-1">
               Email Us
-              <h4 className="lg:text-3xl md:text-2xl text-xl font-bold leading-none text-[28px] text-primary mb-[10px]">
-              </h4>
+              <h4 className="lg:text-3xl md:text-2xl text-xl font-bold leading-none text-[28px] text-primary mb-[10px]"></h4>
               <p className="lg:max-w-[230px]">
-
                 <a
                   href="mailto:Info@Knsproperty.com"
                   className="hover:text-secondary"

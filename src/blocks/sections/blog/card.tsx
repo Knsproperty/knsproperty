@@ -1,3 +1,5 @@
+import { formatDate } from "@/utils/helpers";
+import Link from "next/link";
 import React from "react";
 
 interface CardData {
@@ -32,7 +34,7 @@ const Card: React.FC<CardProps> = ({ cardData }) => {
             <div className="flex justify-between mb-4">
               <span className="text-slate-400 text-sm">
                 <i className="uil uil-calendar-alt text-slate-900  me-2" />
-                {date}
+                {formatDate(date)}
               </span>
               <span className="text-slate-400 text-sm ms-3">
                 <i className="uil uil-clock text-slate-900 me-2" />
@@ -46,12 +48,12 @@ const Card: React.FC<CardProps> = ({ cardData }) => {
               {title}
             </a>
             <div className="mt-3">
-              <a
-                href={link}
+              <Link
+                href={`/blogs/${link}`}
                 className="btn btn-link hover:text-secondary after:bg-green-600 duration-500 ease-in-out"
               >
                 Read More <i className="uil uil-arrow-right" />
-              </a>
+              </Link>
             </div>
           </div>
         </div>
