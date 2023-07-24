@@ -1,7 +1,6 @@
 import React from "react";
 import Container from "../atoms/container";
 import Link from "next/link";
-import { useRouter } from "next/navigation";
 
 export default function Community() {
   return (
@@ -24,12 +23,7 @@ export default function Community() {
             <div className="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
               <div className="grid grid-cols-1 gap-6 mt-8 sm:grid-cols-4 md:mt-16 lg:gap-x-12">
                 <Link href={"/buy"} className="cursor-pointer">
-                  <img
-                    className="w-full h-96"
-                    src="/pic2.jpg"
-                    alt=""
-                    onClick={() => router.push}
-                  />
+                  <img className="w-full h-96" src="/pic2.jpg" alt="" />
                   <p className="bg-primary text-white text-center font-semibold py-1">
                     DownTown Dubai
                   </p>
