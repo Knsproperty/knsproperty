@@ -34,7 +34,7 @@ export default function Featured() {
               <span className="relative ml-4 mb-3 inline-block text-sm text-white md:ml-5 md:text-lg">
                 The Heart of Europe
               </span>
-              <p className="relative ml-4 mb-3 inline-block text-sm text-white md:ml-5 md:text-lg">
+              <p className="relative ml-4 mb-3 text-sm text-white md:ml-5 md:text-lg hidden md:inline-block">
                 AED 1,800,000
               </p>
             </a>
@@ -54,7 +54,7 @@ export default function Featured() {
               <span className="relative ml-4 mb-3 inline-block text-sm text-white md:ml-5 md:text-lg">
                 Six Senses Residences
               </span>
-              <p className="relative ml-4 mb-3 inline-block text-sm text-white md:ml-5 md:text-lg">
+              <p className="relative ml-4 mb-3 text-sm text-white md:ml-5 md:text-lg hidden md:inline-block">
                 AED 9,400,000
               </p>
             </a>
@@ -74,7 +74,7 @@ export default function Featured() {
               <span className="relative ml-4 mb-3 inline-block text-sm text-white md:ml-5 md:text-lg">
                 DAMAC Cavalli Estates Villas
               </span>
-              <span className="relative ml-4 mb-3 inline-block text-sm text-white md:ml-5 md:text-lg">
+              <span className="relative ml-4 mb-3 text-sm text-white md:ml-5 md:text-lg hidden md:inline-block">
                 19,796,630
               </span>
             </a>
@@ -94,7 +94,7 @@ export default function Featured() {
               <span className="relative ml-4 mb-3 inline-block text-sm text-white md:ml-5 md:text-lg">
                 DAMAC Safa Two by de GRISOGONO
               </span>
-              <span className="relative ml-4 mb-3 inline-block text-sm text-white md:ml-5 md:text-lg">
+              <span className="relative ml-4 mb-3 text-sm text-white md:ml-5 md:text-lg hidden md:inline-block">
                 AED 750,000
               </span>
             </a>
