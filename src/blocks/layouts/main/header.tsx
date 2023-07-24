@@ -14,7 +14,7 @@ const Header: React.FC = () => {
   const pathname = usePathname();
 
   if (
-    ["/property/buy", "/property/rent", "/property/offplan", "/"].includes(
+    ["/property/buy", "/property/rent", "/property/offplan", "/", "/contact"].includes(
       pathname
     )
   ) {

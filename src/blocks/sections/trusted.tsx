@@ -37,7 +37,7 @@ export default function Trusted() {
       <Container>
         <div className="">
           <div className="max-w-2xl mx-auto text-center">
-            <h2 className="lg:text-4xl md:text-3xl text-2xl font-bold text-gray-800 sm:text-4xl sm:leading-tight mb-3">
+            <h2 className="lg:text-4xl md:text-3xl text-2xl font-bold text-gray-800  mb-3">
               Our Partners
             </h2>
             <hr className="my-10" />

@@ -6,15 +6,12 @@ export default function Page() {
     <div>
       <Landing background="url('bg-1.webp')">
         <div>
-          <h5 className="text-white text-center mb-10">Join us</h5>
-          <h1 className="text-5xl font-semibold text-white text-center">
-            Contact Us{" "}
-          </h1>
+          <h1 className="lg:text-4xl md:text-3xl text-2xl font-bold text-white text-center">Contact Us</h1>
         </div>
       </Landing>
 
       <Container>
-        <div className="pt-[80px] lg:pt-[120px]">
+        <div className="pt-[80px] lg:pt-[120px] px-5 xl:px-0">
           <div className="container">
             <form
               id="contact-form"
@@ -24,7 +21,7 @@ export default function Page() {
               <div className="grid grid-cols-12 gap-x-[30px] mb-[-30px] items-end">
                 <div className="col-span-12 lg:col-span-7 mb-[30px]">
                   <div>
-                    <h2 className="font-lora text-primary text-[24px] sm:text-[28px] leading-[1.277] capitalize mb-[10px] font-medium">
+                    <h2 className="lg:text-4xl md:text-3xl text-2xl font-bold leading-[1.277] capitalize mb-[10px] text-primary ">
                       Send Message
                     </h2>
                     <p className="max-w-[465px] mb-[40px]">
@@ -123,10 +120,10 @@ const Details = () => {
               alt="image icon"
             />
             <div className="flex-1">
-              <h4 className="font-lora group-hover:text-secondary group-hover:transition-all leading-none text-[28px] text-primary mb-[10px]">
-                Address <span className="text-secondary">.</span>
+              Address
+              <h4 className="lg:text-3xl md:text-2xl text-xl font-bold leading-none text-[28px] text-primary mb-[10px]">
               </h4>
-              <p className="font-light text-[18px] lg:max-w-[230px]">
+              <p className="lg:max-w-[230px]">
                 Office #106, KIA Flagship Building, 1 Al Safeena Street,
               </p>
             </div>
@@ -141,10 +138,10 @@ const Details = () => {
               alt="image icon"
             />
             <div className="flex-1">
-              <h4 className="font-lora group-hover:text-secondary group-hover:transition-all leading-none text-[28px] text-primary mb-[10px]">
-                Call us <span className="text-secondary">.</span>
+              Call Us
+              <h4 className="lg:text-3xl md:text-2xl text-xl font-bold leading-none text-[28px] text-primary mb-[10px]">
               </h4>
-              <p className="font-light text-[18px] lg:max-w-[230px]">
+              <p className="lg:max-w-[230px]">
                 (+971) 5022652650
               </p>
             </div>
@@ -159,21 +156,16 @@ const Details = () => {
               alt="image icon"
             />
             <div className="flex-1">
-              <h4 className="font-lora group-hover:text-secondary group-hover:transition-all leading-none text-[28px] text-primary mb-[10px]">
-                Email us <span className="text-secondary">.</span>
+              Email Us
+              <h4 className="lg:text-3xl md:text-2xl text-xl font-bold leading-none text-[28px] text-primary mb-[10px]">
               </h4>
-              <p className="font-light text-[18px] lg:max-w-[230px]">
+              <p className="lg:max-w-[230px]">
+
                 <a
-                  href="mailto:admin@examples.com"
+                  href="mailto:Info@Knsproperty.com"
                   className="hover:text-secondary"
                 >
-                  admin@examples.com
-                </a>
-                <a
-                  href="mailto:info@examples.com"
-                  className="hover:text-secondary"
-                >
-                  info@examples.com
+                  Info@Knsproperty.Com
                 </a>
               </p>
             </div>
