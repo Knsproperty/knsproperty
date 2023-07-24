@@ -39,27 +39,13 @@ export default async function page({ params }: any) {
                 <div className="relative overflow-hidden rounded-xl shadow ">
                   <img src="/9.jpg" alt="" />
                   <div className="p-6">
-                    <p className="text-slate-400">
-                      The most well-known dummy text is the 'Lorem Ipsum', which
-                      is said to have originated in the 16th century. Lorem
-                      Ipsum is composed in a pseudo-Latin language which more or
-                      less corresponds to 'proper' Latin. It contains a series
-                      of real Latin words. This ancient dummy text is also
-                      incomprehensible, but it imitates the rhythm of most
-                      European languages in Latin script.
+                    <h1 className="text-2xl font-semibold text-center py-10">
+                      {attributes.title}
+                    </h1>
+                    <p className="my-2 text-center font-light">
+                      {attributes.description}
                     </p>
-                    <p className="text-slate-400 italic border-x-4 border-green-600 rounded-ss-xl rounded-ee-xl mt-3 p-3">
-                      " There are many variations of passages of Lorem Ipsum
-                      available, but the majority have suffered alteration in
-                      some form, by injected humour, or randomised words which
-                      don't look even slightly believable. "
-                    </p>
-                    <p className="text-slate-400 mt-3">
-                      The advantage of its Latin origin and the relative
-                      meaninglessness of Lorum Ipsum is that the text does not
-                      attract attention to itself or distract the viewer's
-                      attention from the layout.
-                    </p>
+                    <div id="blog">{ReactHtmlParser(attributes.content)}</div>
                   </div>
                 </div>
                 <div className="p-6 rounded-md shadow  mt-8">
