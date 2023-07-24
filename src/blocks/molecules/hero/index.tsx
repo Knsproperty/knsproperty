@@ -1,13 +1,15 @@
 'use client'
+import ReactPlayer from 'react-player'
+import { motion } from "framer-motion"
 import { usePathname } from "next/navigation"
 import { FiChevronDown } from "react-icons/fi"
 import Parallax from "@/blocks/atoms/parallex"
+
 const Hero = () => {
     const pathname = usePathname()
     if (pathname !== "/") {
         return null
     }
-
     return (
         <div className="relative w-full h-[100vh] bg-black">
             <motion.button
@@ -28,24 +30,21 @@ const Hero = () => {
                 <div className="p-10 rounded-md max-w-[800px] bg-opacity-50">
                     <Parallax>
                         <h1 className="text-white md:text-3xl text-xl text-center font-heading mb-2">"To Build true long-term wealth. <br /> You must buy and hold real estate"</h1>
+
                     </Parallax>
                 </div>
             </div>
 
-            <video autoPlay muted loop className="absolute top-0 z-20 left-0 w-full h-full object-cover"  >
-                <source src="video_new.mov" />
-            </video>
-        </div>
+            <div className='player-wrapper'>
+                <ReactPlayer
+                    className='react-player'
+                    playing loop muted url="video_new.mov"
+                    width='100%'
+                    height='100%'
+                />
+            </div>
+
+        </div >
     )
 }
 export default Hero
-
-import { useState, useRef, useLayoutEffect, ReactNode } from "react";
-import {
-    motion,
-    useViewportScroll,
-    useTransform,
-    useSpring,
-    useReducedMotion,
-    easeIn,
-} from "framer-motion";
