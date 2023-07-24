@@ -35,8 +35,6 @@ const PropertyCard: React.FC<Props> = ({
     nextArrow: hovered ? <SampleNextArrow /> : undefined,
     prevArrow: hovered ? <SamplePrevArrow /> : undefined,
     arrow: true,
-    speed: 1000,
-    autoplay: true,
     infinite: true,
     slidesToShow: 1,
     slidesToScroll: 1,
