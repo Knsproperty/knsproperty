@@ -11,7 +11,7 @@ export default async function Page() {
   const jobs = jobsData.data.map((it, i) => <Job_Card key={i} {...it} />);
   return (
     <div>
-      <Landing background="url('/bg-1.webp')">
+      <Landing background="url('/car.jpg')">
         <div>
           <h1 className=" lg:text-3xl text-3xl font-medium text-white text-center">
             Careers at K&S property
