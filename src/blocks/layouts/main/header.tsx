@@ -8,6 +8,7 @@ import Contact from "@/blocks/atoms/buttons/contact";
 import Dropdown from "@/blocks/layouts/main/dropdown";
 import Hero from "@/blocks/molecules/hero";
 import { config } from "@/config/links";
+import CountrySelector from "@/blocks/atoms/selector";
 
 const Header: React.FC = () => {
   const pathname = usePathname();
@@ -53,6 +54,9 @@ const Header: React.FC = () => {
                     </Link>
                   )
                 )}
+
+                <CountrySelector />
+
               </nav>
               <Drawer color="white" />
               <Contact />
