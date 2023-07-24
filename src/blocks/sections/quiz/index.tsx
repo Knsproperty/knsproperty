@@ -339,7 +339,7 @@ const QuizComponent: React.FC = () => {
           <div className="max-w-5xl px-4 mx-auto sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 md:grid-cols-2 md:gap-x-16 lg:gap-x-24 gap-y-10 items-center ">
               <div>
-                <h2 className="xl:text-5xl lg:text-4xl md:text-3xl text-2xl font-bold">Find Your <b className="text-[tomato] underline">Perfect Property</b> Match</h2>
+                <h2 className="xl:text-5xl lg:text-4xl md:text-3xl text-2xl font-bold">Find Your <b className="text-secondary">Perfect Property</b> Match</h2>
                 <blockquote>
                   <p className="mt-6 text-sm leading-relaxed text-black">
                     Welcome to our interactive property quiz! Whether you're looking to rent or buy, we understand that finding the ideal property can be a daunting task. That's why we've created this quick and easy quiz to help you discover your perfect property match.
