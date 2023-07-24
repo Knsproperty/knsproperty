@@ -1,14 +1,16 @@
 'use client'
 
+const configuration = {
+    time: 300000
+}
+
 import NewsLetter from ".";
-import { useScrollLock } from "@mantine/hooks";
 import { useState, useEffect } from "react";
+import { useScrollLock } from "@mantine/hooks";
 
 const NewsLetterSection = () => {
     const [showPopup, setShowPopup] = useState(false);
-
     useScrollLock(showPopup)
-
     useEffect(() => {
         const popupClosed = localStorage.getItem('popupClosed');
 
@@ -16,7 +18,7 @@ const NewsLetterSection = () => {
             const timeout = setTimeout(() => {
                 setShowPopup(true);
                 clearTimeout(timeout);
-            }, 5000); // 1 minute
+            }, configuration.time);
 
             return () => {
                 clearTimeout(timeout);
