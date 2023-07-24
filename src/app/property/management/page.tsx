@@ -5,7 +5,7 @@ import Landing from "@/blocks/sections/landing";
 export default function Management() {
   return (
     <div>
-      <Landing background="url('/home-3.webp')">
+      <Landing background="url('/property-management.jpg')">
         <div>
           <h1 className="text-5xl font-semibold text-white text-center">
             Property Management
