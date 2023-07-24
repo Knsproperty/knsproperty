@@ -1,6 +1,7 @@
 import Container from "@/blocks/atoms/container";
 import Banner from "@/blocks/molecules/banner/banner";
 import Recentposts from "@/blocks/sections/blog/recentposts";
+import { formatDate } from "@/utils/helpers";
 import React from "react";
 import ReactHtmlParser from "react-html-parser";
 export default async function page({ params }: any) {
@@ -8,25 +9,27 @@ export default async function page({ params }: any) {
   return (
     <>
       <Banner>
-        <div className="grid grid-cols-1 text-center mt-10 z-50">
-          <h3 className="md:text-3xl text-2xl md:leading-snug tracking-wide leading-snug font-medium text-white mb-3">
-            Skills That You Can Learn In The Real Estate Market
+        <div className="grid grid-cols-1 text-center mt-10 ">
+          <h3 className="md:text-3xl text-2xl md:leading-snug tracking-wide leading-snug font-medium text-white mb-3 z-50">
+            {attributes.title}
           </h3>
-          <ul className="list-none mt-6">
-            <li className="inline-block text-white/50 mx-5">
+          <ul className="list-none mt-6 z-50">
+            <li className="inline-block text-white mx-5">
               {" "}
               <span className="text-white block">Author :</span>{" "}
-              <span className="block">Calvin Carlo</span>
+              <span className="block text-white">{attributes.author}</span>
             </li>
-            <li className="inline-block text-white/50 mx-5">
+            <li className="inline-block text-white mx-5">
               {" "}
               <span className="text-white block">Date :</span>{" "}
-              <span className="block">3rd March, 2023</span>
+              <span className="block text-white">
+                {formatDate(attributes.date)}
+              </span>
             </li>
-            <li className="inline-block text-white/50 mx-5">
+            <li className="inline-block text-white mx-5">
               {" "}
               <span className="text-white block">Time :</span>{" "}
-              <span className="block">8 Min Read</span>
+              <span className="block text-white">3 Min Read</span>
             </li>
           </ul>
         </div>
@@ -37,7 +40,7 @@ export default async function page({ params }: any) {
             <div className="grid lg:grid-cols-12 md:grid-cols-2 grid-cols-1 gap-[30px]">
               <div className="lg:col-span-8 md:order-1 order-2">
                 <div className="relative overflow-hidden rounded-xl shadow ">
-                  <img src="/9.jpg" alt="" />
+                  <img src={attributes.thumbnail.data.attributes.url} alt="" />
                   <div className="p-6">
                     <h1 className="text-2xl font-semibold text-center py-10">
                       {attributes.title}

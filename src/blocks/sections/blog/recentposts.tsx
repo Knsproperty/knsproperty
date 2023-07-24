@@ -1,5 +1,6 @@
 import { formatDate } from "@/utils/helpers";
 import strapi from "@/utils/strapi";
+import Link from "next/link";
 import React from "react";
 
 export default async function Recentposts() {
@@ -23,9 +24,12 @@ export default async function Recentposts() {
               alt=""
             />
             <div className="ms-3">
-              <a href="" className="font-medium hover:text-green-600">
+              <Link
+                href={attributes.slug}
+                className="font-medium hover:text-green-600"
+              >
                 {attributes.title}
-              </a>
+              </Link>
               <p className="text-sm text-slate-400">
                 {formatDate(attributes.updatedAt)}
               </p>
