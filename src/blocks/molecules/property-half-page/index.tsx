@@ -12,7 +12,7 @@ export default function PropertyHalfPage({ title, bg }: any) {
             className={`h-[50vh] bg-center bg-no-repeat bg-cover`}>
             <div className="w-full h-full _center  bg-[#00000047] backdrop-brightness-75">
                 <Parallax>
-                    <h1 className="text-white text-5xl font-semibold">{title}</h1>
+                    <h1 className="text-white xl:text-5xl lg:text-3xl md:text-2xl text-3xl font-semibold">{title}</h1>
                 </Parallax>
             </div>
         </section>
