@@ -10,6 +10,7 @@ import Featured from "@/blocks/sections/featured";
 import Features from "@/blocks/sections/features";
 import NewsletterSection from "@/blocks/sections/newsletter-section";
 import Blog from "@/blocks/sections/blog/home";
+import Community from "@/blocks/sections/community";
 export default async function Home() {
   return (
     <main>
@@ -35,6 +36,7 @@ export default async function Home() {
       <Blog />
       <Features />
       <Featured />
+      <Community />
       <NewsletterSection />
     </main>
   );
