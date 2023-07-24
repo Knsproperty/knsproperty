@@ -2,11 +2,14 @@ interface Props {
     children: any,
     background: string
 }
+
+import Parallax from "../animation/parallex"
+
 const LandingSection: React.FC<Props> = ({ children, background }) => {
     return (
         <section style={{ backgroundImage: background }} className={`h-[80vh] bg-center`}>
             <div className="w-full h-full _center  bg-[#00000047] backdrop-brightness-75">
-                {children}
+                <Parallax>{children}</Parallax>
             </div>
         </section>
     )

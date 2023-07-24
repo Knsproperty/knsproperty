@@ -1,7 +1,7 @@
 'use client'
 
 import Container from "../atoms/container";
-import Parallax from "../atoms/parallex";
+import Parallax from "../animation/parallex";
 const Testimonals = () => {
   return (
     <section className="py-10 bg-gray-100 sm:py-16 lg:py-24">

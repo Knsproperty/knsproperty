@@ -3,7 +3,7 @@ import ReactPlayer from 'react-player'
 import { motion } from "framer-motion"
 import { usePathname } from "next/navigation"
 import { FiChevronDown } from "react-icons/fi"
-import Parallax from "@/blocks/atoms/parallex"
+import Parallax from "@/blocks/animation/parallex"
 
 const Hero = () => {
     const pathname = usePathname()
