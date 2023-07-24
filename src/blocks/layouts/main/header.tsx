@@ -1,9 +1,7 @@
 "use client";
-
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
-import Logo from "@/blocks/atoms/logo";
 import Container from "@/blocks/atoms/container";
 import Drawer from "@/blocks/molecules/menu-drawer";
 import Contact from "@/blocks/atoms/buttons/contact";
@@ -75,12 +73,12 @@ const Header: React.FC = () => {
             <div className="flex items-center lg:justify-center">
               <Link href={"/"} className="hidden md:block">
                 <button aria-label="logo" className=" relative flex items-center gap-2 ">
-                  <Image src="/ksnlogo.png" alt="logo" width={100} height={100} />
+                  <Image src="/ks.png" alt="logo" width={50} height={50} />
                 </button>
               </Link>
               <Link href={"/"} className="block md:hidden">
                 <button aria-label="logo" className=" relative flex items-center gap-2 ">
-                  <Image src="/ksnlogo.png" alt="logo" width={80} height={80} />
+                  <Image src="/ks.png" alt="logo" width={30} height={30} />
                 </button>
               </Link>
             </div>
