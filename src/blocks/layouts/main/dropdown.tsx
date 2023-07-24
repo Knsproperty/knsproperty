@@ -19,7 +19,7 @@ const HeaderDropdown: React.FC<Props> = ({ options, text, href, color }) => {
             <Link href={href}>
                 <button
                     tabIndex={0}
-                    className={`text-md font-medium hover:underline capitalize flex items-center ${textColor}`}>
+                    className={`text-md  px-5 py-2 rounded-md font-medium hover:underline capitalize flex items-center ${textColor} ${color == 'white' ? 'hover:bg-secondary' : ''}`}>
                     {text}<FiChevronDown className={`ml-2 ${strokeColor}`} />
                 </button>
             </Link>
@@ -29,7 +29,7 @@ const HeaderDropdown: React.FC<Props> = ({ options, text, href, color }) => {
                 <ul className="flex flex-col bg-lightgray p-5 rounded-md shadow">
                     {options.map((link, index) => (
                         <li key={index}>
-                            <Link href={link.href} className="text-md font-medium hover:underline capitalize py-2">{link.text}</Link>
+                            <Link href={link.href} className="text-md font-medium hover:underline  capitalize py-2">{link.text}</Link>
                         </li>
                     ))}
                 </ul>

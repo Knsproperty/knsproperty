@@ -6,7 +6,7 @@ import { config } from "@/config/links";
 import { HiOutlineMenuAlt3 } from "react-icons/hi"
 import { SmallContact } from "@/blocks/atoms/buttons/contact";
 
-const Drawer = () => {
+const Drawer = ({ color }: { color: 'white' | 'black' }) => {
     const overlayRef = useRef<any>(null)
     const handleClose = () => {
         overlayRef.current.click()
@@ -31,7 +31,7 @@ const Drawer = () => {
                 <div className="drawer-content flex items-center justify-end">
                     <button aria-label="menu-toggle">
                         <label htmlFor="my-drawer" className="drawer-button px-3">
-                            <HiOutlineMenuAlt3 size={28} className="stroke-white" color="white" />
+                            <HiOutlineMenuAlt3 size={28} className={color == 'white' ? '!stroke-white' : '!stroke-black'} color={color} />
                         </label>
                     </button>
                 </div>

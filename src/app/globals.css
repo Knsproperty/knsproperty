@@ -100,3 +100,12 @@
 
 
 }
+
+.goog-te-gadget-simple {
+    display: flex !important;
+}
+
+
+.goog-te-gadget-simple>span>a {
+    display: flex !important;
+}
