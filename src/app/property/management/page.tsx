@@ -7,7 +7,7 @@ export default function Management() {
     <div>
       <Landing background="url('/property-management.jpg')">
         <div>
-          <h1 className="text-5xl font-semibold text-white text-center">
+          <h1 className="lg:text-5xl md:text-3xl text-xl  font-semibold text-white text-center">
             Property Management
           </h1>
         </div>
