@@ -1,5 +1,5 @@
-import Container from "@/blocks/atoms/container";
 import React from "react";
+import Container from "@/blocks/atoms/container";
 
 export default function Features() {
   return (
@@ -24,19 +24,19 @@ export default function Features() {
                   family and are free to choose a home model
                 </p>
                 <div className="max-w-[450px] mx-auto">
-                  <div className="flex flex-col md:flex-row justify-center xl:justify-start space-x-4 mb-5 ">
-                    <div className="px-8 h-20 mx-auto md:mx-0 bg-[green] bg-opacity-10 rounded-lg flex items-center justify-center mb-5 md:mb-0">
+                  <div className="flex flex-col md:flex-row justify-center xl:justify-start space-x-4 mb-5 group">
+                    <div className="px-8 h-20 mx-auto md:mx-0 bg-[gray] bg-opacity-10 rounded-lg flex items-center justify-center mb-5 md:mb-0 group-hover:shadow-lg ">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width={24}
                         height={24}
                         viewBox="0 0 24 24"
                         fill="none"
-                        stroke="green"
+                        stroke="black"
                         strokeWidth={2}
                         strokeLinecap="round"
                         strokeLinejoin="round"
-                        className="feather feather-check-circle text-green-900"
+                        className="feather feather-check-circle text-green-900 group-hover:scale-150 duration-200 transition-all"
                       >
                         <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
                         <polyline points="22 4 12 14.01 9 11.01" />
@@ -46,25 +46,26 @@ export default function Features() {
                       <h4 className="font-semibold text-gray-900 text-xl mb-2">
                         Best Home Guarantee
                       </h4>
-                      <p className="font-normal  leading-relaxed">
+                      <p className="font-normal leading-relaxed">
                         We guarantees the quality of your home you bought from
                         K&S
                       </p>
                     </div>
                   </div>
-                  <div className="flex flex-col md:flex-row justify-center xl:justify-start space-x-4 mb-5">
-                    <div className="px-8 h-20 mx-auto md:mx-0 bg-[purple] bg-opacity-10 rounded-lg flex items-center justify-center mb-5 md:mb-0">
+                  <div className="flex flex-col md:flex-row justify-center xl:justify-start space-x-4 mb-5 group">
+                    <div className="px-8 h-20 mx-auto md:mx-0 bg-[gray] bg-opacity-10 rounded-lg flex items-center justify-center mb-5 md:mb-0 group-hover:shadow-lg">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width={24}
                         height={24}
                         viewBox="0 0 24 24"
                         fill="none"
-                        stroke="purple"
+                        stroke="black"
                         strokeWidth={2}
                         strokeLinecap="round"
                         strokeLinejoin="round"
-                        className="feather feather-lock  text-green-900"
+                        className="feather feather-check-circle text-green-900 group-hover:scale-150 duration-200 transition-all"
+
                       >
                         <rect
                           x={3}
@@ -87,19 +88,19 @@ export default function Features() {
                       </p>
                     </div>
                   </div>
-                  <div className="flex flex-col md:flex-row justify-center xl:justify-start space-x-4">
-                    <div className="px-8 h-20 mx-auto md:mx-0 bg-[blue] bg-opacity-10 rounded-lg flex items-center justify-center mb-5 md:mb-0">
+                  <div className="flex flex-col md:flex-row justify-center xl:justify-start space-x-4 group">
+                    <div className="px-8 h-20 mx-auto md:mx-0 bg-[gray] bg-opacity-10 rounded-lg flex items-center justify-center mb-5 md:mb-0 group-hover:shadow-lg">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width={24}
                         height={24}
                         viewBox="0 0 24 24"
                         fill="none"
-                        stroke="blue"
+                        stroke="black"
                         strokeWidth={2}
                         strokeLinecap="round"
-                        strokeLinejoin="round"
-                        className="feather feather-credit-card  text-green-900"
+                        className="feather feather-check-circle text-green-900 group-hover:scale-150 duration-200 transition-all"
+
                       >
                         <rect
                           x={1}

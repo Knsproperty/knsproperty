@@ -30,6 +30,11 @@ const Footer = () => {
           </div>
 
           <div className="grid lg:grid-cols-3 gap-5 lg:gap-0 order-1 lg:order-2">
+            <Image
+              src={'/ks.png'}
+              alt="footer-logo"
+              className="mb-5 block lg:hidden ml-2"
+              width={40} height={40} />
             <List />
           </div>
         </section>
