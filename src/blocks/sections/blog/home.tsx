@@ -30,7 +30,10 @@ export default async function Blog() {
 
           <div className="flex flex-wrap xl:flex-nowrap gap-10 ">
             <div className="basis-full xl:basis-[65%] shrink-0">
-              <Link className="block " href={data[0].attributes.slug}>
+              <Link
+                className="block "
+                href={`/blogs/${data[0].attributes.slug}`}
+              >
                 <div className="block relative pt-[75%] bg-black/5  ">
                   <img
                     alt="Post thumbnail"
@@ -55,12 +58,9 @@ export default async function Blog() {
               </Link>
               <div className="flex flex-wrap gap-3 items-center mt-8">
                 <div className="flex flex-wrap gap-3">
-                  <a
-                    className="text-xs font-medium uppercase rounded-full py-1.5 px-2.5 border border-black text-black hover:bg-black hover:text-white     tracking-wide whitespace-nowrap"
-                    href="/category/inspirational"
-                  >
+                  <span className="text-xs font-medium uppercase rounded-full py-1.5 px-2.5 border border-black text-black hover:bg-black hover:text-white     tracking-wide whitespace-nowrap">
                     {data[0].attributes.category}
-                  </a>
+                  </span>
                 </div>
                 <div className="text-sm data-color flex items-center ">
                   <span className="whitespace-nowrap ">
@@ -71,7 +71,7 @@ export default async function Blog() {
                 </div>
               </div>
               <h2 className="font-bold leading-snug mt-4 text-2xl sm:text-4xl">
-                <Link href={data[0].attributes.slug}>
+                <Link href={`/blogs/${data[0].attributes.slug}`}>
                   {data[0].attributes.title}
                 </Link>
               </h2>
@@ -120,7 +120,10 @@ export default async function Blog() {
             </div>
             <div className="flex flex-col md:flex-row xl:flex-col gap-10 ">
               <div className="flex-1">
-                <Link className="block " href={data[1].attributes.slug}>
+                <Link
+                  className="block "
+                  href={`/blogs/${data[1].attributes.slug}`}
+                >
                   <div className="block relative pt-[75%] bg-black/5  ">
                     <img
                       alt="Post thumbnail"
@@ -157,7 +160,7 @@ export default async function Blog() {
                   </div>
                 </div>
                 <h2 className="font-bold leading-snug mt-3 text-2xl">
-                  <Link href={data[1].attributes.slug}>
+                  <Link href={`/blogs/${data[1].attributes.slug}`}>
                     {data[1].attributes.title}
                   </Link>
                 </h2>
