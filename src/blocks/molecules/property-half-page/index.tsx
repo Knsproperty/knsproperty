@@ -1,5 +1,5 @@
 'use client'
-import Parallax from "@/blocks/atoms/parallex";
+import Parallax from "@/blocks/animation/parallex";
 import { usePathname } from "next/navigation";
 export default function PropertyHalfPage({ title, bg }: any) {
     const pathname = usePathname()

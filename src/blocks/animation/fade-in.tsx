@@ -1,9 +1,16 @@
 'use client'
 import React, { useRef } from "react";
 import { useInView } from "framer-motion";
+import { useMediaQuery } from "@mantine/hooks";
 function FadeIn({ children }: any) {
     const ref = useRef(null);
     const isInView = useInView(ref, { once: true, margin: "0px 100px -50px 0px" });
+
+    const matches = useMediaQuery('(max-width: 768px)');
+    if (matches) {
+        return <>{children}</>
+    }
+
     return (
         <div ref={ref}>
             <div style={{

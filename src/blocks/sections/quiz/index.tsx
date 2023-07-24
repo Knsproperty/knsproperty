@@ -5,7 +5,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { useLocalStorage } from "@mantine/hooks";
 import { isValidEmail } from "@/utils/helpers";
 import { submitForm } from "@/services/email/quiz";
-import Parallax from "@/blocks/atoms/parallex";
+import Parallax from "@/blocks/animation/parallex";
 const Continue = ({ onClick }: any) => {
   return (
     <div className="_center">

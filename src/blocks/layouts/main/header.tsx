@@ -21,7 +21,7 @@ const Header: React.FC = () => {
       <>
         <header className="px-3 absolute top-0 left-0 w-full bg-transparent z-50">
           <Container>
-            <div className="h-[150px] grid lg:grid-cols-[1fr_3fr_1fr] grid-cols-[1fr_1fr] ">
+            <div className="h-[100px] grid lg:grid-cols-[1fr_3fr_1fr] grid-cols-[1fr_1fr] ">
               <div className="flex items-center lg:justify-center">
                 <Link href={"/"} className="hidden md:block">
                   <button aria-label="logo" className=" relative flex items-center gap-2 ">

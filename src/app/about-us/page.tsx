@@ -3,7 +3,7 @@ import React from "react";
 import Link from "next/link";
 import { GiKey } from "react-icons/gi";
 import { BsHouseHeart } from "react-icons/bs";
-import Parallax from "@/blocks/atoms/parallex";
+import Parallax from "@/blocks/animation/parallex";
 import Service from "@/blocks/sections/services";
 import Container from "@/blocks/atoms/container";
 import Banner from "@/blocks/molecules/banner/banner";

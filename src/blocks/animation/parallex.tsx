@@ -1,11 +1,12 @@
+'use client'
 import { useState, useRef, useLayoutEffect, ReactNode } from "react";
+import { useMediaQuery } from "@mantine/hooks";
 import {
     motion,
     useViewportScroll,
     useTransform,
     useSpring,
     useReducedMotion,
-    easeIn,
 } from "framer-motion";
 
 type ParallaxProps = {
@@ -14,6 +15,20 @@ type ParallaxProps = {
 };
 
 const Parallax = ({ children, offset = 50 }: ParallaxProps): JSX.Element => {
+    const matches = useMediaQuery('(max-width: 768px)');
+    if (matches) {
+        return <>{children}</>
+    }
+    return (
+        <ParallaxWrapper offset={offset}>
+            {children}
+        </ParallaxWrapper>
+    );
+};
+export default Parallax
+
+
+const ParallaxWrapper = ({ children, offset }: any) => {
     const prefersReducedMotion = useReducedMotion();
     const [elementTop, setElementTop] = useState(0);
     const [clientHeight, setClientHeight] = useState(0);
@@ -51,5 +66,4 @@ const Parallax = ({ children, offset = 50 }: ParallaxProps): JSX.Element => {
             {children}
         </motion.div>
     );
-};
-export default Parallax
+}
