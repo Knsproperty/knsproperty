@@ -112,7 +112,7 @@ const PropertyDetailed: React.FC<Props> = ({
           </div>
 
           <div className="border-t border-[#eef0f6]  lg:flex items-center px-5 hidden">
-            <CallMe />
+            <CallMe title={title} />
           </div>
         </div>
       </div>

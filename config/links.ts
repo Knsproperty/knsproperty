@@ -84,8 +84,8 @@ export const config = {
         { text: "Careers at Knsproperty", href: "/about-us/careers" },
       ],
       "contact us": [
-        { text: "(+971) 5022652650", href: "https://wa.me/+971502265265" },
-        { text: "Info@knsproperty.com", href: "mailto:Info@knsproperty.com" },
+        { text: "(+971) 42582592", href: "tel:+97142582592" },
+        { text: "Info@knsproperty.com", href: "mailto:info@knsproperty.com" },
       ],
     },
   },
