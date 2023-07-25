@@ -5,54 +5,50 @@ import Link from "next/link";
 export default function Community() {
   return (
     <Container>
-      <section className="relative -z-10 py-20 bg-[url('/commune.jpg')] bg-no-repeat bg-center bg-fixed bg-cover mb-10">
-        <div className="absolute inset-0 bg-black/60 -z-20" />
-        <div className="container ">
-          <div className="max-w-2xl mx-auto text-center">
-            <h2 className="text-3xl font-bold text-white sm:text-4xl sm:leading-tight mb-3">
-              Community Guide
-            </h2>
-            <p className="text-white">
-              We are partnered with the leading developers of Dubai to provide
-              you top quality properties guaranteed to satisfy your expectations
-              in both terms; your Living Standards as well a Sound Investment
-            </p>
+      <section className="py-10 sm:py-16 lg:py-24">
+        <div className="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
+          <div className="max-w-3xl mx-auto text-center">
+            <h3 className="text-center lg:text-4xl md:text-3xl text-2xl font-bold ">Our Community</h3>
+            <p className=" mx-auto mt-4">Locate your home in either a luxurious or a family-friendly community.</p>
           </div>
-          <section className="py-10  ">
-            <div className="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
-              <div className="grid grid-cols-1 gap-6 mt-8 sm:grid-cols-4 md:mt-16 lg:gap-x-12">
-                <Link href={"/property/buy"} className=" cursor-pointer">
-                  <img className="w-full h-96" src="/pic2.jpg" alt="" />
-                  <p className="bg-primary text-white text-center font-semibold py-1">
-                    DownTown Dubai
-                  </p>
-                </Link>
-                <Link href={"/property/buy"} className=" cursor-pointer">
-                  <img className="w-full h-96" src="/pic3.jpg" alt="" />
-                  <p className="bg-primary text-white text-center font-semibold py-1">
-                    Dubai Marina
-                  </p>
-                </Link>
-                <Link href={"/property/buy"} className=" cursor-pointer">
-                  <img className="w-full h-96" src="/pic4.jpg" alt="" />
-                  <p className="bg-primary text-white text-center font-semibold py-1">
-                    Business Bay
-                  </p>
-                </Link>
-                <Link href={"/property/buy"} className=" cursor-pointer">
-                  <img className="w-full h-96" src="/pic5.jpg" alt="" />
-                  <p className="bg-primary text-white text-center font-semibold py-1">
-                    Meydan
-                  </p>
-                </Link>
-              </div>
-            </div>
-          </section>
 
-          {/*end grid*/}
+          <div className="grid grid-cols-1 gap-6 mt-8 sm:grid-cols-3 md:mt-16 lg:gap-x-12">
+
+            <Link href={'/property/buy'}>
+              <div className="relative group hover:-translate-y-10 ease-in-out duration-500 transition-all">
+                <div className="absolute top-0 left-0 w-full h-full _center bg-black bg-opacity-40 px-5 text-white hidden group-hover:flex ease-in-out duration-200 transition-all">
+                  <h1 className="text-white font-bold text-3xl translate-x-5 group-hover:-translate-x-5">DownTown Dubai</h1>
+                </div>
+                <img className="w-full" src="/pic2.jpg" alt="" />
+              </div>
+            </Link>
+
+            <Link href={'/property/buy'}>
+              <div className="relative group hover:-translate-y-10 ease-in-out duration-500 transition-all">
+                <div className="absolute top-0 left-0 w-full h-full _center bg-black bg-opacity-40 px-5 text-white hidden group-hover:flex ease-in-out duration-200 transition-all">
+                  <h1 className="text-white font-bold text-3xl  group-hover:translate-x-0">Dubai Marina</h1>
+                </div>
+                <img className="w-full" src="/pic3.jpg" alt="" />
+              </div>
+            </Link>
+
+
+            <Link href={'/property/buy'}>
+              <div className="relative group hover:-translate-y-10 ease-in-out duration-500 transition-all">
+                <div className="absolute top-0 left-0 w-full h-full _center bg-black bg-opacity-40 px-5 text-white hidden group-hover:flex ease-in-out duration-200 transition-all">
+                  <h1 className="text-white font-bold text-3xl translate-x-5 group-hover:-translate-x-5">Business Bay</h1>
+                </div>
+                <img className="w-full" src="/pic4.jpg" alt="" />
+              </div>
+            </Link>
+          </div>
+
+
+          <div className="mt-8 text-center md:mt-16">
+            <a href="#" title="" className="inline-flex items-center justify-center py-4 font-semibold text-white transition-all duration-200 bg-blue-600 border border-transparent rounded-md px-14 hover:bg-blue-700 focus:bg-blue-700" role="button"> Join our team </a>
+          </div>
         </div>
-        {/*end container*/}
       </section>
-    </Container>
+    </Container >
   );
 }

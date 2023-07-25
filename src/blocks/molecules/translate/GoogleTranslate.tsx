@@ -29,7 +29,7 @@ export default function GoogleTranslate(): JSX.Element {
 
   return (
     <>
-      <div className="h-4">
+      <div className="h-10 border-2 border-primary inline-block rounded-full bg-white">
         <div
           id="google_translate_element"
           style={{

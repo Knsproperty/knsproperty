@@ -10,7 +10,7 @@ export default function Features() {
             <div className="grid lg:grid-cols-2 grid-cols-1 lg:gap-0 gap-5">
               <div className="_center hidden lg:block">
                 <img
-                  src="/feature-img.png"
+                  src="/features.jpg"
                   className="max-h-[600px]"
                   alt="Feature img"
                 />
