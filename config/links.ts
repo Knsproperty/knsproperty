@@ -68,7 +68,7 @@ export const config = {
       {
         name: "location",
         Icon: FiMapPin,
-        href: "https://www.google.com/maps/dir/25.2559418,55.3032913/universal+link+llc/@25.2111526,55.2380109,13z/data=!3m1!4b1!4m9!4m8!1m1!4e1!1m5!1m1!1s0x3e5f695820b80fa5:0x7477349341a5096e!2m2!1d55.2431915!2d25.1720602?entry=ttu",
+        href: "https://maps.app.goo.gl/MnAreDemXshaA2XS7?g_st=ic",
       },
     ],
     links: {
