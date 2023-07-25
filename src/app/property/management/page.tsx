@@ -14,7 +14,6 @@ export default function Management() {
       </Landing>
 
       <Container>
-        <Plan />
         <Service />
         <Book_Valuation />
         {/* form goes here */}
@@ -23,59 +22,6 @@ export default function Management() {
   );
 }
 
-const Plan = () => {
-  return (
-    <>
-      <section className="Floor-plan pt-[80px] lg:pt-[120px] mb-20">
-        <div className="container">
-          <div className="grid gap-x-[30px]">
-            <div className="col-span-12 relative pb-[45px] text-center max-w-[480px] mx-auto">
-              <span className="text-secondary text-tiny inline-block mb-2">
-                Floor Plan
-              </span>
-              <h2 className="font-lora text-primary text-[24px] sm:text-3xl capitalize mb-3 font-medium">
-                Check our Floor Plan<span className="text-secondary">.</span>
-              </h2>
-              <p>
-                Huge number of propreties availabe here for buy, sell and Rent.
-                Also you find here co-living property, lots opportunity
-              </p>
-            </div>
-          </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-x-[30px] mb-[-30px]">
-            <div className="text-center">
-              <img
-                src="/floor2.webp"
-                width={370}
-                height={484}
-                alt="Floor Plan"
-              />
-              <p>Ground floor</p>
-            </div>
-            <div className="text-center">
-              <img
-                src="/floor1.webp"
-                width={361}
-                height={491}
-                alt="Floor Plan"
-              />
-              <p>Single flat</p>
-            </div>
-            <div className="text-center">
-              <img
-                src="/floor3.webp"
-                width={370}
-                height={484}
-                alt="Floor Plan"
-              />
-              <p>1st Floor</p>
-            </div>
-          </div>
-        </div>
-      </section>
-    </>
-  );
-};
 
 const Service = () => {
   return (
@@ -95,8 +41,8 @@ const Service = () => {
           </div>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-[30px]">
-          <div className="relative group">
-            <a href="properties-details.html" className="block">
+          <div className="relative group hover:-translate-y-10 transition-all d duration-200 ease-linear">
+            <a className="block">
               <img
                 src="/service1.webp"
                 className="w-full h-full block mx-auto rounded-[6px_6px_0px_0px]"
@@ -118,8 +64,8 @@ const Service = () => {
               </div>
             </a>
           </div>
-          <div className="relative group">
-            <a href="properties-details.html" className="block">
+          <div className="relative group hover:-translate-y-10 transition-all d duration-200 ease-linear">
+            <a className="block">
               <img
                 src="/service2.webp"
                 className="w-full h-full block mx-auto rounded-[6px_6px_0px_0px]"
@@ -141,8 +87,8 @@ const Service = () => {
               </div>
             </a>
           </div>
-          <div className="relative group">
-            <a href="properties-details.html" className="block">
+          <div className="relative group hover:-translate-y-10 transition-all d duration-200 ease-linear">
+            <a className="block">
               <img
                 src="/service3.webp"
                 className="w-full h-full block mx-auto rounded-[6px_6px_0px_0px]"
@@ -164,8 +110,8 @@ const Service = () => {
               </div>
             </a>
           </div>
-          <div className="relative group">
-            <a href="properties-details.html" className="block">
+          <div className="relative group hover:-translate-y-10 transition-all d duration-200 ease-linear">
+            <a className="block">
               <img
                 src="/service4.webp"
                 className="w-full h-full block mx-auto rounded-[6px_6px_0px_0px]"
