@@ -11,16 +11,32 @@ export async function POST(req: Request, res: Response) {
     await req.json();
 
   const htmlTemplate = `
-<h3>Dear ${fullName}, welcome to our company!</h3>
-<p>We have received a booking request from you with the following details:</p>
-<ul>
-  <li>Email: ${email}</li>
-  <li>Phone: ${phoneNumber}</li>
-  <li>Property Type: ${propertyType}</li>
-  <li>Property Address: ${propertyAddress}</li>
-</ul>
-<p>Thank you for choosing our services. We will get back to you soon.</p>
-`;
+    <style>
+      /* Define your CSS styles here */
+      h3 {
+        color: #333;
+      }
+      ul {
+        list-style-type: none;
+        padding: 0;
+      }
+      li {
+        margin-bottom: 10px;
+      }
+      p {
+        font-size: 14px;
+      }
+    </style>
+    <h3>Booking Request from ${fullName}</h3>
+    <p>The user with the following details has made a booking request:</p>
+    <ul>
+      <li>Email: ${email}</li>
+      <li>Phone: ${phoneNumber}</li>
+      <li>Property Type: ${propertyType}</li>
+      <li>Property Address: ${propertyAddress}</li>
+    </ul>
+    <p>Please get in touch with the user soon.</p>
+  `;
 
   try {
     await mailjet.post("send", { version: "v3.1" }).request({

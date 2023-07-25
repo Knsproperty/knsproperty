@@ -9,16 +9,40 @@ import { NextResponse } from "next/server";
 export async function POST(req: Request, res: Response) {
   const { name, email, phone, selectedDate, selectedHour } = await req.json();
   const htmlTemplate = `
-      <h3>Dear {{name}}, welcome to our company!</h3>
-      <p>We have received a booking request from you with the following details:</p>
-      <ul>
-        <li>Email: {{email}}</li>
-        <li>Phone: {{phone}}</li>
-        <li>Selected Date: {{selectedDate}}</li>
-        <li>Selected Hour: {{selectedHour}}</li>
-      </ul>
-      <p>Thank you for choosing our services. We will get back to you soon.</p>
-    `;
+  <html>
+  <head>
+    <style>
+      /* Define your CSS styles here */
+      body {
+        font-family: Arial, sans-serif;
+        color: #333;
+        line-height: 1.6;
+      }
+      h3 {
+        color: #0066cc;
+      }
+      ul {
+        list-style-type: none;
+        padding: 0;
+      }
+      li {
+        margin-bottom: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <h3>Dear {{name}}, welcome to our company!</h3>
+    <p>We have received a booking request from you with the following details:</p>
+    <ul>
+      <li>Email: {{email}}</li>
+      <li>Phone: {{phone}}</li>
+      <li>Selected Date: {{selectedDate}}</li>
+      <li>Selected Hour: {{selectedHour}}</li>
+    </ul>
+    <p>Thank you for choosing our services. We will get back to you soon.</p>
+  </body>
+  </html>
+`;
 
   // Replace the placeholders with actual form data in the email template
   const personalizedHTML = htmlTemplate

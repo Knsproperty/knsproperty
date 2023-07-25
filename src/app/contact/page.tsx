@@ -81,10 +81,12 @@ export default function Page() {
                 <div className="col-span-12 lg:col-span-5 mb-[30px] order-last lg:order-none">
                   <div className="h-[385px] rounded-[6px] overflow-hidden xl:ml-[40px]">
                     <iframe
-                      src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3608.435193434183!2d55.3007163745862!3d25.255941777673208!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjXCsDE1JzIxLjQiTiA1NcKwMTgnMTEuOSJF!5e0!3m2!1sen!2sin!4v1690185264936!5m2!1sen!2sin"
+                      src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3610.9313673934234!2d55.241364715008956!3d25.171795183908074!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjXCsDEwJzE4LjUiTiA1NcKwMTQnMzYuOCJF!5e0!3m2!1sen!2s!4v1690274150034!5m2!1sen!2s"
                       width="600"
                       height="450"
+                      allowfullscreen=""
                       loading="lazy"
+                      referrerpolicy="no-referrer-when-downgrade"
                     ></iframe>
                   </div>
                 </div>
