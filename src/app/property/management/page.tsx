@@ -25,7 +25,7 @@ export default function Management() {
 
 const Service = () => {
   return (
-    <section className="pt-[80px] pb-[120px] lg:py-[120px]">
+    <section className="pt-[80px] pb-[120px] lg:py-[120px] px-5">
       <div className="container">
         <div className="grid grid-cols-12">
           <div className="col-span-12">
@@ -41,14 +41,12 @@ const Service = () => {
           </div>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-[30px]">
-          <div className="relative group hover:-translate-y-10 transition-all d duration-200 ease-linear">
+          <div className="relative group hover:-translate-y-10 transition-all d duration-200 ease-linear h-full">
             <a className="block">
               <img
-                src="/service1.webp"
+                src="/sale.jpg"
                 className="w-full h-full block mx-auto rounded-[6px_6px_0px_0px]"
                 loading="lazy"
-                width={270}
-                height={290}
                 alt="Sale Property"
               />
               <div className="drop-shadow-[0px_2px_15px_rgba(0,0,0,0.1)] hover:drop-shadow-[0px_8px_20px_rgba(0,0,0,0.15)] bg-[#FFFDFC] rounded-[0px_0px_6px_6px] px-[25px] py-[25px]">
@@ -64,14 +62,12 @@ const Service = () => {
               </div>
             </a>
           </div>
-          <div className="relative group hover:-translate-y-10 transition-all d duration-200 ease-linear">
+          <div className="relative group hover:-translate-y-10 transition-all d duration-200 ease-linear h-full">
             <a className="block">
               <img
-                src="/service2.webp"
-                className="w-full h-full block mx-auto rounded-[6px_6px_0px_0px]"
+                src="/buy.jpg"
+                className="w-full h-[200px] block mx-auto rounded-[6px_6px_0px_0px]"
                 loading="lazy"
-                width={270}
-                height={290}
                 alt="Buy Property"
               />
               <div className="drop-shadow-[0px_2px_15px_rgba(0,0,0,0.1)] hover:drop-shadow-[0px_8px_20px_rgba(0,0,0,0.15)] bg-[#FFFDFC] rounded-[0px_0px_6px_6px] px-[25px] py-[25px]">
@@ -79,7 +75,7 @@ const Service = () => {
                   Buy Property
                   <span className="text-secondary group-hover:text-primary">
                     .
-                  </span>{" "}
+                  </span>
                 </h3>
                 <p className="font-light text-tiny">
                   Provide prorpery Sale options opportunity to find the best{" "}
@@ -87,14 +83,12 @@ const Service = () => {
               </div>
             </a>
           </div>
-          <div className="relative group hover:-translate-y-10 transition-all d duration-200 ease-linear">
+          <div className="relative group hover:-translate-y-10 transition-all d duration-200 ease-linear h-full">
             <a className="block">
               <img
-                src="/service3.webp"
+                src="/rent.jpg"
                 className="w-full h-full block mx-auto rounded-[6px_6px_0px_0px]"
                 loading="lazy"
-                width={270}
-                height={290}
                 alt="Rent Property"
               />
               <div className="drop-shadow-[0px_2px_15px_rgba(0,0,0,0.1)] hover:drop-shadow-[0px_8px_20px_rgba(0,0,0,0.15)] bg-[#FFFDFC] rounded-[0px_0px_6px_6px] px-[25px] py-[25px]">
@@ -110,14 +104,12 @@ const Service = () => {
               </div>
             </a>
           </div>
-          <div className="relative group hover:-translate-y-10 transition-all d duration-200 ease-linear">
+          <div className="relative group hover:-translate-y-10 transition-all d duration-200 ease-linear h-full">
             <a className="block">
               <img
-                src="/service4.webp"
+                src="/mortage.jpg"
                 className="w-full h-full block mx-auto rounded-[6px_6px_0px_0px]"
-                loading="lazy"
                 width={270}
-                height={290}
                 alt="Mortgage"
               />
               <div className="drop-shadow-[0px_2px_15px_rgba(0,0,0,0.1)] hover:drop-shadow-[0px_8px_20px_rgba(0,0,0,0.15)] bg-[#FFFDFC] rounded-[0px_0px_6px_6px] px-[25px] py-[25px]">
