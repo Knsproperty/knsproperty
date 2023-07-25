@@ -6,17 +6,38 @@ import { useLocalStorage } from "@mantine/hooks";
 import { isValidEmail } from "@/utils/helpers";
 import { submitForm } from "@/services/email/quiz";
 import Parallax from "@/blocks/animation/parallex";
+import FadeIn from "@/blocks/animation/fade-in";
 const Continue = ({ onClick }: any) => {
   return (
-    <div className="_center">
-      <a onClick={onClick} className="relative inline-flex items-center justify-center p-4 px-10 py-2 overflow-hidden font-medium text-indigo-600 transition duration-300 ease-out bg-[tomato] rounded-full shadow-md group">
-        <span className="absolute inset-0 flex items-center justify-center w-full h-full text-white duration-300 -translate-x-full bg-purple-500 group-hover:translate-x-0 ease">
-          <svg className="w-6 h-6" fill="none" stroke="white" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
-        </span>
-        <span className="absolute flex items-center justify-center w-full h-full text-white transition-all duration-300 transform group-hover:translate-x-full ease">Continue</span>
-        <span className="relative invisible">Continue</span>
-      </a>
-    </div>
+    <FadeIn>
+      <div className="_center">
+        <a
+          onClick={onClick}
+          className="relative inline-flex items-center justify-center p-4 px-10 py-2 overflow-hidden font-medium text-indigo-600 transition duration-300 ease-out bg-[tomato] rounded-full shadow-md group"
+        >
+          <span className="absolute inset-0 flex items-center justify-center w-full h-full text-white duration-300 -translate-x-full bg-purple-500 group-hover:translate-x-0 ease">
+            <svg
+              className="w-6 h-6"
+              fill="none"
+              stroke="white"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M14 5l7 7m0 0l-7 7m7-7H3"
+              ></path>
+            </svg>
+          </span>
+          <span className="absolute flex items-center justify-center w-full h-full text-white transition-all duration-300 transform group-hover:translate-x-full ease">
+            Continue
+          </span>
+          <span className="relative invisible">Continue</span>
+        </a>
+      </div>
+    </FadeIn>
   );
 };
 
@@ -62,8 +83,9 @@ const First: React.FC<Props> = ({ set, next, state }) => {
       </h1>
       <div className="_center gap-5 ">
         <button
-          className={`capitalize px-10 py-2.5 text-sm border border-secondary rounded-full ${state.first == "buy" ? "bg-secondary text-white" : ""
-            }`}
+          className={`capitalize px-10 py-2.5 text-sm border border-secondary rounded-full ${
+            state.first == "buy" ? "bg-secondary text-white" : ""
+          }`}
           onClick={() => {
             set("first", "buy");
           }}
@@ -71,8 +93,9 @@ const First: React.FC<Props> = ({ set, next, state }) => {
           buy
         </button>
         <button
-          className={`capitalize px-10 py-2.5 text-sm border border-szecondary rounded-full ${state.first == "rent" ? "bg-secondary text-white" : ""
-            }`}
+          className={`capitalize px-10 py-2.5 text-sm border border-szecondary rounded-full ${
+            state.first == "rent" ? "bg-secondary text-white" : ""
+          }`}
           onClick={() => {
             set("first", "rent");
           }}
@@ -102,8 +125,9 @@ const Second: React.FC<Props> = ({ set, next, state }) => {
       </h1>
       <div className="_center gap-5 flex-wrap py-5">
         <button
-          className={`capitalize px-10 py-2.5 text-sm border border-secondary rounded-full ${state.second == "1" ? "bg-secondary text-white" : ""
-            }`}
+          className={`capitalize px-10 py-2.5 text-sm border border-secondary rounded-full ${
+            state.second == "1" ? "bg-secondary text-white" : ""
+          }`}
           onClick={() => {
             set("second", "1");
           }}
@@ -111,8 +135,9 @@ const Second: React.FC<Props> = ({ set, next, state }) => {
           1 Bed
         </button>
         <button
-          className={`capitalize px-10 py-2.5 text-sm border border-secondary rounded-full ${state.second == "2" ? "bg-secondary text-white" : ""
-            }`}
+          className={`capitalize px-10 py-2.5 text-sm border border-secondary rounded-full ${
+            state.second == "2" ? "bg-secondary text-white" : ""
+          }`}
           onClick={() => {
             set("second", "2");
           }}
@@ -120,8 +145,9 @@ const Second: React.FC<Props> = ({ set, next, state }) => {
           2 Bed
         </button>
         <button
-          className={`capitalize px-10 py-2.5 text-sm border border-secondary rounded-full ${state.second == "3" ? "bg-secondary text-white" : ""
-            }`}
+          className={`capitalize px-10 py-2.5 text-sm border border-secondary rounded-full ${
+            state.second == "3" ? "bg-secondary text-white" : ""
+          }`}
           onClick={() => {
             set("second", "3");
           }}
@@ -129,8 +155,9 @@ const Second: React.FC<Props> = ({ set, next, state }) => {
           3 Bed
         </button>
         <button
-          className={`capitalize px-10 py-2.5 text-sm border border-secondary rounded-full ${state.second == "4" ? "bg-secondary text-white" : ""
-            }`}
+          className={`capitalize px-10 py-2.5 text-sm border border-secondary rounded-full ${
+            state.second == "4" ? "bg-secondary text-white" : ""
+          }`}
           onClick={() => {
             set("second", "4");
           }}
@@ -138,8 +165,9 @@ const Second: React.FC<Props> = ({ set, next, state }) => {
           4 Bed
         </button>
         <button
-          className={`capitalize px-10 py-2.5 text-sm border border-secondary rounded-full ${state.second == "5+" ? "bg-secondary text-white" : ""
-            }`}
+          className={`capitalize px-10 py-2.5 text-sm border border-secondary rounded-full ${
+            state.second == "5+" ? "bg-secondary text-white" : ""
+          }`}
           onClick={() => {
             set("second", "5+");
           }}
@@ -339,10 +367,17 @@ const QuizComponent: React.FC = () => {
           <div className="max-w-5xl px-4 mx-auto sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 md:grid-cols-2 md:gap-x-16 lg:gap-x-24 gap-y-10 items-center ">
               <div>
-                <h2 className="xl:text-5xl lg:text-4xl md:text-3xl text-2xl font-bold">Find Your <b className="text-secondary">Perfect Property</b> Match</h2>
+                <h2 className="xl:text-5xl lg:text-4xl md:text-3xl text-2xl font-bold">
+                  Find Your <b className="text-secondary">Perfect Property</b>{" "}
+                  Match
+                </h2>
                 <blockquote>
                   <p className="mt-6 text-sm leading-relaxed text-black">
-                    Welcome to our interactive property quiz! Whether you're looking to rent or buy, we understand that finding the ideal property can be a daunting task. That's why we've created this quick and easy quiz to help you discover your perfect property match.
+                    Welcome to our interactive property quiz! Whether you're
+                    looking to rent or buy, we understand that finding the ideal
+                    property can be a daunting task. That's why we've created
+                    this quick and easy quiz to help you discover your perfect
+                    property match.
                   </p>
                 </blockquote>
               </div>
@@ -361,18 +396,28 @@ const QuizComponent: React.FC = () => {
                                     onClick={() => {
                                       setIndex(j);
                                     }}
-                                    className={`${index == j ? "border-2 border-[tomato]" : "bg-lightgray"
-                                      } h-[30px] w-[30px] rounded-full`}
-                                  >{j + 1}</button>
+                                    className={`${
+                                      index == j
+                                        ? "border-2 border-[tomato]"
+                                        : "bg-lightgray"
+                                    } h-[30px] w-[30px] rounded-full`}
+                                  >
+                                    {j + 1}
+                                  </button>
                                 </div>
-
                               ))}
                             </div>
 
                             <AnimatePresence>
-                              {index == 0 && <First set={set} next={next} state={state} />}
-                              {index == 1 && <Second set={set} next={next} state={state} />}
-                              {index == 2 && <Third set={set} next={next} state={state} />}
+                              {index == 0 && (
+                                <First set={set} next={next} state={state} />
+                              )}
+                              {index == 1 && (
+                                <Second set={set} next={next} state={state} />
+                              )}
+                              {index == 2 && (
+                                <Third set={set} next={next} state={state} />
+                              )}
                               {index == 3 && (
                                 <Fourth
                                   set={set}
@@ -400,16 +445,8 @@ const QuizComponent: React.FC = () => {
             </div>
           </div>
         </section>
-
-
-
-
-
-
-
-
       </Container>
-    </div >
+    </div>
   );
 };
 

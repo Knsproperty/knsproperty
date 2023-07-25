@@ -3,6 +3,7 @@ import Container from "@/blocks/atoms/container";
 import strapi from "@/utils/strapi";
 import Link from "next/link";
 import { formatDate } from "@/utils/helpers";
+import Image from "next/image";
 export default async function Blog() {
   const { data } = await strapi.find<any>("blogs", {
     populate: ["*", "thumbnail"],
@@ -35,7 +36,9 @@ export default async function Blog() {
                 href={`/blogs/${data[0].attributes.slug}`}
               >
                 <div className="block relative pt-[75%] bg-black/5  ">
-                  <img
+                  <Image
+                    height={780}
+                    width={580}
                     alt="Post thumbnail"
                     sizes="(max-width: 1279px) 95vw, 950px"
                     src={data[0].attributes.thumbnail.data.attributes.url}
@@ -86,7 +89,9 @@ export default async function Blog() {
                       style={{ width: 30, height: 30 }}
                     >
                       <div className="pt-[100%] relative">
-                        <img
+                        <Image
+                          width={380}
+                          height={284}
                           alt="author avatar"
                           sizes="30px"
                           decoding="async"
@@ -125,7 +130,9 @@ export default async function Blog() {
                   href={`/blogs/${data[1].attributes.slug}`}
                 >
                   <div className="block relative pt-[75%] bg-black/5  ">
-                    <img
+                    <Image
+                      width={380}
+                      height={284}
                       alt="Post thumbnail"
                       src={data[1].attributes.thumbnail.data.attributes.url}
                       decoding="async"

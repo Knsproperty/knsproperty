@@ -1,10 +1,13 @@
+import Image from "next/image";
 import NewsletterForm from "../molecules/forms/newsletter";
 
 export default function NewsletterSection() {
   return (
     <section className="relative group py-10 overflow-hidden bg-black sm:py-16 lg:py-24 xl:py-32">
       <div className="absolute inset-0">
-        <img
+        <Image
+          width={1260}
+          height={513}
           className="object-cover w-full h-full md:object-left group-hover:scale-150 transition-all duration-500 ease-in-out md:origin-top-left "
           src="https://cdn.rareblocks.xyz/collection/celebration/images/cta/5/girl-working-on-laptop.jpg"
           alt="background-image"

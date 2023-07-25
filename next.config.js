@@ -39,6 +39,10 @@ const nextConfig = {
         protocol: "https",
         hostname: "range.ae",
       },
+      {
+        protocol: "https",
+        hostname: "cdn.rareblocks.xyz",
+      },
     ],
   },
 };

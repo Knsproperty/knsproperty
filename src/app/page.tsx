@@ -1,38 +1,44 @@
 import { Metadata } from "next";
 import Booking from "@/blocks/sections/book";
-import Service from "@/blocks/sections/services";
-import Trusted from "@/blocks/sections/trusted";
-import Trendings from "@/blocks/sections/trending";
+// import Service from "@/blocks/sections/services";
+// import Trusted from "@/blocks/sections/trusted";
+// import Trendings from "@/blocks/sections/trending";
 import FadeIn from "@/blocks/animation/fade-in";
-import Testimonals from "@/blocks/molecules/testimonals";
-import QuizComponent from "@/blocks/sections/quiz";
+// import Testimonals from "@/blocks/molecules/testimonals";
+// import QuizComponent from "@/blocks/sections/quiz";
 import Featured from "@/blocks/sections/featured";
 import Features from "@/blocks/sections/features";
 import NewsletterSection from "@/blocks/sections/newsletter-section";
 import Blog from "@/blocks/sections/blog/home";
 import Community from "@/blocks/sections/community";
+import dynamic from "next/dynamic";
+import Loader from "@/blocks/molecules/loader";
+
+const QuizComponent = dynamic(() => import("@/blocks/sections/quiz"), {
+  loading: () => <Loader />, // Optional loading component
+});
+const Trendings = dynamic(() => import("@/blocks/sections/trending"), {
+  loading: () => <Loader />, // Optional loading component
+});
+const Service = dynamic(() => import("@/blocks/sections/services"), {
+  loading: () => <Loader />, // Optional loading component
+});
+const Testimonals = dynamic(() => import("@/blocks/molecules/testimonals"), {
+  loading: () => <Loader />, // Optional loading component
+});
+const Trusted = dynamic(() => import("@/blocks/sections/trusted"), {
+  loading: () => <Loader />, // Optional loading component
+});
 export default async function Home() {
   return (
     <main>
-      <FadeIn>
-        <QuizComponent />
-      </FadeIn>
-
+      <QuizComponent />
       <Trendings title="Properties for Sale" type="buy" />
       <Trendings title="Properties for Rent" type="rent" />
-
-      <FadeIn>
-        <Service />
-      </FadeIn>
-
-      <FadeIn>
-        <Testimonals />
-      </FadeIn>
+      <Service />
+      <Testimonals />
       <Booking />
-
-      <FadeIn>
-        <Trusted />
-      </FadeIn>
+      <Trusted />
       <Blog />
       <Features />
       <Featured />
@@ -56,15 +62,4 @@ export const metadata: Metadata = {
   authors: [{ name: "", url: "" }],
   abstract: "",
   publisher: "KSN PROPERTIES",
-
-  // url: "",
-  // image: "https://www.yourwebsite.com/images/property-thumbnail.jpg",
-  // siteName: "Your Website Name",
-  // twitterUsername: "@YourTwitterUsername",
-  // facebookAppID: "YourFacebookAppID",
-  // type: "website",
-  // locale: "en_US",
-  // propertyType: ["Villas", "Apartments", "Commercial Spaces", "Land"],
-  // location: "Dubai, United Arab Emirates",
-  // currency: "AED",
 };

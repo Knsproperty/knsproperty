@@ -1,6 +1,7 @@
 import React from "react";
 import Container from "@/blocks/atoms/container";
 import Booking_Form from "@/blocks/molecules/forms/booking";
+import Image from "next/image";
 export default function Booking() {
   return (
     <section className=" py-10 md:py-16 bg-primary group">
@@ -12,13 +13,15 @@ export default function Booking() {
                 Talk to us <br /> to discuss
               </h1>
               <p className="font-normal text-white">
-                Need more time to discuss? Won’t worry, we are  ready to
-                help you. You can fill in the column on the  right to book
-                a meeting with us. Totally free.
+                Need more time to discuss? Won’t worry, we are ready to help
+                you. You can fill in the column on the right to book a meeting
+                with us. Totally free.
               </p>
             </div>
             <div className="hidden xl:block xl:absolute right-0">
-              <img
+              <Image
+                width={640}
+                height={690}
                 className=" group-hover:scale-125 transition-all duration-500 ease-linear group-hover:animate-pulse"
                 src="/book.png"
                 alt="Image"

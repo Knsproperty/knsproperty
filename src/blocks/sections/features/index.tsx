@@ -1,5 +1,6 @@
 import React from "react";
 import Container from "@/blocks/atoms/container";
+import Image from "next/image";
 
 export default function Features() {
   return (
@@ -9,7 +10,9 @@ export default function Features() {
           <div className="px-4">
             <div className="grid lg:grid-cols-2 grid-cols-1 lg:gap-0 gap-5">
               <div className="_center hidden lg:block">
-                <img
+                <Image
+                  width={615}
+                  height={516}
                   src="/features.jpg"
                   className="max-h-[600px]"
                   alt="Feature img"
@@ -65,7 +68,6 @@ export default function Features() {
                         strokeLinecap="round"
                         strokeLinejoin="round"
                         className="feather feather-check-circle text-green-900 group-hover:scale-150 duration-200 transition-all"
-
                       >
                         <rect
                           x={3}
@@ -100,7 +102,6 @@ export default function Features() {
                         strokeWidth={2}
                         strokeLinecap="round"
                         className="feather feather-check-circle text-green-900 group-hover:scale-150 duration-200 transition-all"
-
                       >
                         <rect
                           x={1}
