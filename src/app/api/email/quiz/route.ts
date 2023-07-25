@@ -10,17 +10,42 @@ export async function POST(req: Request, res: Response) {
   const { name, email, mobile, first, second, min, max } = await req.json();
 
   const htmlTemplate = `
-  <h3>Dear ${name}, welcome to our company!</h3>
-  <p>We have received a booking request from you with the following details:</p>
-  <ul>
-    <li>Email: ${email}</li>
-    <li>Phone: ${mobile}</li>
-    <li>Property Type: ${first}</li>
-    <li>Property Address: ${second}</li>
-    <li>Min Price: ${min}</li>
-    <li>Max Price: ${max}</li>
-  </ul>
-  <p>Thank you for choosing our services. We will get back to you soon.</p>
+    <html>
+    <head>
+      <style>
+        /* Define your CSS styles here */
+        body {
+          font-family: Arial, sans-serif;
+          color: #333;
+          line-height: 1.6;
+        }
+        h3 {
+          color: #0066cc;
+        }
+        ul {
+          list-style-type: none;
+          padding: 0;
+        }
+        li {
+          margin-bottom: 10px;
+        }
+      </style>
+    </head>
+    <body>
+      <h3>Dear Company, a quiz submission has been received!</h3>
+      <p>Here are the quiz details:</p>
+      <ul>
+        <li>Name: ${name}</li>
+        <li>Email: ${email}</li>
+        <li>Phone: ${mobile}</li>
+        <li>Selected Property Type: ${first}</li>
+        <li>Selected Property Address: ${second}</li>
+        <li>Minimum Price Range: ${min}</li>
+        <li>Maximum Price Range: ${max}</li>
+      </ul>
+      <p>Please follow up with the participant as soon as possible.</p>
+    </body>
+    </html>
   `;
 
   try {
