@@ -1,4 +1,5 @@
 "use client";
+import { submitForm } from "@/services/email/contact-us";
 import React, { useState } from "react";
 
 interface FormData {
@@ -79,16 +80,6 @@ const ContactForm: React.FC = () => {
     } else {
       setFormErrors(errors);
     }
-  };
-
-  const submitForm = (data: FormData) => {
-    // Simulate an API call here, or handle the form submission as needed
-    return new Promise((resolve, reject) => {
-      setTimeout(() => {
-        // For this example, we'll just resolve the promise after a delay
-        resolve("");
-      }, 2000); // Simulating a 2-second delay for the API call
-    });
   };
 
   return (

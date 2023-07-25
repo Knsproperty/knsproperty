@@ -96,6 +96,12 @@ export default function Form({ id }: any) {
         job: id,
       };
       await submitForm(data);
+      setFormData({
+        fullName: "",
+        email: "",
+        phone: "",
+        resume: null,
+      });
     }
   };
 
