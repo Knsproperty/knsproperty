@@ -1,5 +1,7 @@
 import Landing from "@/blocks/sections/landing";
 import Container from "@/blocks/atoms/container";
+import ContactForm from "@/blocks/molecules/forms/contact";
+import { FaDivide } from "react-icons/fa";
 
 export default function Page() {
   return (
@@ -15,11 +17,7 @@ export default function Page() {
       <Container>
         <div className="pt-[80px] lg:pt-[120px] px-5">
           <div className="container">
-            <form
-              id="contact-form"
-              action="assets/php/contact.php"
-              method="post"
-            >
+            <div>
               <div className="grid grid-cols-12 gap-x-[30px] mb-[-30px] items-end">
                 <div className="col-span-12 lg:col-span-7 mb-[30px]">
                   <div>
@@ -32,51 +30,7 @@ export default function Page() {
                       opportunity
                     </p>
                   </div>
-                  <div className="grid grid-cols-12 gap-x-[20px] gap-y-[30px]">
-                    <div className="col-span-12 md:col-span-6">
-                      <input
-                        className="font-light w-full leading-[1.75] placeholder:opacity-100 placeholder:text-body border border-primary border-opacity-60 rounded-[8px] p-[15px] focus:border-secondary focus:border-opacity-60 focus:outline-none focus:drop-shadow-[0px_6px_15px_rgba(0,0,0,0.1)] "
-                        type="text"
-                        placeholder="First Name"
-                        name="name"
-                      />
-                    </div>
-                    <div className="col-span-12 md:col-span-6">
-                      <input
-                        className="font-light w-full leading-[1.75] placeholder:opacity-100 placeholder:text-body border border-primary border-opacity-60 rounded-[8px] p-[15px] focus:border-secondary focus:border-opacity-60 focus:outline-none focus:drop-shadow-[0px_6px_15px_rgba(0,0,0,0.1)] "
-                        type="text"
-                        placeholder="Last Name"
-                        name="name"
-                      />
-                    </div>
-                    <div className="col-span-12 md:col-span-6">
-                      <input
-                        className="font-light w-full leading-[1.75] placeholder:opacity-100 placeholder:text-body border border-primary border-opacity-60 rounded-[8px] p-[15px] focus:border-secondary focus:border-opacity-60 focus:outline-none focus:drop-shadow-[0px_6px_15px_rgba(0,0,0,0.1)] "
-                        type="text"
-                        placeholder="Phone number"
-                        name="number"
-                      />
-                    </div>
-                    <div className="col-span-12 md:col-span-6">
-                      <input
-                        className="font-light w-full leading-[1.75] placeholder:opacity-100 placeholder:text-body border border-primary border-opacity-60 rounded-[8px] p-[15px] focus:border-secondary focus:border-opacity-60 focus:outline-none focus:drop-shadow-[0px_6px_15px_rgba(0,0,0,0.1)] "
-                        type="email"
-                        placeholder="Email Address"
-                        name="email"
-                      />
-                    </div>
-                    <div className="col-span-12">
-                      <textarea
-                        className="h-[196px] font-light w-full leading-[1.75] placeholder:opacity-100 placeholder:text-body border border-primary border-opacity-60 rounded-[8px] p-[15px] focus:border-secondary focus:border-opacity-60 focus:outline-none focus:drop-shadow-[0px_6px_15px_rgba(0,0,0,0.1)] resize-none"
-                        name="message"
-                        id="textarea"
-                        cols={30}
-                        rows={10}
-                        placeholder="Message"
-                        defaultValue={""}
-                      />
-                    </div>
-                  </div>
+                  <ContactForm />
                 </div>
                 <div className="col-span-12 lg:col-span-5 mb-[30px] order-last lg:order-none">
                   <div className="h-[385px] rounded-[6px] overflow-hidden xl:ml-[40px]">
@@ -84,23 +38,12 @@ export default function Page() {
                       src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3610.9313673934234!2d55.241364715008956!3d25.171795183908074!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjXCsDEwJzE4LjUiTiA1NcKwMTQnMzYuOCJF!5e0!3m2!1sen!2s!4v1690274150034!5m2!1sen!2s"
                       width="600"
                       height="450"
-                      allowfullscreen=""
                       loading="lazy"
-                      referrerpolicy="no-referrer-when-downgrade"
                     ></iframe>
                   </div>
                 </div>
-                <div className="col-span-12 mb-[30px] lg:mb-0  order-2 lg:order-none">
-                  <button
-                    type="submit"
-                    className="before:rounded-md before:block before:absolute before:left-auto before:right-0 before:inset-y-0 before:-z-[1] before:bg-secondary before:w-0 hover:before:w-full hover:before:left-0 hover:before:right-auto before:transition-all leading-none px-[30px] py-[15px] capitalize font-medium text-white text-[14px] xl:text-[16px] relative after:block after:absolute after:inset-0 after:-z-[2] after:bg-primary after:rounded-md after:transition-all mb-[30px] lg:mb-0"
-                  >
-                    Contact us
-                  </button>
-                  <p className="form-messege mt-3" />
-                </div>
               </div>
-            </form>
+            </div>
           </div>
         </div>
         <Details />

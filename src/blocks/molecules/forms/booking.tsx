@@ -1,6 +1,6 @@
 "use client";
 import React, { useState } from "react";
-
+import { submitForm } from "@/services/email/booking";
 interface FormData {
   fullName: string;
   email: string;
@@ -57,8 +57,15 @@ export default function Booking_Form() {
       // Form is valid, you can proceed with the form submission
       setLoading(true);
       try {
+        const requestData = {
+          name: formData.fullName,
+          email: formData.email,
+          phone: formData.phoneNumber,
+          selectedDate: formData.selectedDate,
+          selectedHour: "Any",
+        };
         // Simulate API call or any async task
-        await submitForm(formData);
+        await submitForm(requestData);
 
         // Clear form fields after successful submission
         setFormData({
@@ -80,23 +87,15 @@ export default function Booking_Form() {
     }
   };
 
-  const submitForm = (data: FormData) => {
-    // Simulate an API call here, or handle the form submission as needed
-    return new Promise((resolve, reject) => {
-      setTimeout(() => {
-        // For this example, we'll just resolve the promise after a delay
-        resolve("success");
-      }, 2000); // Simulating a 2-second delay for the API call
-    });
-  };
-
   return (
     <form
       className=" bg-white xl:relative px-6 py-3 rounded-3xl "
       onSubmit={handleFormSubmit}
     >
       <div className="py-3">
-        <h3 className="font-semibold text-gray-900 lg:text-3xl text-xl">Book a meeting</h3>
+        <h3 className="font-semibold text-gray-900 lg:text-3xl text-xl">
+          Book a meeting
+        </h3>
       </div>
       <div className="py-3">
         <input
