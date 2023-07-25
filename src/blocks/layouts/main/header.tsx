@@ -14,9 +14,13 @@ const Header: React.FC = () => {
   const pathname = usePathname();
 
   if (
-    ["/property/buy", "/property/rent", "/property/offplan", "/", "/contact"].includes(
-      pathname
-    )
+    [
+      "/property/buy",
+      "/property/rent",
+      "/property/offplan",
+      "/",
+      "/contact",
+    ].includes(pathname)
   ) {
     return (
       <>
@@ -25,13 +29,29 @@ const Header: React.FC = () => {
             <div className="h-[100px] grid lg:grid-cols-[1fr_3fr_1fr] grid-cols-[1fr_1fr] ">
               <div className="flex items-center lg:justify-center">
                 <Link href={"/"} className="hidden md:block">
-                  <button aria-label="logo" className=" relative flex items-center gap-2 ">
-                    <Image src="/white-logo.png" alt="logo" width={100} height={100} />
+                  <button
+                    aria-label="logo"
+                    className=" relative flex items-center gap-2 "
+                  >
+                    <Image
+                      src="/white-logo.png"
+                      alt="logo"
+                      width={100}
+                      height={100}
+                    />
                   </button>
                 </Link>
                 <Link href={"/"} className="block md:hidden">
-                  <button aria-label="logo" className=" relative flex items-center gap-2 ">
-                    <Image src="/white-logo.png" alt="logo" width={80} height={80} />
+                  <button
+                    aria-label="logo"
+                    className=" relative flex items-center gap-2 "
+                  >
+                    <Image
+                      src="/white-logo.png"
+                      alt="logo"
+                      width={80}
+                      height={80}
+                    />
                   </button>
                 </Link>
               </div>
@@ -54,8 +74,6 @@ const Header: React.FC = () => {
                     </Link>
                   )
                 )}
-
-
               </nav>
               <Drawer color="white" />
               <Contact />
@@ -75,12 +93,18 @@ const Header: React.FC = () => {
           <div className="h-[100px] grid lg:grid-cols-[1fr_2fr_1fr] grid-cols-[1fr_1fr] ">
             <div className="flex items-center lg:justify-center">
               <Link href={"/"} className="hidden md:block">
-                <button aria-label="logo" className=" relative flex items-center gap-2 ">
+                <button
+                  aria-label="logo"
+                  className=" relative flex items-center gap-2 "
+                >
                   <Image src="/ks.png" alt="logo" width={50} height={50} />
                 </button>
               </Link>
               <Link href={"/"} className="block md:hidden">
-                <button aria-label="logo" className=" relative flex items-center gap-2 ">
+                <button
+                  aria-label="logo"
+                  className=" relative flex items-center gap-2 "
+                >
                   <Image src="/ks.png" alt="logo" width={30} height={30} />
                 </button>
               </Link>
