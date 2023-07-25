@@ -11,6 +11,8 @@ export const config = {
     { text: "contact us", href: "/contact" },
     { text: "careers", href: "/about-us/careers" },
     { text: "our team", href: "/about-us/team" },
+    { text: "about", href: "/about-us" },
+    { text: "blogs", href: "/blogs" },
     { text: "property management", href: "/property/management" },
   ],
   desktop: [
