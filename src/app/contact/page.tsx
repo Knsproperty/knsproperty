@@ -13,7 +13,7 @@ export default function Page() {
       </Landing>
 
       <Container>
-        <div className="pt-[80px] lg:pt-[120px] px-5 xl:px-0">
+        <div className="pt-[80px] lg:pt-[120px] px-5">
           <div className="container">
             <form
               id="contact-form"
