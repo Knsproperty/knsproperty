@@ -8,8 +8,6 @@ import Contact from "@/blocks/atoms/buttons/contact";
 import Dropdown from "@/blocks/layouts/main/dropdown";
 import Hero from "@/blocks/molecules/hero";
 import { config } from "@/config/links";
-import CountrySelector from "@/blocks/atoms/selector";
-import GoogleTranslate from "@/blocks/molecules/translate/GoogleTranslate";
 const Header: React.FC = () => {
   const pathname = usePathname();
 
@@ -68,7 +66,7 @@ const Header: React.FC = () => {
                     />
                   ) : (
                     <Link key={index} href={link.href}>
-                      <button className="hover:bg-secondary px-5 py-2 text-md font-medium hover:underline capitalize text-white">
+                      <button className="hover:bg-secondary px-5 py-2 text-md font-medium hover:underline capitalize text-white rounded-md">
                         {link.text}
                       </button>
                     </Link>

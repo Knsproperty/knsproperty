@@ -1,6 +1,7 @@
 import Container from "@/blocks/atoms/container";
 import Book_Valuation from "@/blocks/sections/book-valuation";
 import Landing from "@/blocks/sections/landing";
+import Image from "next/image";
 
 export default function Management() {
   return (
@@ -22,7 +23,6 @@ export default function Management() {
   );
 }
 
-
 const Service = () => {
   return (
     <section className="pt-[80px] pb-[120px] lg:py-[120px] px-5">
@@ -43,7 +43,9 @@ const Service = () => {
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-[30px]">
           <div className="relative group hover:-translate-y-10 transition-all d duration-200 ease-linear h-full">
             <a className="block">
-              <img
+              <Image
+                width={235}
+                height={157}
                 src="/sale.jpg"
                 className="w-full h-full block mx-auto rounded-[6px_6px_0px_0px]"
                 loading="lazy"
@@ -64,7 +66,9 @@ const Service = () => {
           </div>
           <div className="relative group hover:-translate-y-10 transition-all d duration-200 ease-linear h-full">
             <a className="block">
-              <img
+              <Image
+                width={235}
+                height={157}
                 src="/buy.jpg"
                 className="w-full h-[200px] block mx-auto rounded-[6px_6px_0px_0px]"
                 loading="lazy"
@@ -85,7 +89,9 @@ const Service = () => {
           </div>
           <div className="relative group hover:-translate-y-10 transition-all d duration-200 ease-linear h-full">
             <a className="block">
-              <img
+              <Image
+                width={235}
+                height={157}
                 src="/rent.jpg"
                 className="w-full h-full block mx-auto rounded-[6px_6px_0px_0px]"
                 loading="lazy"
@@ -106,10 +112,11 @@ const Service = () => {
           </div>
           <div className="relative group hover:-translate-y-10 transition-all d duration-200 ease-linear h-full">
             <a className="block">
-              <img
+              <Image
+                width={235}
+                height={157}
                 src="/mortage.jpg"
                 className="w-full h-full block mx-auto rounded-[6px_6px_0px_0px]"
-                width={270}
                 alt="Mortgage"
               />
               <div className="drop-shadow-[0px_2px_15px_rgba(0,0,0,0.1)] hover:drop-shadow-[0px_8px_20px_rgba(0,0,0,0.15)] bg-[#FFFDFC] rounded-[0px_0px_6px_6px] px-[25px] py-[25px]">
