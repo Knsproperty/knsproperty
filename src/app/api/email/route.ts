@@ -57,12 +57,12 @@ export async function POST(req: Request, res: Response) {
       Messages: [
         {
           From: {
-            Email: "virenderkumar23435@gmail.com",
+            Email: process.env.NEXT_PUBLIC_EMAIL,
             Name: "Mailjet Pilot",
           },
           To: [
             {
-              Email: "virenderkumar23435@gmail.com",
+              Email: process.env.NEXT_PUBLIC_EMAIL,
               Name: "passenger 1",
             },
           ],
