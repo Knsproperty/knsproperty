@@ -1,13 +1,9 @@
-import Banner from "@/blocks/molecules/banner/banner";
-import Latest_Blogs from "@/blocks/molecules/cards/blog/blogs";
-import Blog_Header from "@/blocks/molecules/cards/blog/header";
-import Card from "@/blocks/sections/blog/card";
-import Container from "@/blocks/sections/blog/main";
-import LandingSection from "@/blocks/sections/landing";
-import { cardsdata } from "@/data/blogs";
-import { Main } from "@/types/blog";
-import strapi from "@/utils/strapi";
 import React from "react";
+import { Metadata } from "next";
+import strapi from "@/utils/strapi";
+import Card from "@/blocks/sections/blog/card";
+import Banner from "@/blocks/molecules/banner/banner";
+import Container from "@/blocks/sections/blog/main";
 
 export default async function page() {
   const blogs = await strapi.find<any>("blogs", {
@@ -42,3 +38,19 @@ export default async function page() {
 }
 
 export const revalidate = 3600;
+
+export const metadata: Metadata = {
+  title: "Blogs | Buy, Rent, and Invest in Real Estate",
+  description:
+    "Explore a wide range of properties for sale, rent, and investment in Dubai. Find luxury villas, apartments, commercial spaces, and more.",
+  keywords: [
+    "Dubai properties",
+    "real estate",
+    "buy property in Dubai",
+    "rent property in Dubai",
+    "investment properties",
+  ],
+  authors: [{ name: "", url: "" }],
+  abstract: "",
+  publisher: "K&N PROPERTIES",
+};

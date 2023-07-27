@@ -169,14 +169,6 @@ export default async function page({ params }: any) {
           </div>
           {/*end container*/}
         </section>
-
-        {/* <div className="max-w-5xl mx-auto px-5">
-        <h1 className="text-2xl font-semibold text-center py-10">
-          {attributes.title}
-        </h1>
-        <p className="my-2 text-center font-light">{attributes.description}</p>
-        <div id="blog">{ReactHtmlParser(attributes.cotent)}</div>
-      </div> */}
       </Container>
     </>
   );
@@ -188,3 +180,22 @@ const getProperty = async (slug: string) => {
   });
   return await res.json();
 };
+
+export async function generateMetadata({ params }: any) {
+  const { slug } = params;
+  const [{ attributes }] = await getProperty(slug);
+  return {
+    title: attributes.title,
+    description: attributes.description,
+    keywords: [
+      "Dubai properties",
+      "real estate",
+      "buy property in Dubai",
+      "rent property in Dubai",
+      "investment properties",
+    ],
+    authors: [{ name: "", url: "" }],
+    abstract: "",
+    publisher: "K&N PROPERTIES",
+  }
+}
