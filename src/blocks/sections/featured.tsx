@@ -1,13 +1,12 @@
 import Image from "next/image";
 import React from "react";
 import Container from "../atoms/container";
-
 export default function Featured() {
   return (
     <div className="bg-white py-6 sm:py-8 lg:py-12">
       <Container>
         <div className="px-4">
-          <div className="mb-4 flex items-center justify-between gap-8 sm:mb-8 md:mb-12">
+          <div className="mb-4 flex items-center md:justify-between flex-col md:flex-row gap-8 sm:mb-8 md:mb-12">
             <div className="flex flex-col gap-5">
               <h2 className="text-2xl font-bold text-gray-800 lg:text-4xl">
                 Featured Properties
@@ -18,7 +17,12 @@ export default function Featured() {
                 service to help you find the best real estate to invest in Dubai,
               </p>
             </div>
+            <video controls className=" md:max-w-[600px]  mx-auto mb-5">
+              <source src="kns-video.mov" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
           </div>
+
           <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:gap-6 xl:gap-8">
             <a
               href="#"
