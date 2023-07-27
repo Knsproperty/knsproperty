@@ -1,9 +1,9 @@
 import Template from "@/blocks/templates/property";
 import strapi, { populate } from "@/utils/strapi";
+
 export default async function page({ params }: any) {
   const { slug } = params;
   const [{ attributes }] = await getProperty(slug);
-
   return (
     <>
       <Template
@@ -24,7 +24,26 @@ export default async function page({ params }: any) {
     </>
   );
 }
-// fetcher component
+
+export async function generateMetadata({ params }: any) {
+  const { slug } = params;
+  const [{ attributes }] = await getProperty(slug);
+  return {
+    title: attributes.Short_Address,
+    description: attributes.Description,
+    keywords: [
+      "Dubai properties",
+      "real estate",
+      "buy property in Dubai",
+      "rent property in Dubai",
+      "investment properties",
+    ],
+    authors: [{ name: "", url: "" }],
+    abstract: "",
+    publisher: "K&N PROPERTIES",
+  }
+}
+
 const getProperty = async (slug: string) => {
   const buy_properties = await strapi.find<any>("buy-properties", {
     populate: populate,
@@ -33,10 +52,6 @@ const getProperty = async (slug: string) => {
     },
   });
   return buy_properties.data;
-  // const res = await fetch(`${process.env.NEXT_PUBLIC_URL}/api/buy/${slug}`, {
-  //   next: { revalidate: 60 },
-  // });
-  // return await res.json();
 };
 
 export async function generateStaticParams() {
@@ -47,6 +62,7 @@ export async function generateStaticParams() {
   return slugs.data.map((post: any) => ({
     slug: post.attributes.slug,
   }));
+
 }
 
 export const revalidate = 43200000;

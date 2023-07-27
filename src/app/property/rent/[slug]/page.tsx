@@ -28,6 +28,27 @@ export default async function page({ params }: any) {
     </>
   );
 }
+
+
+export async function generateMetadata({ params }: any) {
+  const { slug } = params;
+  const [{ attributes }] = await getProperty(slug);
+  return {
+    title: attributes.Short_Address,
+    description: attributes.Description,
+    keywords: [
+      "Dubai properties",
+      "real estate",
+      "buy property in Dubai",
+      "rent property in Dubai",
+      "investment properties",
+    ],
+    authors: [{ name: "", url: "" }],
+    abstract: "",
+    publisher: "K&N PROPERTIES",
+  }
+}
+
 // fetcher component
 const getProperty = async (slug: string) => {
   const rent_properties = await strapi.find<any>("rent-properties", {

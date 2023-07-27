@@ -20,10 +20,10 @@ export default function Community() {
 
           <div className="grid grid-cols-1 gap-6 mt-8 sm:grid-cols-3 md:mt-16 lg:gap-x-12">
             <Link href={"/property/buy"}>
-              <div className="relative group hover:-translate-y-10 ease-in-out duration-500 transition-all">
+              <div className="relative group md:hover:-translate-y-10 ease-in-out duration-500 transition-all">
                 <div className="absolute top-0 left-0 w-full h-full _center bg-black bg-opacity-40 px-5 text-white hidden group-hover:flex ease-in-out duration-200 transition-all">
                   <h1 className="text-white font-bold text-3xl translate-x-5 group-hover:-translate-x-5">
-                    DownTown Dubai
+                    DownTown Dubaiz
                   </h1>
                 </div>
                 <Image
@@ -37,7 +37,7 @@ export default function Community() {
             </Link>
 
             <Link href={"/property/buy"}>
-              <div className="relative group hover:-translate-y-10 ease-in-out duration-500 transition-all">
+              <div className="relative group md:hover:-translate-y-10 ease-in-out duration-500 transition-all">
                 <div className="absolute top-0 left-0 w-full h-full _center bg-black bg-opacity-40 px-5 text-white hidden group-hover:flex ease-in-out duration-200 transition-all">
                   <h1 className="text-white font-bold text-3xl  group-hover:translate-x-0">
                     Dubai Marina
@@ -54,7 +54,7 @@ export default function Community() {
             </Link>
 
             <Link href={"/property/buy"}>
-              <div className="relative group hover:-translate-y-10 ease-in-out duration-500 transition-all">
+              <div className="relative group md:hover:-translate-y-10 ease-in-out duration-500 transition-all">
                 <div className="absolute top-0 left-0 w-full h-full _center bg-black bg-opacity-40 px-5 text-white hidden group-hover:flex ease-in-out duration-200 transition-all">
                   <h1 className="text-white font-bold text-3xl translate-x-5 group-hover:-translate-x-5">
                     Business Bay

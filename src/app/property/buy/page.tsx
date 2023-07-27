@@ -1,3 +1,4 @@
+import { Metadata } from "next";
 import Container from "@/blocks/atoms/container";
 import strapi, { populate } from "@/utils/strapi";
 import Pagination from "@/blocks/molecules/pagination";
@@ -72,14 +73,17 @@ export default async function Buy({ searchParams }: any) {
   );
 }
 
-const Search = async (query: string) => {
-  if (query) {
-    const queryData = await fetch(
-      `https://ksnpropertiesstrapi-production.up.railway.app/api/fuzzy-search/search?query=${query}&filters[contentTypes]=buy-properties`
-    );
-    const res = await queryData.json();
-    return res["buy-properties"];
-  } else {
-    return [];
-  }
+export const metadata: Metadata = {
+  title: "Buy Properties | K&S Properties",
+  description: "Explore a wide range of properties for sale, rent, and investment in Dubai. Find luxury villas, apartments, commercial spaces, and more.",
+  keywords: [
+    "Dubai properties",
+    "real estate",
+    "buy property in Dubai",
+    "rent property in Dubai",
+    "investment properties",
+  ],
+  authors: [{ name: "", url: "" }],
+  abstract: "",
+  publisher: "K&N PROPERTIES",
 };
