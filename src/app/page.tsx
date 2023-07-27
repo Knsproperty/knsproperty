@@ -1,18 +1,12 @@
 import { Metadata } from "next";
-import Booking from "@/blocks/sections/book";
-// import Service from "@/blocks/sections/services";
-// import Trusted from "@/blocks/sections/trusted";
-// import Trendings from "@/blocks/sections/trending";
-import FadeIn from "@/blocks/animation/fade-in";
-// import Testimonals from "@/blocks/molecules/testimonals";
-// import QuizComponent from "@/blocks/sections/quiz";
-import Featured from "@/blocks/sections/featured";
-import Features from "@/blocks/sections/features";
-import NewsletterSection from "@/blocks/sections/newsletter-section";
-import Blog from "@/blocks/sections/blog/home";
-import Community from "@/blocks/sections/community";
 import dynamic from "next/dynamic";
+import Booking from "@/blocks/sections/book";
+import Blog from "@/blocks/sections/blog/home";
+import Featured from "@/blocks/sections/featured";
 import Loader from "@/blocks/molecules/loader";
+import Features from "@/blocks/sections/features";
+import Community from "@/blocks/sections/community";
+import NewsletterSection from "@/blocks/sections/newsletter-section";
 
 const QuizComponent = dynamic(() => import("@/blocks/sections/quiz"), {
   loading: () => <Loader />, // Optional loading component
@@ -61,5 +55,5 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: "", url: "" }],
   abstract: "",
-  publisher: "KSN PROPERTIES",
+  publisher: "K&N PROPERTIES",
 };

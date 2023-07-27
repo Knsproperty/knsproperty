@@ -1,8 +1,9 @@
+import { Metadata } from "next";
 import Container from "@/blocks/atoms/container";
 import strapi, { populate } from "@/utils/strapi";
+import Pagination from "@/blocks/molecules/pagination";
 import DataNotFound from "@/blocks/atoms/data-not-found";
 import PropertyDetailed from "@/blocks/molecules/cards/property-lg";
-import Pagination from "@/blocks/molecules/pagination";
 
 export default async function OffPlan({ searchParams }: any) {
   const { data, meta } = await strapi.find<any>("off-plans", {
@@ -72,3 +73,19 @@ export default async function OffPlan({ searchParams }: any) {
     </div>
   );
 }
+
+
+export const metadata: Metadata = {
+  title: "Offplan Properties | K&S Properties",
+  description: "Explore a wide range of properties for sale, rent, and investment in Dubai. Find luxury villas, apartments, commercial spaces, and more.",
+  keywords: [
+    "Dubai properties",
+    "real estate",
+    "buy property in Dubai",
+    "rent property in Dubai",
+    "investment properties",
+  ],
+  authors: [{ name: "", url: "" }],
+  abstract: "",
+  publisher: "K&N PROPERTIES",
+};

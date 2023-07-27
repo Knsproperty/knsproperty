@@ -1,7 +1,8 @@
-import Container from "@/blocks/atoms/container";
-import Book_Valuation from "@/blocks/sections/book-valuation";
-import Landing from "@/blocks/sections/landing";
+import { Metadata } from "next";
 import Image from "next/image";
+import Container from "@/blocks/atoms/container";
+import Landing from "@/blocks/sections/landing";
+import Book_Valuation from "@/blocks/sections/book-valuation";
 
 export default function Management() {
   return (
@@ -136,4 +137,20 @@ const Service = () => {
       </div>
     </section>
   );
+};
+
+
+export const metadata: Metadata = {
+  title: "Buy Properties | K&S Properties",
+  description: "Explore a wide range of properties for sale, rent, and investment in Dubai. Find luxury villas, apartments, commercial spaces, and more.",
+  keywords: [
+    "Dubai properties",
+    "real estate",
+    "buy property in Dubai",
+    "rent property in Dubai",
+    "investment properties",
+  ],
+  authors: [{ name: "", url: "" }],
+  abstract: "",
+  publisher: "K&N PROPERTIES",
 };

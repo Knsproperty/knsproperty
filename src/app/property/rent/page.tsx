@@ -1,3 +1,4 @@
+import { Metadata } from "next";
 import Container from "@/blocks/atoms/container";
 import strapi, { populate } from "@/utils/strapi";
 import DataNotFound from "@/blocks/atoms/data-not-found";
@@ -69,3 +70,18 @@ export default async function Buy({ searchParams }: any) {
     </div>
   );
 }
+
+export const metadata: Metadata = {
+  title: "Rent Properties | K&S Properties",
+  description: "Explore a wide range of properties for sale, rent, and investment in Dubai. Find luxury villas, apartments, commercial spaces, and more.",
+  keywords: [
+    "Dubai properties",
+    "real estate",
+    "buy property in Dubai",
+    "rent property in Dubai",
+    "investment properties",
+  ],
+  authors: [{ name: "", url: "" }],
+  abstract: "",
+  publisher: "K&N PROPERTIES",
+};
