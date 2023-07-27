@@ -1,9 +1,9 @@
 import Template from "@/blocks/templates/property";
 import strapi, { populate } from "@/utils/strapi";
+
 export default async function page({ params }: any) {
   const { slug } = params;
   const [{ attributes }] = await getProperty(slug);
-
   return (
     <>
       <Template
@@ -24,6 +24,7 @@ export default async function page({ params }: any) {
     </>
   );
 }
+
 export async function generateMetadata({ params }: any) {
   const { slug } = params;
   const [{ attributes }] = await getProperty(slug);
@@ -54,7 +55,6 @@ const getProperty = async (slug: string) => {
 };
 
 export async function generateStaticParams() {
-
   const slugs = await strapi.find<any>("buy-properties", {
     fields: ["id", "slug"],
   });
