@@ -174,7 +174,10 @@ export default async function Blog() {
                 <p className="mt-3">{data[1].attributes.description}</p>
               </div>
               <div className="flex-1">
-                <a className="block " href={data[2].attributes.slug}>
+                <Link
+                  className="block "
+                  href={`/blogs/${data[2].attributes.slug}`}
+                >
                   <div className="block relative pt-[75%] bg-black/5  ">
                     <img
                       alt="Post thumbnail"
@@ -196,15 +199,12 @@ export default async function Blog() {
                       }}
                     />
                   </div>
-                </a>
+                </Link>
                 <div className="flex flex-wrap gap-3 items-center mt-6">
                   <div className="flex flex-wrap gap-3">
-                    <a
-                      className="text-xs font-medium uppercase rounded-full py-1.5 px-2.5 border border-black text-black hover:bg-black hover:text-white     tracking-wide whitespace-nowrap"
-                      href="/category/productivity"
-                    >
+                    <span className="text-xs font-medium uppercase rounded-full py-1.5 px-2.5 border border-black text-black hover:bg-black hover:text-white     tracking-wide whitespace-nowrap">
                       {data[2].attributes.category}
-                    </a>
+                    </span>
                   </div>
                   <div className="text-sm data-color flex items-center ">
                     <span className="whitespace-nowrap ">
@@ -215,9 +215,9 @@ export default async function Blog() {
                   </div>
                 </div>
                 <h2 className="font-bold leading-snug mt-3 text-2xl">
-                  <a href={data[2].attributes.slug}>
+                  <Link href={`/blogs/${data[2].attributes.slug}`}>
                     {data[2].attributes.title}
-                  </a>
+                  </Link>
                 </h2>
                 <p className="mt-3">{data[2].attributes.description}</p>
               </div>
