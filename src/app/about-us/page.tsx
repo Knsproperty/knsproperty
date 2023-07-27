@@ -1,7 +1,6 @@
 'use client'
 import React from "react";
 import Link from "next/link";
-import { Metadata } from "next";
 import { GiKey } from "react-icons/gi";
 import { BsHouseHeart } from "react-icons/bs";
 import Parallax from "@/blocks/animation/parallex";
@@ -214,18 +213,3 @@ const Award = () => {
   );
 };
 
-export const metadata: Metadata = {
-  title: "About us | Buy, Rent, and Invest in Real Estate",
-  description:
-    "Explore a wide range of properties for sale, rent, and investment in Dubai. Find luxury villas, apartments, commercial spaces, and more.",
-  keywords: [
-    "Dubai properties",
-    "real estate",
-    "buy property in Dubai",
-    "rent property in Dubai",
-    "investment properties",
-  ],
-  authors: [{ name: "", url: "" }],
-  abstract: "",
-  publisher: "K&N PROPERTIES",
-};
