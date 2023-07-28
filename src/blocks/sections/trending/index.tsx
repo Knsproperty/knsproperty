@@ -5,23 +5,34 @@ interface Props {
 import List from "./list";
 import Link from "next/link";
 import Container from "../../atoms/container";
+import strapi, { populate } from "@/utils/strapi";
 
 const Trendings: React.FC<Props> = async ({ title, type }) => {
-  const data = await getData(type);
+  const buy_properties = await strapi.find<any>(
+    type == "buy" ? "buy-properties" : "rent-properties",
+    {
+      populate: populate,
+      filters: {
+        Exclusive: true,
+      },
+    }
+  );
 
   // hide if there no exclusive properties
-  if (data.length == 0) {
+  if (buy_properties.data.length == 0) {
     return null;
   }
+  let data = buy_properties.data;
 
   return (
-    <section
-      className="bg-gray">
+    <section className="bg-gray">
       <Container>
         <div className=" grid pt-10 pb-10">
           <div className="flex items-center justify-between px-3 mb-5">
             <div>
-              <h2 className="lg:text-3xl text-xl text-primary font-bold">{title}</h2>
+              <h2 className="lg:text-3xl text-xl text-primary font-bold">
+                {title}
+              </h2>
             </div>
             <Link
               href={`/property/${type}`}
@@ -39,15 +50,4 @@ const Trendings: React.FC<Props> = async ({ title, type }) => {
 
 export default Trendings;
 
-// Exclusive Properties
-const getData = async (type: string) => {
-  const data = await fetch(
-    `${process.env.NEXT_PUBLIC_URL}/api/exclusive/${type}`,
-    {
-      cache: "force-cache",
-    }
-  );
-  return await data.json();
-};
-
-
+export const fetchCache = "force-cache";
