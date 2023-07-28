@@ -16,11 +16,6 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  if (process.env.NODE_ENV === "production") {
-    console.log = () => {};
-    console.error = () => {};
-    console.debug = () => {};
-  }
   return (
     <html lang="en">
       <Script id="google-tag-manager" strategy="afterInteractive">
