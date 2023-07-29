@@ -10,7 +10,6 @@ const Hero = () => {
   }
   return (
     <div className="relative w-full h-[100vh] bg-black">
-
       <div className="scroll-downs">
         <div className="mousey">
           <div className="scroller"></div>
@@ -30,6 +29,9 @@ const Hero = () => {
 
       <div className="player-wrapper">
         <ReactPlayer
+          style={{
+            border: "none",
+          }}
           className="react-player"
           playing
           loop
