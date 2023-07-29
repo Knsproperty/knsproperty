@@ -85,7 +85,7 @@ export const config = {
       ],
       "contact us": [
         { text: "(+971) 42582592", href: "tel:+97142582592" },
-        { text: "Info@knsproperty.com", href: "mailto:info@knsproperty.com" },
+        { text: "info@knsproperty.com", href: "mailto:info@knsproperty.com" },
       ],
     },
   },
