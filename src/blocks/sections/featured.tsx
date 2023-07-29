@@ -19,20 +19,8 @@ export default function Featured() {
                 Dubai,
               </p>
             </div>
-            <div className="featured-player-wrapper md:!max-w-[600px]  mx-auto mb-5 relative">
+            <div className="featured-player-wrapper md:max-w-[600px]  mx-auto mb-5 relative">
               <Featured_Video />
-              {/* <ReactPlayer
-                className="react-player"
-                controls
-                // playing
-                // loop
-
-                url="kns-video.mov"
-                width="100%"
-                height="100%"
-              /> */}
-              {/* <source src="kns-video.mov" type="video/mp4" /> */}
-              Your browser does not support the video tag.
             </div>
           </div>
 
