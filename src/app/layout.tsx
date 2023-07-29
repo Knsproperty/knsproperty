@@ -1,3 +1,4 @@
+import { Analytics } from "@vercel/analytics/react";
 import "./globals.css";
 const GTM_ID = "GTM-MT9PWSWC";
 import Script from "next/script";
@@ -39,6 +40,7 @@ export default function RootLayout({
         <NewsLetterSection />
         <Header />
         {children}
+        <Analytics />
         <Footer />
       </body>
     </html>
