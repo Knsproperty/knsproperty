@@ -1,6 +1,7 @@
 import Image from "next/image";
 import React from "react";
 import Container from "../atoms/container";
+import Featured_Video from "../molecules/video/featured";
 export default function Featured() {
   return (
     <div className="bg-white py-6 sm:py-8 lg:py-12">
@@ -14,13 +15,25 @@ export default function Featured() {
               <p className="hidden max-w-screen-sm text-gray-500 md:block">
                 Explore the most popular and sought-after properties with our
                 exclusive Range Concierge service. We provide this cost-free
-                service to help you find the best real estate to invest in Dubai,
+                service to help you find the best real estate to invest in
+                Dubai,
               </p>
             </div>
-            <video controls className=" md:max-w-[600px]  mx-auto mb-5">
-              <source src="kns-video.mov" type="video/mp4" />
+            <div className="featured-player-wrapper md:!max-w-[600px]  mx-auto mb-5 relative">
+              <Featured_Video />
+              {/* <ReactPlayer
+                className="react-player"
+                controls
+                // playing
+                // loop
+
+                url="kns-video.mov"
+                width="100%"
+                height="100%"
+              /> */}
+              {/* <source src="kns-video.mov" type="video/mp4" /> */}
               Your browser does not support the video tag.
-            </video>
+            </div>
           </div>
 
           <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:gap-6 xl:gap-8">

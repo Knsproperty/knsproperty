@@ -2,176 +2,173 @@
 @tailwind components;
 @tailwind utilities;
 
-
 @font-face {
-    font-family: 'Lato';
-    font-weight: 300;
-    font-style: normal;
-    src: url('../../fonts/Lato/Lato-Light.ttf') format('truetype');
+  font-family: "Lato";
+  font-weight: 300;
+  font-style: normal;
+  src: url("../../fonts/Lato/Lato-Light.ttf") format("truetype");
 }
 
 @font-face {
-    font-family: 'Lato';
-    font-weight: 400;
-    font-style: normal;
-    src: url('../../fonts/Lato/Lato-Regular.ttf') format('truetype');
+  font-family: "Lato";
+  font-weight: 400;
+  font-style: normal;
+  src: url("../../fonts/Lato/Lato-Regular.ttf") format("truetype");
 }
 
 @font-face {
-    font-family: 'Lato';
-    font-weight: 600;
-    font-style: normal;
-    src: url('../../fonts/Lato/Lato-Bold.ttf') format('truetype');
+  font-family: "Lato";
+  font-weight: 600;
+  font-style: normal;
+  src: url("../../fonts/Lato/Lato-Bold.ttf") format("truetype");
 }
 
 @font-face {
-    font-family: 'Lato';
-    font-weight: 700;
-    font-style: normal;
-    src: url('../../fonts/Lato/Lato-Black.ttf') format('truetype');
+  font-family: "Lato";
+  font-weight: 700;
+  font-style: normal;
+  src: url("../../fonts/Lato/Lato-Black.ttf") format("truetype");
 }
 
 @font-face {
-    font-family: 'Optima';
-    font-weight: 300;
-    font-style: normal;
-    src: url('../../fonts/Optima/OPTIMA.woff') format('woff');
+  font-family: "Optima";
+  font-weight: 300;
+  font-style: normal;
+  src: url("../../fonts/Optima/OPTIMA.woff") format("woff");
 }
 
 @font-face {
-    font-family: 'Optima';
-    font-weight: 400;
-    font-style: normal;
-    src: url('../../fonts/Optima/Optima Medium.woff') format('woff');
+  font-family: "Optima";
+  font-weight: 400;
+  font-style: normal;
+  src: url("../../fonts/Optima/Optima Medium.woff") format("woff");
 }
 
 @font-face {
-    font-family: 'Optima';
-    font-weight: 600;
-    font-style: normal;
-    src: url('../../fonts/Optima/OPTIMA_B.woff') format('woff');
+  font-family: "Optima";
+  font-weight: 600;
+  font-style: normal;
+  src: url("../../fonts/Optima/OPTIMA_B.woff") format("woff");
 }
-
 
 @layer {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-heading;
+  }
 
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6 {
-        @apply font-heading
-    }
+  * {
+    @apply text-black;
+    font-family: "Lato";
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
 
-    * {
-        @apply text-black;
-        font-family: 'Lato';
-        -webkit-font-smoothing: antialiased;
-        -moz-osx-font-smoothing: grayscale;
-        text-rendering: optimizeLegibility;
-    }
+  /* custom css goes here... */
+  ._container {
+    @apply max-w-[1520px];
+  }
 
-    /* custom css goes here... */
-    ._container {
-        @apply max-w-[1520px];
-    }
+  ._center {
+    @apply flex items-center justify-center;
+  }
 
-    ._center {
-        @apply flex items-center justify-center
-    }
+  .custom-scrollbar::-webkit-scrollbar {
+    width: 5px;
+  }
 
-    .custom-scrollbar::-webkit-scrollbar {
-        width: 5px;
-    }
+  .custom-scrollbar::-webkit-scrollbar-track {
+    background-color: whitesmoke;
+  }
 
-    .custom-scrollbar::-webkit-scrollbar-track {
-        background-color: whitesmoke;
-    }
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    background-color: darkgrey;
+    border-radius: 10px;
+  }
 
-    .custom-scrollbar::-webkit-scrollbar-thumb {
-        background-color: darkgrey;
-        border-radius: 10px;
-    }
-
-    #blog p {
-        @apply py-2
-    }
-
-
+  #blog p {
+    @apply py-2;
+  }
 }
 
 .goog-te-gadget-simple {
-    display: flex !important;
+  display: flex !important;
 }
 
-
-.goog-te-gadget-simple>span>a {
-    display: flex !important;
+.goog-te-gadget-simple > span > a {
+  display: flex !important;
 }
-
 
 .player-wrapper {
-    position: relative;
-    height: 100vh;
+  position: relative;
+  height: 100vh;
+}
+.featured-player-wrapper {
+  position: relative;
+  height: 30vh;
 }
 
 .react-player {
-    position: absolute;
-    top: 0;
-    left: 0;
-    border: 5px solid;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border: 5px solid;
 }
 
-.react-player>video {
-    object-fit: cover;
+.react-player > video {
+  object-fit: cover;
 }
 
 .scroll-downs {
-    position: absolute;
-    z-index: 9999;
-    right: 0;
-    bottom: 100px;
-    left: 0;
-    margin: auto;
+  position: absolute;
+  z-index: 9999;
+  right: 0;
+  bottom: 100px;
+  left: 0;
+  margin: auto;
 
-    width: 34px;
-    height: 55px;
+  width: 34px;
+  height: 55px;
 }
 
 .mousey {
-    width: 3px;
-    padding: 10px 15px;
-    height: 35px;
-    border: 2px solid #fff;
-    border-radius: 25px;
-    opacity: 0.75;
-    box-sizing: content-box;
+  width: 3px;
+  padding: 10px 15px;
+  height: 35px;
+  border: 2px solid #fff;
+  border-radius: 25px;
+  opacity: 0.75;
+  box-sizing: content-box;
 }
 
 .scroller {
-    width: 3px;
-    height: 10px;
-    border-radius: 25%;
-    background-color: #fff;
-    animation-name: scroll;
-    animation-duration: 2.2s;
-    animation-timing-function: cubic-bezier(.15, .41, .69, .94);
-    animation-iteration-count: infinite;
+  width: 3px;
+  height: 10px;
+  border-radius: 25%;
+  background-color: #fff;
+  animation-name: scroll;
+  animation-duration: 2.2s;
+  animation-timing-function: cubic-bezier(0.15, 0.41, 0.69, 0.94);
+  animation-iteration-count: infinite;
 }
 
 @keyframes scroll {
-    0% {
-        opacity: 0;
-    }
+  0% {
+    opacity: 0;
+  }
 
-    10% {
-        transform: translateY(0);
-        opacity: 1;
-    }
+  10% {
+    transform: translateY(0);
+    opacity: 1;
+  }
 
-    100% {
-        transform: translateY(15px);
-        opacity: 0;
-    }
+  100% {
+    transform: translateY(15px);
+    opacity: 0;
+  }
 }
