@@ -19,7 +19,7 @@ const HeaderDropdown: React.FC<Props> = ({ options, text, href, color }) => {
       <Link href={href}>
         <button
           tabIndex={0}
-          className={`text-md  px-5 py-2 rounded-md font-medium hover:underline capitalize flex items-center ${textColor} ${
+          className={`text-md  px-5 py-2 rounded-md font-medium capitalize flex items-center ${textColor} ${
             color == "white" ? "hover:bg-secondary" : ""
           }`}
         >
@@ -37,7 +37,7 @@ const HeaderDropdown: React.FC<Props> = ({ options, text, href, color }) => {
             <li key={index}>
               <Link
                 href={link.href}
-                className="text-md font-medium hover:underline  capitalize py-2"
+                className="text-md font-medium capitalize py-2"
               >
                 {link.text}
               </Link>

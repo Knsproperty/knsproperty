@@ -66,7 +66,7 @@ const Header: React.FC = () => {
                     />
                   ) : (
                     <Link key={index} href={link.href}>
-                      <button className="hover:bg-secondary px-5 py-2 text-md font-medium hover:underline capitalize text-white rounded-md">
+                      <button className="hover:bg-secondary px-5 py-2 text-md font-medium  capitalize text-white rounded-md">
                         {link.text}
                       </button>
                     </Link>
@@ -120,7 +120,7 @@ const Header: React.FC = () => {
                   />
                 ) : (
                   <Link key={index} href={link.href}>
-                    <button className="text-md font-medium hover:underline capitalize text-black">
+                    <button className="text-md font-medium capitalize text-black">
                       {link.text}
                     </button>
                   </Link>
