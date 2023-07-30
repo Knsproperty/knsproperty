@@ -85,7 +85,7 @@ export default async function Blog() {
                 <div className="flex">
                   <span className="flex -ml-3 first:ml-0 first:z-10 hover:z-20 ">
                     <div
-                      className="rounded-full overflow-hidden border-4 border-gray-200  inline-block leading-[0] !border-2"
+                      className="rounded-full overflow-hidden border-gray-200  inline-block leading-[0] !border-2"
                       style={{ width: 30, height: 30 }}
                     >
                       <div className="pt-[100%] relative">
