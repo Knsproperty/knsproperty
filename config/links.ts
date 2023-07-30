@@ -76,7 +76,6 @@ export const config = {
         { text: "buy", href: "/property/buy" },
         { text: "rent", href: "/property/rent" },
         { text: "off plan", href: "/property/offplan" },
-        { text: "commercial", href: "/property/commercial" },
         { text: "property management", href: "/property/property-management" },
       ],
       abouts: [
