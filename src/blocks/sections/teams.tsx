@@ -19,4 +19,4 @@ export default async function Teams() {
   ));
 }
 
-export const revalidate = 3600000;
+export const revalidate = 60;
