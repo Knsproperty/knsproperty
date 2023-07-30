@@ -11,10 +11,12 @@ const Footer = () => {
         <section className="grid lg:grid-cols-2 w-full py-10 gap-5 lg:gap-0">
           <div className="order-2 lg:order-1">
             <Image
-              src={'/ks.png'}
+              src={"/ks.png"}
               alt="footer-logo"
               className="mb-5 hidden lg:block ml-2"
-              width={40} height={40} />
+              width={40}
+              height={40}
+            />
 
             <div className="flex gap-3 flex-wrap mb-5">
               {config.footer.social.map((links, index) => (
@@ -31,14 +33,35 @@ const Footer = () => {
 
           <div className="grid lg:grid-cols-3 gap-5 lg:gap-0 order-1 lg:order-2">
             <Image
-              src={'/ks.png'}
+              src={"/ks.png"}
               alt="footer-logo"
               className="mb-5 block lg:hidden ml-2"
-              width={40} height={40} />
+              width={40}
+              height={40}
+            />
             <List />
           </div>
         </section>
-        <p className="text-sm">Copyright© K&S PROPERTIES L.L.C. All Rights Reserved</p>
+        <div className="flex items-center justify-between md:flex-row md:gap-0 flex-col gap-5">
+          <p className="text-sm">
+            Copyright© K&S PROPERTIES L.L.C. All Rights Reserved
+          </p>
+          <p>
+            <span className="font-bold italic">devs →</span>
+            <a
+              className="px-2 underline font-heading"
+              href="https://github.com/deepakvishwakarma-hh"
+            >
+              @deepak
+            </a>
+            <a
+              className="px-2 underline font-heading"
+              href="https://github.com/dag-bag/"
+            >
+              @virendra
+            </a>
+          </p>
+        </div>
       </Container>
     </footer>
   );
@@ -51,15 +74,19 @@ const List = () => {
     <>
       {keys.map((key, index) => (
         <div key={index}>
-          <h6 className="capitalize font-medium py-2 md:text-md text-md">{key}</h6>
+          <h6 className="capitalize font-medium py-2 md:text-md text-md">
+            {key}
+          </h6>
           <ul className="flex flex-col gap-1">
             {(config.footer.links as any)[key].map(
               (links: any, index2: number) => (
                 <li key={index2}>
                   <Link
                     href={links.href}
-                    className="text-sm  hover:underline capitalize">
-                    {links.text}</Link>
+                    className="text-sm  hover:underline capitalize"
+                  >
+                    {links.text}
+                  </Link>
                 </li>
               )
             )}
