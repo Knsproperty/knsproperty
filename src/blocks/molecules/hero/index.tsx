@@ -16,7 +16,7 @@ const Hero = () => {
         </div>
       </div>
 
-      <div className="absolute w-full h-full top-0 left-0 z-30  bg-black bg-opacity-40 _center flex-col">
+      <div className="absolute w-full h-full top-0 left-0 z-30  bg-black bg-opacity-30 _center flex-col">
         <div className="p-10 rounded-md max-w-[800px] bg-opacity-50">
           <Parallax>
             <h1 className="text-white md:text-3xl text-xl text-center font-heading mb-2">
