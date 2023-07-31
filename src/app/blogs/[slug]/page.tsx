@@ -3,6 +3,7 @@ import Banner from "@/blocks/molecules/banner/banner";
 import Recentposts from "@/blocks/sections/blog/recentposts";
 import { formatDate } from "@/utils/helpers";
 import React from "react";
+import ReactMarkdown from 'react-markdown';
 import ReactHtmlParser from "react-html-parser";
 export default async function page({ params }: any) {
   const [{ attributes }] = await getProperty(params.slug);
@@ -46,10 +47,10 @@ export default async function page({ params }: any) {
                       {attributes.title}
                     </h1>
                     <p className="my-2 text-center">{attributes.description}</p>
-                    <div id="blog">{ReactHtmlParser(attributes.content)}</div>
+                    <ReactMarkdown className="prose" >{(attributes.content)}</ReactMarkdown>
                   </div>
                 </div>
-                <div className="p-6 rounded-md shadow  mt-8">
+                {/* <div className="p-6 rounded-md shadow  mt-8">
                   <h5 className="text-lg font-semibold">Leave A Comment:</h5>
                   <form className="mt-8">
                     <div className="grid lg:grid-cols-12 lg:gap-6">
@@ -157,7 +158,7 @@ export default async function page({ params }: any) {
                       Send Message
                     </button>
                   </form>
-                </div>
+                </div> */}
               </div>
               {/*end col*/}
               <Recentposts />
