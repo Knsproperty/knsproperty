@@ -1,4 +1,4 @@
-'use client'
+"use client";
 import React from "react";
 import Link from "next/link";
 import { GiKey } from "react-icons/gi";
@@ -26,7 +26,11 @@ const About = () => {
               <div className="md:col-span-5">
                 <div className="relative">
                   <Parallax>
-                    <img src="/about.jpg" className="rounded-xl shadow-md" alt="image" />
+                    <img
+                      src="/about.jpg"
+                      className="rounded-xl shadow-md"
+                      alt="image"
+                    />
                   </Parallax>
                   <div className="absolute bottom-2/4 translate-y-2/4 start-0 end-0 text-center"></div>
                 </div>
@@ -39,12 +43,17 @@ const About = () => {
                     with us.
                   </h3>
                   <p className="text-slate-400 max-w-xl">
-                    The United Arab Emirates is a crossroads for individuals from all over the world.
-                    Housing and commercial properties in this futuristic city are profitable; therefore,
-                    investing in real estate in Dubai gives an opportunity to maximize profits.
+                    The United Arab Emirates is a crossroads for individuals
+                    from all over the world. Housing and commercial properties
+                    in this futuristic city are profitable; therefore, investing
+                    in real estate in Dubai gives an opportunity to maximize
+                    profits.
                   </p>
                   <div className="mt-4">
-                    <Link className="btn bg-primary hover:bg-green-700 text-white rounded-md mt-3" href={"/"}>
+                    <Link
+                      className="btn bg-primary hover:bg-green-700 text-white rounded-md mt-3"
+                      href={"/"}
+                    >
                       Learn More
                     </Link>
                   </div>
@@ -60,7 +69,9 @@ const About = () => {
               <h4 className="mb-6 md:text-3xl text-primary text-2xl lg:leading-normal leading-normal font-semibold">
                 How It Works
               </h4>
-              <p className="text-slate-400 max-w-xl mx-auto">K&amp;S is a great place to buy and rent properties.</p>
+              <p className="text-slate-400 max-w-xl mx-auto">
+                K&amp;S is a great place to buy and rent properties.
+              </p>
             </div>
             {/*end grid*/}
             <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 mt-8 gap-[30px]">
@@ -86,7 +97,9 @@ const About = () => {
                 <div className="mt-6">
                   <h5 className="text-xl font-bold">Evaluate Property</h5>
                   <p className="text-slate-400 mt-3">
-                    Our expert team conducts thorough assessments of properties, from location and amenities to structural integrity, empowering you to make informed decisions.
+                    Our expert team conducts thorough assessments of properties,
+                    from location and amenities to structural integrity,
+                    empowering you to make informed decisions.
                   </p>
                 </div>
               </div>
@@ -113,7 +126,9 @@ const About = () => {
                 <div className="mt-6">
                   <h5 className="text-xl font-bold">Meeting with Agent</h5>
                   <p className="text-slate-400 mt-3">
-                    Experience personalized service as our agents understand your needs, guiding you through property searches with tailored options.
+                    Experience personalized service as our agents understand
+                    your needs, guiding you through property searches with
+                    tailored options.
                   </p>
                 </div>
               </div>
@@ -140,7 +155,9 @@ const About = () => {
                 <div className="mt-6">
                   <h5 className="text-xl font-bold">Close the Deal</h5>
                   <p className="text-slate-400 mt-3">
-                    Our skilled negotiators work tirelessly to secure the best terms, ensuring a smooth and transparent closing process for your property investment.
+                    Our skilled negotiators work tirelessly to secure the best
+                    terms, ensuring a smooth and transparent closing process for
+                    your property investment.
                   </p>
                 </div>
               </div>
@@ -194,7 +211,7 @@ const Award = () => {
               <div className="counter-box text-center">
                 <h1 className="text-white lg:text-5xl text-4xl font-semibold mb-2">
                   <span className="counter-value text-white" data-target={9}>
-                    9
+                    16
                   </span>
                   +
                 </h1>
@@ -212,4 +229,3 @@ const Award = () => {
     </section>
   );
 };
-
