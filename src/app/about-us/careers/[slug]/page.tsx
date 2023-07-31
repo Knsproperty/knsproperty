@@ -11,7 +11,7 @@ export default async function page({ params }: any) {
       <Container>
         <div className="grid lg:grid-cols-[1.5fr_2fr] gap-5 lg:py-10 ">
           <div className="_center h-[300px] xl:h-auto bg-lightgray roudned-md mb-2 bg-[url('/pettern.avif')] bg-cover">
-            <h1 className=" text-3xl text-secondary font-semibold text-center">
+            <h1 className=" text-3xl text-secondary font-bold text-center">
               {attributes.position}
             </h1>
           </div>
@@ -27,20 +27,20 @@ export default async function page({ params }: any) {
               <FiDollarSign className="mr-2" />
               {attributes.salary} ADS
             </p>
-            <p className="text-sm font-light flex items-center">
+            <p className="text-sm  flex items-center">
               {attributes.description}
             </p>
 
             <section className="my-2">
-              <h3 className="mb-1">Responsiblity</h3>
-              <p className="text-sm font-light flex items-center">
+              <h3 className="mb-1 font-bold">Responsiblity</h3>
+              <p className="text-sm  flex items-center">
                 {attributes.responsibilities}
               </p>
             </section>
 
             <section className="my-2">
-              <h3 className="mb-1">Requirements</h3>
-              <p className="text-sm font-light flex items-center">
+              <h3 className="mb-1 font-bold">Requirements</h3>
+              <p className="text-sm  flex items-center">
                 {attributes.requirements}
               </p>
             </section>

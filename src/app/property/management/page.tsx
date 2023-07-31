@@ -59,7 +59,7 @@ const Service = () => {
                     .
                   </span>{" "}
                 </h3>
-                <p className="font-light text-tiny">
+                <p className="  text-tiny">
                   Provide prorpery Sale options opportunity to find the best{" "}
                 </p>
               </div>
@@ -82,7 +82,7 @@ const Service = () => {
                     .
                   </span>
                 </h3>
-                <p className="font-light text-tiny">
+                <p className="  text-tiny">
                   Provide prorpery Sale options opportunity to find the best{" "}
                 </p>
               </div>
@@ -105,7 +105,7 @@ const Service = () => {
                     .
                   </span>{" "}
                 </h3>
-                <p className="font-light text-tiny">
+                <p className="  text-tiny">
                   Provide prorpery Sale options opportunity to find the best{" "}
                 </p>
               </div>
@@ -127,7 +127,7 @@ const Service = () => {
                     .
                   </span>{" "}
                 </h3>
-                <p className="font-light text-tiny">
+                <p className="  text-tiny">
                   Provide prorpery Sale options opportunity to find the best{" "}
                 </p>
               </div>
@@ -139,10 +139,10 @@ const Service = () => {
   );
 };
 
-
 export const metadata: Metadata = {
   title: "Buy Properties | K&S Properties",
-  description: "Explore a wide range of properties for sale, rent, and investment in Dubai. Find luxury villas, apartments, commercial spaces, and more.",
+  description:
+    "Explore a wide range of properties for sale, rent, and investment in Dubai. Find luxury villas, apartments, commercial spaces, and more.",
   keywords: [
     "Dubai properties",
     "real estate",

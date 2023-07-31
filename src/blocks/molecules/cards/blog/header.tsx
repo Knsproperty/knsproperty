@@ -62,7 +62,7 @@ export default function Blog_Header() {
               How AR will transform our lives in 2050
             </h1>
             <p
-              className="mt-2 font-light text-sm"
+              className="mt-2 text-sm"
               data-contentful-field-id="shortDescription"
               data-contentful-entry-id="5Ffob3XoJGrQuKE5uRUugR"
             >

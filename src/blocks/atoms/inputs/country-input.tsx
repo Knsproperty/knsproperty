@@ -17,7 +17,7 @@ export default function CountryInput({
         onChange={setValue}
         defaultCountry="AE"
         placeholder="Enter phone number"
-        className="border-none outline-none placeholder:text-sm text-sm placeholder:font-light w-full focus-visible:no-underline"
+        className="border-none outline-none placeholder:text-sm text-sm  w-full focus-visible:no-underline"
       />
     </div>
   );

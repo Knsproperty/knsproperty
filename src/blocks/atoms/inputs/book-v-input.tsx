@@ -16,7 +16,7 @@ export default function Book_Input({
   return (
     <div className="bg-white rounded-full flex items-center py-4 px-[30px] gap-4 relative">
       <input
-        className="border-none outline-none placeholder:text-sm text-sm placeholder:font-light w-full"
+        className="border-none outline-none placeholder:text-sm text-sm w-full"
         placeholder={placeholder}
         type={type}
         value={value}

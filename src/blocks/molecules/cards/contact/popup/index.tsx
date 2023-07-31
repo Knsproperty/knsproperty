@@ -122,13 +122,13 @@ const BookAView: React.FC<Props> = ({ isOpen, closeModal }) => {
                         type="text"
                         placeholder="Your name"
                         {...nameInput}
-                        className="text-sm bg-lightgray border border-lightgreen p-2 rounded-md placeholder:text-sm placeholder:font-light"
+                        className="text-sm bg-lightgray border border-lightgreen p-2 rounded-md placeholder:text-sm placeholder: "
                       />
                       <input
                         type="text"
                         placeholder="Your email"
                         {...emailInput}
-                        className="text-sm bg-lightgray border border-lightgreen p-2 rounded-md placeholder:text-sm placeholder:font-light"
+                        className="text-sm bg-lightgray border border-lightgreen p-2 rounded-md placeholder:text-sm placeholder: "
                       />
                       <CountryInput
                         value={phone}

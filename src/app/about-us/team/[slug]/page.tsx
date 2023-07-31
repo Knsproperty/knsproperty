@@ -26,7 +26,7 @@ export default async function Page({ params: { slug } }: any) {
                 {attributes.Position}
               </p>
 
-              <p className="xl:text-left text-center text-sm font-light">
+              <p className="xl:text-left text-center text-sm">
                 {attributes.Description}
               </p>
             </div>

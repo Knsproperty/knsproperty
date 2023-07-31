@@ -19,7 +19,7 @@ export default function Book_Valuation() {
               >
                 Contact Us
               </h2>
-              <p className="col-md-7 col-11 mx-auto text-primary text-base sm:w-[60%] pb-[10px] font-light">
+              <p className="col-md-7 col-11 mx-auto text-primary text-base sm:w-[60%] pb-[10px]  ">
                 We have a waitlist of clients ready to view properties,
                 extensive comparable community data and a trusted reputation.
                 Just three of the reasons why people choose us.
