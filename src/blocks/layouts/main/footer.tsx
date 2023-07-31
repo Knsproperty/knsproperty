@@ -44,7 +44,7 @@ const Footer = () => {
         </section>
         <div className="flex items-center justify-between md:flex-row md:gap-0 flex-col gap-5">
           <p className="text-sm">
-            Copyright© K&S PROPERTIES L.L.C. All Rights Reserved
+            Copyright© K & S PROPERTIES L.L.C. All Rights Reserved
           </p>
         </div>
       </Container>
