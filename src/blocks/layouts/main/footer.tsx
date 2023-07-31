@@ -46,21 +46,6 @@ const Footer = () => {
           <p className="text-sm">
             Copyright© K&S PROPERTIES L.L.C. All Rights Reserved
           </p>
-          <p>
-            <span className="font-bold italic">devs →</span>
-            <a
-              className="px-2 underline font-heading"
-              href="https://github.com/deepakvishwakarma-hh"
-            >
-              @deepak
-            </a>
-            <a
-              className="px-2 underline font-heading"
-              href="https://github.com/dag-bag/"
-            >
-              @virendra
-            </a>
-          </p>
         </div>
       </Container>
     </footer>
