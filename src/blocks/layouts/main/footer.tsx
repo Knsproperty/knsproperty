@@ -1,9 +1,9 @@
 import Link from "next/link";
+import Image from "next/image";
 import { config } from "@/config/links";
 import SocialIcon from "./social-icon";
 import Container from "@/blocks/atoms/container";
 import GoogleTranslate from "@/blocks/molecules/translate/GoogleTranslate";
-import Image from "next/image";
 const Footer = () => {
   return (
     <footer className="bg-lightgray p-5 lg:p-3">

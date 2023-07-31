@@ -23,7 +23,7 @@ export default function Community() {
               <div className="relative group md:hover:-translate-y-10 ease-in-out duration-500 transition-all">
                 <div className="absolute top-0 left-0 w-full h-full _center bg-black bg-opacity-40 px-5 text-white hidden group-hover:flex ease-in-out duration-200 transition-all">
                   <h1 className="text-white font-bold text-3xl translate-x-5 group-hover:-translate-x-5">
-                    DownTown Dubaiz
+                    DownTown Dubai
                   </h1>
                 </div>
                 <Image
