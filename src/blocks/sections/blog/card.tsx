@@ -41,12 +41,12 @@ const Card: React.FC<CardProps> = ({ cardData }) => {
                 {readingTime}
               </span>
             </div>
-            <a
-              href={link}
+            <Link
+              href={`/blogs/${link}`}
               className="title text-xl font-medium hover:text-primary duration-500 ease-in-out"
             >
               {title}
-            </a>
+            </Link>
             <div className="mt-3">
               <Link
                 href={`/blogs/${link}`}
