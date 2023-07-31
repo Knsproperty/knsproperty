@@ -17,7 +17,7 @@ const Customdate: React.FC = () => {
   return (
     <div className="grid  py-2 gap-2">
       <label className="bg-lightgray  p-5 gap-1 border border-lightgreen rounded-md flex flex-row">
-        <span className="text-md font-light mr-2">Select a date</span>
+        <span className="text-md   mr-2">Select a date</span>
         <DatePicker
           className="border-2 border-lightgreen px-5 py-1 rounded-md text-sm"
           selected={startDate}

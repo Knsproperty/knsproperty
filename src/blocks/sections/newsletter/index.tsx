@@ -32,10 +32,10 @@ const NewsLetter: React.FC<Props> = ({ onclose }) => {
         <div className="bg-secondary p-3 inline-block rounded-md _center mb-3">
           <HiOutlineMail className="stroke-white" size={20} />
         </div>
-        <h1 className="text-white text-3xl font-light mb-5">
+        <h1 className="text-white text-3xl   mb-5">
           Sign Up <br /> and stay updated
         </h1>
-        <p className="text-sm font-light text-[#e4e4e4]">
+        <p className="text-sm   text-[#e4e4e4]">
           Stay tuned for exciting updates, exclusive offers, and valuable
           insights in our upcoming newsletter. Don't miss out!
         </p>
@@ -72,13 +72,11 @@ const NewsLetter: React.FC<Props> = ({ onclose }) => {
             />
             <button
               type="submit"
-              className="px-5 py-2.5 w-full block bg-secondary text-white rounded-md font-light text-sm mb-2"
+              className="px-5 py-2.5 w-full block bg-secondary text-white rounded-md   text-sm mb-2"
             >
               Subscribe
             </button>
-            <p className="text-sm font-light ">
-              Zero span, Unsubscribe any time
-            </p>
+            <p className="text-sm   ">Zero span, Unsubscribe any time</p>
           </form>
         )}
       </div>

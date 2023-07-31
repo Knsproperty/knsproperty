@@ -83,7 +83,7 @@ const ExcludeWeekendDatePicker: React.FC<Props> = ({
   return (
     <div className="grid md:grid-cols-2 py-2 gap-2">
       <label className="bg-lightgray grid p-5 gap-1 border border-lightgreen rounded-md">
-        <span className="text-md font-light mr-2">Select a date</span>
+        <span className="text-md   mr-2">Select a date</span>
         <select
           className="border-2 border-lightgreen px-5 py-1 rounded-md text-sm"
           value={selectedDate}
@@ -93,7 +93,7 @@ const ExcludeWeekendDatePicker: React.FC<Props> = ({
         </select>
       </label>
       <label className="bg-lightgray grid p-5 gap-1 border border-lightgreen rounded-md">
-        <span className="text-md font-light mr-2">Select a time</span>
+        <span className="text-md   mr-2">Select a time</span>
         <select
           className="border-2 border-lightgreen px-5 py-1 rounded-md text-sm"
           value={selectedHour}

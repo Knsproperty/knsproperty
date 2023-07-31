@@ -82,7 +82,7 @@ const BookValuationForm: React.FC = () => {
         onChange={(value) => handleChange("email", value)}
       />
       <select
-        className="select w-full bg-white rounded-full pl-8 font-light text-[#A7ADB8] "
+        className="select w-full bg-white rounded-full pl-8   text-[#A7ADB8] "
         value={formState.propertyType}
         onChange={(e) => handleChange("propertyType", e.target.value)}
       >

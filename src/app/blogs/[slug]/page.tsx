@@ -45,9 +45,7 @@ export default async function page({ params }: any) {
                     <h1 className="text-2xl font-semibold text-center py-10">
                       {attributes.title}
                     </h1>
-                    <p className="my-2 text-center font-light">
-                      {attributes.description}
-                    </p>
+                    <p className="my-2 text-center">{attributes.description}</p>
                     <div id="blog">{ReactHtmlParser(attributes.content)}</div>
                   </div>
                 </div>
@@ -197,5 +195,5 @@ export async function generateMetadata({ params }: any) {
     authors: [{ name: "", url: "" }],
     abstract: "",
     publisher: "K&N PROPERTIES",
-  }
+  };
 }

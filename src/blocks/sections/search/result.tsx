@@ -47,7 +47,7 @@ const Property: React.FC<Property> = ({ name, place, href }) => (
   <Link href={href}>
     <li className="bg-lightgray py-1 px-5">
       <h3 className="text-sm">{name}</h3>
-      <p className="font-light text-sm">{place}</p>
+      <p className="  text-sm">{place}</p>
     </li>
   </Link>
 );
