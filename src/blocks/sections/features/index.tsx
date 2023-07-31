@@ -119,8 +119,7 @@ export default function Features() {
                         Low and Cost Home Taxes
                       </h4>
                       <p className="font-normal leading-relaxed">
-                        By buying a house from D’house, you will get a tax{" "}
-                        <br /> discount
+                        By buying a house, you will get a tax <br /> discount
                       </p>
                     </div>
                   </div>

@@ -1,7 +1,7 @@
 import React from "react";
-import Container from "../atoms/container";
 import Link from "next/link";
 import Image from "next/image";
+import Container from "../atoms/container";
 
 export default function Community() {
   return (
@@ -12,7 +12,7 @@ export default function Community() {
             <h3 className="text-center lg:text-4xl md:text-3xl text-2xl font-bold ">
               Our Community
             </h3>
-            <p className=" mx-auto mt-4">
+            <p className="mx-auto mt-4">
               Locate your home in either a luxurious or a family-friendly
               community.
             </p>
