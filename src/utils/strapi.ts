@@ -3,7 +3,7 @@
 import Strapi from "strapi-sdk-js";
 
 const strapi = new Strapi({
-  url: "https://ksnpropertiesstrapi-production.up.railway.app",
+  url: "https://ksn-strapi-production.up.railway.app",
   prefix: "/api",
   store: {
     key: "strapi_jwt",

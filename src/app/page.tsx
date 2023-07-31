@@ -33,7 +33,7 @@ export default async function Home() {
       <Testimonals />
       <Booking />
       <Trusted />
-      <Blog />
+      {/* <Blog /> */}
       <Features />
       <Featured />
       <Community />
