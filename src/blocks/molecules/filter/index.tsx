@@ -33,7 +33,9 @@ const Filter = () => {
     setFilterVisibility((prevState) => !prevState);
   };
 
-  if (!["/property/buy", "/property/rent"].includes(pathname)) {
+  if (
+    !["/property/buy", "/property/rent", "/property/offplan"].includes(pathname)
+  ) {
     return null;
   }
 
