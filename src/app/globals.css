@@ -172,3 +172,7 @@
     opacity: 0;
   }
 }
+
+li::marker {
+  color: black !important;
+}

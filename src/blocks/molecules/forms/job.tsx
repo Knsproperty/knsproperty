@@ -119,9 +119,10 @@ export default function Form({ id }: any) {
                 Apply to Job
               </h2>
               <p className="col-md-7 col-11 mx-auto text-primary text-base sm:w-[60%] pb-[10px]  ">
-                We have a waitlist of clients ready to view properties,
-                extensive comparable community data and a trusted reputation.
-                Just three of the reasons why people choose us.
+                If you have a passion for real estate and a drive for
+                excellence, you've come to the right place. Submit your resume
+                today, and expect to hear from us soon. Join us in shaping the
+                future of real estate. Send your resume now!
               </p>
             </div>
           </div>

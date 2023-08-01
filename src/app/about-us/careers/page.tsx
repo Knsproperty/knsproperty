@@ -6,7 +6,6 @@ import Job_Card from "@/blocks/molecules/cards/job-card";
 import strapi, { populate } from "@/utils/strapi";
 import Form from "@/blocks/molecules/forms/job";
 
-
 export default async function Page() {
   const jobsData = await strapi.find<Main[]>("jobs", {
     populate: populate,
@@ -22,8 +21,11 @@ export default async function Page() {
         </div>
       </Landing>
       <Container>
-        <div className="my-20">
-      <Form id={3} />
+        <div className="mb-20 mt-10">
+          <h1 className="text-4xl font-semibold text-center pb-10">
+            Available positions
+          </h1>
+          <Form id={3} />
         </div>
         <section>
           <div className="grid xl:grid-cols-3 lg:grid-cols-2 gap-5 my-10 px-5">
