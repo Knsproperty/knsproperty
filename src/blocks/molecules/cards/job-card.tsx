@@ -30,11 +30,11 @@ export default function Job_Card({
             <h5>{location}</h5>
           </div>
 
-          <div className="text-sm text-[gray] flex space-x-1 items-center">
+          {/* <div className="text-sm text-[gray] flex space-x-1 items-center">
             <FiDollarSign />
             <h5>{salary}</h5>
-          </div>
-          <div>
+          </div> */}
+          {/* <div>
             <div className="mt-5 space-y-5 text-sm">
               <TextFormatter text={requirements} />
               <Link href={`/about-us/careers/${slug}`}>
@@ -43,7 +43,7 @@ export default function Job_Card({
                 </button>
               </Link>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
 

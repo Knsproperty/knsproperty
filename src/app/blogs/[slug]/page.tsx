@@ -47,7 +47,7 @@ export default async function page({ params }: any) {
                       {attributes.title}
                     </h1>
                     <p className="my-2 text-center">{attributes.description}</p>
-                    <div className="prose">
+                    <div className="prose prose-li:text-primary">
       <ReactMarkdown
         components={{
           h1: ({ node, ...props }) => (
@@ -68,6 +68,13 @@ export default async function page({ params }: any) {
           h6: ({ node, ...props }) => (
             <h6 className="text-base font-semibold mb-1 mt-3 text-primary" {...props} />
           ),
+          strong: ({ node, ...props }) => (
+            <strong className="font-semibold  text-primary" {...props}/>
+          ),
+          li: ({ node, ...props }) => (
+            <li className="  text-primary " {...props}/>
+          )
+          
         }}
       >
         {attributes.content}
