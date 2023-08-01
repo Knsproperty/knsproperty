@@ -21,13 +21,13 @@ export default async function Page() {
         </div>
       </Landing>
       <Container>
-        <div className="mb-20 mt-10">
-          <h1 className="text-4xl font-semibold text-center pb-10">
-            Available positions
-          </h1>
+        <div className="my-20 ">
           <Form id={3} />
         </div>
         <section>
+          <h1 className="text-4xl font-semibold text-center pb-10">
+            Available positions
+          </h1>
           <div className="grid xl:grid-cols-3 lg:grid-cols-2 gap-5 my-10 px-5">
             {jobs}
           </div>
