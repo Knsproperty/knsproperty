@@ -3,7 +3,7 @@ import Banner from "@/blocks/molecules/banner/banner";
 import Recentposts from "@/blocks/sections/blog/recentposts";
 import { formatDate } from "@/utils/helpers";
 import React from "react";
-import ReactMarkdown from 'react-markdown';
+import ReactMarkdown from "react-markdown";
 import ReactHtmlParser from "react-html-parser";
 export default async function page({ params }: any) {
   const [{ attributes }] = await getProperty(params.slug);
@@ -48,39 +48,58 @@ export default async function page({ params }: any) {
                     </h1>
                     <p className="my-2 text-center">{attributes.description}</p>
                     <div className="prose prose-li:text-primary">
-      <ReactMarkdown
-        components={{
-          h1: ({ node, ...props }) => (
-            <h1 className="text-4xl font-bold mb-4 text-primary" {...props} />
-          ),
-          h2: ({ node, ...props }) => (
-            <h2 className="text-3xl font-semibold mb-3  mt-6 text-primary" {...props} />
-          ),
-          h3: ({ node, ...props }) => (
-            <h3 className="text-2xl font-semibold mb-2 mt-4 text-primary" {...props} />
-          ),
-          h4: ({ node, ...props }) => (
-            <h4 className="text-xl font-semibold mb-2 mt-4 text-primary" {...props} />
-          ),
-          h5: ({ node, ...props }) => (
-            <h5 className="text-lg font-semibold mb-1 mt-3 text-primary" {...props} />
-          ),
-          h6: ({ node, ...props }) => (
-            <h6 className="text-base font-semibold mb-1 mt-3 text-primary" {...props} />
-          ),
-          strong: ({ node, ...props }) => (
-            <strong className="font-semibold  text-primary" {...props}/>
-          ),
-          li: ({ node, ...props }) => (
-            <li className="  text-primary " {...props}/>
-          )
-          
-        }}
-      >
-        {attributes.content}
-      </ReactMarkdown>
-    </div>
-                    
+                      <ReactMarkdown
+                        components={{
+                          h1: ({ node, ...props }) => (
+                            <h1
+                              className="text-4xl font-bold mb-4 text-primary"
+                              {...props}
+                            />
+                          ),
+                          h2: ({ node, ...props }) => (
+                            <h2
+                              className="text-3xl font-semibold mb-3  mt-6 text-primary"
+                              {...props}
+                            />
+                          ),
+                          h3: ({ node, ...props }) => (
+                            <h3
+                              className="text-2xl font-semibold mb-2 mt-4 text-primary"
+                              {...props}
+                            />
+                          ),
+                          h4: ({ node, ...props }) => (
+                            <h4
+                              className="text-xl font-semibold mb-2 mt-4 text-primary"
+                              {...props}
+                            />
+                          ),
+                          h5: ({ node, ...props }) => (
+                            <h5
+                              className="text-lg font-semibold mb-1 mt-3 text-primary"
+                              {...props}
+                            />
+                          ),
+                          h6: ({ node, ...props }) => (
+                            <h6
+                              className="text-base font-semibold mb-1 mt-3 text-primary"
+                              {...props}
+                            />
+                          ),
+                          strong: ({ node, ...props }) => (
+                            <strong
+                              className="font-semibold  text-primary"
+                              {...props}
+                            />
+                          ),
+                          li: ({ node, ...props }) => (
+                            <li className="  text-primary " {...props} />
+                          ),
+                        }}
+                      >
+                        {attributes.content}
+                      </ReactMarkdown>
+                    </div>
                   </div>
                 </div>
                 {/* <div className="p-6 rounded-md shadow  mt-8">
@@ -231,3 +250,5 @@ export async function generateMetadata({ params }: any) {
     publisher: "K&N PROPERTIES",
   };
 }
+
+export const revalidate = 60;
