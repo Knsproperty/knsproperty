@@ -5,15 +5,9 @@ import ReactPlayer from "react-player";
 
 export default function Featured_Video() {
   return (
-    <ReactPlayer
-      className="react-player"
-      controls
-      url="kns-video.mov"
-      width="100%"
-      height="100%"
-      style={{
-        border: "none",
-      }}
-    />
+    <video controls className="md:max-w-[600px] mx-auto mb-5">
+      <source src="kns-video.mov" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
   );
 }

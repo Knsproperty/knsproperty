@@ -19,9 +19,10 @@ export default function Featured() {
                 Dubai,
               </p>
             </div>
-            <div className="featured-player-wrapper md:max-w-[600px]  mx-auto mb-5 relative">
-              <Featured_Video />
-            </div>
+            <video controls className=" md:max-w-[600px]  mx-auto mb-5">
+              <source src="kns-video.mov" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
           </div>
 
           <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:gap-6 xl:gap-8">
