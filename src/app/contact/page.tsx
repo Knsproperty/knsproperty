@@ -86,7 +86,9 @@ const Details = () => {
             <div className="flex-1">
               Call Us
               <h4 className="lg:text-3xl md:text-2xl text-xl font-bold leading-none text-[28px] text-primary mb-[10px]"></h4>
-              <a href="tel:+97142582592" className="lg:max-w-[230px]">(+971) 42582592</a>
+              <a href="tel:+97142582592" className="lg:max-w-[230px]">
+                (+971) 42582592
+              </a>
             </div>
           </div>
           <div className="flex hover:drop-shadow-[0px_16px_10px_rgba(0,0,0,0.1)] hover:bg-[#F5F9F8] transition-all p-[20px] xl:p-[35px] rounded-[8px] mb-[30px] xl:pl-[65px] group">

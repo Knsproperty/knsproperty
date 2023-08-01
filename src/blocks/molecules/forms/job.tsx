@@ -3,6 +3,7 @@ import Container from "@/blocks/atoms/container";
 import { submitForm } from "@/services/email/job";
 import strapi from "@/utils/strapi";
 import axios from "axios";
+import Image from "next/image";
 import { useState, ChangeEvent, FormEvent } from "react";
 
 interface FormData {
@@ -128,9 +129,11 @@ export default function Form({ id }: any) {
           </div>
           <div className="lg:flex lg:items-center lg:max-w-none lg:mx-0 max-w-[500px] mx-auto">
             <div className="mt-12 lg:flex lg:mt-0 lg:flex-col lg:items-center lg:w-1/2 lg:mx-10">
-              <img
+              <Image
+                width={531}
+                height={395}
                 className="hidden object-cover mx-auto rounded-lg lg:block shrink-0 "
-                src="https://plus.unsplash.com/premium_photo-1661371767935-aeeb44523816?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+                src="/hi.jpg"
                 alt=""
               />
             </div>

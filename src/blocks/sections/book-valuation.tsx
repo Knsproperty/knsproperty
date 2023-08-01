@@ -21,8 +21,10 @@ export default function Book_Valuation() {
               </h2>
               <p className="col-md-7 col-11 mx-auto text-primary text-base sm:w-[60%] pb-[10px]  ">
                 We have a waitlist of clients ready to view properties,
-                extensive comparable community data and a trusted reputation.
-                Just three of the reasons why people choose us.
+                extensive comparable community data, and a trusted reputation.
+                We're here to help! Feel free to reach out to us, and we'll
+                respond promptly. Let's start a conversation
+                today. Contact us now!
               </p>
             </div>
           </div>
