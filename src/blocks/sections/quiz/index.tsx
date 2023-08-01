@@ -434,7 +434,7 @@ const QuizComponent: React.FC = () => {
                       {storage && (
                         <div>
                           <h1 className="text-center font-semibold text-xl py-10 rounded-md">
-                            ✅ Quiz is Completed.
+                            ✅ Thank you, will get back to you shortly.
                           </h1>
                         </div>
                       )}
