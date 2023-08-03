@@ -4,6 +4,7 @@ import DatePicker from "./picker";
 import { Dialog, Transition } from "@headlessui/react";
 import { submitForm } from "@/services/email/booking";
 import CountryInput from "./customphone";
+import { notify } from "@/utils/toast";
 
 interface Props {
   isOpen: boolean;
@@ -72,6 +73,7 @@ const BookAView: React.FC<Props> = ({ isOpen, closeModal }) => {
       console.error("Error submitting the form:", error);
     } finally {
       setIsLoading(false);
+      notify();
     }
   };
 

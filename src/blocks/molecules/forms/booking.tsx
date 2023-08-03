@@ -1,6 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import { submitForm } from "@/services/email/booking";
+import { notify } from "@/utils/toast";
 interface FormData {
   fullName: string;
   email: string;
@@ -74,6 +75,7 @@ export default function Booking_Form() {
           selectedDate: "2018-07-22",
           phoneNumber: "",
         });
+        notify();
         // @ts-ignore
         setFormErrors({});
       } catch (error) {

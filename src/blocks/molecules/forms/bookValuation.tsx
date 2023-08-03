@@ -2,6 +2,7 @@
 import Book_Input from "@/blocks/atoms/inputs/book-v-input";
 import CountryInput from "@/blocks/atoms/inputs/country-input";
 import { submitForm } from "@/services/email/valuation";
+import { notify } from "@/utils/toast";
 import React, { useState } from "react";
 
 interface BookValuationFormState {
@@ -58,6 +59,7 @@ const BookValuationForm: React.FC = () => {
         console.log("Form submitted successfully!");
         // Clear the form after successful submission
         setFormState(initialFormState);
+        notify();
       } catch (err) {
         console.error("Error submitting form:", err);
         setError("Error submitting form. Please try again later.");

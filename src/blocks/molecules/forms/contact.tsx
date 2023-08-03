@@ -1,5 +1,6 @@
 "use client";
 import { submitForm } from "@/services/email/contact-us";
+import { notify } from "@/utils/toast";
 import React, { useState } from "react";
 
 interface FormData {
@@ -70,6 +71,7 @@ const ContactForm: React.FC = () => {
           email: "",
           message: "",
         });
+        notify();
         // @ts-ignore
         setFormErrors({});
       } catch (error) {

@@ -2,6 +2,7 @@
 import Container from "@/blocks/atoms/container";
 import { submitForm } from "@/services/email/job";
 import strapi from "@/utils/strapi";
+import { notify } from "@/utils/toast";
 import axios from "axios";
 import Image from "next/image";
 import { useState, ChangeEvent, FormEvent } from "react";
@@ -103,6 +104,7 @@ export default function Form({ id }: any) {
         phone: "",
         resume: null,
       });
+      notify();
     }
   };
 

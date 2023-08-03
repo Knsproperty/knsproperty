@@ -6,6 +6,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { Header, Footer } from "@/blocks/layouts/main";
 import NewsLetterSection from "@/blocks/sections/newsletter/popup";
+import { Toaster } from "react-hot-toast";
 
 export const metadata = {
   title: "Ksnproperty",
@@ -39,8 +40,10 @@ export default function RootLayout({
         />
         <NewsLetterSection />
         <Header />
+
         {children}
         <Analytics />
+        <Toaster />
         <Footer />
       </body>
     </html>
