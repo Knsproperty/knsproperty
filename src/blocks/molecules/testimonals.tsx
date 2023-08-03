@@ -12,7 +12,7 @@ const Testimonals = () => {
         <Container>
           <div className="max-w-2xl mx-auto text-center">
             <h2 className="lg:text-4xl md:text-3xl text-2xl font-bold leading-tight">
-              Reviews by customers
+              Testimonial
             </h2>
           </div>
           <div className="grid max-w-xl grid-cols-1 mx-auto mt-8 text-center lg:max-w-full sm:mt-12 lg:mt-20 lg:grid-cols-3 gap-x-6 xl:gap-x-12 gap-y-6">
