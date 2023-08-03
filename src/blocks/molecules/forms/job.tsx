@@ -105,6 +105,12 @@ export default function Form({ id }: any) {
         resume: null,
       });
       notify();
+    } else {
+      // If there are validation errors, clear the resume field
+      setFormData((prevFormData) => ({
+        ...prevFormData,
+        resume: null,
+      }));
     }
   };
 
