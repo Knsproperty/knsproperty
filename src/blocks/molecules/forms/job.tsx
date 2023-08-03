@@ -5,7 +5,7 @@ import strapi from "@/utils/strapi";
 import { notify } from "@/utils/toast";
 import axios from "axios";
 import Image from "next/image";
-import { useState, ChangeEvent, FormEvent } from "react";
+import { useState, ChangeEvent, FormEvent, useRef } from "react";
 
 interface FormData {
   fullName: string;
@@ -21,6 +21,8 @@ export default function Form({ id }: any) {
     phone: "",
     resume: null,
   });
+
+  const formRef = useRef<HTMLFormElement>(null);
 
   const handleFileUpload = async (file: any) => {
     const formData = new FormData();
@@ -39,6 +41,7 @@ export default function Form({ id }: any) {
       console.log(error);
     }
   };
+
   const applyJob = async () => {
     const pdf = await handleFileUpload(formData.resume);
     let data = {
@@ -51,6 +54,7 @@ export default function Form({ id }: any) {
     const res = strapi.create("job-applications", data);
     console.log(res);
   };
+
   const [errors, setErrors] = useState<Partial<FormData>>({});
 
   const handleInputChange = (e: ChangeEvent<HTMLInputElement>) => {
@@ -105,12 +109,9 @@ export default function Form({ id }: any) {
         resume: null,
       });
       notify();
-    } else {
-      // If there are validation errors, clear the resume field
-      setFormData((prevFormData) => ({
-        ...prevFormData,
-        resume: null,
-      }));
+      if (formRef.current) {
+        formRef.current.reset();
+      }
     }
   };
 
@@ -131,7 +132,7 @@ export default function Form({ id }: any) {
                 If you have a passion for real estate and a drive for
                 excellence, you've come to the right place. Submit your resume
                 today, and expect to hear from us soon. Join us in shaping the
-                future of real estate. Send your resume now!
+                future of real estate. Send your resume now!
               </p>
             </div>
           </div>
@@ -146,7 +147,7 @@ export default function Form({ id }: any) {
               />
             </div>
             <div className="lg:w-1/2 lg:mx-10">
-              <form onSubmit={handleSubmit}>
+              <form ref={formRef} onSubmit={handleSubmit}>
                 <label className="label">
                   <span className="label-text text-black">Full Name</span>
                 </label>
@@ -203,7 +204,10 @@ export default function Form({ id }: any) {
                   </span>
                 </label>
 
-                <button className="bg-primary group flex items-center mt-5 py-4 text-white hover:bg-white  hover:text-primary font-medium text-sm rounded-full capitalize px-8 w-full justify-center ">
+                <button
+                  className="bg-primary group flex items-center mt-5 py-4 text-white hover:bg-white  hover:text-primary font-medium text-sm rounded-full capitalize px-8 w-full justify-center"
+                  type="submit"
+                >
                   Submit Details
                 </button>
               </form>
