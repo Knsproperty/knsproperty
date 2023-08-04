@@ -24,6 +24,14 @@ const Footer = () => {
               ))}
             </div>
 
+            <p>
+              <Link href={"/privacy"} className="hover:underline pb-2 text-sm">
+                Privacy & Cookies Policy
+              </Link>
+            </p>
+
+            <br />
+
             <p className="text-sm  max-w-md mb-5">
               <b>Office address - </b>Office #106, KIA Flagship Building, 1 Al
               Safeena Street, Near Al Quoz Cemetery, Al Quoz 1 - Dubai.
