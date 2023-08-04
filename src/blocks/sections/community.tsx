@@ -22,10 +22,18 @@ export default function Community() {
             <Comp
               href="/property/buy"
               title="DownTown Dubai"
-              image="/pic2.jpg"
+              image="/Downtown-dubai.png"
             />
-            <Comp href="/property/buy" title="Dubai Marina" image="/pic3.jpg" />
-            <Comp href="/property/buy" title="Business Bay" image="/pic4.jpg" />
+            <Comp
+              href="/property/buy"
+              title="Dubai Marina"
+              image="/Dubai-marina.png"
+            />
+            <Comp
+              href="/property/buy"
+              title="Business Bay"
+              image="/Business-bay.png"
+            />
           </div>
         </div>
       </section>
