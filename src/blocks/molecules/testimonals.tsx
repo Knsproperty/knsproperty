@@ -1,13 +1,12 @@
 "use client";
 
 import Container from "../atoms/container";
+import FadeIn from "../animation/fade-in";
 import Parallax from "../animation/parallex";
 import { testimonials } from "@/config/testimonals";
-import FadeIn from "../animation/fade-in";
 const Testimonals = () => {
   return (
     <FadeIn>
-      {" "}
       <section className="py-10 bg-gray-100 sm:py-16 lg:py-24">
         <Container>
           <div className="max-w-2xl mx-auto text-center">
@@ -21,6 +20,10 @@ const Testimonals = () => {
               <Element {...testimonials[1]} />
             </Parallax>
             <Element {...testimonials[2]} />
+            <Element {...testimonials[3]} />
+            <Parallax>
+              <Element {...testimonials[4]} />
+            </Parallax>
           </div>
         </Container>
       </section>
