@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import Container from "@/blocks/atoms/container";
 import { motion, AnimatePresence } from "framer-motion";
-import { useLocalStorage } from "@mantine/hooks";
+import { useLocalStorage, useSessionStorage } from "@mantine/hooks";
 import { isValidEmail } from "@/utils/helpers";
 import { submitForm } from "@/services/email/quiz";
 import Parallax from "@/blocks/animation/parallex";
@@ -286,7 +286,7 @@ const Fourth: React.FC<Fouth_Props> = ({
 };
 
 const QuizComponent: React.FC = () => {
-  const [storage, setStorage] = useLocalStorage({
+  const [storage, setStorage] = useSessionStorage({
     key: "knsproperty",
     defaultValue: false,
   });
