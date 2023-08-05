@@ -1,7 +1,6 @@
 import Image from "next/image";
 import React from "react";
 import Container from "../atoms/container";
-import Featured_Video from "../molecules/video/featured";
 export default function Featured() {
   return (
     <div className="bg-white py-6 sm:py-8 lg:py-12">
@@ -19,7 +18,12 @@ export default function Featured() {
                 Dubai,
               </p>
             </div>
-            <video controls className=" md:max-w-[600px]  mx-auto mb-5">
+            <video
+              controls
+              autoPlay
+              muted
+              className="md:max-w-[600px] mx-auto mb-5"
+            >
               <source src="kns-video.mov" type="video/mp4" />
               Your browser does not support the video tag.
             </video>
