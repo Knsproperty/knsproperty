@@ -34,16 +34,19 @@ export default async function OffPlan({ searchParams }: any) {
     },
   });
 
+  const images = data[4].attributes.Images.data.map((it) => {
+    return it.attributes.url;
+  });
+
   return (
     <div>
+      {JSON.stringify(images)}
       <Container>
         <div className="mt-5 pl-5">
           <h3 className="lg:text-3xl md:text-xl text-lg text-secondary font-semibold mb-1">
             Search Result
           </h3>
-          <p className="text-sm">
-            Properties for sale ({data.length})
-          </p>
+          <p className="text-sm">Properties for sale ({data.length})</p>
         </div>
 
         {data.length == 0 && <DataNotFound />}
@@ -74,10 +77,10 @@ export default async function OffPlan({ searchParams }: any) {
   );
 }
 
-
 export const metadata: Metadata = {
   title: "Offplan Properties | K&S Properties",
-  description: "Explore a wide range of properties for sale, rent, and investment in Dubai. Find luxury villas, apartments, commercial spaces, and more.",
+  description:
+    "Explore a wide range of properties for sale, rent, and investment in Dubai. Find luxury villas, apartments, commercial spaces, and more.",
   keywords: [
     "Dubai properties",
     "real estate",
