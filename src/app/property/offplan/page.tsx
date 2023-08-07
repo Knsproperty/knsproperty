@@ -34,13 +34,8 @@ export default async function OffPlan({ searchParams }: any) {
     },
   });
 
-  const images = data[4].attributes.Images.data.map((it) => {
-    return it.attributes.url;
-  });
-
   return (
     <div>
-      {JSON.stringify(images)}
       <Container>
         <div className="mt-5 pl-5">
           <h3 className="lg:text-3xl md:text-xl text-lg text-secondary font-semibold mb-1">
