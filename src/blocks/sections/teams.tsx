@@ -3,12 +3,8 @@ import TeamCard from "../molecules/cards/team-card";
 import { Main } from "@/types/team";
 import strapi from "@/utils/strapi";
 
-export default async function Teams() {
-  const teams = await strapi.find<Main[]>("teams", {
-    populate: ["*", "Profile"],
-  });
-
-  return teams.data.map((member, index) => (
+export default async function Teams({ teams }: { teams: Main[] }) {
+  return teams.map((member, index) => (
     <TeamCard
       key={index}
       name={member.attributes.Name}
@@ -18,5 +14,3 @@ export default async function Teams() {
     />
   ));
 }
-
-export const revalidate = 60;

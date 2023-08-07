@@ -1,7 +1,12 @@
 import Container from "@/blocks/atoms/container";
 import Teams from "@/blocks/sections/teams";
+import strapi from "@/utils/strapi";
 import { Metadata } from "next";
-export default function About() {
+import { Main } from "@/types/team";
+export default async function About() {
+  const teams = await strapi.find<Main[]>("teams", {
+    populate: ["*", "Profile"],
+  });
   return (
     <main>
       <Container>
@@ -9,7 +14,7 @@ export default function About() {
           Our Leadership
         </h1>
         <section className="flex gap-5 items-center justify-center flex-wrap">
-          <Teams />
+          <Teams teams={teams.data} />
         </section>
       </Container>
     </main>
@@ -31,3 +36,4 @@ export const metadata: Metadata = {
   abstract: "",
   publisher: "K&N PROPERTIES",
 };
+export const revalidate = 60;
