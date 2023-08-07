@@ -18,7 +18,13 @@ export default async function page({ params }: any) {
           description: attributes.Description,
           property_type: attributes.Property_Type,
           short_address: attributes.Short_Address,
-          images: [...attributes.Cron_Images.data.map((e: any) => e.url)],
+          images:
+            attributes.Images.data == null
+              ? [...attributes.Cron_Images?.data?.map((e: any) => e.url)]
+              : [
+                  attributes.Preview_Image.data?.attributes?.url,
+                  ...attributes.Images.data?.map((e: any) => e.attributes.url),
+                ],
         }}
       />
     </>
@@ -41,7 +47,7 @@ export async function generateMetadata({ params }: any) {
     authors: [{ name: "", url: "" }],
     abstract: "",
     publisher: "K&N PROPERTIES",
-  }
+  };
 }
 
 // fetcher component

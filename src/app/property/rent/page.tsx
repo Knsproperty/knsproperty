@@ -40,9 +40,7 @@ export default async function Buy({ searchParams }: any) {
           <h3 className="lg:text-3xl md:text-xl text-lg text-secondary font-semibold mb-1">
             Search Result
           </h3>
-          <p className="text-sm ">
-            Properties for sale ({data.length})
-          </p>
+          <p className="text-sm ">Properties for sale ({data.length})</p>
         </div>
         {data.length == 0 && <DataNotFound />}
 
@@ -58,11 +56,18 @@ export default async function Buy({ searchParams }: any) {
               bed: attributes.Bedrooms,
               bathroom: attributes.Bathrooms,
               area: attributes.Area,
-              media: [
-                attributes.Cron_Images.data[0].url,
-                attributes.Cron_Images.data[1].url,
-                attributes.Cron_Images.data[2].url,
-              ],
+              media:
+                attributes.Images.data == null
+                  ? [
+                      attributes.Cron_Images?.data?.at(0)?.url ?? "",
+                      attributes.Cron_Images?.data?.at(1)?.url ?? "",
+                      attributes.Cron_Images?.data?.at(2)?.url ?? "",
+                    ]
+                  : [
+                      attributes.Preview_Image.data?.attributes?.url ?? "",
+                      attributes.Images.data?.at(0)?.attributes?.url ?? "",
+                      attributes.Images.data?.at(1)?.attributes?.url ?? "",
+                    ],
             }}
           />
         ))}
@@ -73,7 +78,8 @@ export default async function Buy({ searchParams }: any) {
 
 export const metadata: Metadata = {
   title: "Rent Properties | K&S Properties",
-  description: "Explore a wide range of properties for sale, rent, and investment in Dubai. Find luxury villas, apartments, commercial spaces, and more.",
+  description:
+    "Explore a wide range of properties for sale, rent, and investment in Dubai. Find luxury villas, apartments, commercial spaces, and more.",
   keywords: [
     "Dubai properties",
     "real estate",
