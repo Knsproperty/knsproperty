@@ -47,24 +47,33 @@ export default async function OffPlan({ searchParams }: any) {
         {data.length == 0 && <DataNotFound />}
 
         {data.map(({ attributes }: any) => (
-          <PropertyDetailed
-            {...{
-              property_type: "offplan",
-              parking: attributes.Parking,
-              slug: attributes.slug,
-              area: attributes.Area,
-              price: attributes.Price,
-              bed: attributes.Bedrooms,
-              bathroom: attributes.Bathrooms,
-              title: attributes.Short_Address,
-              discription: attributes.Location,
-              media: [
-                attributes.Cron_Images.data[0].url,
-                attributes.Cron_Images.data[1].url,
-                attributes.Cron_Images.data[2].url,
-              ],
-            }}
-          />
+          <>
+            <PropertyDetailed
+              {...{
+                property_type: "offplan",
+                parking: attributes.Parking,
+                slug: attributes.slug,
+                area: attributes.Area,
+                price: attributes.Price,
+                bed: attributes.Bedrooms,
+                bathroom: attributes.Bathrooms,
+                title: attributes.Short_Address,
+                discription: attributes.Location,
+                media:
+                  attributes.Images.data == null
+                    ? [
+                        attributes.Cron_Images?.data?.at(0)?.url ?? "",
+                        attributes.Cron_Images?.data?.at(1)?.url ?? "",
+                        attributes.Cron_Images?.data?.at(2)?.url ?? "",
+                      ]
+                    : [
+                        attributes.Preview_Image.data?.attributes?.url ?? "",
+                        attributes.Images.data?.at(0)?.attributes?.url ?? "",
+                        attributes.Images.data?.at(1)?.attributes?.url ?? "",
+                      ],
+              }}
+            />
+          </>
         ))}
         <Pagination meta={meta} />
       </Container>
