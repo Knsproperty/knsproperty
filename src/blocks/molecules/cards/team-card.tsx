@@ -12,8 +12,8 @@ const TeamCard: React.FC<Props> = ({ slug, image, name, role }) => {
   return (
     <Link href={url}>
       <div className="grid group w-[300px] cursor-pointer">
-        <div className="aspect-w-5 aspect-h-5 overflow-hidden rounded-lg">
-          <Image src={image} fill alt={name} />
+        <div className="aspect-w-4 aspect-h-5 overflow-hidden rounded-lg">
+          <Image src={image} className="object-cover" fill alt={name} />
         </div>
 
         <div className="p-2">

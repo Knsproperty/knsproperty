@@ -11,6 +11,8 @@ export default async function Page({ params: { slug } }: any) {
           <section className="flex items-center xl:justify-end justify-center">
             <div className="relative h-[300px] w-[300px] rounded-full overflow-hidden">
               <Image
+                className="object-cover"
+                style={{ objectPosition: "0px 0px" }}
                 src={attributes.Profile.data.attributes.url}
                 fill
                 alt={attributes.Name}
