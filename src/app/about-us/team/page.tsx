@@ -1,14 +1,20 @@
-import Container from "@/blocks/atoms/container";
-import Teams from "@/blocks/sections/teams";
-import strapi from "@/utils/strapi";
 import { Metadata } from "next";
 import { Main } from "@/types/team";
+import strapi from "@/utils/strapi";
+import Teams from "@/blocks/sections/teams";
+import Container from "@/blocks/atoms/container";
+import Landing from "@/blocks/sections/landing";
+import Image from "next/image";
+
 export default async function About() {
   const teams = await strapi.find<Main[]>("teams", {
     populate: ["*", "Profile"],
   });
   return (
     <main>
+      <div className="relative h-[80vh]">
+        <Image src="/group.jpg" alt="peoples" fill className="object-cover" />
+      </div>
       <Container>
         <h1 className="text-4xl font-semibold text-center py-10">
           Our Leadership
