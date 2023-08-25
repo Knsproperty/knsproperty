@@ -1,11 +1,10 @@
 import { Metadata } from "next";
+import Image from "next/image";
 import { Main } from "@/types/team";
 import strapi from "@/utils/strapi";
 import Teams from "@/blocks/sections/teams";
 import Container from "@/blocks/atoms/container";
-import Landing from "@/blocks/sections/landing";
-import Image from "next/image";
-
+import slugBasesPosition from "@/lib/slugBasedPosition";
 export default async function About() {
   const teams = await strapi.find<Main[]>("teams", {
     populate: ["*", "Profile"],
@@ -24,8 +23,9 @@ export default async function About() {
         <h1 className="text-4xl font-semibold text-center py-10">
           Our Leadership
         </h1>
+
         <section className="flex gap-5 items-center justify-center flex-wrap">
-          <Teams teams={teams.data} />
+          <Teams teams={slugBasesPosition(teams)} />
         </section>
       </Container>
     </main>
