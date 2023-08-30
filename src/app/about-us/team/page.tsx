@@ -4,11 +4,18 @@ import { Main } from "@/types/team";
 import strapi from "@/utils/strapi";
 import Teams from "@/blocks/sections/teams";
 import Container from "@/blocks/atoms/container";
-import slugBasesPosition from "@/lib/slugBasedPosition";
+import slugBasesPosition, {
+  filterLeaders,
+  filterOthers,
+} from "@/lib/slugBasedPosition";
+
 export default async function About() {
   const teams = await strapi.find<Main[]>("teams", {
     populate: ["*", "Profile"],
   });
+
+  const DATA = slugBasesPosition(teams);
+
   return (
     <main>
       <div className="relative md:h-[80vh] max-[768px]:aspect-w-16 max-[768px]:aspect-h-11">
@@ -21,11 +28,19 @@ export default async function About() {
       </div>
       <Container>
         <h1 className="text-4xl font-semibold text-center py-10">
-          Our Leadership
+          Meet the Leaders
         </h1>
 
         <section className="flex gap-5 items-center justify-center flex-wrap">
-          <Teams teams={slugBasesPosition(teams)} />
+          <Teams teams={filterLeaders(DATA)} />
+        </section>
+
+        <h1 className="text-4xl font-semibold text-center py-10">
+          Key Personnel
+        </h1>
+
+        <section className="flex gap-5 items-center justify-center flex-wrap">
+          <Teams teams={filterOthers(DATA)} />
         </section>
       </Container>
     </main>

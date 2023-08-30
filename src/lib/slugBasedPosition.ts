@@ -8,3 +8,12 @@ const slugBasesPosition = (teams : any) => {
 }
 
 export default slugBasesPosition
+
+const differentiation = "Co-Founder / Managing Partner"
+export const filterLeaders = (profiles: any) => {
+  return profiles.filter((profile: any) => differentiation == profile.attributes.Position)
+}
+
+export const filterOthers = (profiles: any) => {
+  return profiles.filter((profile: any) =>differentiation !== profile.attributes.Position)
+}
