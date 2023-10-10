@@ -1,13 +1,13 @@
-import { Metadata } from "next";
-import { Main } from "@/types/job";
-import Landing from "@/blocks/sections/landing";
-import Container from "@/blocks/atoms/container";
-import Job_Card from "@/blocks/molecules/cards/job-card";
-import strapi, { populate } from "@/utils/strapi";
-import Form from "@/blocks/molecules/forms/job";
+import { Metadata } from 'next';
+import { Main } from '@/types/job';
+import Landing from '@/blocks/sections/landing';
+import Container from '@/blocks/atoms/container';
+import Job_Card from '@/blocks/molecules/cards/job-card';
+import strapi, { populate } from '@/utils/strapi';
+import Form from '@/blocks/molecules/forms/job';
 
 export default async function Page() {
-  const jobsData = await strapi.find<Main[]>("jobs", {
+  const jobsData = await strapi.find<Main[]>('jobs', {
     populate: populate,
   });
   const jobs = jobsData.data.map((it, i) => <Job_Card key={i} {...it} />);
@@ -15,20 +15,20 @@ export default async function Page() {
     <div>
       <Landing background="url('/car.jpg')">
         <div>
-          <h1 className=" lg:text-3xl text-3xl font-medium text-white text-center">
+          <h1 className=' lg:text-3xl text-3xl font-medium text-white text-center'>
             Careers at K&S property
           </h1>
         </div>
       </Landing>
       <Container>
-        <div className="my-20 ">
+        <div className='my-20 '>
           <Form id={3} />
         </div>
         <section>
-          <h1 className="text-4xl font-semibold text-center pb-10">
+          <h1 className='text-4xl font-semibold text-center pb-10'>
             Available positions
           </h1>
-          <div className="grid xl:grid-cols-3 lg:grid-cols-2 gap-5 my-10 px-5">
+          <div className='grid xl:grid-cols-3 lg:grid-cols-2 gap-5 my-10 px-5'>
             {jobs}
           </div>
         </section>
@@ -40,17 +40,17 @@ export default async function Page() {
 export const revalidate = 60;
 
 export const metadata: Metadata = {
-  title: "Careers at K&S | Buy, Rent, and Invest in Real Estate",
+  title: 'Careers at K&S | Buy, Rent, and Invest in Real Estate',
   description:
-    "Explore a wide range of properties for sale, rent, and investment in Dubai. Find luxury villas, apartments, commercial spaces, and more.",
+    'Explore a wide range of properties for sale, rent, and investment in Dubai. Find luxury villas, apartments, commercial spaces, and more.',
   keywords: [
-    "Dubai properties",
-    "real estate",
-    "buy property in Dubai",
-    "rent property in Dubai",
-    "investment properties",
+    'Dubai properties',
+    'real estate',
+    'buy property in Dubai',
+    'rent property in Dubai',
+    'investment properties',
   ],
-  authors: [{ name: "", url: "" }],
-  abstract: "",
-  publisher: "K&N PROPERTIES",
+  authors: [{ name: '', url: '' }],
+  abstract: '',
+  publisher: 'K&N PROPERTIES',
 };

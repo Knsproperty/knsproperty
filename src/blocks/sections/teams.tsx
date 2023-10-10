@@ -1,8 +1,7 @@
-import React from "react";
-import { Main } from "@/types/team";
-import TeamCard from "../molecules/cards/team-card";
+import { Main } from '@/types/team';
+import TeamCard from '../molecules/cards/team-card';
 
-export default async function Teams({ teams }: { teams: Main[] }) {
+export default function Teams({ teams }: { teams: Main[] }) {
   return teams.map((member, index) => {
     // this (member !== null) prevent error caused by sorting (absent of index)
     if (member !== null) {
