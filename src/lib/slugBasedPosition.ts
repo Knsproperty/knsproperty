@@ -1,12 +1,7 @@
 const slugBasesPosition = (teams: any) => {
-  return teams?.data;
-  // return teams?.data?.map((_: any, index: number) => {
-  //   const pos = index + 1;
-  //   return (
-  //     teams.data.filter((T: any) => parseInt(T.attributes.slug) == pos)[0] ??
-  //     null
-  //   );
-  // });
+  return teams?.data.sort(
+    (a: any, b: any) => Number(a.attributes.slug) - Number(b.attributes.slug)
+  );
 };
 
 export default slugBasesPosition;
