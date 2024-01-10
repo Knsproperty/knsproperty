@@ -11,6 +11,11 @@ import Image from 'next/image';
 
 export default async function About() {
   const teams = await strapi.find<Main[]>('teams', {
+    pagination: {
+      start: 0,
+      limit: -1,
+    },
+
     populate: ['*', 'Profile'],
   });
 
