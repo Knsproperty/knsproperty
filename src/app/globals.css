@@ -51,6 +51,10 @@
   src: url("../../fonts/Optima/OPTIMA_B.woff") format("woff");
 }
 
+body {
+  background-color: whitesmoke;
+}
+
 @layer {
   h1,
   h2,
