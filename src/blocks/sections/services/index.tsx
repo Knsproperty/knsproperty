@@ -4,8 +4,8 @@ import services from "@/config/services";
 import FadeIn from "@/blocks/animation/fade-in";
 const Services2 = () => (
   <FadeIn>
-    <section className="py-5 mt-5 mb-20">
-      <h3 className="text-center lg:text-4xl md:text-3xl text-2xl font-bold ">
+    <section className="bg-lightgray py-5 pb-20">
+      <h3 className="text-secondary text-center lg:text-4xl md:text-3xl text-2xl font-bold ">
         Our Services
       </h3>
       <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
