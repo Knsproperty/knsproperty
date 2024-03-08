@@ -14,25 +14,6 @@ export default async function page({ params }: any) {
           <h3 className="md:text-3xl text-2xl md:leading-snug tracking-wide leading-snug font-medium text-white mb-3 z-50">
             {attributes.title}
           </h3>
-          <ul className="list-none mt-6 z-50">
-            <li className="inline-block text-white mx-5">
-              {" "}
-              <span className="text-white block">Author :</span>{" "}
-              <span className="block text-white">{attributes.author}</span>
-            </li>
-            <li className="inline-block text-white mx-5">
-              {" "}
-              <span className="text-white block">Date :</span>{" "}
-              <span className="block text-white">
-                {formatDate(attributes.date)}
-              </span>
-            </li>
-            <li className="inline-block text-white mx-5">
-              {" "}
-              <span className="text-white block">Time :</span>{" "}
-              <span className="block text-white">3 Min Read</span>
-            </li>
-          </ul>
         </div>
       </Banner>
       <Container>
