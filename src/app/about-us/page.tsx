@@ -178,7 +178,7 @@ export default About;
 
 const Award = () => {
   return (
-    <section className="relative -z-10 py-24 bg-[url('/01.jpg')] bg-no-repeat bg-center bg-fixed bg-cover">
+    <section className="relative -z-10 py-24 bg-[url('/01.jpg')] bg-no-repeat bg-center bg-fixed bg-cover z-10">
       <div className="absolute inset-0 bg-black/60 -z-20" />
       <div className="container ">
         <div className="grid lg:grid-cols-12 grid-cols-1 md:text-left text-center justify-center">
