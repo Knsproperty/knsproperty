@@ -155,7 +155,7 @@ export default function Form({ id }: any) {
                   type="text"
                   name="fullName"
                   placeholder="Enter your name"
-                  className="input input-bordered w-full max-w-full"
+                  className="input input-bordered w-full max-w-full bg-white"
                   value={formData.fullName}
                   onChange={handleInputChange}
                 />
@@ -170,7 +170,7 @@ export default function Form({ id }: any) {
                   type="email"
                   name="email"
                   placeholder="Enter email"
-                  className="input input-bordered w-full max-w-full"
+                  className="input input-bordered w-full max-w-full bg-white"
                   value={formData.email}
                   onChange={handleInputChange}
                 />
@@ -183,7 +183,7 @@ export default function Form({ id }: any) {
                   type="number"
                   name="phone"
                   placeholder="Enter your Mobile No."
-                  className="input input-bordered w-full max-w-full"
+                  className="input input-bordered w-full max-w-full bg-white"
                   value={formData.phone}
                   onChange={handleInputChange}
                 />
@@ -195,7 +195,7 @@ export default function Form({ id }: any) {
                 <input
                   type="file"
                   name="resume"
-                  className="file-input file-input-bordered w-full max-w-full"
+                  className="file-input file-input-bordered w-full max-w-full bg-white"
                   onChange={handleFileChange}
                 />
                 <label className="label">

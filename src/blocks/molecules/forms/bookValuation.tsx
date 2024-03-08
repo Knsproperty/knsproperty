@@ -88,7 +88,7 @@ const BookValuationForm: React.FC = () => {
         value={formState.propertyType}
         onChange={(e) => handleChange("propertyType", e.target.value)}
       >
-        <option disabled selected className="text-sm ">
+        <option selected className="text-sm ">
           Property type
         </option>
         <option value="buy">Buy</option>
