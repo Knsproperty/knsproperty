@@ -35,10 +35,12 @@ export default function Page() {
                 <div className="col-span-12 lg:col-span-5 mb-[30px] order-last lg:order-none">
                   <div className="h-[385px] rounded-[6px] overflow-hidden xl:ml-[40px]">
                     <iframe
-                      src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3610.9313673934234!2d55.241364715008956!3d25.171795183908074!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjXCsDEwJzE4LjUiTiA1NcKwMTQnMzYuOCJF!5e0!3m2!1sen!2s!4v1690274150034!5m2!1sen!2s"
+                      src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d451.3678232821474!2d55.2438454!3d25.1714164!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f13dde70c1f6d%3A0x9a64f893112d75cd!2sK%26S%20Properties%20LLC!5e0!3m2!1sen!2s!4v1710184366622!5m2!1sen!2s"
                       width="600"
                       height="450"
                       loading="lazy"
+                      style={{ border: 0 }}
+                      referrerPolicy="no-referrer-when-downgrade"
                     ></iframe>
                   </div>
                 </div>
