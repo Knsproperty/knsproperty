@@ -4,6 +4,7 @@ import Container from "../atoms/container";
 import FadeIn from "../animation/fade-in";
 import Parallax from "../animation/parallex";
 import { testimonials } from "@/config/testimonals";
+import "./testimonals.css";
 const Testimonals = () => {
   return (
     <FadeIn>
@@ -14,16 +15,47 @@ const Testimonals = () => {
               Testimonial
             </h2>
           </div>
-          <div className="grid max-w-xl grid-cols-1 mx-auto mt-8 text-center lg:max-w-full sm:mt-12 lg:mt-20 lg:grid-cols-3 gap-x-6 xl:gap-x-12 gap-y-6">
-            <Element {...testimonials[0]} />
-            <Parallax>
-              <Element {...testimonials[1]} />
-            </Parallax>
-            <Element {...testimonials[2]} />
-            <Element {...testimonials[3]} />
-            <Parallax>
-              <Element {...testimonials[4]} />
-            </Parallax>
+          <div className="testimonial_grid">
+            <article className="testimonial testimonial_bg1 grid_col paragraph">
+              <div className="flex_group">
+                <div>
+                  <h1>{testimonials[0].name}</h1>
+                </div>
+              </div>
+              <p>{testimonials[0].review}</p>
+            </article>
+            <article className="testimonial testimonial_bg2 paragraph">
+              <div className="flex_group">
+                <div>
+                  <h1>{testimonials[1].name}</h1>
+                </div>
+              </div>
+              <p>{testimonials[1].review}</p>
+            </article>
+            <article className="testimonial testimonial_bg3 paragraph2 head">
+              <div className="flex_group">
+                <div>
+                  <h1>{testimonials[2].name}</h1>
+                </div>
+              </div>
+              <p>{testimonials[2].review}</p>
+            </article>
+            <article className="testimonial testimonial_bg4 grid_col paragraph">
+              <div className="flex_group">
+                <div>
+                  <h1>{testimonials[3].name}</h1>
+                </div>
+              </div>
+              <p>{testimonials[3].review}</p>
+            </article>
+            <article className="testimonial testimonial_bg5 paragraph2 head">
+              <div className="flex_group">
+                <div>
+                  <h1>{testimonials[4].name}</h1>
+                </div>
+              </div>
+              <p>{testimonials[4].review}</p>
+            </article>
           </div>
         </Container>
       </section>
@@ -32,14 +64,3 @@ const Testimonals = () => {
 };
 
 export default Testimonals;
-
-const Element = ({ name, review }: any) => (
-  <div className="overflow-hidden bg-white rounded-md hover:drop-shadow-md hover:-translate-y-10 duration-500 ease-in-out group md:skew-x-12 relative">
-    <div className="px-8 py-12 md:-skew-x-12">
-      <p className="text-base font-semibold tex-tblack">{name}</p>
-      <blockquote className="mt-7">
-        <p className=" text-sm text-black">“{review}”</p>
-      </blockquote>
-    </div>
-  </div>
-);
