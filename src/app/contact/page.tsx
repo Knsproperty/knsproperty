@@ -2,6 +2,7 @@ import Landing from "@/blocks/sections/landing";
 import Container from "@/blocks/atoms/container";
 import ContactForm from "@/blocks/molecules/forms/contact";
 import { FaDivide } from "react-icons/fa";
+import Link from "next/link";
 
 export default function Page() {
   return (
@@ -68,13 +69,17 @@ const Details = () => {
               loading="lazy"
               alt="image icon"
             />
-            <div className="flex-1">
+            <Link
+              href="https://maps.app.goo.gl/iYknDeBsDAbqR14p9"
+              target="_blank"
+              className="flex-1"
+            >
               Address
               <h4 className="lg:text-3xl md:text-2xl text-xl font-bold leading-none text-[28px] text-primary mb-[10px]"></h4>
               <p className="lg:max-w-[230px]">
                 Office #106, KIA Flagship Building, 1 Al Safeena Street,
               </p>
-            </div>
+            </Link>
           </div>
           <div className="flex hover:drop-shadow-[0px_16px_10px_rgba(0,0,0,0.1)] hover:bg-[#F5F9F8] transition-all p-[20px] xl:p-[35px] rounded-[8px] mb-[30px] group">
             <img

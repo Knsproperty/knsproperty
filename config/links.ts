@@ -68,7 +68,7 @@ export const config = {
       {
         name: "location",
         Icon: FiMapPin,
-        href: "https://maps.app.goo.gl/MnAreDemXshaA2XS7?g_st=ic",
+        href: "https://maps.app.goo.gl/iYknDeBsDAbqR14p9",
       },
     ],
     links: {

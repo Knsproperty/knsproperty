@@ -7,9 +7,9 @@ export default async function Page({ params: { slug } }: any) {
   return (
     <main>
       <Container>
-        <div className="grid lg:grid-cols-[1fr_2fr] gap-10 p-5 xl:h-[60vh]">
+        <div className="grid lg:grid-cols-[1fr_2fr] gap-10 p-5 xl:h-[70vh]">
           <section className="flex items-center xl:justify-end justify-center">
-            <div className="relative h-[300px] w-[300px] rounded-full overflow-hidden">
+            <div className="relative h-[400px] w-[400px] rounded-full overflow-hidden">
               <Image
                 className="object-cover"
                 style={{ objectPosition: "0px 0px" }}
