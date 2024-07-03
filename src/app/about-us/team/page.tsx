@@ -23,14 +23,14 @@ export default async function About() {
 
   return (
     <main>
-      <div className='relative md:h-[80vh] max-[768px]:aspect-w-16 max-[768px]:aspect-h-11'>
+      {/* <div className='relative md:h-[80vh] max-[768px]:aspect-w-16 max-[768px]:aspect-h-11'>
         <Image
           src='/group.jpg'
           alt='peoples'
           fill
           className='md:object-cover'
         />
-      </div>
+      </div> */}
       <Container>
         <h1 className='text-4xl font-semibold text-center py-10'>
           Meet the Leaders
